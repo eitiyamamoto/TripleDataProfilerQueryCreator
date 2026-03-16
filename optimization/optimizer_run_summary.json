@@ -1,0 +1,331 @@
+{
+  "analysis_inputs": [
+    "optimization/B1.analysis.json",
+    "optimization/B2.analysis.json",
+    "optimization/B3.analysis.json",
+    "optimization/B4.analysis.json",
+    "optimization/B5.analysis.json",
+    "optimization/B6.analysis.json",
+    "optimization/B7.analysis.json",
+    "optimization/B8.analysis.json",
+    "optimization/C1.analysis.json",
+    "optimization/C10.analysis.json",
+    "optimization/C2.analysis.json",
+    "optimization/C3.analysis.json",
+    "optimization/C4.analysis.json",
+    "optimization/C5.analysis.json",
+    "optimization/C6.analysis.json",
+    "optimization/C7.analysis.json",
+    "optimization/C8.analysis.json",
+    "optimization/C9.analysis.json",
+    "optimization/S1.analysis.json",
+    "optimization/S10.analysis.json",
+    "optimization/S11.analysis.json",
+    "optimization/S12.analysis.json",
+    "optimization/S13.analysis.json",
+    "optimization/S14.analysis.json",
+    "optimization/S2.analysis.json",
+    "optimization/S3.analysis.json",
+    "optimization/S4.analysis.json",
+    "optimization/S5.analysis.json",
+    "optimization/S6.analysis.json",
+    "optimization/S7.analysis.json",
+    "optimization/S8.analysis.json",
+    "optimization/S9.analysis.json"
+  ],
+  "output_dir": "optimization",
+  "total_queries": 32,
+  "processed": 32,
+  "failed": 0,
+  "partial_optimizations": 32,
+  "queries": [
+    {
+      "query_id": "B1",
+      "analysis_file": "optimization/B1.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/B1.optimization.json",
+      "report_file": "optimization/B1.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "B2",
+      "analysis_file": "optimization/B2.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/B2.optimization.json",
+      "report_file": "optimization/B2.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 1
+    },
+    {
+      "query_id": "B3",
+      "analysis_file": "optimization/B3.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/B3.optimization.json",
+      "report_file": "optimization/B3.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 7
+    },
+    {
+      "query_id": "B4",
+      "analysis_file": "optimization/B4.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/B4.optimization.json",
+      "report_file": "optimization/B4.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "B5",
+      "analysis_file": "optimization/B5.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/B5.optimization.json",
+      "report_file": "optimization/B5.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "B6",
+      "analysis_file": "optimization/B6.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/B6.optimization.json",
+      "report_file": "optimization/B6.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "B7",
+      "analysis_file": "optimization/B7.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/B7.optimization.json",
+      "report_file": "optimization/B7.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 5
+    },
+    {
+      "query_id": "B8",
+      "analysis_file": "optimization/B8.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/B8.optimization.json",
+      "report_file": "optimization/B8.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "C1",
+      "analysis_file": "optimization/C1.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/C1.optimization.json",
+      "report_file": "optimization/C1.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "C10",
+      "analysis_file": "optimization/C10.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/C10.optimization.json",
+      "report_file": "optimization/C10.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 5
+    },
+    {
+      "query_id": "C2",
+      "analysis_file": "optimization/C2.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/C2.optimization.json",
+      "report_file": "optimization/C2.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "C3",
+      "analysis_file": "optimization/C3.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/C3.optimization.json",
+      "report_file": "optimization/C3.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "C4",
+      "analysis_file": "optimization/C4.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/C4.optimization.json",
+      "report_file": "optimization/C4.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "C5",
+      "analysis_file": "optimization/C5.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/C5.optimization.json",
+      "report_file": "optimization/C5.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 4
+    },
+    {
+      "query_id": "C6",
+      "analysis_file": "optimization/C6.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/C6.optimization.json",
+      "report_file": "optimization/C6.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "C7",
+      "analysis_file": "optimization/C7.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/C7.optimization.json",
+      "report_file": "optimization/C7.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 5
+    },
+    {
+      "query_id": "C8",
+      "analysis_file": "optimization/C8.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/C8.optimization.json",
+      "report_file": "optimization/C8.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 2
+    },
+    {
+      "query_id": "C9",
+      "analysis_file": "optimization/C9.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/C9.optimization.json",
+      "report_file": "optimization/C9.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "S1",
+      "analysis_file": "optimization/S1.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S1.optimization.json",
+      "report_file": "optimization/S1.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "S10",
+      "analysis_file": "optimization/S10.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S10.optimization.json",
+      "report_file": "optimization/S10.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "S11",
+      "analysis_file": "optimization/S11.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S11.optimization.json",
+      "report_file": "optimization/S11.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "S12",
+      "analysis_file": "optimization/S12.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S12.optimization.json",
+      "report_file": "optimization/S12.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "S13",
+      "analysis_file": "optimization/S13.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S13.optimization.json",
+      "report_file": "optimization/S13.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 1
+    },
+    {
+      "query_id": "S14",
+      "analysis_file": "optimization/S14.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S14.optimization.json",
+      "report_file": "optimization/S14.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "S2",
+      "analysis_file": "optimization/S2.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S2.optimization.json",
+      "report_file": "optimization/S2.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 1
+    },
+    {
+      "query_id": "S3",
+      "analysis_file": "optimization/S3.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S3.optimization.json",
+      "report_file": "optimization/S3.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "S4",
+      "analysis_file": "optimization/S4.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S4.optimization.json",
+      "report_file": "optimization/S4.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 1
+    },
+    {
+      "query_id": "S5",
+      "analysis_file": "optimization/S5.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S5.optimization.json",
+      "report_file": "optimization/S5.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 1
+    },
+    {
+      "query_id": "S6",
+      "analysis_file": "optimization/S6.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S6.optimization.json",
+      "report_file": "optimization/S6.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "S7",
+      "analysis_file": "optimization/S7.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S7.optimization.json",
+      "report_file": "optimization/S7.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "S8",
+      "analysis_file": "optimization/S8.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S8.optimization.json",
+      "report_file": "optimization/S8.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    },
+    {
+      "query_id": "S9",
+      "analysis_file": "optimization/S9.analysis.json",
+      "status": "ok",
+      "optimization_file": "optimization/S9.optimization.json",
+      "report_file": "optimization/S9.report.txt",
+      "optimization_status": "partial",
+      "unknown_endpoint_triples": 0
+    }
+  ]
+}

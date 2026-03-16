@@ -1,0 +1,50 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 5
+Unique Predicates: 5
+Endpoints Used: 0
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: no-metadata
+Estimated Rows: unknown
+Confidence: low
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Query structure is already well-optimized
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 0/5
+Unknown Endpoint Triples: 5
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with Class Constraints
+# Variables are constrained by inferred class types and grouped by endpoint
+
+SELECT DISTINCT ?aliquot ?country ?o ?patient ?popDensity ?uri
+WHERE {
+
+  # Unknown endpoint (no metadata)
+    ?patient <http://dbpedia.org/ontology/country> ?country .
+    ?patient <http://tcga.deri.ie/schema/bcr_aliquot_barcode> ?aliquot .
+    ?uri <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .
+    ?country <http://dbpedia.org/ontology/populationDensity> ?popDensity .
+    ?aliquot ?p ?o .
+}
+LIMIT 1000

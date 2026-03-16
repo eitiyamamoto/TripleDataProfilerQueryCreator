@@ -1,0 +1,105 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 9
+Unique Predicates: 8
+Endpoints Used: 2
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. sameAs
+   Cardinality: 1.8K
+   Endpoints: 2
+   Possible Class Pairs: 4
+2. first_use
+   Cardinality: 7.2K
+   Endpoints: 1
+   Possible Class Pairs: 1
+3. latest_use
+   Cardinality: 7.2K
+   Endpoints: 1
+   Possible Class Pairs: 1
+4. associated_article_count
+   Cardinality: 9.9K
+   Endpoints: 1
+   Possible Class Pairs: 1
+5. number_of_variants
+   Cardinality: 9.9K
+   Endpoints: 1
+   Possible Class Pairs: 1
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8895/sparql/
+  Predicates: 3
+  Total Triples: 29.1K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 5
+  Total Triples: 36.1K
+  Estimated Retrieved Triples: 1.8K
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 1.8K
+Confidence: medium
+Reasoning: Estimated from 3 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'sameAs' (1.8K triples)
+• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 5/8
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with UNION for Multiple Class Interpretations
+# Each UNION branch uses different endpoints or predicates
+
+SELECT ?actor ?articleCount ?dbpediaURI ?film ?filmTitle ?first_use ?latest_use ?news ?nytURI ?variants
+WHERE {
+  # Scenario 1: ?nytURI=Concept, ?articleCount=Literal, ?first_use=Literal, ?latest_use=Literal, ?variants=Literal, ?dbpediaURI=Feature, ?actor=Concept
+  {
+    SERVICE <http://localhost:8897/sparql/> {
+      ?nytURI <http://www.w3.org/2002/07/owl#sameAs> ?dbpediaURI . # ?nytURI:Concept, ?dbpediaURI:Feature
+      ?actor <http://www.w3.org/2002/07/owl#sameAs> ?dbpediaURI . # ?actor:Concept, ?dbpediaURI:Feature
+      ?nytURI <http://data.nytimes.com/elements/first_use> ?first_use . # ?nytURI:Concept, ?first_use:Literal
+      ?nytURI <http://data.nytimes.com/elements/latest_use> ?latest_use . # ?nytURI:Concept, ?latest_use:Literal
+      ?nytURI <http://data.nytimes.com/elements/associated_article_count> ?articleCount . # ?nytURI:Concept, ?articleCount:Literal
+      ?nytURI <http://data.nytimes.com/elements/number_of_variants> ?variants . # ?nytURI:Concept, ?variants:Literal
+      ?nytURI <http://data.nytimes.com/elements/topicPage> ?news .
+      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .
+      ?film <http://purl.org/dc/terms/title> ?filmTitle .
+    }
+  }
+
+  UNION
+
+  # Scenario 2: ?nytURI=Concept, ?articleCount=Literal, ?first_use=Literal, ?latest_use=Literal, ?variants=Literal, ?dbpediaURI=Drug, ?actor=Drug
+  {
+    SERVICE <http://localhost:8895/sparql/> {
+      ?actor <http://www.w3.org/2002/07/owl#sameAs> ?dbpediaURI . # ?actor:Drug, ?dbpediaURI:Drug
+      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .
+      ?film <http://purl.org/dc/terms/title> ?filmTitle .
+    }
+    SERVICE <http://localhost:8897/sparql/> {
+      ?nytURI <http://www.w3.org/2002/07/owl#sameAs> ?dbpediaURI . # ?nytURI:Concept, ?dbpediaURI:Feature
+      ?nytURI <http://data.nytimes.com/elements/first_use> ?first_use . # ?nytURI:Concept, ?first_use:Literal
+      ?nytURI <http://data.nytimes.com/elements/latest_use> ?latest_use . # ?nytURI:Concept, ?latest_use:Literal
+      ?nytURI <http://data.nytimes.com/elements/associated_article_count> ?articleCount . # ?nytURI:Concept, ?articleCount:Literal
+      ?nytURI <http://data.nytimes.com/elements/number_of_variants> ?variants . # ?nytURI:Concept, ?variants:Literal
+      ?nytURI <http://data.nytimes.com/elements/topicPage> ?news .
+    }
+  }
+}
+LIMIT 1000

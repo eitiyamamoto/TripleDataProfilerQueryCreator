@@ -1,0 +1,162 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [
+      [
+        "?president",
+        "<http://dbpedia.org/ontology/nationality>",
+        "<http://dbpedia.org/resource/United_States>"
+      ],
+      [
+        "?president",
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+        "<http://dbpedia.org/ontology/President>"
+      ],
+      [
+        "?x",
+        "<http://www.w3.org/2002/07/owl#sameAs>",
+        "?president"
+      ],
+      [
+        "?president",
+        "<http://dbpedia.org/ontology/party>",
+        "?party"
+      ],
+      [
+        "?x",
+        "<http://data.nytimes.com/elements/topicPage>",
+        "?page"
+      ]
+    ],
+    "num_triples": 5,
+    "unique_predicates": [
+      "<http://data.nytimes.com/elements/topicPage>",
+      "<http://dbpedia.org/ontology/nationality>",
+      "<http://dbpedia.org/ontology/party>",
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "<http://www.w3.org/2002/07/owl#sameAs>"
+    ],
+    "subjects": [
+      "?president",
+      "?x"
+    ],
+    "objects": [
+      "<http://dbpedia.org/ontology/President>",
+      "<http://dbpedia.org/resource/United_States>",
+      "?page",
+      "?party",
+      "?president"
+    ],
+    "variables": []
+  },
+  "total_triples": 5,
+  "unique_predicates": [
+    "<http://data.nytimes.com/elements/topicPage>",
+    "<http://dbpedia.org/ontology/nationality>",
+    "<http://dbpedia.org/ontology/party>",
+    "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+    "<http://www.w3.org/2002/07/owl#sameAs>"
+  ],
+  "subjects": [
+    "?president",
+    "?x"
+  ],
+  "objects": [
+    "<http://dbpedia.org/ontology/President>",
+    "<http://dbpedia.org/resource/United_States>",
+    "?page",
+    "?party",
+    "?president"
+  ],
+  "variables": [],
+  "num_unique_predicates": 5,
+  "query_modifiers": {
+    "distinct": false,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://www.w3.org/2002/07/owl#sameAs>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "object_class": "http://www.geonames.org/ontology#Feature",
+        "triple_count": 1787,
+        "authorities": {
+          "subject": [
+            "http://data.nytimes.com",
+            "http://sws.geonames.org"
+          ],
+          "object": [
+            "http://data.nytimes.com",
+            "http://dbpedia.org",
+            "http://rdf.freebase.com",
+            "http://rdf.insee.fr",
+            "http://sws.geonames.org",
+            "http://www.ordnancesurvey.co.uk"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "object_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "triple_count": 7827,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "object_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "triple_count": 7426,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "object_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "triple_count": 13863,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8895/sparql/",
+    "http://localhost:8897/sparql/"
+  ],
+  "num_endpoints": 2,
+  "query_id": "S3",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S3",
+  "metadata_coverage": {
+    "total_predicates": 5,
+    "covered_predicates": 1,
+    "missing_predicates": [
+      "<http://data.nytimes.com/elements/topicPage>",
+      "<http://dbpedia.org/ontology/nationality>",
+      "<http://dbpedia.org/ontology/party>",
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+    ],
+    "coverage_ratio": 0.2,
+    "is_partial": true
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "query_id": "S8",
+  "analysis_file": "optimization/S8.analysis.json",
+  "optimization_status": "partial",
+  "metadata_coverage": {
+    "total_predicates": 2,
+    "covered_predicates": 1,
+    "missing_predicates": [
+      "<http://dbpedia.org/ontology/Drug/meltingPoint>"
+    ],
+    "coverage_ratio": 0.5,
+    "is_partial": true
+  },
+  "unknown_endpoint_triples": [],
+  "optimization_analysis": {
+    "optimization_strategy": "federated-with-service-clauses",
+    "original_query": "SELECT ...",
+    "endpoints_used": [
+      "http://localhost:8892/sparql/"
+    ],
+    "num_endpoints": 1,
+    "optimization_details": {
+      "num_triples": 0,
+      "num_unique_predicates": 2,
+      "num_unique_subjects": 1,
+      "num_unique_objects": 1,
+      "num_variables": 0,
+      "selective_predicates": [
+        {
+          "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint>",
+          "cardinality": 1159,
+          "num_endpoints": 1,
+          "num_possible_classes": 2
+        }
+      ],
+      "multi_endpoint_predicates": []
+    },
+    "cardinality_estimate": {
+      "estimated_rows": 0,
+      "confidence": "low",
+      "method": "no-chains"
+    },
+    "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "num_predicates": 2,
+        "total_triples": 2318,
+        "total_triples_readable": "2.3K",
+        "predicates": [
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      }
+    ],
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 2\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.2K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.2K triples]\n\n"
+  },
+  "constraint_map": {},
+  "inferred_variable_classes": {},
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Variables are constrained by inferred class types and grouped by endpoint\n\nSELECT *\nWHERE {\n}\nLIMIT 1000\n",
+  "predicate_selectivity": [
+    {
+      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint>",
+      "cardinality": 1159,
+      "num_endpoints": 1,
+      "num_possible_classes": 2
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "query_id": "B7",
+  "analysis_file": "optimization/B7.analysis.json",
+  "optimization_status": "partial",
+  "metadata_coverage": {
+    "total_predicates": 5,
+    "covered_predicates": 0,
+    "missing_predicates": [
+      "<http://dbpedia.org/ontology/country>",
+      "<http://dbpedia.org/ontology/populationDensity>",
+      "<http://tcga.deri.ie/schema/bcr_aliquot_barcode>",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "?p"
+    ],
+    "coverage_ratio": 0.0,
+    "is_partial": true
+  },
+  "unknown_endpoint_triples": [
+    [
+      "?patient",
+      "<http://dbpedia.org/ontology/country>",
+      "?country"
+    ],
+    [
+      "?patient",
+      "<http://tcga.deri.ie/schema/bcr_aliquot_barcode>",
+      "?aliquot"
+    ],
+    [
+      "?uri",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "?patient"
+    ],
+    [
+      "?country",
+      "<http://dbpedia.org/ontology/populationDensity>",
+      "?popDensity"
+    ],
+    [
+      "?aliquot",
+      "?p",
+      "?o"
+    ]
+  ],
+  "optimization_analysis": {
+    "optimization_strategy": "federated-with-service-clauses",
+    "original_query": "SELECT ...",
+    "endpoints_used": [],
+    "num_endpoints": 0,
+    "optimization_details": {
+      "num_triples": 5,
+      "num_unique_predicates": 5,
+      "num_unique_subjects": 4,
+      "num_unique_objects": 5,
+      "num_variables": 0,
+      "selective_predicates": [],
+      "multi_endpoint_predicates": []
+    },
+    "cardinality_estimate": {
+      "estimated_rows": 0,
+      "confidence": "low",
+      "method": "no-metadata"
+    },
+    "endpoint_breakdown": [],
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n"
+  },
+  "constraint_map": {},
+  "inferred_variable_classes": {},
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Variables are constrained by inferred class types and grouped by endpoint\n\nSELECT DISTINCT ?aliquot ?country ?o ?patient ?popDensity ?uri\nWHERE {\n\n  # Unknown endpoint (no metadata)\n    ?patient <http://dbpedia.org/ontology/country> ?country .\n    ?patient <http://tcga.deri.ie/schema/bcr_aliquot_barcode> ?aliquot .\n    ?uri <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .\n    ?country <http://dbpedia.org/ontology/populationDensity> ?popDensity .\n    ?aliquot ?p ?o .\n}\nLIMIT 1000\n",
+  "predicate_selectivity": []
+}

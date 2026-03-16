@@ -1,0 +1,103 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 8
+Unique Predicates: 8
+Endpoints Used: 4
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. title
+   Cardinality: 4.1K
+   Endpoints: 3
+   Possible Class Pairs: 7
+2. inchiIdentifier
+   Cardinality: 4.4K
+   Endpoints: 1
+   Possible Class Pairs: 2
+3. genericName
+   Cardinality: 4.8K
+   Endpoints: 1
+   Possible Class Pairs: 2
+4. mass
+   Cardinality: 6.4K
+   Endpoints: 1
+   Possible Class Pairs: 2
+5. inchi
+   Cardinality: 11.7K
+   Endpoints: 1
+   Possible Class Pairs: 1
+6. iupacName
+   Cardinality: 15.5K
+   Endpoints: 1
+   Possible Class Pairs: 1
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8890/sparql/
+  Predicates: 3
+  Total Triples: 61.2K
+  Estimated Retrieved Triples: 11.7K
+Endpoint: http://localhost:8892/sparql/
+  Predicates: 4
+  Total Triples: 18.3K
+  Estimated Retrieved Triples: 4.4K
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 2
+  Total Triples: 51.4K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8895/sparql/
+  Predicates: 6
+  Total Triples: 52.7K
+  Estimated Retrieved Triples: 6.4K
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 4.1K
+Confidence: medium
+Reasoning: Estimated from 3 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'title' (4.1K triples)
+• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 4 endpoints
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 6/8
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with Class Constraints
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
+
+SELECT ?chebiDrug ?chebiInchi ?chebiIupacName ?drug ?drugBankName ?drugbankInchi ?keggDrug ?keggmass
+WHERE {
+
+  SERVICE <http://localhost:8890/sparql/> {
+    ?chebiDrug <http://purl.org/dc/elements/1.1/title> ?drugBankName . # ?chebiDrug:Compound, ?drugBankName:Literal
+    ?chebiDrug <http://bio2rdf.org/ns/bio2rdf#inchi> ?chebiInchi . # ?chebiDrug:Compound, ?chebiInchi:Literal
+    ?chebiDrug <http://bio2rdf.org/ns/chebi#iupacName> ?chebiIupacName . # ?chebiDrug:Compound, ?chebiIupacName:Literal
+  }
+
+  SERVICE <http://localhost:8892/sparql/> {
+    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/inchiIdentifier> ?drugbankInchi . # ?drug:drugs, ?drugbankInchi:Literal
+    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> ?drugBankName . # ?drug:drugs, ?drugBankName:Literal
+    ?drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> .
+    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId> ?keggDrug .
+  }
+
+  SERVICE <http://localhost:8895/sparql/> {
+    ?keggDrug <http://bio2rdf.org/ns/bio2rdf#mass> ?keggmass . # ?keggDrug:Drug, ?keggmass:Literal
+  }
+}
+LIMIT 1000

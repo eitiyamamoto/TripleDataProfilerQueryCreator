@@ -1,0 +1,59 @@
+{
+  "started_at": "2026-03-16T02:53:31.763583+00:00",
+  "submit_endpoint": "http://localhost:8892/sparql/",
+  "service_endpoint_mode": "docker-service",
+  "optimization_dir": "optimization",
+  "total_files": 1,
+  "dry_run": false,
+  "results": [
+    {
+      "query_id": "C1",
+      "source_file": "optimization/C1.optimization.json",
+      "status": "success",
+      "row_count": 1000,
+      "elapsed_seconds": 5.728,
+      "result_file": "query_results/C1.results.json",
+      "warnings": [
+        "optimization_status is partial"
+      ],
+      "preflight": {
+        "service_endpoints": [
+          {
+            "endpoint": "http://localhost:8892/sparql/",
+            "dataset": "DrugBank"
+          },
+          {
+            "endpoint": "http://localhost:8895/sparql/",
+            "dataset": "KEGG"
+          }
+        ],
+        "metadata_endpoints_used": [
+          "http://localhost:8890/sparql/",
+          "http://localhost:8892/sparql/",
+          "http://localhost:8894/sparql/",
+          "http://localhost:8895/sparql/"
+        ]
+      },
+      "service_endpoint_mode": "docker-service",
+      "service_rewrites": [
+        {
+          "old_endpoint": "http://localhost:8892/sparql/",
+          "new_endpoint": "http://drugbank:8890/sparql/",
+          "mode": "docker-service"
+        },
+        {
+          "old_endpoint": "http://localhost:8895/sparql/",
+          "new_endpoint": "http://kegg:8890/sparql/",
+          "mode": "docker-service"
+        }
+      ],
+      "service_endpoints_after_rewrite": [
+        "http://drugbank:8890/sparql/",
+        "http://kegg:8890/sparql/"
+      ]
+    }
+  ],
+  "finished_at": "2026-03-16T02:53:37.519045+00:00",
+  "success_count": 1,
+  "failure_count": 0
+}

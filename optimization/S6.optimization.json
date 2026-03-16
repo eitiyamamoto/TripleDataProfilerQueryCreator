@@ -1,0 +1,146 @@
+{
+  "query_id": "S6",
+  "analysis_file": "optimization/S6.analysis.json",
+  "optimization_status": "partial",
+  "metadata_coverage": {
+    "total_predicates": 4,
+    "covered_predicates": 3,
+    "missing_predicates": [
+      "<http://xmlns.com/foaf/0.1/based_near>"
+    ],
+    "coverage_ratio": 0.75,
+    "is_partial": true
+  },
+  "unknown_endpoint_triples": [],
+  "optimization_analysis": {
+    "optimization_strategy": "federated-with-service-clauses",
+    "original_query": "SELECT ...",
+    "endpoints_used": [
+      "http://localhost:8894/sparql/",
+      "http://localhost:8897/sparql/"
+    ],
+    "num_endpoints": 2,
+    "optimization_details": {
+      "num_triples": 4,
+      "num_unique_predicates": 4,
+      "num_unique_subjects": 3,
+      "num_unique_objects": 4,
+      "num_variables": 0,
+      "selective_predicates": [
+        {
+          "predicate": "<http://www.geonames.org/ontology#parentFeature>",
+          "cardinality": 585,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        },
+        {
+          "predicate": "<http://www.geonames.org/ontology#name>",
+          "cardinality": 1780,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        },
+        {
+          "predicate": "<http://xmlns.com/foaf/0.1/name>",
+          "cardinality": 3505,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        }
+      ],
+      "multi_endpoint_predicates": []
+    },
+    "cardinality_estimate": {
+      "estimated_rows": 585,
+      "estimated_rows_readable": "585",
+      "confidence": "medium",
+      "method": "join-chain-analysis",
+      "reasoning": "Estimated from 3 join chains"
+    },
+    "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "num_predicates": 1,
+        "total_triples": 3505,
+        "total_triples_readable": "3.5K",
+        "predicates": [
+          "<http://xmlns.com/foaf/0.1/name>"
+        ],
+        "estimated_retrieved_triples": 3505,
+        "estimated_retrieved_triples_readable": "3.5K"
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "num_predicates": 2,
+        "total_triples": 2365,
+        "total_triples_readable": "2.4K",
+        "predicates": [
+          "<http://www.geonames.org/ontology#parentFeature>",
+          "<http://www.geonames.org/ontology#name>"
+        ],
+        "estimated_retrieved_triples": 585,
+        "estimated_retrieved_triples_readable": "585"
+      }
+    ],
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 2\n#   <http://www.geonames.org/ontology#parentFeature> (http://www.geonames.org/ontology#Feature -> http://www.geonames.org/ontology#Feature) [585 triples]\n#   <http://www.geonames.org/ontology#name> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 1\n#   <http://xmlns.com/foaf/0.1/name> (http://purl.org/ontology/mo/MusicArtist -> http://www.w3.org/2000/01/rdf-schema#Literal) [3.5K triples]\n\n"
+  },
+  "constraint_map": {
+    "?germany": [
+      "http://www.geonames.org/ontology#Feature"
+    ],
+    "?location": [
+      "http://www.geonames.org/ontology#Feature"
+    ],
+    "?artist": [
+      "http://purl.org/ontology/mo/MusicArtist"
+    ],
+    "?name": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "inferred_variable_classes": {
+    "?germany": [
+      {
+        "class": "http://www.geonames.org/ontology#Feature",
+        "confidence": 1.0
+      }
+    ],
+    "?location": [
+      {
+        "class": "http://www.geonames.org/ontology#Feature",
+        "confidence": 1.0
+      }
+    ],
+    "?artist": [
+      {
+        "class": "http://purl.org/ontology/mo/MusicArtist",
+        "confidence": 1.0
+      }
+    ],
+    "?name": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Variables are constrained by inferred class types and grouped by endpoint\n\nSELECT ?artist ?germany ?location ?name\nWHERE {\n\n  SERVICE <http://localhost:8894/sparql/> {\n    ?artist <http://xmlns.com/foaf/0.1/name> ?name . # ?artist:MusicArtist, ?name:Literal\n    ?artist <http://xmlns.com/foaf/0.1/based_near> ?location .\n  }\n\n  SERVICE <http://localhost:8897/sparql/> {\n    ?location <http://www.geonames.org/ontology#parentFeature> ?germany . # ?location:Feature, ?germany:Feature\n    ?germany <http://www.geonames.org/ontology#name> \"Federal Republic of Germany\" . # ?germany:Feature\n  }\n}\nLIMIT 1000\n",
+  "predicate_selectivity": [
+    {
+      "predicate": "<http://www.geonames.org/ontology#parentFeature>",
+      "cardinality": 585,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://www.geonames.org/ontology#name>",
+      "cardinality": 1780,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://xmlns.com/foaf/0.1/name>",
+      "cardinality": 3505,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    }
+  ]
+}

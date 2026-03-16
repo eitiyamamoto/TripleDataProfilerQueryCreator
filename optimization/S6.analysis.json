@@ -1,0 +1,128 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [
+      [
+        "?germany",
+        "<http://www.geonames.org/ontology#name>",
+        "\"Federal Republic of Germany\""
+      ],
+      [
+        "?location",
+        "<http://www.geonames.org/ontology#parentFeature>",
+        "?germany"
+      ],
+      [
+        "?artist",
+        "<http://xmlns.com/foaf/0.1/based_near>",
+        "?location"
+      ],
+      [
+        "?artist",
+        "<http://xmlns.com/foaf/0.1/name>",
+        "?name"
+      ]
+    ],
+    "num_triples": 4,
+    "unique_predicates": [
+      "<http://www.geonames.org/ontology#name>",
+      "<http://www.geonames.org/ontology#parentFeature>",
+      "<http://xmlns.com/foaf/0.1/based_near>",
+      "<http://xmlns.com/foaf/0.1/name>"
+    ],
+    "subjects": [
+      "?artist",
+      "?germany",
+      "?location"
+    ],
+    "objects": [
+      "\"Federal Republic of Germany\"",
+      "?germany",
+      "?location",
+      "?name"
+    ],
+    "variables": []
+  },
+  "total_triples": 4,
+  "unique_predicates": [
+    "<http://www.geonames.org/ontology#name>",
+    "<http://www.geonames.org/ontology#parentFeature>",
+    "<http://xmlns.com/foaf/0.1/based_near>",
+    "<http://xmlns.com/foaf/0.1/name>"
+  ],
+  "subjects": [
+    "?artist",
+    "?germany",
+    "?location"
+  ],
+  "objects": [
+    "\"Federal Republic of Germany\"",
+    "?germany",
+    "?location",
+    "?name"
+  ],
+  "variables": [],
+  "num_unique_predicates": 4,
+  "query_modifiers": {
+    "distinct": false,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://www.geonames.org/ontology#parentFeature>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.geonames.org/ontology#Feature",
+        "triple_count": 585,
+        "authorities": {
+          "subject": [
+            "http://sws.geonames.org"
+          ],
+          "object": [
+            "http://sws.geonames.org"
+          ]
+        }
+      }
+    ],
+    "<http://xmlns.com/foaf/0.1/name>": [
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": "http://purl.org/ontology/mo/MusicArtist",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3505,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www.geonames.org/ontology#name>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1780,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8894/sparql/",
+    "http://localhost:8897/sparql/"
+  ],
+  "num_endpoints": 2,
+  "query_id": "S6",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S6",
+  "metadata_coverage": {
+    "total_predicates": 4,
+    "covered_predicates": 3,
+    "missing_predicates": [
+      "<http://xmlns.com/foaf/0.1/based_near>"
+    ],
+    "coverage_ratio": 0.75,
+    "is_partial": true
+  }
+}

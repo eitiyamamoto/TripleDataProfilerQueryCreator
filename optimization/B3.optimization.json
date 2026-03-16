@@ -1,0 +1,83 @@
+{
+  "query_id": "B3",
+  "analysis_file": "optimization/B3.analysis.json",
+  "optimization_status": "partial",
+  "metadata_coverage": {
+    "total_predicates": 7,
+    "covered_predicates": 0,
+    "missing_predicates": [
+      "<http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis>",
+      "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "<http://tcga.deri.ie/schema/beta_value>",
+      "<http://tcga.deri.ie/schema/drug_name>",
+      "<http://tcga.deri.ie/schema/result>",
+      "<http://tcga.deri.ie/schema/vital_status>"
+    ],
+    "coverage_ratio": 0.0,
+    "is_partial": true
+  },
+  "unknown_endpoint_triples": [
+    [
+      "?patient",
+      "<http://tcga.deri.ie/schema/vital_status>",
+      "\"Dead\""
+    ],
+    [
+      "?patient",
+      "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
+      "?drug"
+    ],
+    [
+      "?drug",
+      "<http://tcga.deri.ie/schema/drug_name>",
+      "\"Tarceva\""
+    ],
+    [
+      "?patient",
+      "<http://tcga.deri.ie/schema/result>",
+      "?results"
+    ],
+    [
+      "?patient",
+      "<http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis>",
+      "?age"
+    ],
+    [
+      "?s",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "?patient"
+    ],
+    [
+      "?results",
+      "<http://tcga.deri.ie/schema/beta_value>",
+      "?methylationValue"
+    ]
+  ],
+  "optimization_analysis": {
+    "optimization_strategy": "federated-with-service-clauses",
+    "original_query": "SELECT ...",
+    "endpoints_used": [],
+    "num_endpoints": 0,
+    "optimization_details": {
+      "num_triples": 7,
+      "num_unique_predicates": 7,
+      "num_unique_subjects": 4,
+      "num_unique_objects": 7,
+      "num_variables": 0,
+      "selective_predicates": [],
+      "multi_endpoint_predicates": []
+    },
+    "cardinality_estimate": {
+      "estimated_rows": 0,
+      "confidence": "low",
+      "method": "no-metadata"
+    },
+    "endpoint_breakdown": [],
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n"
+  },
+  "constraint_map": {},
+  "inferred_variable_classes": {},
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Variables are constrained by inferred class types and grouped by endpoint\n\nSELECT ?age ?drug ?methylationValue ?patient ?results ?s\nWHERE {\n\n  # Unknown endpoint (no metadata)\n    ?patient <http://tcga.deri.ie/schema/vital_status> \"Dead\" .\n    ?patient <http://tcga.deri.ie/schema/bcr_drug_barcode> ?drug .\n    ?drug <http://tcga.deri.ie/schema/drug_name> \"Tarceva\" .\n    ?patient <http://tcga.deri.ie/schema/result> ?results .\n    ?patient <http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis> ?age .\n    ?s <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .\n    ?results <http://tcga.deri.ie/schema/beta_value> ?methylationValue .\n}\nLIMIT 1000\n",
+  "predicate_selectivity": []
+}

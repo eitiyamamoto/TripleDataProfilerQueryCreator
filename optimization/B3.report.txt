@@ -1,0 +1,52 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 7
+Unique Predicates: 7
+Endpoints Used: 0
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: no-metadata
+Estimated Rows: unknown
+Confidence: low
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Query structure is already well-optimized
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 0/7
+Unknown Endpoint Triples: 7
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with Class Constraints
+# Variables are constrained by inferred class types and grouped by endpoint
+
+SELECT ?age ?drug ?methylationValue ?patient ?results ?s
+WHERE {
+
+  # Unknown endpoint (no metadata)
+    ?patient <http://tcga.deri.ie/schema/vital_status> "Dead" .
+    ?patient <http://tcga.deri.ie/schema/bcr_drug_barcode> ?drug .
+    ?drug <http://tcga.deri.ie/schema/drug_name> "Tarceva" .
+    ?patient <http://tcga.deri.ie/schema/result> ?results .
+    ?patient <http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis> ?age .
+    ?s <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .
+    ?results <http://tcga.deri.ie/schema/beta_value> ?methylationValue .
+}
+LIMIT 1000

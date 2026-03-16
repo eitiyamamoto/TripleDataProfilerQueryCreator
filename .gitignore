@@ -1,0 +1,24 @@
+# Dataset directories
+/Affymetrix/
+/ChEBI/
+/DBPedia-Subset/
+/DrugBank/
+/GeoNames/
+/Jamendo/
+/KEGG/
+/LMDB/
+/LinkedTCGA-A/
+/LinkedTCGA-E/
+/LinkedTCGA-M/
+/NYT/
+/SWDFood/
+
+# Dataset archives at repository root
+/LinkedTCGA-A.7z
+/LinkedTCGA-E.7z
+/LinkedTCGA-M.7z
+/\*.7z
+/\*.zip
+
+# Python virtual environment
+/.venv/

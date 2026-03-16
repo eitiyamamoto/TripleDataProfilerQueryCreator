@@ -1,0 +1,194 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [
+      [
+        "?geneId",
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+        "<http://tcga.deri.ie/schema/expression_gene_lookup>"
+      ],
+      [
+        "?s",
+        "<http://bio2rdf.org/affymetrix_vocabulary:x-geneid>",
+        "?geneId"
+      ],
+      [
+        "?s",
+        "<http://bio2rdf.org/affymetrix_vocabulary:x-symbol>",
+        "<http://bio2rdf.org/symbol:CNTNAP2>"
+      ],
+      [
+        "?geneId",
+        "<http://tcga.deri.ie/schema/chromosome>",
+        "?lookupChromosome"
+      ],
+      [
+        "?geneId",
+        "<http://tcga.deri.ie/schema/start>",
+        "?start"
+      ],
+      [
+        "?geneId",
+        "<http://tcga.deri.ie/schema/stop>",
+        "?stop"
+      ],
+      [
+        "?patient",
+        "<http://tcga.deri.ie/schema/result>",
+        "?recordNo"
+      ],
+      [
+        "?recordNo",
+        "<http://tcga.deri.ie/schema/beta_value>",
+        "?methylationCNTNAP2"
+      ],
+      [
+        "?recordNo",
+        "<http://tcga.deri.ie/schema/chromosome>",
+        "?chromosome"
+      ],
+      [
+        "?recordNo",
+        "<http://tcga.deri.ie/schema/position>",
+        "?position"
+      ],
+      [
+        "?uri",
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "?patient"
+      ]
+    ],
+    "num_triples": 11,
+    "unique_predicates": [
+      "<http://bio2rdf.org/affymetrix_vocabulary:x-geneid>",
+      "<http://bio2rdf.org/affymetrix_vocabulary:x-symbol>",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "<http://tcga.deri.ie/schema/beta_value>",
+      "<http://tcga.deri.ie/schema/chromosome>",
+      "<http://tcga.deri.ie/schema/position>",
+      "<http://tcga.deri.ie/schema/result>",
+      "<http://tcga.deri.ie/schema/start>",
+      "<http://tcga.deri.ie/schema/stop>",
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+    ],
+    "subjects": [
+      "?geneId",
+      "?patient",
+      "?recordNo",
+      "?s",
+      "?uri"
+    ],
+    "objects": [
+      "<http://bio2rdf.org/symbol:CNTNAP2>",
+      "<http://tcga.deri.ie/schema/expression_gene_lookup>",
+      "?chromosome",
+      "?geneId",
+      "?lookupChromosome",
+      "?methylationCNTNAP2",
+      "?patient",
+      "?position",
+      "?recordNo",
+      "?start",
+      "?stop"
+    ],
+    "variables": []
+  },
+  "total_triples": 11,
+  "unique_predicates": [
+    "<http://bio2rdf.org/affymetrix_vocabulary:x-geneid>",
+    "<http://bio2rdf.org/affymetrix_vocabulary:x-symbol>",
+    "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+    "<http://tcga.deri.ie/schema/beta_value>",
+    "<http://tcga.deri.ie/schema/chromosome>",
+    "<http://tcga.deri.ie/schema/position>",
+    "<http://tcga.deri.ie/schema/result>",
+    "<http://tcga.deri.ie/schema/start>",
+    "<http://tcga.deri.ie/schema/stop>",
+    "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+  ],
+  "subjects": [
+    "?geneId",
+    "?patient",
+    "?recordNo",
+    "?s",
+    "?uri"
+  ],
+  "objects": [
+    "<http://bio2rdf.org/symbol:CNTNAP2>",
+    "<http://tcga.deri.ie/schema/expression_gene_lookup>",
+    "?chromosome",
+    "?geneId",
+    "?lookupChromosome",
+    "?methylationCNTNAP2",
+    "?patient",
+    "?position",
+    "?recordNo",
+    "?start",
+    "?stop"
+  ],
+  "variables": [],
+  "num_unique_predicates": 10,
+  "query_modifiers": {
+    "distinct": false,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://tcga.deri.ie/schema/start>": [
+      {
+        "endpoint": "http://localhost:8888/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/expression_exon_result",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 57429308,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://tcga.deri.ie/schema/chromosome>": [
+      {
+        "endpoint": "http://localhost:8888/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/expression_exon_result",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 57429308,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://tcga.deri.ie/schema/stop>": [
+      {
+        "endpoint": "http://localhost:8888/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/expression_exon_result",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 57429308,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8888/sparql/"
+  ],
+  "num_endpoints": 1,
+  "query_id": "B5",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B5",
+  "metadata_coverage": {
+    "total_predicates": 10,
+    "covered_predicates": 3,
+    "missing_predicates": [
+      "<http://bio2rdf.org/affymetrix_vocabulary:x-geneid>",
+      "<http://bio2rdf.org/affymetrix_vocabulary:x-symbol>",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "<http://tcga.deri.ie/schema/beta_value>",
+      "<http://tcga.deri.ie/schema/position>",
+      "<http://tcga.deri.ie/schema/result>",
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+    ],
+    "coverage_ratio": 0.3,
+    "is_partial": true
+  }
+}

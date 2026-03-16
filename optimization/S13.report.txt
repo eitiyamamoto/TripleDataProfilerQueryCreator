@@ -1,0 +1,87 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 5
+Unique Predicates: 5
+Endpoints Used: 3
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. title
+   Cardinality: 4.1K
+   Endpoints: 3
+   Possible Class Pairs: 7
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8890/sparql/
+  Predicates: 1
+  Total Triples: 34.1K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 2
+  Total Triples: 51.4K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8895/sparql/
+  Predicates: 4
+  Total Triples: 34.1K
+  Estimated Retrieved Triples: 4.1K
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 4.1K
+Confidence: medium
+Reasoning: Estimated from 2 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'title' (4.1K triples)
+• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 3 endpoints
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 1/5
+Unknown Endpoint Triples: 1
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with UNION for Multiple Class Interpretations
+# Each UNION branch uses different endpoints or predicates
+
+SELECT ?drug ?id ?keggDrug ?title
+WHERE {
+  # Scenario 1: ?title=Literal, ?keggDrug=Enzyme
+  {
+    SERVICE <http://localhost:8895/sparql/> {
+      ?keggDrug <http://purl.org/dc/elements/1.1/title> ?title . # ?keggDrug:Enzyme, ?title:Literal
+      ?keggDrug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/ns/kegg#Drug> .
+      ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?id .
+      ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?id .
+    }
+    # Unknown endpoint (no metadata)
+      ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/micronutrient> .
+  }
+
+  UNION
+
+  # Scenario 2: ?title=Literal, ?keggDrug=Record
+  {
+    SERVICE <http://localhost:8894/sparql/> {
+      ?keggDrug <http://purl.org/dc/elements/1.1/title> ?title . # ?keggDrug:Record, ?title:Literal
+      ?keggDrug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/ns/kegg#Drug> .
+      ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?id .
+      ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?id .
+    }
+    # Unknown endpoint (no metadata)
+      ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/micronutrient> .
+  }
+}
+LIMIT 1000

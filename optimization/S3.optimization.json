@@ -1,0 +1,140 @@
+{
+  "query_id": "S3",
+  "analysis_file": "optimization/S3.analysis.json",
+  "optimization_status": "partial",
+  "metadata_coverage": {
+    "total_predicates": 5,
+    "covered_predicates": 1,
+    "missing_predicates": [
+      "<http://data.nytimes.com/elements/topicPage>",
+      "<http://dbpedia.org/ontology/nationality>",
+      "<http://dbpedia.org/ontology/party>",
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+    ],
+    "coverage_ratio": 0.2,
+    "is_partial": true
+  },
+  "unknown_endpoint_triples": [],
+  "optimization_analysis": {
+    "optimization_strategy": "federated-with-service-clauses",
+    "original_query": "SELECT ...",
+    "endpoints_used": [
+      "http://localhost:8895/sparql/",
+      "http://localhost:8897/sparql/"
+    ],
+    "num_endpoints": 2,
+    "optimization_details": {
+      "num_triples": 5,
+      "num_unique_predicates": 5,
+      "num_unique_subjects": 2,
+      "num_unique_objects": 5,
+      "num_variables": 0,
+      "selective_predicates": [
+        {
+          "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
+          "cardinality": 1787,
+          "num_endpoints": 2,
+          "num_possible_classes": 4
+        }
+      ],
+      "multi_endpoint_predicates": [
+        "<http://www.w3.org/2002/07/owl#sameAs>"
+      ]
+    },
+    "cardinality_estimate": {
+      "estimated_rows": 1787,
+      "estimated_rows_readable": "1.8K",
+      "confidence": "medium",
+      "method": "join-chain-analysis",
+      "reasoning": "Estimated from 2 join chains"
+    },
+    "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "num_predicates": 3,
+        "total_triples": 29116,
+        "total_triples_readable": "29.1K",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "num_predicates": 1,
+        "total_triples": 1787,
+        "total_triples_readable": "1.8K",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": 1787,
+        "estimated_retrieved_triples_readable": "1.8K"
+      }
+    ],
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n"
+  },
+  "constraint_map": {
+    "?x": [
+      "http://bio2rdf.org/ns/kegg#Compound",
+      "http://bio2rdf.org/ns/kegg#Drug",
+      "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "?president": [
+      "http://bio2rdf.org/ns/kegg#Compound",
+      "http://bio2rdf.org/ns/kegg#Drug",
+      "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://www.geonames.org/ontology#Feature"
+    ]
+  },
+  "inferred_variable_classes": {
+    "?x": [
+      {
+        "class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "confidence": 0.2888385676023399
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Drug",
+        "confidence": 0.2428200971928318
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "confidence": 0.241397748359715
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Compound",
+        "confidence": 0.2269435868451133
+      }
+    ],
+    "?president": [
+      {
+        "class": "http://www.geonames.org/ontology#Feature",
+        "confidence": 0.2888385676023399
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Drug",
+        "confidence": 0.2428200971928318
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "confidence": 0.241397748359715
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Compound",
+        "confidence": 0.2269435868451133
+      }
+    ]
+  },
+  "optimized_federated_query": "# Smart Federated Query with UNION for Multiple Class Interpretations\n# Each UNION branch uses different endpoints or predicates\n\nSELECT ?page ?party ?president ?x\nWHERE {\n  # Scenario 1: ?x=Concept, ?president=Feature\n  {\n    SERVICE <http://localhost:8897/sparql/> {\n      ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . # ?x:Concept, ?president:Feature\n      ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> .\n      ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .\n      ?president <http://dbpedia.org/ontology/party> ?party .\n      ?x <http://data.nytimes.com/elements/topicPage> ?page .\n    }\n  }\n\n  UNION\n\n  # Scenario 2: ?x=Drug, ?president=Drug\n  {\n    SERVICE <http://localhost:8895/sparql/> {\n      ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . # ?x:Drug, ?president:Drug\n      ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> .\n      ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .\n      ?president <http://dbpedia.org/ontology/party> ?party .\n      ?x <http://data.nytimes.com/elements/topicPage> ?page .\n    }\n  }\n}\nLIMIT 1000\n",
+  "predicate_selectivity": [
+    {
+      "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
+      "cardinality": 1787,
+      "num_endpoints": 2,
+      "num_possible_classes": 4
+    }
+  ]
+}

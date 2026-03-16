@@ -1,0 +1,72 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 4
+Unique Predicates: 4
+Endpoints Used: 2
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. parentFeature
+   Cardinality: 585
+   Endpoints: 1
+   Possible Class Pairs: 1
+2. name
+   Cardinality: 1.8K
+   Endpoints: 1
+   Possible Class Pairs: 1
+3. sameAs
+   Cardinality: 1.8K
+   Endpoints: 2
+   Possible Class Pairs: 4
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8895/sparql/
+  Predicates: 3
+  Total Triples: 29.1K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 3
+  Total Triples: 4.2K
+  Estimated Retrieved Triples: 585
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 585
+Confidence: medium
+Reasoning: Estimated from 3 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'parentFeature' (585 triples)
+• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 3/4
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with Class Constraints
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
+
+SELECT ?location ?news ?parent ?y
+WHERE {
+
+  SERVICE <http://localhost:8897/sparql/> {
+    ?location <http://www.geonames.org/ontology#parentFeature> ?parent . # ?location:Feature, ?parent:Feature
+    ?parent <http://www.geonames.org/ontology#name> "California" . # ?parent:Feature
+    ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . # ?y:Concept, ?location:Feature
+    ?y <http://data.nytimes.com/elements/topicPage> ?news .
+  }
+}
+LIMIT 1000

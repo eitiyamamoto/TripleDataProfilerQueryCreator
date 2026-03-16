@@ -1,0 +1,253 @@
+{
+  "query_id": "C2",
+  "analysis_file": "optimization/C2.analysis.json",
+  "optimization_status": "partial",
+  "metadata_coverage": {
+    "total_predicates": 8,
+    "covered_predicates": 6,
+    "missing_predicates": [
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
+    ],
+    "coverage_ratio": 0.75,
+    "is_partial": true
+  },
+  "unknown_endpoint_triples": [],
+  "optimization_analysis": {
+    "optimization_strategy": "federated-with-service-clauses",
+    "original_query": "SELECT ...",
+    "endpoints_used": [
+      "http://localhost:8890/sparql/",
+      "http://localhost:8892/sparql/",
+      "http://localhost:8894/sparql/",
+      "http://localhost:8895/sparql/"
+    ],
+    "num_endpoints": 4,
+    "optimization_details": {
+      "num_triples": 8,
+      "num_unique_predicates": 8,
+      "num_unique_subjects": 3,
+      "num_unique_objects": 7,
+      "num_variables": 0,
+      "selective_predicates": [
+        {
+          "predicate": "<http://purl.org/dc/elements/1.1/title>",
+          "cardinality": 4131,
+          "num_endpoints": 3,
+          "num_possible_classes": 7
+        },
+        {
+          "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/inchiIdentifier>",
+          "cardinality": 4392,
+          "num_endpoints": 1,
+          "num_possible_classes": 2
+        },
+        {
+          "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
+          "cardinality": 4772,
+          "num_endpoints": 1,
+          "num_possible_classes": 2
+        }
+      ],
+      "multi_endpoint_predicates": [
+        "<http://purl.org/dc/elements/1.1/title>"
+      ]
+    },
+    "cardinality_estimate": {
+      "estimated_rows": 4131,
+      "estimated_rows_readable": "4.1K",
+      "confidence": "medium",
+      "method": "join-chain-analysis",
+      "reasoning": "Estimated from 3 join chains"
+    },
+    "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8890/sparql/",
+        "num_predicates": 3,
+        "total_triples": 61249,
+        "total_triples_readable": "61.2K",
+        "predicates": [
+          "<http://bio2rdf.org/ns/chebi#iupacName>",
+          "<http://bio2rdf.org/ns/bio2rdf#inchi>",
+          "<http://purl.org/dc/elements/1.1/title>"
+        ],
+        "estimated_retrieved_triples": 11736,
+        "estimated_retrieved_triples_readable": "11.7K"
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "num_predicates": 4,
+        "total_triples": 18328,
+        "total_triples_readable": "18.3K",
+        "predicates": [
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/inchiIdentifier>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/inchiIdentifier>"
+        ],
+        "estimated_retrieved_triples": 4392,
+        "estimated_retrieved_triples_readable": "4.4K"
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "num_predicates": 2,
+        "total_triples": 51402,
+        "total_triples_readable": "51.4K",
+        "predicates": [
+          "<http://purl.org/dc/elements/1.1/title>",
+          "<http://purl.org/dc/elements/1.1/title>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "num_predicates": 6,
+        "total_triples": 52653,
+        "total_triples_readable": "52.7K",
+        "predicates": [
+          "<http://bio2rdf.org/ns/bio2rdf#mass>",
+          "<http://bio2rdf.org/ns/bio2rdf#mass>",
+          "<http://purl.org/dc/elements/1.1/title>",
+          "<http://purl.org/dc/elements/1.1/title>",
+          "<http://purl.org/dc/elements/1.1/title>",
+          "<http://purl.org/dc/elements/1.1/title>"
+        ],
+        "estimated_retrieved_triples": 6444,
+        "estimated_retrieved_triples_readable": "6.4K"
+      }
+    ],
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 4\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.8K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.8K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/inchiIdentifier> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.4K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/inchiIdentifier> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.4K triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 2\n#   <http://purl.org/dc/elements/1.1/title> (http://purl.org/ontology/mo/Track -> http://www.w3.org/2000/01/rdf-schema#Literal) [45.6K triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://purl.org/ontology/mo/Record -> http://www.w3.org/2000/01/rdf-schema#Literal) [5.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 6\n#   <http://bio2rdf.org/ns/bio2rdf#mass> (http://bio2rdf.org/ns/kegg#Drug -> http://www.w3.org/2000/01/rdf-schema#Literal) [6.4K triples]\n#   <http://bio2rdf.org/ns/bio2rdf#mass> (http://bio2rdf.org/ns/kegg#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [12.1K triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://bio2rdf.org/ns/kegg#Reaction -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.8K triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://bio2rdf.org/ns/kegg#Drug -> http://www.w3.org/2000/01/rdf-schema#Literal) [8.1K triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://bio2rdf.org/ns/kegg#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [14.1K triples]\n\n# Endpoint: http://localhost:8890/sparql/\n# Predicates: 3\n#   <http://bio2rdf.org/ns/chebi#iupacName> (http://bio2rdf.org/ns/chebi#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [15.5K triples]\n#   <http://bio2rdf.org/ns/bio2rdf#inchi> (http://bio2rdf.org/ns/chebi#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [11.7K triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://bio2rdf.org/ns/chebi#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [34.1K triples]\n\n"
+  },
+  "constraint_map": {
+    "?drug": [
+      "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+      "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer"
+    ],
+    "?drugBankName": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?chebiDrug": [
+      "http://bio2rdf.org/ns/chebi#Compound",
+      "http://bio2rdf.org/ns/kegg#Compound",
+      "http://bio2rdf.org/ns/kegg#Drug",
+      "http://bio2rdf.org/ns/kegg#Enzyme",
+      "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://purl.org/ontology/mo/Record",
+      "http://purl.org/ontology/mo/Track"
+    ],
+    "?keggDrug": [
+      "http://bio2rdf.org/ns/kegg#Compound",
+      "http://bio2rdf.org/ns/kegg#Drug"
+    ],
+    "?keggmass": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?chebiIupacName": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?chebiInchi": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?drugbankInchi": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "inferred_variable_classes": {
+    "?chebiDrug": [
+      {
+        "class": "http://bio2rdf.org/ns/chebi#Compound",
+        "confidence": 1.0
+      }
+    ],
+    "?chebiIupacName": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?chebiInchi": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?drug": [
+      {
+        "class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "confidence": 0.5
+      },
+      {
+        "class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "confidence": 0.5
+      }
+    ],
+    "?drugBankName": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?keggDrug": [
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Drug",
+        "confidence": 0.5172325458416132
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Compound",
+        "confidence": 0.48276745415838684
+      }
+    ],
+    "?keggmass": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?drugbankInchi": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Note: Multiple class interpretations exist but all route to same endpoints\n# A single query retrieves all data regardless of class ambiguity\n\nSELECT ?chebiDrug ?chebiInchi ?chebiIupacName ?drug ?drugBankName ?drugbankInchi ?keggDrug ?keggmass\nWHERE {\n\n  SERVICE <http://localhost:8890/sparql/> {\n    ?chebiDrug <http://purl.org/dc/elements/1.1/title> ?drugBankName . # ?chebiDrug:Compound, ?drugBankName:Literal\n    ?chebiDrug <http://bio2rdf.org/ns/bio2rdf#inchi> ?chebiInchi . # ?chebiDrug:Compound, ?chebiInchi:Literal\n    ?chebiDrug <http://bio2rdf.org/ns/chebi#iupacName> ?chebiIupacName . # ?chebiDrug:Compound, ?chebiIupacName:Literal\n  }\n\n  SERVICE <http://localhost:8892/sparql/> {\n    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/inchiIdentifier> ?drugbankInchi . # ?drug:drugs, ?drugbankInchi:Literal\n    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> ?drugBankName . # ?drug:drugs, ?drugBankName:Literal\n    ?drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> .\n    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId> ?keggDrug .\n  }\n\n  SERVICE <http://localhost:8895/sparql/> {\n    ?keggDrug <http://bio2rdf.org/ns/bio2rdf#mass> ?keggmass . # ?keggDrug:Drug, ?keggmass:Literal\n  }\n}\nLIMIT 1000\n",
+  "predicate_selectivity": [
+    {
+      "predicate": "<http://purl.org/dc/elements/1.1/title>",
+      "cardinality": 4131,
+      "num_endpoints": 3,
+      "num_possible_classes": 7
+    },
+    {
+      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/inchiIdentifier>",
+      "cardinality": 4392,
+      "num_endpoints": 1,
+      "num_possible_classes": 2
+    },
+    {
+      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
+      "cardinality": 4772,
+      "num_endpoints": 1,
+      "num_possible_classes": 2
+    },
+    {
+      "predicate": "<http://bio2rdf.org/ns/bio2rdf#mass>",
+      "cardinality": 6444,
+      "num_endpoints": 1,
+      "num_possible_classes": 2
+    },
+    {
+      "predicate": "<http://bio2rdf.org/ns/bio2rdf#inchi>",
+      "cardinality": 11736,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://bio2rdf.org/ns/chebi#iupacName>",
+      "cardinality": 15458,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    }
+  ]
+}

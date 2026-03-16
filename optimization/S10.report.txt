@@ -1,0 +1,85 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 5
+Unique Predicates: 5
+Endpoints Used: 3
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. sameAs
+   Cardinality: 1.8K
+   Endpoints: 2
+   Possible Class Pairs: 4
+2. interactionDrug2
+   Cardinality: 10.1K
+   Endpoints: 1
+   Possible Class Pairs: 2
+3. interactionDrug1
+   Cardinality: 10.1K
+   Endpoints: 1
+   Possible Class Pairs: 2
+4. text
+   Cardinality: 10.1K
+   Endpoints: 1
+   Possible Class Pairs: 1
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8892/sparql/
+  Predicates: 5
+  Total Triples: 50.5K
+  Estimated Retrieved Triples: 10.1K
+Endpoint: http://localhost:8895/sparql/
+  Predicates: 3
+  Total Triples: 29.1K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 1
+  Total Triples: 1.8K
+  Estimated Retrieved Triples: 1.8K
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 1.8K
+Confidence: medium
+Reasoning: Estimated from 3 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'sameAs' (1.8K triples)
+• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 3 endpoints
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 4/5
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with Class Constraints
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
+
+SELECT ?Drug ?Int ?IntDrug ?IntEffect ?y
+WHERE {
+
+  SERVICE <http://localhost:8892/sparql/> {
+    ?Int <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y . # ?Int:drug_interactions, ?y:Offer
+    ?Int <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug . # ?Int:drug_interactions, ?IntDrug:drugs
+    ?Int <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect . # ?Int:drug_interactions, ?IntEffect:Literal
+  }
+
+  SERVICE <http://localhost:8897/sparql/> {
+    ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . # ?y:Concept, ?Drug:Feature
+    ?Drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Drug> .
+  }
+}
+LIMIT 1000

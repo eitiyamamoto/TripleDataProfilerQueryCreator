@@ -1,0 +1,179 @@
+{
+  "query_id": "S11",
+  "analysis_file": "optimization/S11.analysis.json",
+  "optimization_status": "partial",
+  "metadata_coverage": {
+    "total_predicates": 7,
+    "covered_predicates": 4,
+    "missing_predicates": [
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
+    ],
+    "coverage_ratio": 0.5714,
+    "is_partial": true
+  },
+  "unknown_endpoint_triples": [],
+  "optimization_analysis": {
+    "optimization_strategy": "federated-with-service-clauses",
+    "original_query": "SELECT ...",
+    "endpoints_used": [
+      "http://localhost:8892/sparql/",
+      "http://localhost:8895/sparql/"
+    ],
+    "num_endpoints": 2,
+    "optimization_details": {
+      "num_triples": 7,
+      "num_unique_predicates": 7,
+      "num_unique_subjects": 3,
+      "num_unique_objects": 6,
+      "num_variables": 0,
+      "selective_predicates": [
+        {
+          "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>",
+          "cardinality": 1861,
+          "num_endpoints": 1,
+          "num_possible_classes": 2
+        },
+        {
+          "predicate": "<http://bio2rdf.org/ns/kegg#xEnzyme>",
+          "cardinality": 7174,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        },
+        {
+          "predicate": "<http://bio2rdf.org/ns/kegg#equation>",
+          "cardinality": 7827,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        }
+      ],
+      "multi_endpoint_predicates": []
+    },
+    "cardinality_estimate": {
+      "estimated_rows": 1861,
+      "estimated_rows_readable": "1.9K",
+      "confidence": "medium",
+      "method": "join-chain-analysis",
+      "reasoning": "Estimated from 3 join chains"
+    },
+    "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "num_predicates": 2,
+        "total_triples": 3722,
+        "total_triples_readable": "3.7K",
+        "predicates": [
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>"
+        ],
+        "estimated_retrieved_triples": 1861,
+        "estimated_retrieved_triples_readable": "1.9K"
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "num_predicates": 3,
+        "total_triples": 23385,
+        "total_triples_readable": "23.4K",
+        "predicates": [
+          "<http://bio2rdf.org/ns/kegg#equation>",
+          "<http://bio2rdf.org/ns/kegg#xSubstrate>",
+          "<http://bio2rdf.org/ns/kegg#xEnzyme>"
+        ],
+        "estimated_retrieved_triples": 7174,
+        "estimated_retrieved_triples_readable": "7.2K"
+      }
+    ],
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 2\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.9K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.9K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://bio2rdf.org/ns/kegg#equation> (http://bio2rdf.org/ns/kegg#Reaction -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.8K triples]\n#   <http://bio2rdf.org/ns/kegg#xSubstrate> (http://bio2rdf.org/ns/kegg#Enzyme -> http://bio2rdf.org/ns/kegg#Compound) [8.4K triples]\n#   <http://bio2rdf.org/ns/kegg#xEnzyme> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Enzyme) [7.2K triples]\n\n"
+  },
+  "constraint_map": {
+    "?enzyme": [
+      "http://bio2rdf.org/ns/kegg#Enzyme"
+    ],
+    "?cpd": [
+      "http://bio2rdf.org/ns/kegg#Compound"
+    ],
+    "?reaction": [
+      "http://bio2rdf.org/ns/kegg#Reaction"
+    ],
+    "?drug": [
+      "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+      "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer"
+    ],
+    "?drugDesc": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?equation": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "inferred_variable_classes": {
+    "?enzyme": [
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Enzyme",
+        "confidence": 1.0
+      }
+    ],
+    "?cpd": [
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Compound",
+        "confidence": 1.0
+      }
+    ],
+    "?reaction": [
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "confidence": 1.0
+      }
+    ],
+    "?equation": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?drug": [
+      {
+        "class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "confidence": 0.5
+      },
+      {
+        "class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "confidence": 0.5
+      }
+    ],
+    "?drugDesc": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Note: Multiple class interpretations exist but all route to same endpoints\n# A single query retrieves all data regardless of class ambiguity\n\nSELECT ?cpd ?drug ?drugDesc ?equation ?reaction\nWHERE {\n\n  SERVICE <http://localhost:8892/sparql/> {\n    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?drugDesc . # ?drug:drugs, ?drugDesc:Literal\n    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/cathartics> .\n    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId> ?cpd .\n  }\n\n  SERVICE <http://localhost:8895/sparql/> {\n    ?reaction <http://bio2rdf.org/ns/kegg#xEnzyme> ?enzyme . # ?reaction:Reaction, ?enzyme:Enzyme\n    ?reaction <http://bio2rdf.org/ns/kegg#equation> ?equation . # ?reaction:Reaction, ?equation:Literal\n    ?enzyme <http://bio2rdf.org/ns/kegg#xSubstrate> ?cpd . # ?enzyme:Enzyme, ?cpd:Compound\n    ?enzyme <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/ns/kegg#Enzyme> .\n  }\n}\nLIMIT 1000\n",
+  "predicate_selectivity": [
+    {
+      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>",
+      "cardinality": 1861,
+      "num_endpoints": 1,
+      "num_possible_classes": 2
+    },
+    {
+      "predicate": "<http://bio2rdf.org/ns/kegg#xEnzyme>",
+      "cardinality": 7174,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://bio2rdf.org/ns/kegg#equation>",
+      "cardinality": 7827,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://bio2rdf.org/ns/kegg#xSubstrate>",
+      "cardinality": 8384,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sbm: <http://sparqlbuilder.org/2015/09/rdf-metadata-schema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sd:Service ;
+    sd:defaultDataset [ a sd:Dataset ;
+            void:classPartition [ a void:Dataset ;
+                    void:class <http://www.geonames.org/ontology#Feature> ;
+                    void:entities "1780"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class skos:Concept ;
+                    void:entities "9943"^^xsd:long ] ;
+            void:classes "2"^^xsd:long ;
+            void:properties "16"^^xsd:long ;
+            void:propertyPartition [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://www.geonames.org/ontology#postalCode> ;
+                    void:triples "501"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "501"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://www.geonames.org/ontology#Feature> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://data.nytimes.com/elements/search_api_query> ;
+                    void:triples "9943"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "9943"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass skos:Concept ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://www.geonames.org/ontology#alternateName> ;
+                    void:triples "58074"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "58074"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://www.geonames.org/ontology#Feature> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://www.geonames.org/ontology#name> ;
+                    void:triples "1780"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1780"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://www.geonames.org/ontology#Feature> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://data.nytimes.com/elements/number_of_variants> ;
+                    void:triples "9943"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "9943"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass skos:Concept ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://data.nytimes.com/elements/associated_article_count> ;
+                    void:triples "9943"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "9943"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass skos:Concept ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property owl:sameAs ;
+                    void:triples "1787"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.ordnancesurvey.co.uk> ;
+                            sbm:authorityCount "5"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://rdf.freebase.com> ;
+                            sbm:authorityCount "9939"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://data.nytimes.com> ;
+                            sbm:authorityCount "30423"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://sws.geonames.org> ;
+                            sbm:authorityCount "1250"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://data.nytimes.com> ;
+                            sbm:authorityCount "9943"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://sws.geonames.org> ;
+                            sbm:authorityCount "1789"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbpedia.org> ;
+                            sbm:authorityCount "9990"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://rdf.insee.fr> ;
+                            sbm:authorityCount "7"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1787"^^xsd:long ;
+                            sbm:objectClass <http://www.geonames.org/ontology#Feature> ;
+                            sbm:subjectClass skos:Concept ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://www.geonames.org/ontology#population> ;
+                    void:triples "1283"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1283"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://www.geonames.org/ontology#Feature> ] ],
+                [ a void:Dataset ;
+                    void:classes "1"^^xsd:long ;
+                    void:property <http://www.geonames.org/ontology#parentFeature> ;
+                    void:triples "585"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://sws.geonames.org> ;
+                            sbm:authorityCount "1780"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://sws.geonames.org> ;
+                            sbm:authorityCount "1780"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "585"^^xsd:long ;
+                            sbm:objectClass <http://www.geonames.org/ontology#Feature> ;
+                            sbm:subjectClass <http://www.geonames.org/ontology#Feature> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://data.nytimes.com/elements/latest_use> ;
+                    void:triples "7189"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "7189"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass skos:Concept ] ],
+                [ a void:Dataset ;
+                    void:classes "3"^^xsd:long ;
+                    void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+                    void:triples "3567"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1780"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://www.geonames.org/ontology#Feature> ],
+                        [ a sbm:ClassRelation ;
+                            void:triples "1787"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass skos:Concept ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property skos:prefLabel ;
+                    void:triples "9943"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "9943"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass skos:Concept ] ],
+                [ a void:Dataset ;
+                    void:classes "3"^^xsd:long ;
+                    void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+                    void:triples "3567"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1780"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://www.geonames.org/ontology#Feature> ],
+                        [ a sbm:ClassRelation ;
+                            void:triples "1787"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass skos:Concept ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property skos:definition ;
+                    void:triples "1142"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1142"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass skos:Concept ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://data.nytimes.com/elements/first_use> ;
+                    void:triples "7189"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "7189"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass skos:Concept ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://www.geonames.org/ontology#countryCode> ;
+                    void:triples "1761"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1761"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://www.geonames.org/ontology#Feature> ] ] ;
+            void:triples "335197"^^xsd:long ;
+            sbm:crawlLog [ a sbm:CrawlLog ;
+                    sbm:crawlEndTime "2026-03-04T04:38:46+09:00"^^xsd:dateTime ;
+                    sbm:crawlStartTime "2026-03-03T18:56:13+09:00"^^xsd:dateTime ;
+                    sbm:endpointAccesses "26"^^xsd:long ] ;
+            sd:namedGraph [ a sd:NamedGraph ;
+                    sd:name <file:///Users/yamamotobikutorueiichi/codes/federated_query/tripledataprofiler/largerdfbench/nyt> ] ] ;
+    sd:endpoint <http://localhost:8897/sparql/> .
+

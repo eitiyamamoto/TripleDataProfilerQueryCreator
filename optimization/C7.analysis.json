@@ -1,0 +1,182 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [
+      [
+        "?proceedings",
+        "<http://data.semanticweb.org/ns/swc/ontology#relatedToEvent>",
+        "<http://data.semanticweb.org/conference/eswc/2010>"
+      ],
+      [
+        "?role",
+        "<http://data.semanticweb.org/ns/swc/ontology#isRoleAt>",
+        "<http://data.semanticweb.org/conference/eswc/2010>"
+      ],
+      [
+        "?role",
+        "<http://data.semanticweb.org/ns/swc/ontology#heldBy>",
+        "?author"
+      ],
+      [
+        "?paper",
+        "<http://swrc.ontoware.org/ontology#author>",
+        "?author"
+      ],
+      [
+        "?paper",
+        "<http://data.semanticweb.org/ns/swc/ontology#isPartOf>",
+        "?proceedings"
+      ],
+      [
+        "?author",
+        "<http://xmlns.com/foaf/0.1/based_near>",
+        "?place"
+      ],
+      [
+        "?place",
+        "<http://dbpedia.org/ontology/capital>",
+        "?capital"
+      ],
+      [
+        "?place",
+        "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>",
+        "?latitude"
+      ],
+      [
+        "?place",
+        "<http://www.w3.org/2003/01/geo/wgs84_pos#long>",
+        "?longitude"
+      ]
+    ],
+    "num_triples": 9,
+    "unique_predicates": [
+      "<http://data.semanticweb.org/ns/swc/ontology#heldBy>",
+      "<http://data.semanticweb.org/ns/swc/ontology#isPartOf>",
+      "<http://data.semanticweb.org/ns/swc/ontology#isRoleAt>",
+      "<http://data.semanticweb.org/ns/swc/ontology#relatedToEvent>",
+      "<http://dbpedia.org/ontology/capital>",
+      "<http://swrc.ontoware.org/ontology#author>",
+      "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>",
+      "<http://www.w3.org/2003/01/geo/wgs84_pos#long>",
+      "<http://xmlns.com/foaf/0.1/based_near>"
+    ],
+    "subjects": [
+      "?author",
+      "?paper",
+      "?place",
+      "?proceedings",
+      "?role"
+    ],
+    "objects": [
+      "<http://data.semanticweb.org/conference/eswc/2010>",
+      "?author",
+      "?capital",
+      "?latitude",
+      "?longitude",
+      "?place",
+      "?proceedings"
+    ],
+    "variables": []
+  },
+  "total_triples": 9,
+  "unique_predicates": [
+    "<http://data.semanticweb.org/ns/swc/ontology#heldBy>",
+    "<http://data.semanticweb.org/ns/swc/ontology#isPartOf>",
+    "<http://data.semanticweb.org/ns/swc/ontology#isRoleAt>",
+    "<http://data.semanticweb.org/ns/swc/ontology#relatedToEvent>",
+    "<http://dbpedia.org/ontology/capital>",
+    "<http://swrc.ontoware.org/ontology#author>",
+    "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>",
+    "<http://www.w3.org/2003/01/geo/wgs84_pos#long>",
+    "<http://xmlns.com/foaf/0.1/based_near>"
+  ],
+  "subjects": [
+    "?author",
+    "?paper",
+    "?place",
+    "?proceedings",
+    "?role"
+  ],
+  "objects": [
+    "<http://data.semanticweb.org/conference/eswc/2010>",
+    "?author",
+    "?capital",
+    "?latitude",
+    "?longitude",
+    "?place",
+    "?proceedings"
+  ],
+  "variables": [],
+  "num_unique_predicates": 9,
+  "query_modifiers": {
+    "distinct": true,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1780,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1787,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www.w3.org/2003/01/geo/wgs84_pos#long>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1780,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1787,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8897/sparql/"
+  ],
+  "num_endpoints": 1,
+  "query_id": "C7",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C7",
+  "metadata_coverage": {
+    "total_predicates": 9,
+    "covered_predicates": 2,
+    "missing_predicates": [
+      "<http://data.semanticweb.org/ns/swc/ontology#heldBy>",
+      "<http://data.semanticweb.org/ns/swc/ontology#isPartOf>",
+      "<http://data.semanticweb.org/ns/swc/ontology#isRoleAt>",
+      "<http://data.semanticweb.org/ns/swc/ontology#relatedToEvent>",
+      "<http://dbpedia.org/ontology/capital>",
+      "<http://swrc.ontoware.org/ontology#author>",
+      "<http://xmlns.com/foaf/0.1/based_near>"
+    ],
+    "coverage_ratio": 0.2222,
+    "is_partial": true
+  }
+}

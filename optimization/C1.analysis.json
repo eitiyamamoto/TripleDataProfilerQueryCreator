@@ -1,0 +1,285 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [
+      [
+        "?drug",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugType>",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugtype/smallMolecule>"
+      ],
+      [
+        "?drug",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>",
+        "?compound"
+      ],
+      [
+        "?drug",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>",
+        "?drugDesc"
+      ],
+      [
+        "?enzyme",
+        "<http://bio2rdf.org/ns/kegg#xSubstrate>",
+        "?compound"
+      ],
+      [
+        "?Chemicalreaction",
+        "<http://bio2rdf.org/ns/kegg#xEnzyme>",
+        "?enzyme"
+      ],
+      [
+        "?Chemicalreaction",
+        "<http://bio2rdf.org/ns/kegg#equation>",
+        "?ChemicalEquation"
+      ],
+      [
+        "?Chemicalreaction",
+        "<http://purl.org/dc/elements/1.1/title>",
+        "?ReactionTitle"
+      ],
+      [
+        "?drug",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/molecularWeightAverage>",
+        "?molecularWeightAverage"
+      ]
+    ],
+    "num_triples": 8,
+    "unique_predicates": [
+      "<http://bio2rdf.org/ns/kegg#equation>",
+      "<http://bio2rdf.org/ns/kegg#xEnzyme>",
+      "<http://bio2rdf.org/ns/kegg#xSubstrate>",
+      "<http://purl.org/dc/elements/1.1/title>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugType>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/molecularWeightAverage>"
+    ],
+    "subjects": [
+      "?Chemicalreaction",
+      "?drug",
+      "?enzyme"
+    ],
+    "objects": [
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugtype/smallMolecule>",
+      "?ChemicalEquation",
+      "?ReactionTitle",
+      "?compound",
+      "?drugDesc",
+      "?enzyme",
+      "?molecularWeightAverage"
+    ],
+    "variables": []
+  },
+  "total_triples": 8,
+  "unique_predicates": [
+    "<http://bio2rdf.org/ns/kegg#equation>",
+    "<http://bio2rdf.org/ns/kegg#xEnzyme>",
+    "<http://bio2rdf.org/ns/kegg#xSubstrate>",
+    "<http://purl.org/dc/elements/1.1/title>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugType>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/molecularWeightAverage>"
+  ],
+  "subjects": [
+    "?Chemicalreaction",
+    "?drug",
+    "?enzyme"
+  ],
+  "objects": [
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugtype/smallMolecule>",
+    "?ChemicalEquation",
+    "?ReactionTitle",
+    "?compound",
+    "?drugDesc",
+    "?enzyme",
+    "?molecularWeightAverage"
+  ],
+  "variables": [],
+  "num_unique_predicates": 8,
+  "query_modifiers": {
+    "distinct": true,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://bio2rdf.org/ns/kegg#equation>": [
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 7827,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1861,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1861,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://bio2rdf.org/ns/kegg#xSubstrate>": [
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Enzyme",
+        "object_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "triple_count": 8384,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      }
+    ],
+    "<http://bio2rdf.org/ns/kegg#xEnzyme>": [
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "object_class": "http://bio2rdf.org/ns/kegg#Enzyme",
+        "triple_count": 7174,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/molecularWeightAverage>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4727,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4727,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://purl.org/dc/elements/1.1/title>": [
+      {
+        "endpoint": "http://localhost:8890/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/chebi#Compound",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 34055,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": "http://purl.org/ontology/mo/Track",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 45634,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": "http://purl.org/ontology/mo/Record",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 5768,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 7827,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 8117,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 14071,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Enzyme",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4131,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8890/sparql/",
+    "http://localhost:8892/sparql/",
+    "http://localhost:8894/sparql/",
+    "http://localhost:8895/sparql/"
+  ],
+  "num_endpoints": 4,
+  "query_id": "C1",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C1",
+  "metadata_coverage": {
+    "total_predicates": 8,
+    "covered_predicates": 6,
+    "missing_predicates": [
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugType>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
+    ],
+    "coverage_ratio": 0.75,
+    "is_partial": true
+  }
+}

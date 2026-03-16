@@ -1,0 +1,163 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [],
+    "num_triples": 0,
+    "unique_predicates": [],
+    "subjects": [],
+    "objects": [],
+    "variables": [],
+    "children": [
+      {
+        "scope_type": "union_branch",
+        "triples": [
+          [
+            "?patient",
+            "<http://tcga.deri.ie/schema/result>",
+            "?results"
+          ],
+          [
+            "?patient",
+            "<http://dbpedia.org/ontology/country>",
+            "?country"
+          ],
+          [
+            "?uri",
+            "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+            "?patient"
+          ],
+          [
+            "?results",
+            "<http://tcga.deri.ie/schema/reads_per_million_miRNA_mapped>",
+            "?expressionValues"
+          ]
+        ],
+        "num_triples": 4,
+        "unique_predicates": [
+          "<http://dbpedia.org/ontology/country>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/reads_per_million_miRNA_mapped>",
+          "<http://tcga.deri.ie/schema/result>"
+        ],
+        "subjects": [
+          "?patient",
+          "?results",
+          "?uri"
+        ],
+        "objects": [
+          "?country",
+          "?expressionValues",
+          "?patient",
+          "?results"
+        ],
+        "variables": [],
+        "label": "LEFT"
+      },
+      {
+        "scope_type": "union_branch",
+        "triples": [
+          [
+            "?patient",
+            "<http://tcga.deri.ie/schema/result>",
+            "?exonResults"
+          ],
+          [
+            "?patient",
+            "<http://dbpedia.org/ontology/country>",
+            "?country"
+          ],
+          [
+            "?s",
+            "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+            "?patient"
+          ],
+          [
+            "?exonResults",
+            "<http://tcga.deri.ie/schema/RPKM>",
+            "?expressionValues"
+          ]
+        ],
+        "num_triples": 4,
+        "unique_predicates": [
+          "<http://dbpedia.org/ontology/country>",
+          "<http://tcga.deri.ie/schema/RPKM>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/result>"
+        ],
+        "subjects": [
+          "?exonResults",
+          "?patient",
+          "?s"
+        ],
+        "objects": [
+          "?country",
+          "?exonResults",
+          "?expressionValues",
+          "?patient"
+        ],
+        "variables": [],
+        "label": "RIGHT"
+      }
+    ]
+  },
+  "total_triples": 8,
+  "unique_predicates": [
+    "<http://dbpedia.org/ontology/country>",
+    "<http://tcga.deri.ie/schema/RPKM>",
+    "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+    "<http://tcga.deri.ie/schema/reads_per_million_miRNA_mapped>",
+    "<http://tcga.deri.ie/schema/result>"
+  ],
+  "subjects": [
+    "?exonResults",
+    "?patient",
+    "?results",
+    "?s",
+    "?uri"
+  ],
+  "objects": [
+    "?country",
+    "?exonResults",
+    "?expressionValues",
+    "?patient",
+    "?results"
+  ],
+  "variables": [],
+  "num_unique_predicates": 5,
+  "query_modifiers": {
+    "distinct": false,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://tcga.deri.ie/schema/RPKM>": [
+      {
+        "endpoint": "http://localhost:8888/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/expression_exon_result",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 57429308,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8888/sparql/"
+  ],
+  "num_endpoints": 1,
+  "query_id": "B4",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B4",
+  "metadata_coverage": {
+    "total_predicates": 5,
+    "covered_predicates": 1,
+    "missing_predicates": [
+      "<http://dbpedia.org/ontology/country>",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "<http://tcga.deri.ie/schema/reads_per_million_miRNA_mapped>",
+      "<http://tcga.deri.ie/schema/result>"
+    ],
+    "coverage_ratio": 0.2,
+    "is_partial": true
+  }
+}

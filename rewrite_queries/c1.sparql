@@ -1,0 +1,30 @@
+PREFIX drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/> 
+PREFIX drugtype: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugtype/>
+PREFIX kegg: <http://bio2rdf.org/ns/kegg#>
+PREFIX purl: <http://purl.org/dc/elements/1.1/>
+
+SELECT DISTINCT ?drug ?drugDesc ?molecularWeightAverage ?compound ?ReactionTitle ?ChemicalEquation 
+WHERE {
+  # --- Subquery Start ---
+  {
+    SELECT ?drug ?drugDesc ?compound ?molecularWeightAverage
+    WHERE {
+      ?drug drugbank:drugType drugtype:smallMolecule .
+      ?drug drugbank:keggCompoundId ?compound .
+      ?drug drugbank:description ?drugDesc .
+      
+      OPTIONAL { 
+        ?drug drugbank:molecularWeightAverage ?molecularWeightAverage .
+        FILTER(?molecularWeightAverage > 114)
+      }
+    }
+  }
+  # --- Subquery End ---
+
+  # Now we join the reduced set of drugs with the reaction data
+  ?enzyme           kegg:xSubstrate   ?compound .
+  ?Chemicalreaction kegg:xEnzyme      ?enzyme .
+  ?Chemicalreaction kegg:equation     ?ChemicalEquation .
+  ?Chemicalreaction purl:title        ?ReactionTitle .
+}
+

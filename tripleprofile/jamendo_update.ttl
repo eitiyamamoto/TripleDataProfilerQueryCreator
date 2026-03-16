@@ -1,0 +1,283 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sbm: <http://sparqlbuilder.org/2015/09/rdf-metadata-schema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sd:Service ;
+    sd:defaultDataset [ a sd:Dataset ;
+            void:classPartition [ a void:Dataset ;
+                    void:class <http://purl.org/ontology/mo/Track> ;
+                    void:entities "45634"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://purl.org/ontology/mo/ED2K> ;
+                    void:entities "11572"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://purl.org/ontology/mo/MusicArtist> ;
+                    void:entities "3505"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tag> ;
+                    void:entities "9235"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://purl.org/ontology/mo/Playlist> ;
+                    void:entities "102804"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://purl.org/ontology/mo/Record> ;
+                    void:entities "5786"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class time:Interval ;
+                    void:entities "45634"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://purl.org/ontology/mo/Torrent> ;
+                    void:entities "11572"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class foaf:Document ;
+                    void:entities "92"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://purl.org/ontology/mo/Lyrics> ;
+                    void:entities "8823"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://purl.org/ontology/mo/Signal> ;
+                    void:entities "45634"^^xsd:long ] ;
+            void:classes "11"^^xsd:long ;
+            void:properties "17"^^xsd:long ;
+            void:propertyPartition [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property foaf:name ;
+                    void:triples "3505"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "3505"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/MusicArtist> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://purl.org/ontology/mo/track_number> ;
+                    void:triples "45634"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "45634"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Track> ] ],
+                [ a void:Dataset ;
+                    void:classes "4"^^xsd:long ;
+                    void:property dc:format ;
+                    void:triples "125948"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "11572"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Torrent> ],
+                        [ a sbm:ClassRelation ;
+                            void:triples "11572"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/ED2K> ],
+                        [ a sbm:ClassRelation ;
+                            void:triples "102804"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Playlist> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://www.holygoat.co.uk/owl/redwood/0.1/tags/tagName> ;
+                    void:triples "9235"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "9235"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tag> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property dc:date ;
+                    void:triples "5786"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "5786"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Record> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://purl.org/ontology/mo/text> ;
+                    void:triples "8823"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "8823"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Lyrics> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property dc:description ;
+                    void:triples "880"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "880"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Record> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property foaf:maker ;
+                    void:triples "5786"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "5786"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "5786"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "5786"^^xsd:long ;
+                            sbm:objectClass <http://purl.org/ontology/mo/MusicArtist> ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Record> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://purl.org/ontology/mo/biography> ;
+                    void:triples "485"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "485"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/MusicArtist> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property foaf:made ;
+                    void:triples "5786"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "5786"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "5786"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "5786"^^xsd:long ;
+                            sbm:objectClass <http://purl.org/ontology/mo/Record> ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/MusicArtist> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://purl.org/ontology/mo/published_as> ;
+                    void:triples "45634"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "45634"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "45634"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "45634"^^xsd:long ;
+                            sbm:objectClass <http://purl.org/ontology/mo/Track> ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Signal> ] ],
+                [ a void:Dataset ;
+                    void:classes "3"^^xsd:long ;
+                    void:property dc:title ;
+                    void:triples "51402"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "45634"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Track> ],
+                        [ a sbm:ClassRelation ;
+                            void:triples "5768"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Record> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://purl.org/ontology/mo/track> ;
+                    void:triples "45634"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "45634"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "45634"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "45634"^^xsd:long ;
+                            sbm:objectClass <http://purl.org/ontology/mo/Track> ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Record> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://purl.org/ontology/mo/license> ;
+                    void:triples "45634"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "45634"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://artlibre.org> ;
+                            sbm:authorityCount "1728"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://creativecommons.org> ;
+                            sbm:authorityCount "43906"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "45634"^^xsd:long ;
+                            sbm:objectClass foaf:Document ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Track> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://www.holygoat.co.uk/owl/redwood/0.1/tags/taggedWithTag> ;
+                    void:triples "53438"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "53438"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "53438"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "53438"^^xsd:long ;
+                            sbm:objectClass <http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tag> ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Record> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://purl.org/ontology/mo/time> ;
+                    void:triples "45634"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "45634"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "45634"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "45634"^^xsd:long ;
+                            sbm:objectClass time:Interval ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Signal> ] ],
+                [ a void:Dataset ;
+                    void:classes "5"^^xsd:long ;
+                    void:property <http://purl.org/ontology/mo/available_as> ;
+                    void:triples "125948"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbtune.org> ;
+                            sbm:authorityCount "125948"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.jamendo.com> ;
+                            sbm:authorityCount "125948"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "91268"^^xsd:long ;
+                            sbm:objectClass <http://purl.org/ontology/mo/Playlist> ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Track> ],
+                        [ a sbm:ClassRelation ;
+                            void:triples "11536"^^xsd:long ;
+                            sbm:objectClass <http://purl.org/ontology/mo/Playlist> ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Record> ],
+                        [ a sbm:ClassRelation ;
+                            void:triples "11572"^^xsd:long ;
+                            sbm:objectClass <http://purl.org/ontology/mo/Torrent> ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Record> ],
+                        [ a sbm:ClassRelation ;
+                            void:triples "11572"^^xsd:long ;
+                            sbm:objectClass <http://purl.org/ontology/mo/ED2K> ;
+                            sbm:subjectClass <http://purl.org/ontology/mo/Record> ] ] ;
+            void:triples "1049647"^^xsd:long ;
+            sbm:crawlLog [ a sbm:CrawlLog ;
+                    sbm:crawlEndTime "2026-03-04T14:19:37+09:00"^^xsd:dateTime ;
+                    sbm:crawlStartTime "2026-03-03T18:56:47+09:00"^^xsd:dateTime ;
+                    sbm:endpointAccesses "55"^^xsd:long ] ;
+            sd:namedGraph [ a sd:NamedGraph ;
+                    sd:name <file:///Users/yamamotobikutorueiichi/codes/federated_query/tripledataprofiler/largerdfbench/jamendo> ] ] ;
+    sd:endpoint <http://localhost:8894/sparql/> .
+

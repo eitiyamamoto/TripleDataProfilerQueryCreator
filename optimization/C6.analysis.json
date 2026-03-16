@@ -1,0 +1,243 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [
+      [
+        "?nytURI",
+        "<http://www.w3.org/2002/07/owl#sameAs>",
+        "?dbpediaURI"
+      ],
+      [
+        "?nytURI",
+        "<http://data.nytimes.com/elements/associated_article_count>",
+        "?articleCount"
+      ],
+      [
+        "?nytURI",
+        "<http://data.nytimes.com/elements/first_use>",
+        "?first_use"
+      ],
+      [
+        "?nytURI",
+        "<http://data.nytimes.com/elements/latest_use>",
+        "?latest_use"
+      ],
+      [
+        "?nytURI",
+        "<http://data.nytimes.com/elements/number_of_variants>",
+        "?variants"
+      ],
+      [
+        "?nytURI",
+        "<http://data.nytimes.com/elements/topicPage>",
+        "?news"
+      ],
+      [
+        "?actor",
+        "<http://www.w3.org/2002/07/owl#sameAs>",
+        "?dbpediaURI"
+      ],
+      [
+        "?film",
+        "<http://data.linkedmdb.org/resource/movie/actor>",
+        "?actor"
+      ],
+      [
+        "?film",
+        "<http://purl.org/dc/terms/title>",
+        "?filmTitle"
+      ]
+    ],
+    "num_triples": 9,
+    "unique_predicates": [
+      "<http://data.linkedmdb.org/resource/movie/actor>",
+      "<http://data.nytimes.com/elements/associated_article_count>",
+      "<http://data.nytimes.com/elements/first_use>",
+      "<http://data.nytimes.com/elements/latest_use>",
+      "<http://data.nytimes.com/elements/number_of_variants>",
+      "<http://data.nytimes.com/elements/topicPage>",
+      "<http://purl.org/dc/terms/title>",
+      "<http://www.w3.org/2002/07/owl#sameAs>"
+    ],
+    "subjects": [
+      "?actor",
+      "?film",
+      "?nytURI"
+    ],
+    "objects": [
+      "?actor",
+      "?articleCount",
+      "?dbpediaURI",
+      "?filmTitle",
+      "?first_use",
+      "?latest_use",
+      "?news",
+      "?variants"
+    ],
+    "variables": []
+  },
+  "total_triples": 9,
+  "unique_predicates": [
+    "<http://data.linkedmdb.org/resource/movie/actor>",
+    "<http://data.nytimes.com/elements/associated_article_count>",
+    "<http://data.nytimes.com/elements/first_use>",
+    "<http://data.nytimes.com/elements/latest_use>",
+    "<http://data.nytimes.com/elements/number_of_variants>",
+    "<http://data.nytimes.com/elements/topicPage>",
+    "<http://purl.org/dc/terms/title>",
+    "<http://www.w3.org/2002/07/owl#sameAs>"
+  ],
+  "subjects": [
+    "?actor",
+    "?film",
+    "?nytURI"
+  ],
+  "objects": [
+    "?actor",
+    "?articleCount",
+    "?dbpediaURI",
+    "?filmTitle",
+    "?first_use",
+    "?latest_use",
+    "?news",
+    "?variants"
+  ],
+  "variables": [],
+  "num_unique_predicates": 8,
+  "query_modifiers": {
+    "distinct": false,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://data.nytimes.com/elements/first_use>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 7189,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://data.nytimes.com/elements/associated_article_count>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 9943,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://data.nytimes.com/elements/latest_use>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 7189,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www.w3.org/2002/07/owl#sameAs>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "object_class": "http://www.geonames.org/ontology#Feature",
+        "triple_count": 1787,
+        "authorities": {
+          "subject": [
+            "http://data.nytimes.com",
+            "http://sws.geonames.org"
+          ],
+          "object": [
+            "http://data.nytimes.com",
+            "http://dbpedia.org",
+            "http://rdf.freebase.com",
+            "http://rdf.insee.fr",
+            "http://sws.geonames.org",
+            "http://www.ordnancesurvey.co.uk"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "object_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "triple_count": 7827,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "object_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "triple_count": 7426,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "object_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "triple_count": 13863,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      }
+    ],
+    "<http://data.nytimes.com/elements/number_of_variants>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 9943,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8895/sparql/",
+    "http://localhost:8897/sparql/"
+  ],
+  "num_endpoints": 2,
+  "query_id": "C6",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C6",
+  "metadata_coverage": {
+    "total_predicates": 8,
+    "covered_predicates": 5,
+    "missing_predicates": [
+      "<http://data.linkedmdb.org/resource/movie/actor>",
+      "<http://data.nytimes.com/elements/topicPage>",
+      "<http://purl.org/dc/terms/title>"
+    ],
+    "coverage_ratio": 0.625,
+    "is_partial": true
+  }
+}

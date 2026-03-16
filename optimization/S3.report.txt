@@ -1,0 +1,79 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 5
+Unique Predicates: 5
+Endpoints Used: 2
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. sameAs
+   Cardinality: 1.8K
+   Endpoints: 2
+   Possible Class Pairs: 4
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8895/sparql/
+  Predicates: 3
+  Total Triples: 29.1K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 1
+  Total Triples: 1.8K
+  Estimated Retrieved Triples: 1.8K
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 1.8K
+Confidence: medium
+Reasoning: Estimated from 2 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'sameAs' (1.8K triples)
+• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 1/5
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with UNION for Multiple Class Interpretations
+# Each UNION branch uses different endpoints or predicates
+
+SELECT ?page ?party ?president ?x
+WHERE {
+  # Scenario 1: ?x=Concept, ?president=Feature
+  {
+    SERVICE <http://localhost:8897/sparql/> {
+      ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . # ?x:Concept, ?president:Feature
+      ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> .
+      ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .
+      ?president <http://dbpedia.org/ontology/party> ?party .
+      ?x <http://data.nytimes.com/elements/topicPage> ?page .
+    }
+  }
+
+  UNION
+
+  # Scenario 2: ?x=Drug, ?president=Drug
+  {
+    SERVICE <http://localhost:8895/sparql/> {
+      ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . # ?x:Drug, ?president:Drug
+      ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> .
+      ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .
+      ?president <http://dbpedia.org/ontology/party> ?party .
+      ?x <http://data.nytimes.com/elements/topicPage> ?page .
+    }
+  }
+}
+LIMIT 1000

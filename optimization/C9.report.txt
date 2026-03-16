@@ -1,0 +1,120 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 9
+Unique Predicates: 9
+Endpoints Used: 3
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. affectedOrganism
+   Cardinality: 1.5K
+   Endpoints: 1
+   Possible Class Pairs: 2
+2. sameAs
+   Cardinality: 1.8K
+   Endpoints: 2
+   Possible Class Pairs: 4
+3. description
+   Cardinality: 1.9K
+   Endpoints: 1
+   Possible Class Pairs: 2
+4. structure
+   Cardinality: 4.8K
+   Endpoints: 1
+   Possible Class Pairs: 2
+5. interactionDrug2
+   Cardinality: 10.1K
+   Endpoints: 1
+   Possible Class Pairs: 2
+6. interactionDrug1
+   Cardinality: 10.1K
+   Endpoints: 1
+   Possible Class Pairs: 2
+7. text
+   Cardinality: 10.1K
+   Endpoints: 1
+   Possible Class Pairs: 1
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8892/sparql/
+  Predicates: 11
+  Total Triples: 66.8K
+  Estimated Retrieved Triples: 1.5K
+Endpoint: http://localhost:8895/sparql/
+  Predicates: 3
+  Total Triples: 29.1K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 1
+  Total Triples: 1.8K
+  Estimated Retrieved Triples: 1.8K
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 1.5K
+Confidence: medium
+Reasoning: Estimated from 3 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'affectedOrganism' (1.5K triples)
+• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 3 endpoints
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 7/9
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with UNION for Multiple Class Interpretations
+# Each UNION branch uses different endpoints or predicates
+
+SELECT ?Drug ?IntEffect ?InteractionName ?casRegistryNumber ?description ?drugbankDrug ?drugbankDrug2 ?structure
+WHERE {
+  # Scenario 1: ?InteractionName=drug_interactions, ?IntEffect=Literal, ?description=Literal, ?structure=Literal, ?drugbankDrug=Offer, ?Drug=Feature, ?drugbankDrug2=drugs
+  {
+    SERVICE <http://localhost:8892/sparql/> {
+      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> "Humans and other mammals" . # ?drugbankDrug:Offer
+      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?description . # ?drugbankDrug:Offer, ?description:Literal
+      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/structure> ?structure . # ?drugbankDrug:Offer, ?structure:Literal
+      ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?drugbankDrug . # ?InteractionName:drug_interactions, ?drugbankDrug:Offer
+      ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?drugbankDrug2 . # ?InteractionName:drug_interactions, ?drugbankDrug2:drugs
+      ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect . # ?InteractionName:drug_interactions, ?IntEffect:Literal
+      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?casRegistryNumber .
+    }
+    SERVICE <http://localhost:8897/sparql/> {
+      ?drugbankDrug <http://www.w3.org/2002/07/owl#sameAs> ?Drug . # ?drugbankDrug:Concept, ?Drug:Feature
+      ?Drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Drug> .
+    }
+  }
+
+  UNION
+
+  # Scenario 2: ?InteractionName=drug_interactions, ?IntEffect=Literal, ?description=Literal, ?structure=Literal, ?drugbankDrug=Offer, ?Drug=Drug, ?drugbankDrug2=drugs
+  {
+    SERVICE <http://localhost:8892/sparql/> {
+      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> "Humans and other mammals" . # ?drugbankDrug:Offer
+      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?description . # ?drugbankDrug:Offer, ?description:Literal
+      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/structure> ?structure . # ?drugbankDrug:Offer, ?structure:Literal
+      ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?drugbankDrug . # ?InteractionName:drug_interactions, ?drugbankDrug:Offer
+      ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?drugbankDrug2 . # ?InteractionName:drug_interactions, ?drugbankDrug2:drugs
+      ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect . # ?InteractionName:drug_interactions, ?IntEffect:Literal
+      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?casRegistryNumber .
+    }
+    SERVICE <http://localhost:8895/sparql/> {
+      ?drugbankDrug <http://www.w3.org/2002/07/owl#sameAs> ?Drug . # ?drugbankDrug:Drug, ?Drug:Drug
+      ?Drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Drug> .
+    }
+  }
+}
+LIMIT 1000

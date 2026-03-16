@@ -1,0 +1,73 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 4
+Unique Predicates: 4
+Endpoints Used: 2
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. parentFeature
+   Cardinality: 585
+   Endpoints: 1
+   Possible Class Pairs: 1
+2. name
+   Cardinality: 1.8K
+   Endpoints: 1
+   Possible Class Pairs: 1
+3. name
+   Cardinality: 3.5K
+   Endpoints: 1
+   Possible Class Pairs: 1
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 1
+  Total Triples: 3.5K
+  Estimated Retrieved Triples: 3.5K
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 2
+  Total Triples: 2.4K
+  Estimated Retrieved Triples: 585
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 585
+Confidence: medium
+Reasoning: Estimated from 3 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'parentFeature' (585 triples)
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 3/4
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with Class Constraints
+# Variables are constrained by inferred class types and grouped by endpoint
+
+SELECT ?artist ?germany ?location ?name
+WHERE {
+
+  SERVICE <http://localhost:8894/sparql/> {
+    ?artist <http://xmlns.com/foaf/0.1/name> ?name . # ?artist:MusicArtist, ?name:Literal
+    ?artist <http://xmlns.com/foaf/0.1/based_near> ?location .
+  }
+
+  SERVICE <http://localhost:8897/sparql/> {
+    ?location <http://www.geonames.org/ontology#parentFeature> ?germany . # ?location:Feature, ?germany:Feature
+    ?germany <http://www.geonames.org/ontology#name> "Federal Republic of Germany" . # ?germany:Feature
+  }
+}
+LIMIT 1000

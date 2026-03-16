@@ -1,0 +1,76 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 10
+Unique Predicates: 10
+Endpoints Used: 1
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. indication
+   Cardinality: 1.5K
+   Endpoints: 1
+   Possible Class Pairs: 2
+2. chemicalFormula
+   Cardinality: 4.7K
+   Endpoints: 1
+   Possible Class Pairs: 2
+3. genericName
+   Cardinality: 4.8K
+   Endpoints: 1
+   Possible Class Pairs: 2
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8892/sparql/
+  Predicates: 6
+  Total Triples: 21.9K
+  Estimated Retrieved Triples: 1.5K
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 1.5K
+Confidence: medium
+Reasoning: Estimated from 5 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'indication' (1.5K triples)
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 3/10
+Unknown Endpoint Triples: 5
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with Class Constraints
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
+
+SELECT DISTINCT ?compound ?country ?drgBnkDrg ?drugName ?drugbcr ?formula ?gender ?indication ?patient ?popDensity ?uri
+WHERE {
+
+  SERVICE <http://localhost:8892/sparql/> {
+    ?drgBnkDrg <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication> ?indication . # ?drgBnkDrg:drugs, ?indication:Literal
+    ?drgBnkDrg <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula> ?formula . # ?drgBnkDrg:drugs, ?formula:Literal
+    ?drgBnkDrg <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> ?drugName . # ?drgBnkDrg:drugs, ?drugName:Literal
+    ?drgBnkDrg <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId> ?compound .
+    ?drugbcr <http://tcga.deri.ie/schema/drug_name> ?drugName .
+  }
+
+  # Unknown endpoint (no metadata)
+    ?patient <http://dbpedia.org/ontology/country> ?country .
+    ?patient <http://tcga.deri.ie/schema/bcr_drug_barcode> ?drugbcr .
+    ?patient <http://tcga.deri.ie/schema/gender> ?gender .
+    ?uri <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .
+    ?country <http://dbpedia.org/ontology/populationDensity> ?popDensity .
+}
+LIMIT 1000

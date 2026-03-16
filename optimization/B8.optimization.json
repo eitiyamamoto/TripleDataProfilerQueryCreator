@@ -1,0 +1,72 @@
+{
+  "query_id": "B8",
+  "analysis_file": "optimization/B8.analysis.json",
+  "optimization_status": "partial",
+  "metadata_coverage": {
+    "total_predicates": 5,
+    "covered_predicates": 1,
+    "missing_predicates": [
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "<http://tcga.deri.ie/schema/beta_value>",
+      "<http://tcga.deri.ie/schema/protein_expression_value>",
+      "<http://tcga.deri.ie/schema/result>"
+    ],
+    "coverage_ratio": 0.2,
+    "is_partial": true
+  },
+  "unknown_endpoint_triples": [],
+  "optimization_analysis": {
+    "optimization_strategy": "federated-with-service-clauses",
+    "original_query": "SELECT ...",
+    "endpoints_used": [
+      "http://localhost:8888/sparql/"
+    ],
+    "num_endpoints": 1,
+    "optimization_details": {
+      "num_triples": 0,
+      "num_unique_predicates": 5,
+      "num_unique_subjects": 5,
+      "num_unique_objects": 5,
+      "num_variables": 0,
+      "selective_predicates": [
+        {
+          "predicate": "<http://tcga.deri.ie/schema/chromosome>",
+          "cardinality": 57429308,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        }
+      ],
+      "multi_endpoint_predicates": []
+    },
+    "cardinality_estimate": {
+      "estimated_rows": 0,
+      "confidence": "low",
+      "method": "no-chains"
+    },
+    "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8888/sparql/",
+        "num_predicates": 1,
+        "total_triples": 57429308,
+        "total_triples_readable": "57.4M",
+        "predicates": [
+          "<http://tcga.deri.ie/schema/chromosome>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      }
+    ],
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8888/sparql/\n# Predicates: 1\n#   <http://tcga.deri.ie/schema/chromosome> (http://tcga.deri.ie/schema/expression_exon_result -> http://www.w3.org/2000/01/rdf-schema#Literal) [57.4M triples]\n\n"
+  },
+  "constraint_map": {},
+  "inferred_variable_classes": {},
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Variables are constrained by inferred class types and grouped by endpoint\n\nSELECT *\nWHERE {\n}\nLIMIT 1000\n",
+  "predicate_selectivity": [
+    {
+      "predicate": "<http://tcga.deri.ie/schema/chromosome>",
+      "cardinality": 57429308,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    }
+  ]
+}

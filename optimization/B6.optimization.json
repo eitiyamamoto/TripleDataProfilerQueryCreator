@@ -1,0 +1,158 @@
+{
+  "query_id": "B6",
+  "analysis_file": "optimization/B6.analysis.json",
+  "optimization_status": "partial",
+  "metadata_coverage": {
+    "total_predicates": 9,
+    "covered_predicates": 3,
+    "missing_predicates": [
+      "<http://bio2rdf.org/affymetrix_vocabulary:x-geneid>",
+      "<http://bio2rdf.org/affymetrix_vocabulary:x-symbol>",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "<http://tcga.deri.ie/schema/result>",
+      "<http://tcga.deri.ie/schema/scaled_estimate>",
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+    ],
+    "coverage_ratio": 0.3333,
+    "is_partial": true
+  },
+  "unknown_endpoint_triples": [],
+  "optimization_analysis": {
+    "optimization_strategy": "federated-with-service-clauses",
+    "original_query": "SELECT ...",
+    "endpoints_used": [
+      "http://localhost:8888/sparql/"
+    ],
+    "num_endpoints": 1,
+    "optimization_details": {
+      "num_triples": 10,
+      "num_unique_predicates": 9,
+      "num_unique_subjects": 5,
+      "num_unique_objects": 10,
+      "num_variables": 0,
+      "selective_predicates": [
+        {
+          "predicate": "<http://tcga.deri.ie/schema/start>",
+          "cardinality": 57429308,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        },
+        {
+          "predicate": "<http://tcga.deri.ie/schema/stop>",
+          "cardinality": 57429308,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        },
+        {
+          "predicate": "<http://tcga.deri.ie/schema/chromosome>",
+          "cardinality": 57429308,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        }
+      ],
+      "multi_endpoint_predicates": []
+    },
+    "cardinality_estimate": {
+      "estimated_rows": 57429308,
+      "estimated_rows_readable": "57.4M",
+      "confidence": "medium",
+      "method": "join-chain-analysis",
+      "reasoning": "Estimated from 5 join chains"
+    },
+    "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8888/sparql/",
+        "num_predicates": 3,
+        "total_triples": 172287924,
+        "total_triples_readable": "172.3M",
+        "predicates": [
+          "<http://tcga.deri.ie/schema/start>",
+          "<http://tcga.deri.ie/schema/stop>",
+          "<http://tcga.deri.ie/schema/chromosome>"
+        ],
+        "estimated_retrieved_triples": 57429308,
+        "estimated_retrieved_triples_readable": "57.4M"
+      }
+    ],
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8888/sparql/\n# Predicates: 3\n#   <http://tcga.deri.ie/schema/start> (http://tcga.deri.ie/schema/expression_exon_result -> http://www.w3.org/2000/01/rdf-schema#Literal) [57.4M triples]\n#   <http://tcga.deri.ie/schema/stop> (http://tcga.deri.ie/schema/expression_exon_result -> http://www.w3.org/2000/01/rdf-schema#Literal) [57.4M triples]\n#   <http://tcga.deri.ie/schema/chromosome> (http://tcga.deri.ie/schema/expression_exon_result -> http://www.w3.org/2000/01/rdf-schema#Literal) [57.4M triples]\n\n"
+  },
+  "constraint_map": {
+    "?geneId": [
+      "http://tcga.deri.ie/schema/expression_exon_result"
+    ],
+    "?lookupChromosome": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?recordNo": [
+      "http://tcga.deri.ie/schema/expression_exon_result"
+    ],
+    "?chromosome": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?start": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?stop": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "inferred_variable_classes": {
+    "?geneId": [
+      {
+        "class": "http://tcga.deri.ie/schema/expression_exon_result",
+        "confidence": 1.0
+      }
+    ],
+    "?lookupChromosome": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?recordNo": [
+      {
+        "class": "http://tcga.deri.ie/schema/expression_exon_result",
+        "confidence": 1.0
+      }
+    ],
+    "?chromosome": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?start": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?stop": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Variables are constrained by inferred class types and grouped by endpoint\n\nSELECT DISTINCT ?chromosome ?geneExpVal ?geneId ?lookupChromosome ?patient ?recordNo ?s ?start ?stop ?uri\nWHERE {\n\n  SERVICE <http://localhost:8888/sparql/> {\n    ?geneId <http://tcga.deri.ie/schema/chromosome> ?lookupChromosome . # ?geneId:expression_exon_result, ?lookupChromosome:Literal\n    ?recordNo <http://tcga.deri.ie/schema/chromosome> ?chromosome . # ?recordNo:expression_exon_result, ?chromosome:Literal\n    ?recordNo <http://tcga.deri.ie/schema/start> ?start . # ?recordNo:expression_exon_result, ?start:Literal\n    ?recordNo <http://tcga.deri.ie/schema/stop> ?stop . # ?recordNo:expression_exon_result, ?stop:Literal\n    ?geneId <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://tcga.deri.ie/schema/expression_gene_lookup> .\n    ?s <http://bio2rdf.org/affymetrix_vocabulary:x-geneid> ?geneId .\n    ?s <http://bio2rdf.org/affymetrix_vocabulary:x-symbol> <http://bio2rdf.org/symbol:KRAS> .\n    ?patient <http://tcga.deri.ie/schema/result> ?recordNo .\n    ?recordNo <http://tcga.deri.ie/schema/scaled_estimate> ?geneExpVal .\n    ?uri <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .\n  }\n}\nLIMIT 1000\n",
+  "predicate_selectivity": [
+    {
+      "predicate": "<http://tcga.deri.ie/schema/start>",
+      "cardinality": 57429308,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://tcga.deri.ie/schema/stop>",
+      "cardinality": 57429308,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://tcga.deri.ie/schema/chromosome>",
+      "cardinality": 57429308,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    }
+  ]
+}

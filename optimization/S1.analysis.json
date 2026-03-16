@@ -1,0 +1,165 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [],
+    "num_triples": 0,
+    "unique_predicates": [],
+    "subjects": [],
+    "objects": [],
+    "variables": [],
+    "children": [
+      {
+        "scope_type": "union_branch",
+        "triples": [
+          [
+            "<http://dbpedia.org/resource/Barack_Obama>",
+            "?predicate",
+            "?object"
+          ]
+        ],
+        "num_triples": 1,
+        "unique_predicates": [
+          "?predicate"
+        ],
+        "subjects": [
+          "<http://dbpedia.org/resource/Barack_Obama>"
+        ],
+        "objects": [
+          "?object"
+        ],
+        "variables": [],
+        "label": "LEFT"
+      },
+      {
+        "scope_type": "union_branch",
+        "triples": [
+          [
+            "?subject",
+            "<http://www.w3.org/2002/07/owl#sameAs>",
+            "<http://dbpedia.org/resource/Barack_Obama>"
+          ],
+          [
+            "?subject",
+            "?predicate",
+            "?object"
+          ]
+        ],
+        "num_triples": 2,
+        "unique_predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "?predicate"
+        ],
+        "subjects": [
+          "?subject"
+        ],
+        "objects": [
+          "<http://dbpedia.org/resource/Barack_Obama>",
+          "?object"
+        ],
+        "variables": [],
+        "label": "RIGHT"
+      }
+    ]
+  },
+  "total_triples": 3,
+  "unique_predicates": [
+    "<http://www.w3.org/2002/07/owl#sameAs>",
+    "?predicate"
+  ],
+  "subjects": [
+    "<http://dbpedia.org/resource/Barack_Obama>",
+    "?subject"
+  ],
+  "objects": [
+    "<http://dbpedia.org/resource/Barack_Obama>",
+    "?object"
+  ],
+  "variables": [],
+  "num_unique_predicates": 2,
+  "query_modifiers": {
+    "distinct": false,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://www.w3.org/2002/07/owl#sameAs>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "object_class": "http://www.geonames.org/ontology#Feature",
+        "triple_count": 1787,
+        "authorities": {
+          "subject": [
+            "http://data.nytimes.com",
+            "http://sws.geonames.org"
+          ],
+          "object": [
+            "http://data.nytimes.com",
+            "http://dbpedia.org",
+            "http://rdf.freebase.com",
+            "http://rdf.insee.fr",
+            "http://sws.geonames.org",
+            "http://www.ordnancesurvey.co.uk"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "object_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "triple_count": 7827,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "object_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "triple_count": 7426,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "object_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "triple_count": 13863,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8895/sparql/",
+    "http://localhost:8897/sparql/"
+  ],
+  "num_endpoints": 2,
+  "query_id": "S1",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S1",
+  "metadata_coverage": {
+    "total_predicates": 2,
+    "covered_predicates": 1,
+    "missing_predicates": [
+      "?predicate"
+    ],
+    "coverage_ratio": 0.5,
+    "is_partial": true
+  }
+}

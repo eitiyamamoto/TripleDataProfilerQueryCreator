@@ -1,0 +1,75 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 5
+Unique Predicates: 5
+Endpoints Used: 2
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. biotransformation
+   Cardinality: 993
+   Endpoints: 1
+   Possible Class Pairs: 2
+2. affectedOrganism
+   Cardinality: 1.5K
+   Endpoints: 1
+   Possible Class Pairs: 2
+3. mass
+   Cardinality: 6.4K
+   Endpoints: 1
+   Possible Class Pairs: 2
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8892/sparql/
+  Predicates: 4
+  Total Triples: 5.0K
+  Estimated Retrieved Triples: 993
+Endpoint: http://localhost:8895/sparql/
+  Predicates: 2
+  Total Triples: 18.5K
+  Estimated Retrieved Triples: 6.4K
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 993
+Confidence: medium
+Reasoning: Estimated from 2 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'biotransformation' (993 triples)
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 3/5
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with Class Constraints
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
+
+SELECT ?cas ?drug ?keggDrug ?mass ?transform
+WHERE {
+
+  SERVICE <http://localhost:8892/sparql/> {
+    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> ?transform . # ?drug:drugs, ?transform:Literal
+    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> "Humans and other mammals" . # ?drug:drugs
+    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?cas .
+  }
+
+  SERVICE <http://localhost:8895/sparql/> {
+    ?keggDrug <http://bio2rdf.org/ns/bio2rdf#mass> ?mass . # ?keggDrug:Drug, ?mass:Literal
+    ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?cas .
+  }
+}
+LIMIT 1000

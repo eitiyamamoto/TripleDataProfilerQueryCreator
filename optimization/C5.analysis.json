@@ -1,0 +1,273 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [
+      [
+        "?actor",
+        "<http://dbpedia.org/ontology/spouse>",
+        "?spouseURI"
+      ],
+      [
+        "?movie",
+        "<http://data.linkedmdb.org/resource/movie/actor>",
+        "?imdbactor"
+      ],
+      [
+        "?actor",
+        "<http://dbpedia.org/ontology/birthDate>",
+        "?birthDate"
+      ],
+      [
+        "?actor",
+        "<http://www.w3.org/2000/01/rdf-schema#label>",
+        "?actor_name_en"
+      ],
+      [
+        "?movie",
+        "<http://purl.org/dc/terms/date>",
+        "?movieDate"
+      ],
+      [
+        "?movie",
+        "<http://purl.org/dc/terms/title>",
+        "?movieTitle"
+      ],
+      [
+        "?imdbactor",
+        "<http://data.linkedmdb.org/resource/movie/actor_name>",
+        "?actor_name"
+      ],
+      [
+        "?spouseURI",
+        "<http://www.w3.org/2000/01/rdf-schema#label>",
+        "?spouseName"
+      ]
+    ],
+    "num_triples": 8,
+    "unique_predicates": [
+      "<http://data.linkedmdb.org/resource/movie/actor>",
+      "<http://data.linkedmdb.org/resource/movie/actor_name>",
+      "<http://dbpedia.org/ontology/birthDate>",
+      "<http://dbpedia.org/ontology/spouse>",
+      "<http://purl.org/dc/terms/date>",
+      "<http://purl.org/dc/terms/title>",
+      "<http://www.w3.org/2000/01/rdf-schema#label>"
+    ],
+    "subjects": [
+      "?actor",
+      "?imdbactor",
+      "?movie",
+      "?spouseURI"
+    ],
+    "objects": [
+      "?actor_name",
+      "?actor_name_en",
+      "?birthDate",
+      "?imdbactor",
+      "?movieDate",
+      "?movieTitle",
+      "?spouseName",
+      "?spouseURI"
+    ],
+    "variables": []
+  },
+  "total_triples": 8,
+  "unique_predicates": [
+    "<http://data.linkedmdb.org/resource/movie/actor>",
+    "<http://data.linkedmdb.org/resource/movie/actor_name>",
+    "<http://dbpedia.org/ontology/birthDate>",
+    "<http://dbpedia.org/ontology/spouse>",
+    "<http://purl.org/dc/terms/date>",
+    "<http://purl.org/dc/terms/title>",
+    "<http://www.w3.org/2000/01/rdf-schema#label>"
+  ],
+  "subjects": [
+    "?actor",
+    "?imdbactor",
+    "?movie",
+    "?spouseURI"
+  ],
+  "objects": [
+    "?actor_name",
+    "?actor_name_en",
+    "?birthDate",
+    "?imdbactor",
+    "?movieDate",
+    "?movieTitle",
+    "?spouseName",
+    "?spouseURI"
+  ],
+  "variables": [],
+  "num_unique_predicates": 7,
+  "query_modifiers": {
+    "distinct": false,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://www.w3.org/2000/01/rdf-schema#label>": [
+      {
+        "endpoint": "http://localhost:8890/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/chebi#Compound",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 50477,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/enzymes",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 53,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4772,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4772,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4553,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 10096,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/references",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 96,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "subject_class": "http://bio2rdf.org/affymetrix_vocabulary:Probeset",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1766999,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "subject_class": "http://bio2rdf.org/dataset_vocabulary:Endpoint",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "subject_class": "http://rdfs.org/ns/void#Dataset",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 7827,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 8117,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 14071,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Enzyme",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4131,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8890/sparql/",
+    "http://localhost:8892/sparql/",
+    "http://localhost:8895/sparql/",
+    "http://localhost:8899/sparql/"
+  ],
+  "num_endpoints": 4,
+  "query_id": "C5",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C5",
+  "metadata_coverage": {
+    "total_predicates": 7,
+    "covered_predicates": 1,
+    "missing_predicates": [
+      "<http://data.linkedmdb.org/resource/movie/actor>",
+      "<http://data.linkedmdb.org/resource/movie/actor_name>",
+      "<http://dbpedia.org/ontology/birthDate>",
+      "<http://dbpedia.org/ontology/spouse>",
+      "<http://purl.org/dc/terms/date>",
+      "<http://purl.org/dc/terms/title>"
+    ],
+    "coverage_ratio": 0.1429,
+    "is_partial": true
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [
+      [
+        "?patient",
+        "<http://tcga.deri.ie/schema/vital_status>",
+        "\"Dead\""
+      ],
+      [
+        "?patient",
+        "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
+        "?drug"
+      ],
+      [
+        "?drug",
+        "<http://tcga.deri.ie/schema/drug_name>",
+        "\"Tarceva\""
+      ],
+      [
+        "?patient",
+        "<http://tcga.deri.ie/schema/result>",
+        "?results"
+      ],
+      [
+        "?patient",
+        "<http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis>",
+        "?age"
+      ],
+      [
+        "?s",
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "?patient"
+      ],
+      [
+        "?results",
+        "<http://tcga.deri.ie/schema/beta_value>",
+        "?methylationValue"
+      ]
+    ],
+    "num_triples": 7,
+    "unique_predicates": [
+      "<http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis>",
+      "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "<http://tcga.deri.ie/schema/beta_value>",
+      "<http://tcga.deri.ie/schema/drug_name>",
+      "<http://tcga.deri.ie/schema/result>",
+      "<http://tcga.deri.ie/schema/vital_status>"
+    ],
+    "subjects": [
+      "?drug",
+      "?patient",
+      "?results",
+      "?s"
+    ],
+    "objects": [
+      "\"Dead\"",
+      "\"Tarceva\"",
+      "?age",
+      "?drug",
+      "?methylationValue",
+      "?patient",
+      "?results"
+    ],
+    "variables": []
+  },
+  "total_triples": 7,
+  "unique_predicates": [
+    "<http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis>",
+    "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
+    "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+    "<http://tcga.deri.ie/schema/beta_value>",
+    "<http://tcga.deri.ie/schema/drug_name>",
+    "<http://tcga.deri.ie/schema/result>",
+    "<http://tcga.deri.ie/schema/vital_status>"
+  ],
+  "subjects": [
+    "?drug",
+    "?patient",
+    "?results",
+    "?s"
+  ],
+  "objects": [
+    "\"Dead\"",
+    "\"Tarceva\"",
+    "?age",
+    "?drug",
+    "?methylationValue",
+    "?patient",
+    "?results"
+  ],
+  "variables": [],
+  "num_unique_predicates": 7,
+  "query_modifiers": {
+    "distinct": false,
+    "reduced": false
+  },
+  "predicate_metadata": {},
+  "endpoints_found": [],
+  "num_endpoints": 0,
+  "query_id": "B3",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B3",
+  "metadata_coverage": {
+    "total_predicates": 7,
+    "covered_predicates": 0,
+    "missing_predicates": [
+      "<http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis>",
+      "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "<http://tcga.deri.ie/schema/beta_value>",
+      "<http://tcga.deri.ie/schema/drug_name>",
+      "<http://tcga.deri.ie/schema/result>",
+      "<http://tcga.deri.ie/schema/vital_status>"
+    ],
+    "coverage_ratio": 0.0,
+    "is_partial": true
+  }
+}

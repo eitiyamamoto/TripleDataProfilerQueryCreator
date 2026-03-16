@@ -1,0 +1,80 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 4
+Unique Predicates: 4
+Endpoints Used: 2
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. sameAs
+   Cardinality: 1.8K
+   Endpoints: 2
+   Possible Class Pairs: 4
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8895/sparql/
+  Predicates: 3
+  Total Triples: 29.1K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 1
+  Total Triples: 1.8K
+  Estimated Retrieved Triples: 1.8K
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 1.8K
+Confidence: medium
+Reasoning: Estimated from 3 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'sameAs' (1.8K triples)
+• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 1/4
+Unknown Endpoint Triples: 1
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with UNION for Multiple Class Interpretations
+# Each UNION branch uses different endpoints or predicates
+
+SELECT ?director ?film ?genre ?x
+WHERE {
+  # Scenario 1: ?x=Concept, ?film=Feature
+  {
+    SERVICE <http://localhost:8897/sparql/> {
+      ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . # ?x:Concept, ?film:Feature
+      ?film <http://dbpedia.org/ontology/director> ?director .
+      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre .
+    }
+    # Unknown endpoint (no metadata)
+      ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .
+  }
+
+  UNION
+
+  # Scenario 2: ?x=Drug, ?film=Drug
+  {
+    SERVICE <http://localhost:8895/sparql/> {
+      ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . # ?x:Drug, ?film:Drug
+      ?film <http://dbpedia.org/ontology/director> ?director .
+      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre .
+    }
+    # Unknown endpoint (no metadata)
+      ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .
+  }
+}
+LIMIT 1000

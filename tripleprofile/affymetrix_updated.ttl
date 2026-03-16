@@ -1,0 +1,270 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sbm: <http://sparqlbuilder.org/2015/09/rdf-metadata-schema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sd:Service ;
+    sd:defaultDataset [ a sd:Dataset ;
+            void:classPartition [ a void:Dataset ;
+                    void:class void:Dataset ;
+                    void:entities "2"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://bio2rdf.org/dataset_vocabulary:Endpoint> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ;
+                    void:entities "1421288"^^xsd:long ] ;
+            void:classes "3"^^xsd:long ;
+            void:properties "27"^^xsd:long ;
+            void:propertyPartition [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:trans-membrane> ;
+                    void:triples "230899"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "230899"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:sequence-source> ;
+                    void:triples "1067108"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1067108"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:chromosomal-location> ;
+                    void:triples "410316"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "410316"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property void:inDataset ;
+                    void:triples "1421288"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1421288"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1421288"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1421288"^^xsd:long ;
+                            sbm:objectClass void:Dataset ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_unique_predicate_count> ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/dataset_vocabulary:Endpoint> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:annotation-notes> ;
+                    void:triples "1460345"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1460345"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:genome-version> ;
+                    void:triples "985699"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "985699"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:annotation-date> ;
+                    void:triples "1471218"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1471218"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:pathway> ;
+                    void:triples "58345"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "58345"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property dcterms:rights ;
+                    void:triples "5"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "5"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass void:Dataset ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:species-scientific-name> ;
+                    void:triples "1422596"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1422596"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:unigene-cluster-type> ;
+                    void:triples "732894"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "732894"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:representative-public-id> ;
+                    void:triples "1420523"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1420523"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_triple_count> ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/dataset_vocabulary:Endpoint> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:target-description> ;
+                    void:triples "1463070"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1463070"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "1"^^xsd:long ;
+                    void:property prov:wasDerivedFrom ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass void:Dataset ;
+                            sbm:subjectClass void:Dataset ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_unique_object_count> ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/dataset_vocabulary:Endpoint> ] ],
+                [ a void:Dataset ;
+                    void:classes "4"^^xsd:long ;
+                    void:property rdfs:label ;
+                    void:triples "1767002"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1766999"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ],
+                        [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/dataset_vocabulary:Endpoint> ],
+                        [ a sbm:ClassRelation ;
+                            void:triples "2"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass void:Dataset ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:qtl> ;
+                    void:triples "1705"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1705"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:annotation-description> ;
+                    void:triples "1421452"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1421452"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:transcript> ;
+                    void:triples "1419620"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1419620"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:probe-set-id> ;
+                    void:triples "1421288"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1421288"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_unique_subject_count> ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/dataset_vocabulary:Endpoint> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property dcterms:created ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass void:Dataset ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:alignments> ;
+                    void:triples "1106577"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1106577"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:sequence-type> ;
+                    void:triples "1327251"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1327251"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:gene-title> ;
+                    void:triples "823327"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "823327"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ] ;
+            void:triples "44207146"^^xsd:long ;
+            sbm:crawlLog [ a sbm:CrawlLog ;
+                    sbm:crawlEndTime "2026-03-04T09:38:51+09:00"^^xsd:dateTime ;
+                    sbm:crawlStartTime "2026-03-03T18:55:58+09:00"^^xsd:dateTime ;
+                    sbm:endpointAccesses "41"^^xsd:long ] ;
+            sd:namedGraph [ a sd:NamedGraph ;
+                    sd:name <file:///Users/yamamotobikutorueiichi/codes/federated_query/tripledataprofiler/largerdfbench/affymetrix> ] ] ;
+    sd:endpoint <http://localhost:8899/sparql/> .
+

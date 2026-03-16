@@ -1,0 +1,113 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [],
+    "num_triples": 0,
+    "unique_predicates": [],
+    "subjects": [],
+    "objects": [],
+    "variables": [],
+    "children": [
+      {
+        "scope_type": "union_branch",
+        "triples": [
+          [
+            "?drug",
+            "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint>",
+            "?melt"
+          ]
+        ],
+        "num_triples": 1,
+        "unique_predicates": [
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint>"
+        ],
+        "subjects": [
+          "?drug"
+        ],
+        "objects": [
+          "?melt"
+        ],
+        "variables": [],
+        "label": "LEFT"
+      },
+      {
+        "scope_type": "union_branch",
+        "triples": [
+          [
+            "?drug",
+            "<http://dbpedia.org/ontology/Drug/meltingPoint>",
+            "?melt"
+          ]
+        ],
+        "num_triples": 1,
+        "unique_predicates": [
+          "<http://dbpedia.org/ontology/Drug/meltingPoint>"
+        ],
+        "subjects": [
+          "?drug"
+        ],
+        "objects": [
+          "?melt"
+        ],
+        "variables": [],
+        "label": "RIGHT"
+      }
+    ]
+  },
+  "total_triples": 2,
+  "unique_predicates": [
+    "<http://dbpedia.org/ontology/Drug/meltingPoint>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint>"
+  ],
+  "subjects": [
+    "?drug"
+  ],
+  "objects": [
+    "?melt"
+  ],
+  "variables": [],
+  "num_unique_predicates": 2,
+  "query_modifiers": {
+    "distinct": false,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1159,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1159,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8892/sparql/"
+  ],
+  "num_endpoints": 1,
+  "query_id": "S8",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S8",
+  "metadata_coverage": {
+    "total_predicates": 2,
+    "covered_predicates": 1,
+    "missing_predicates": [
+      "<http://dbpedia.org/ontology/Drug/meltingPoint>"
+    ],
+    "coverage_ratio": 0.5,
+    "is_partial": true
+  }
+}

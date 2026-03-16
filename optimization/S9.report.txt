@@ -1,0 +1,55 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 0
+Unique Predicates: 2
+Endpoints Used: 2
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. sameAs
+   Cardinality: 1.8K
+   Endpoints: 2
+   Possible Class Pairs: 4
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8895/sparql/
+  Predicates: 3
+  Total Triples: 29.1K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 1
+  Total Triples: 1.8K
+  Estimated Retrieved Triples: unknown
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: no-chains
+Estimated Rows: unknown
+Confidence: low
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'sameAs' (1.8K triples)
+• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 1/2
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with Class Constraints
+# Variables are constrained by inferred class types and grouped by endpoint
+
+SELECT *
+WHERE {
+}
+LIMIT 1000

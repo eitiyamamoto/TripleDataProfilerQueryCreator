@@ -1,0 +1,229 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [
+      [
+        "?artist",
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+        "<http://purl.org/ontology/mo/MusicArtist>"
+      ],
+      [
+        "?artist",
+        "<http://xmlns.com/foaf/0.1/based_near>",
+        "?location"
+      ],
+      [
+        "?artist",
+        "<http://xmlns.com/foaf/0.1/name>",
+        "?name"
+      ],
+      [
+        "?location",
+        "<http://www.geonames.org/ontology#parentFeature>",
+        "?locationName"
+      ],
+      [
+        "?nytLocation",
+        "<http://www.w3.org/2002/07/owl#sameAs>",
+        "?location"
+      ],
+      [
+        "?locationName",
+        "<http://www.geonames.org/ontology#name>",
+        "?anylocation"
+      ],
+      [
+        "?nytLocation",
+        "<http://data.nytimes.com/elements/topicPage>",
+        "?news"
+      ],
+      [
+        "?locationName",
+        "<http://www.geonames.org/ontology#name>",
+        "\"Islamic Republic of Afghanistan\""
+      ]
+    ],
+    "num_triples": 8,
+    "unique_predicates": [
+      "<http://data.nytimes.com/elements/topicPage>",
+      "<http://www.geonames.org/ontology#name>",
+      "<http://www.geonames.org/ontology#parentFeature>",
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "<http://www.w3.org/2002/07/owl#sameAs>",
+      "<http://xmlns.com/foaf/0.1/based_near>",
+      "<http://xmlns.com/foaf/0.1/name>"
+    ],
+    "subjects": [
+      "?artist",
+      "?location",
+      "?locationName",
+      "?nytLocation"
+    ],
+    "objects": [
+      "\"Islamic Republic of Afghanistan\"",
+      "<http://purl.org/ontology/mo/MusicArtist>",
+      "?anylocation",
+      "?location",
+      "?locationName",
+      "?name",
+      "?news"
+    ],
+    "variables": []
+  },
+  "total_triples": 8,
+  "unique_predicates": [
+    "<http://data.nytimes.com/elements/topicPage>",
+    "<http://www.geonames.org/ontology#name>",
+    "<http://www.geonames.org/ontology#parentFeature>",
+    "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+    "<http://www.w3.org/2002/07/owl#sameAs>",
+    "<http://xmlns.com/foaf/0.1/based_near>",
+    "<http://xmlns.com/foaf/0.1/name>"
+  ],
+  "subjects": [
+    "?artist",
+    "?location",
+    "?locationName",
+    "?nytLocation"
+  ],
+  "objects": [
+    "\"Islamic Republic of Afghanistan\"",
+    "<http://purl.org/ontology/mo/MusicArtist>",
+    "?anylocation",
+    "?location",
+    "?locationName",
+    "?name",
+    "?news"
+  ],
+  "variables": [],
+  "num_unique_predicates": 7,
+  "query_modifiers": {
+    "distinct": true,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://www.geonames.org/ontology#parentFeature>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.geonames.org/ontology#Feature",
+        "triple_count": 585,
+        "authorities": {
+          "subject": [
+            "http://sws.geonames.org"
+          ],
+          "object": [
+            "http://sws.geonames.org"
+          ]
+        }
+      }
+    ],
+    "<http://www.geonames.org/ontology#name>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1780,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www.w3.org/2002/07/owl#sameAs>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "object_class": "http://www.geonames.org/ontology#Feature",
+        "triple_count": 1787,
+        "authorities": {
+          "subject": [
+            "http://data.nytimes.com",
+            "http://sws.geonames.org"
+          ],
+          "object": [
+            "http://data.nytimes.com",
+            "http://dbpedia.org",
+            "http://rdf.freebase.com",
+            "http://rdf.insee.fr",
+            "http://sws.geonames.org",
+            "http://www.ordnancesurvey.co.uk"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "object_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "triple_count": 7827,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "object_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "triple_count": 7426,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "object_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "triple_count": 13863,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      }
+    ],
+    "<http://xmlns.com/foaf/0.1/name>": [
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": "http://purl.org/ontology/mo/MusicArtist",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3505,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8894/sparql/",
+    "http://localhost:8895/sparql/",
+    "http://localhost:8897/sparql/"
+  ],
+  "num_endpoints": 3,
+  "query_id": "C3",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C3",
+  "metadata_coverage": {
+    "total_predicates": 7,
+    "covered_predicates": 4,
+    "missing_predicates": [
+      "<http://data.nytimes.com/elements/topicPage>",
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "<http://xmlns.com/foaf/0.1/based_near>"
+    ],
+    "coverage_ratio": 0.5714,
+    "is_partial": true
+  }
+}

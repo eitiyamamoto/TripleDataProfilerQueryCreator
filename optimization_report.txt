@@ -1,0 +1,68 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 8
+Unique Predicates: 8
+Endpoints Used: 4
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. description
+   Cardinality: 1.9K
+   Endpoints: 1
+   Possible Class Pairs: 2
+2. title
+   Cardinality: 4.1K
+   Endpoints: 3
+   Possible Class Pairs: 7
+3. molecularWeightAverage
+   Cardinality: 4.7K
+   Endpoints: 1
+   Possible Class Pairs: 2
+4. xEnzyme
+   Cardinality: 7.2K
+   Endpoints: 1
+   Possible Class Pairs: 1
+5. equation
+   Cardinality: 7.8K
+   Endpoints: 1
+   Possible Class Pairs: 1
+6. xSubstrate
+   Cardinality: 8.4K
+   Endpoints: 1
+   Possible Class Pairs: 1
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8890/sparql/
+  Predicates: 1
+  Total Triples: 34.1K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8892/sparql/
+  Predicates: 4
+  Total Triples: 13.2K
+  Estimated Retrieved Triples: 1.9K
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 2
+  Total Triples: 51.4K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8895/sparql/
+  Predicates: 7
+  Total Triples: 57.5K
+  Estimated Retrieved Triples: 7.2K
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 1.9K
+Confidence: medium
+Reasoning: Estimated from 3 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'description' (1.9K triples)
+• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 4 endpoints

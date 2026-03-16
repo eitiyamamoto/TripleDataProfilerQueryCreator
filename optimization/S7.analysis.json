@@ -1,0 +1,180 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [
+      [
+        "?parent",
+        "<http://www.geonames.org/ontology#name>",
+        "\"California\""
+      ],
+      [
+        "?location",
+        "<http://www.geonames.org/ontology#parentFeature>",
+        "?parent"
+      ],
+      [
+        "?y",
+        "<http://www.w3.org/2002/07/owl#sameAs>",
+        "?location"
+      ],
+      [
+        "?y",
+        "<http://data.nytimes.com/elements/topicPage>",
+        "?news"
+      ]
+    ],
+    "num_triples": 4,
+    "unique_predicates": [
+      "<http://data.nytimes.com/elements/topicPage>",
+      "<http://www.geonames.org/ontology#name>",
+      "<http://www.geonames.org/ontology#parentFeature>",
+      "<http://www.w3.org/2002/07/owl#sameAs>"
+    ],
+    "subjects": [
+      "?location",
+      "?parent",
+      "?y"
+    ],
+    "objects": [
+      "\"California\"",
+      "?location",
+      "?news",
+      "?parent"
+    ],
+    "variables": []
+  },
+  "total_triples": 4,
+  "unique_predicates": [
+    "<http://data.nytimes.com/elements/topicPage>",
+    "<http://www.geonames.org/ontology#name>",
+    "<http://www.geonames.org/ontology#parentFeature>",
+    "<http://www.w3.org/2002/07/owl#sameAs>"
+  ],
+  "subjects": [
+    "?location",
+    "?parent",
+    "?y"
+  ],
+  "objects": [
+    "\"California\"",
+    "?location",
+    "?news",
+    "?parent"
+  ],
+  "variables": [],
+  "num_unique_predicates": 4,
+  "query_modifiers": {
+    "distinct": false,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://www.geonames.org/ontology#parentFeature>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.geonames.org/ontology#Feature",
+        "triple_count": 585,
+        "authorities": {
+          "subject": [
+            "http://sws.geonames.org"
+          ],
+          "object": [
+            "http://sws.geonames.org"
+          ]
+        }
+      }
+    ],
+    "<http://www.geonames.org/ontology#name>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1780,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www.w3.org/2002/07/owl#sameAs>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "object_class": "http://www.geonames.org/ontology#Feature",
+        "triple_count": 1787,
+        "authorities": {
+          "subject": [
+            "http://data.nytimes.com",
+            "http://sws.geonames.org"
+          ],
+          "object": [
+            "http://data.nytimes.com",
+            "http://dbpedia.org",
+            "http://rdf.freebase.com",
+            "http://rdf.insee.fr",
+            "http://sws.geonames.org",
+            "http://www.ordnancesurvey.co.uk"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "object_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "triple_count": 7827,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "object_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "triple_count": 7426,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "object_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "triple_count": 13863,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8895/sparql/",
+    "http://localhost:8897/sparql/"
+  ],
+  "num_endpoints": 2,
+  "query_id": "S7",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S7",
+  "metadata_coverage": {
+    "total_predicates": 4,
+    "covered_predicates": 3,
+    "missing_predicates": [
+      "<http://data.nytimes.com/elements/topicPage>"
+    ],
+    "coverage_ratio": 0.75,
+    "is_partial": true
+  }
+}

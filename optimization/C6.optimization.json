@@ -1,0 +1,227 @@
+{
+  "query_id": "C6",
+  "analysis_file": "optimization/C6.analysis.json",
+  "optimization_status": "partial",
+  "metadata_coverage": {
+    "total_predicates": 8,
+    "covered_predicates": 5,
+    "missing_predicates": [
+      "<http://data.linkedmdb.org/resource/movie/actor>",
+      "<http://data.nytimes.com/elements/topicPage>",
+      "<http://purl.org/dc/terms/title>"
+    ],
+    "coverage_ratio": 0.625,
+    "is_partial": true
+  },
+  "unknown_endpoint_triples": [],
+  "optimization_analysis": {
+    "optimization_strategy": "federated-with-service-clauses",
+    "original_query": "SELECT ...",
+    "endpoints_used": [
+      "http://localhost:8895/sparql/",
+      "http://localhost:8897/sparql/"
+    ],
+    "num_endpoints": 2,
+    "optimization_details": {
+      "num_triples": 9,
+      "num_unique_predicates": 8,
+      "num_unique_subjects": 3,
+      "num_unique_objects": 8,
+      "num_variables": 0,
+      "selective_predicates": [
+        {
+          "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
+          "cardinality": 1787,
+          "num_endpoints": 2,
+          "num_possible_classes": 4
+        },
+        {
+          "predicate": "<http://data.nytimes.com/elements/first_use>",
+          "cardinality": 7189,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        },
+        {
+          "predicate": "<http://data.nytimes.com/elements/latest_use>",
+          "cardinality": 7189,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        }
+      ],
+      "multi_endpoint_predicates": [
+        "<http://www.w3.org/2002/07/owl#sameAs>"
+      ]
+    },
+    "cardinality_estimate": {
+      "estimated_rows": 1787,
+      "estimated_rows_readable": "1.8K",
+      "confidence": "medium",
+      "method": "join-chain-analysis",
+      "reasoning": "Estimated from 3 join chains"
+    },
+    "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "num_predicates": 3,
+        "total_triples": 29116,
+        "total_triples_readable": "29.1K",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "num_predicates": 5,
+        "total_triples": 36051,
+        "total_triples_readable": "36.1K",
+        "predicates": [
+          "<http://data.nytimes.com/elements/first_use>",
+          "<http://data.nytimes.com/elements/associated_article_count>",
+          "<http://data.nytimes.com/elements/latest_use>",
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://data.nytimes.com/elements/number_of_variants>"
+        ],
+        "estimated_retrieved_triples": 1787,
+        "estimated_retrieved_triples_readable": "1.8K"
+      }
+    ],
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 5\n#   <http://data.nytimes.com/elements/first_use> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.2K triples]\n#   <http://data.nytimes.com/elements/associated_article_count> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.w3.org/2000/01/rdf-schema#Literal) [9.9K triples]\n#   <http://data.nytimes.com/elements/latest_use> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.2K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n#   <http://data.nytimes.com/elements/number_of_variants> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.w3.org/2000/01/rdf-schema#Literal) [9.9K triples]\n\n"
+  },
+  "constraint_map": {
+    "?nytURI": [
+      "http://bio2rdf.org/ns/kegg#Compound",
+      "http://bio2rdf.org/ns/kegg#Drug",
+      "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "?dbpediaURI": [
+      "http://bio2rdf.org/ns/kegg#Compound",
+      "http://bio2rdf.org/ns/kegg#Drug",
+      "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://www.geonames.org/ontology#Feature"
+    ],
+    "?articleCount": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?first_use": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?latest_use": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?variants": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?actor": [
+      "http://bio2rdf.org/ns/kegg#Compound",
+      "http://bio2rdf.org/ns/kegg#Drug",
+      "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ]
+  },
+  "inferred_variable_classes": {
+    "?nytURI": [
+      {
+        "class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "confidence": 1.0
+      }
+    ],
+    "?articleCount": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?first_use": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?latest_use": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?variants": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?dbpediaURI": [
+      {
+        "class": "http://www.geonames.org/ontology#Feature",
+        "confidence": 0.2888385676023399
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Drug",
+        "confidence": 0.2428200971928318
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "confidence": 0.241397748359715
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Compound",
+        "confidence": 0.2269435868451133
+      }
+    ],
+    "?actor": [
+      {
+        "class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "confidence": 0.2888385676023399
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Drug",
+        "confidence": 0.2428200971928318
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "confidence": 0.241397748359715
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Compound",
+        "confidence": 0.2269435868451133
+      }
+    ]
+  },
+  "optimized_federated_query": "# Smart Federated Query with UNION for Multiple Class Interpretations\n# Each UNION branch uses different endpoints or predicates\n\nSELECT ?actor ?articleCount ?dbpediaURI ?film ?filmTitle ?first_use ?latest_use ?news ?nytURI ?variants\nWHERE {\n  # Scenario 1: ?nytURI=Concept, ?articleCount=Literal, ?first_use=Literal, ?latest_use=Literal, ?variants=Literal, ?dbpediaURI=Feature, ?actor=Concept\n  {\n    SERVICE <http://localhost:8897/sparql/> {\n      ?nytURI <http://www.w3.org/2002/07/owl#sameAs> ?dbpediaURI . # ?nytURI:Concept, ?dbpediaURI:Feature\n      ?actor <http://www.w3.org/2002/07/owl#sameAs> ?dbpediaURI . # ?actor:Concept, ?dbpediaURI:Feature\n      ?nytURI <http://data.nytimes.com/elements/first_use> ?first_use . # ?nytURI:Concept, ?first_use:Literal\n      ?nytURI <http://data.nytimes.com/elements/latest_use> ?latest_use . # ?nytURI:Concept, ?latest_use:Literal\n      ?nytURI <http://data.nytimes.com/elements/associated_article_count> ?articleCount . # ?nytURI:Concept, ?articleCount:Literal\n      ?nytURI <http://data.nytimes.com/elements/number_of_variants> ?variants . # ?nytURI:Concept, ?variants:Literal\n      ?nytURI <http://data.nytimes.com/elements/topicPage> ?news .\n      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .\n      ?film <http://purl.org/dc/terms/title> ?filmTitle .\n    }\n  }\n\n  UNION\n\n  # Scenario 2: ?nytURI=Concept, ?articleCount=Literal, ?first_use=Literal, ?latest_use=Literal, ?variants=Literal, ?dbpediaURI=Drug, ?actor=Drug\n  {\n    SERVICE <http://localhost:8895/sparql/> {\n      ?actor <http://www.w3.org/2002/07/owl#sameAs> ?dbpediaURI . # ?actor:Drug, ?dbpediaURI:Drug\n      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .\n      ?film <http://purl.org/dc/terms/title> ?filmTitle .\n    }\n    SERVICE <http://localhost:8897/sparql/> {\n      ?nytURI <http://www.w3.org/2002/07/owl#sameAs> ?dbpediaURI . # ?nytURI:Concept, ?dbpediaURI:Feature\n      ?nytURI <http://data.nytimes.com/elements/first_use> ?first_use . # ?nytURI:Concept, ?first_use:Literal\n      ?nytURI <http://data.nytimes.com/elements/latest_use> ?latest_use . # ?nytURI:Concept, ?latest_use:Literal\n      ?nytURI <http://data.nytimes.com/elements/associated_article_count> ?articleCount . # ?nytURI:Concept, ?articleCount:Literal\n      ?nytURI <http://data.nytimes.com/elements/number_of_variants> ?variants . # ?nytURI:Concept, ?variants:Literal\n      ?nytURI <http://data.nytimes.com/elements/topicPage> ?news .\n    }\n  }\n}\nLIMIT 1000\n",
+  "predicate_selectivity": [
+    {
+      "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
+      "cardinality": 1787,
+      "num_endpoints": 2,
+      "num_possible_classes": 4
+    },
+    {
+      "predicate": "<http://data.nytimes.com/elements/first_use>",
+      "cardinality": 7189,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://data.nytimes.com/elements/latest_use>",
+      "cardinality": 7189,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://data.nytimes.com/elements/associated_article_count>",
+      "cardinality": 9943,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://data.nytimes.com/elements/number_of_variants>",
+      "cardinality": 9943,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    }
+  ]
+}

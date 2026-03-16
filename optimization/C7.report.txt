@@ -1,0 +1,71 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 9
+Unique Predicates: 9
+Endpoints Used: 1
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. lat
+   Cardinality: 1.8K
+   Endpoints: 1
+   Possible Class Pairs: 2
+2. long
+   Cardinality: 1.8K
+   Endpoints: 1
+   Possible Class Pairs: 2
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 4
+  Total Triples: 7.1K
+  Estimated Retrieved Triples: 1.8K
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 1.8K
+Confidence: medium
+Reasoning: Estimated from 5 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'lat' (1.8K triples)
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 2/9
+Unknown Endpoint Triples: 5
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with Class Constraints
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
+
+SELECT DISTINCT ?author ?capital ?latitude ?longitude ?paper ?place ?proceedings ?role
+WHERE {
+
+  SERVICE <http://localhost:8897/sparql/> {
+    ?place <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?latitude . # ?place:Feature, ?latitude:Literal
+    ?place <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?longitude . # ?place:Feature, ?longitude:Literal
+    ?author <http://xmlns.com/foaf/0.1/based_near> ?place .
+    ?place <http://dbpedia.org/ontology/capital> ?capital .
+  }
+
+  # Unknown endpoint (no metadata)
+    ?proceedings <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/conference/eswc/2010> .
+    ?role <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/conference/eswc/2010> .
+    ?role <http://data.semanticweb.org/ns/swc/ontology#heldBy> ?author .
+    ?paper <http://swrc.ontoware.org/ontology#author> ?author .
+    ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> ?proceedings .
+}
+LIMIT 1000

@@ -1,0 +1,480 @@
+{
+  "queries_dir": "LargeRDFBench/BigRDFBench-Utilities/queries",
+  "output_dir": "optimization",
+  "total_queries": 32,
+  "processed": 32,
+  "failed": 0,
+  "partial_metadata": 32,
+  "queries": [
+    {
+      "query_id": "B1",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B1",
+      "status": "ok",
+      "analysis_file": "optimization/B1.analysis.json",
+      "total_triples": 6,
+      "num_endpoints": 1,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "<http://tcga.deri.ie/schema/result>",
+        "<http://tcga.deri.ie/schema/scaled_estimate>"
+      ]
+    },
+    {
+      "query_id": "B2",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B2",
+      "status": "ok",
+      "analysis_file": "optimization/B2.analysis.json",
+      "total_triples": 6,
+      "num_endpoints": 1,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "<http://tcga.deri.ie/schema/disease_acronym>",
+        "<http://tcga.deri.ie/schema/result>",
+        "<http://tcga.deri.ie/schema/tumor_type>",
+        "<http://tcga.deri.ie/schema/tumor_weight>"
+      ]
+    },
+    {
+      "query_id": "B3",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B3",
+      "status": "ok",
+      "analysis_file": "optimization/B3.analysis.json",
+      "total_triples": 7,
+      "num_endpoints": 0,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis>",
+        "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "<http://tcga.deri.ie/schema/beta_value>",
+        "<http://tcga.deri.ie/schema/drug_name>",
+        "<http://tcga.deri.ie/schema/result>",
+        "<http://tcga.deri.ie/schema/vital_status>"
+      ]
+    },
+    {
+      "query_id": "B4",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B4",
+      "status": "ok",
+      "analysis_file": "optimization/B4.analysis.json",
+      "total_triples": 8,
+      "num_endpoints": 1,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://dbpedia.org/ontology/country>",
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "<http://tcga.deri.ie/schema/reads_per_million_miRNA_mapped>",
+        "<http://tcga.deri.ie/schema/result>"
+      ]
+    },
+    {
+      "query_id": "B5",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B5",
+      "status": "ok",
+      "analysis_file": "optimization/B5.analysis.json",
+      "total_triples": 11,
+      "num_endpoints": 1,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://bio2rdf.org/affymetrix_vocabulary:x-geneid>",
+        "<http://bio2rdf.org/affymetrix_vocabulary:x-symbol>",
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "<http://tcga.deri.ie/schema/beta_value>",
+        "<http://tcga.deri.ie/schema/position>",
+        "<http://tcga.deri.ie/schema/result>",
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+      ]
+    },
+    {
+      "query_id": "B6",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B6",
+      "status": "ok",
+      "analysis_file": "optimization/B6.analysis.json",
+      "total_triples": 10,
+      "num_endpoints": 1,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://bio2rdf.org/affymetrix_vocabulary:x-geneid>",
+        "<http://bio2rdf.org/affymetrix_vocabulary:x-symbol>",
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "<http://tcga.deri.ie/schema/result>",
+        "<http://tcga.deri.ie/schema/scaled_estimate>",
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+      ]
+    },
+    {
+      "query_id": "B7",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B7",
+      "status": "ok",
+      "analysis_file": "optimization/B7.analysis.json",
+      "total_triples": 5,
+      "num_endpoints": 0,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://dbpedia.org/ontology/country>",
+        "<http://dbpedia.org/ontology/populationDensity>",
+        "<http://tcga.deri.ie/schema/bcr_aliquot_barcode>",
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "?p"
+      ]
+    },
+    {
+      "query_id": "B8",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B8",
+      "status": "ok",
+      "analysis_file": "optimization/B8.analysis.json",
+      "total_triples": 8,
+      "num_endpoints": 1,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "<http://tcga.deri.ie/schema/beta_value>",
+        "<http://tcga.deri.ie/schema/protein_expression_value>",
+        "<http://tcga.deri.ie/schema/result>"
+      ]
+    },
+    {
+      "query_id": "C1",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C1",
+      "status": "ok",
+      "analysis_file": "optimization/C1.analysis.json",
+      "total_triples": 8,
+      "num_endpoints": 4,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugType>",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
+      ]
+    },
+    {
+      "query_id": "C10",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C10",
+      "status": "ok",
+      "analysis_file": "optimization/C10.analysis.json",
+      "total_triples": 10,
+      "num_endpoints": 1,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://dbpedia.org/ontology/country>",
+        "<http://dbpedia.org/ontology/populationDensity>",
+        "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "<http://tcga.deri.ie/schema/drug_name>",
+        "<http://tcga.deri.ie/schema/gender>",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
+      ]
+    },
+    {
+      "query_id": "C2",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C2",
+      "status": "ok",
+      "analysis_file": "optimization/C2.analysis.json",
+      "total_triples": 8,
+      "num_endpoints": 4,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
+      ]
+    },
+    {
+      "query_id": "C3",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C3",
+      "status": "ok",
+      "analysis_file": "optimization/C3.analysis.json",
+      "total_triples": 8,
+      "num_endpoints": 3,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://data.nytimes.com/elements/topicPage>",
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+        "<http://xmlns.com/foaf/0.1/based_near>"
+      ]
+    },
+    {
+      "query_id": "C4",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C4",
+      "status": "ok",
+      "analysis_file": "optimization/C4.analysis.json",
+      "total_triples": 12,
+      "num_endpoints": 2,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://dbpedia.org/ontology/anthem>",
+        "<http://dbpedia.org/ontology/capital>",
+        "<http://dbpedia.org/ontology/ethnicGroup>",
+        "<http://dbpedia.org/ontology/foundingDate>",
+        "<http://dbpedia.org/ontology/largestCity>",
+        "<http://dbpedia.org/ontology/motto>"
+      ]
+    },
+    {
+      "query_id": "C5",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C5",
+      "status": "ok",
+      "analysis_file": "optimization/C5.analysis.json",
+      "total_triples": 8,
+      "num_endpoints": 4,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://data.linkedmdb.org/resource/movie/actor>",
+        "<http://data.linkedmdb.org/resource/movie/actor_name>",
+        "<http://dbpedia.org/ontology/birthDate>",
+        "<http://dbpedia.org/ontology/spouse>",
+        "<http://purl.org/dc/terms/date>",
+        "<http://purl.org/dc/terms/title>"
+      ]
+    },
+    {
+      "query_id": "C6",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C6",
+      "status": "ok",
+      "analysis_file": "optimization/C6.analysis.json",
+      "total_triples": 9,
+      "num_endpoints": 2,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://data.linkedmdb.org/resource/movie/actor>",
+        "<http://data.nytimes.com/elements/topicPage>",
+        "<http://purl.org/dc/terms/title>"
+      ]
+    },
+    {
+      "query_id": "C7",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C7",
+      "status": "ok",
+      "analysis_file": "optimization/C7.analysis.json",
+      "total_triples": 9,
+      "num_endpoints": 1,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://data.semanticweb.org/ns/swc/ontology#heldBy>",
+        "<http://data.semanticweb.org/ns/swc/ontology#isPartOf>",
+        "<http://data.semanticweb.org/ns/swc/ontology#isRoleAt>",
+        "<http://data.semanticweb.org/ns/swc/ontology#relatedToEvent>",
+        "<http://dbpedia.org/ontology/capital>",
+        "<http://swrc.ontoware.org/ontology#author>",
+        "<http://xmlns.com/foaf/0.1/based_near>"
+      ]
+    },
+    {
+      "query_id": "C8",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C8",
+      "status": "ok",
+      "analysis_file": "optimization/C8.analysis.json",
+      "total_triples": 11,
+      "num_endpoints": 4,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://data.semanticweb.org/ns/swc/ontology#isPartOf>",
+        "<http://dbpedia.org/ontology/capital>",
+        "<http://dbpedia.org/ontology/governmentType>",
+        "<http://dbpedia.org/ontology/language>",
+        "<http://dbpedia.org/ontology/leaderTitle>",
+        "<http://dbpedia.org/ontology/populationDensity>",
+        "<http://swrc.ontoware.org/ontology#address>",
+        "<http://swrc.ontoware.org/ontology#affiliation>",
+        "<http://swrc.ontoware.org/ontology#author>",
+        "<http://xmlns.com/foaf/0.1/based_near>"
+      ]
+    },
+    {
+      "query_id": "C9",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C9",
+      "status": "ok",
+      "analysis_file": "optimization/C9.analysis.json",
+      "total_triples": 9,
+      "num_endpoints": 3,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>"
+      ]
+    },
+    {
+      "query_id": "S1",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S1",
+      "status": "ok",
+      "analysis_file": "optimization/S1.analysis.json",
+      "total_triples": 3,
+      "num_endpoints": 2,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "?predicate"
+      ]
+    },
+    {
+      "query_id": "S10",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S10",
+      "status": "ok",
+      "analysis_file": "optimization/S10.analysis.json",
+      "total_triples": 5,
+      "num_endpoints": 3,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+      ]
+    },
+    {
+      "query_id": "S11",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S11",
+      "status": "ok",
+      "analysis_file": "optimization/S11.analysis.json",
+      "total_triples": 7,
+      "num_endpoints": 2,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory>",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
+      ]
+    },
+    {
+      "query_id": "S12",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S12",
+      "status": "ok",
+      "analysis_file": "optimization/S12.analysis.json",
+      "total_triples": 6,
+      "num_endpoints": 4,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
+      ]
+    },
+    {
+      "query_id": "S13",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S13",
+      "status": "ok",
+      "analysis_file": "optimization/S13.analysis.json",
+      "total_triples": 5,
+      "num_endpoints": 3,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://bio2rdf.org/ns/bio2rdf#xRef>",
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory>"
+      ]
+    },
+    {
+      "query_id": "S14",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S14",
+      "status": "ok",
+      "analysis_file": "optimization/S14.analysis.json",
+      "total_triples": 5,
+      "num_endpoints": 2,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://bio2rdf.org/ns/bio2rdf#xRef>",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>"
+      ]
+    },
+    {
+      "query_id": "S2",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S2",
+      "status": "ok",
+      "analysis_file": "optimization/S2.analysis.json",
+      "total_triples": 3,
+      "num_endpoints": 2,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://data.nytimes.com/elements/topicPage>",
+        "<http://dbpedia.org/ontology/party>"
+      ]
+    },
+    {
+      "query_id": "S3",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S3",
+      "status": "ok",
+      "analysis_file": "optimization/S3.analysis.json",
+      "total_triples": 5,
+      "num_endpoints": 2,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://data.nytimes.com/elements/topicPage>",
+        "<http://dbpedia.org/ontology/nationality>",
+        "<http://dbpedia.org/ontology/party>",
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+      ]
+    },
+    {
+      "query_id": "S4",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S4",
+      "status": "ok",
+      "analysis_file": "optimization/S4.analysis.json",
+      "total_triples": 5,
+      "num_endpoints": 2,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://data.linkedmdb.org/resource/movie/actor>",
+        "<http://data.nytimes.com/elements/topicPage>",
+        "<http://purl.org/dc/terms/title>"
+      ]
+    },
+    {
+      "query_id": "S5",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S5",
+      "status": "ok",
+      "analysis_file": "optimization/S5.analysis.json",
+      "total_triples": 4,
+      "num_endpoints": 2,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://data.linkedmdb.org/resource/movie/genre>",
+        "<http://dbpedia.org/ontology/director>",
+        "<http://dbpedia.org/ontology/nationality>"
+      ]
+    },
+    {
+      "query_id": "S6",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S6",
+      "status": "ok",
+      "analysis_file": "optimization/S6.analysis.json",
+      "total_triples": 4,
+      "num_endpoints": 2,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://xmlns.com/foaf/0.1/based_near>"
+      ]
+    },
+    {
+      "query_id": "S7",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S7",
+      "status": "ok",
+      "analysis_file": "optimization/S7.analysis.json",
+      "total_triples": 4,
+      "num_endpoints": 2,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://data.nytimes.com/elements/topicPage>"
+      ]
+    },
+    {
+      "query_id": "S8",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S8",
+      "status": "ok",
+      "analysis_file": "optimization/S8.analysis.json",
+      "total_triples": 2,
+      "num_endpoints": 1,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "<http://dbpedia.org/ontology/Drug/meltingPoint>"
+      ]
+    },
+    {
+      "query_id": "S9",
+      "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S9",
+      "status": "ok",
+      "analysis_file": "optimization/S9.analysis.json",
+      "total_triples": 3,
+      "num_endpoints": 2,
+      "metadata_partial": true,
+      "missing_predicates": [
+        "?predicate"
+      ]
+    }
+  ]
+}

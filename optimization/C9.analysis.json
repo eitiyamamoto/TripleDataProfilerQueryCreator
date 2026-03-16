@@ -1,0 +1,337 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [
+      [
+        "?Drug",
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+        "<http://dbpedia.org/ontology/Drug>"
+      ],
+      [
+        "?drugbankDrug",
+        "<http://www.w3.org/2002/07/owl#sameAs>",
+        "?Drug"
+      ],
+      [
+        "?InteractionName",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1>",
+        "?drugbankDrug"
+      ],
+      [
+        "?InteractionName",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2>",
+        "?drugbankDrug2"
+      ],
+      [
+        "?InteractionName",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text>",
+        "?IntEffect"
+      ],
+      [
+        "?drugbankDrug",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>",
+        "\"Humans and other mammals\""
+      ],
+      [
+        "?drugbankDrug",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>",
+        "?casRegistryNumber"
+      ],
+      [
+        "?drugbankDrug",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>",
+        "?description"
+      ],
+      [
+        "?drugbankDrug",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/structure>",
+        "?structure"
+      ]
+    ],
+    "num_triples": 9,
+    "unique_predicates": [
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "<http://www.w3.org/2002/07/owl#sameAs>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/structure>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text>"
+    ],
+    "subjects": [
+      "?Drug",
+      "?InteractionName",
+      "?drugbankDrug"
+    ],
+    "objects": [
+      "\"Humans and other mammals\"",
+      "<http://dbpedia.org/ontology/Drug>",
+      "?Drug",
+      "?IntEffect",
+      "?casRegistryNumber",
+      "?description",
+      "?drugbankDrug",
+      "?drugbankDrug2",
+      "?structure"
+    ],
+    "variables": []
+  },
+  "total_triples": 9,
+  "unique_predicates": [
+    "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+    "<http://www.w3.org/2002/07/owl#sameAs>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/structure>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text>"
+  ],
+  "subjects": [
+    "?Drug",
+    "?InteractionName",
+    "?drugbankDrug"
+  ],
+  "objects": [
+    "\"Humans and other mammals\"",
+    "<http://dbpedia.org/ontology/Drug>",
+    "?Drug",
+    "?IntEffect",
+    "?casRegistryNumber",
+    "?description",
+    "?drugbankDrug",
+    "?drugbankDrug2",
+    "?structure"
+  ],
+  "variables": [],
+  "num_unique_predicates": 9,
+  "query_modifiers": {
+    "distinct": false,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions",
+        "object_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "triple_count": 10096,
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions",
+        "object_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "triple_count": 10096,
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ]
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1861,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1861,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1531,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1531,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 10122,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions",
+        "object_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "triple_count": 10096,
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions",
+        "object_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "triple_count": 10096,
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ]
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/structure>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4772,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4772,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www.w3.org/2002/07/owl#sameAs>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "object_class": "http://www.geonames.org/ontology#Feature",
+        "triple_count": 1787,
+        "authorities": {
+          "subject": [
+            "http://data.nytimes.com",
+            "http://sws.geonames.org"
+          ],
+          "object": [
+            "http://data.nytimes.com",
+            "http://dbpedia.org",
+            "http://rdf.freebase.com",
+            "http://rdf.insee.fr",
+            "http://sws.geonames.org",
+            "http://www.ordnancesurvey.co.uk"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "object_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "triple_count": 7827,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "object_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "triple_count": 7426,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "object_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "triple_count": 13863,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8892/sparql/",
+    "http://localhost:8895/sparql/",
+    "http://localhost:8897/sparql/"
+  ],
+  "num_endpoints": 3,
+  "query_id": "C9",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C9",
+  "metadata_coverage": {
+    "total_predicates": 9,
+    "covered_predicates": 7,
+    "missing_predicates": [
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>"
+    ],
+    "coverage_ratio": 0.7778,
+    "is_partial": true
+  }
+}

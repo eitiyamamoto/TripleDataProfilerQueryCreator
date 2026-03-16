@@ -1,0 +1,99 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [
+      [
+        "?patient",
+        "<http://dbpedia.org/ontology/country>",
+        "?country"
+      ],
+      [
+        "?patient",
+        "<http://tcga.deri.ie/schema/bcr_aliquot_barcode>",
+        "?aliquot"
+      ],
+      [
+        "?uri",
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "?patient"
+      ],
+      [
+        "?country",
+        "<http://dbpedia.org/ontology/populationDensity>",
+        "?popDensity"
+      ],
+      [
+        "?aliquot",
+        "?p",
+        "?o"
+      ]
+    ],
+    "num_triples": 5,
+    "unique_predicates": [
+      "<http://dbpedia.org/ontology/country>",
+      "<http://dbpedia.org/ontology/populationDensity>",
+      "<http://tcga.deri.ie/schema/bcr_aliquot_barcode>",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "?p"
+    ],
+    "subjects": [
+      "?aliquot",
+      "?country",
+      "?patient",
+      "?uri"
+    ],
+    "objects": [
+      "?aliquot",
+      "?country",
+      "?o",
+      "?patient",
+      "?popDensity"
+    ],
+    "variables": []
+  },
+  "total_triples": 5,
+  "unique_predicates": [
+    "<http://dbpedia.org/ontology/country>",
+    "<http://dbpedia.org/ontology/populationDensity>",
+    "<http://tcga.deri.ie/schema/bcr_aliquot_barcode>",
+    "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+    "?p"
+  ],
+  "subjects": [
+    "?aliquot",
+    "?country",
+    "?patient",
+    "?uri"
+  ],
+  "objects": [
+    "?aliquot",
+    "?country",
+    "?o",
+    "?patient",
+    "?popDensity"
+  ],
+  "variables": [],
+  "num_unique_predicates": 5,
+  "query_modifiers": {
+    "distinct": true,
+    "reduced": false
+  },
+  "predicate_metadata": {},
+  "endpoints_found": [],
+  "num_endpoints": 0,
+  "query_id": "B7",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B7",
+  "metadata_coverage": {
+    "total_predicates": 5,
+    "covered_predicates": 0,
+    "missing_predicates": [
+      "<http://dbpedia.org/ontology/country>",
+      "<http://dbpedia.org/ontology/populationDensity>",
+      "<http://tcga.deri.ie/schema/bcr_aliquot_barcode>",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "?p"
+    ],
+    "coverage_ratio": 0.0,
+    "is_partial": true
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [
+      [
+        "?drgBnkDrg",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
+        "?drugName"
+      ],
+      [
+        "?patient",
+        "<http://dbpedia.org/ontology/country>",
+        "?country"
+      ],
+      [
+        "?patient",
+        "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
+        "?drugbcr"
+      ],
+      [
+        "?drgBnkDrg",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula>",
+        "?formula"
+      ],
+      [
+        "?drgBnkDrg",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication>",
+        "?indication"
+      ],
+      [
+        "?drgBnkDrg",
+        "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>",
+        "?compound"
+      ],
+      [
+        "?patient",
+        "<http://tcga.deri.ie/schema/gender>",
+        "?gender"
+      ],
+      [
+        "?uri",
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "?patient"
+      ],
+      [
+        "?drugbcr",
+        "<http://tcga.deri.ie/schema/drug_name>",
+        "?drugName"
+      ],
+      [
+        "?country",
+        "<http://dbpedia.org/ontology/populationDensity>",
+        "?popDensity"
+      ]
+    ],
+    "num_triples": 10,
+    "unique_predicates": [
+      "<http://dbpedia.org/ontology/country>",
+      "<http://dbpedia.org/ontology/populationDensity>",
+      "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "<http://tcga.deri.ie/schema/drug_name>",
+      "<http://tcga.deri.ie/schema/gender>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
+    ],
+    "subjects": [
+      "?country",
+      "?drgBnkDrg",
+      "?drugbcr",
+      "?patient",
+      "?uri"
+    ],
+    "objects": [
+      "?compound",
+      "?country",
+      "?drugName",
+      "?drugbcr",
+      "?formula",
+      "?gender",
+      "?indication",
+      "?patient",
+      "?popDensity"
+    ],
+    "variables": []
+  },
+  "total_triples": 10,
+  "unique_predicates": [
+    "<http://dbpedia.org/ontology/country>",
+    "<http://dbpedia.org/ontology/populationDensity>",
+    "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
+    "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+    "<http://tcga.deri.ie/schema/drug_name>",
+    "<http://tcga.deri.ie/schema/gender>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication>",
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
+  ],
+  "subjects": [
+    "?country",
+    "?drgBnkDrg",
+    "?drugbcr",
+    "?patient",
+    "?uri"
+  ],
+  "objects": [
+    "?compound",
+    "?country",
+    "?drugName",
+    "?drugbcr",
+    "?formula",
+    "?gender",
+    "?indication",
+    "?patient",
+    "?popDensity"
+  ],
+  "variables": [],
+  "num_unique_predicates": 10,
+  "query_modifiers": {
+    "distinct": true,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4721,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4721,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1463,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1463,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4772,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4772,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8892/sparql/"
+  ],
+  "num_endpoints": 1,
+  "query_id": "C10",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C10",
+  "metadata_coverage": {
+    "total_predicates": 10,
+    "covered_predicates": 3,
+    "missing_predicates": [
+      "<http://dbpedia.org/ontology/country>",
+      "<http://dbpedia.org/ontology/populationDensity>",
+      "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "<http://tcga.deri.ie/schema/drug_name>",
+      "<http://tcga.deri.ie/schema/gender>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
+    ],
+    "coverage_ratio": 0.3,
+    "is_partial": true
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "query_id": "C3",
+  "analysis_file": "optimization/C3.analysis.json",
+  "optimization_status": "partial",
+  "metadata_coverage": {
+    "total_predicates": 7,
+    "covered_predicates": 4,
+    "missing_predicates": [
+      "<http://data.nytimes.com/elements/topicPage>",
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "<http://xmlns.com/foaf/0.1/based_near>"
+    ],
+    "coverage_ratio": 0.5714,
+    "is_partial": true
+  },
+  "unknown_endpoint_triples": [],
+  "optimization_analysis": {
+    "optimization_strategy": "federated-with-service-clauses",
+    "original_query": "SELECT ...",
+    "endpoints_used": [
+      "http://localhost:8894/sparql/",
+      "http://localhost:8895/sparql/",
+      "http://localhost:8897/sparql/"
+    ],
+    "num_endpoints": 3,
+    "optimization_details": {
+      "num_triples": 8,
+      "num_unique_predicates": 7,
+      "num_unique_subjects": 4,
+      "num_unique_objects": 7,
+      "num_variables": 0,
+      "selective_predicates": [
+        {
+          "predicate": "<http://www.geonames.org/ontology#parentFeature>",
+          "cardinality": 585,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        },
+        {
+          "predicate": "<http://www.geonames.org/ontology#name>",
+          "cardinality": 1780,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        },
+        {
+          "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
+          "cardinality": 1787,
+          "num_endpoints": 2,
+          "num_possible_classes": 4
+        }
+      ],
+      "multi_endpoint_predicates": [
+        "<http://www.w3.org/2002/07/owl#sameAs>"
+      ]
+    },
+    "cardinality_estimate": {
+      "estimated_rows": 585,
+      "estimated_rows_readable": "585",
+      "confidence": "medium",
+      "method": "join-chain-analysis",
+      "reasoning": "Estimated from 4 join chains"
+    },
+    "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "num_predicates": 1,
+        "total_triples": 3505,
+        "total_triples_readable": "3.5K",
+        "predicates": [
+          "<http://xmlns.com/foaf/0.1/name>"
+        ],
+        "estimated_retrieved_triples": 3505,
+        "estimated_retrieved_triples_readable": "3.5K"
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "num_predicates": 3,
+        "total_triples": 29116,
+        "total_triples_readable": "29.1K",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "num_predicates": 3,
+        "total_triples": 4152,
+        "total_triples_readable": "4.2K",
+        "predicates": [
+          "<http://www.geonames.org/ontology#parentFeature>",
+          "<http://www.geonames.org/ontology#name>",
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": 585,
+        "estimated_retrieved_triples_readable": "585"
+      }
+    ],
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 1\n#   <http://xmlns.com/foaf/0.1/name> (http://purl.org/ontology/mo/MusicArtist -> http://www.w3.org/2000/01/rdf-schema#Literal) [3.5K triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 3\n#   <http://www.geonames.org/ontology#parentFeature> (http://www.geonames.org/ontology#Feature -> http://www.geonames.org/ontology#Feature) [585 triples]\n#   <http://www.geonames.org/ontology#name> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n"
+  },
+  "constraint_map": {
+    "?artist": [
+      "http://purl.org/ontology/mo/MusicArtist"
+    ],
+    "?name": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?location": [
+      "http://bio2rdf.org/ns/kegg#Compound",
+      "http://bio2rdf.org/ns/kegg#Drug",
+      "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://www.geonames.org/ontology#Feature"
+    ],
+    "?locationName": [
+      "http://www.geonames.org/ontology#Feature"
+    ],
+    "?nytLocation": [
+      "http://bio2rdf.org/ns/kegg#Compound",
+      "http://bio2rdf.org/ns/kegg#Drug",
+      "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "?anylocation": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "inferred_variable_classes": {
+    "?artist": [
+      {
+        "class": "http://purl.org/ontology/mo/MusicArtist",
+        "confidence": 1.0
+      }
+    ],
+    "?name": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?location": [
+      {
+        "class": "http://www.geonames.org/ontology#Feature",
+        "confidence": 1.0
+      }
+    ],
+    "?locationName": [
+      {
+        "class": "http://www.geonames.org/ontology#Feature",
+        "confidence": 1.0
+      }
+    ],
+    "?anylocation": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?nytLocation": [
+      {
+        "class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "confidence": 0.2888385676023399
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Drug",
+        "confidence": 0.2428200971928318
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "confidence": 0.241397748359715
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Compound",
+        "confidence": 0.2269435868451133
+      }
+    ]
+  },
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Note: Multiple class interpretations exist but all route to same endpoints\n# A single query retrieves all data regardless of class ambiguity\n\nSELECT DISTINCT ?anylocation ?artist ?location ?locationName ?name ?news ?nytLocation\nWHERE {\n\n  SERVICE <http://localhost:8894/sparql/> {\n    ?artist <http://xmlns.com/foaf/0.1/name> ?name . # ?artist:MusicArtist, ?name:Literal\n    ?artist <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/mo/MusicArtist> .\n    ?artist <http://xmlns.com/foaf/0.1/based_near> ?location .\n  }\n\n  SERVICE <http://localhost:8897/sparql/> {\n    ?location <http://www.geonames.org/ontology#parentFeature> ?locationName . # ?location:Feature, ?locationName:Feature\n    ?locationName <http://www.geonames.org/ontology#name> ?anylocation . # ?locationName:Feature, ?anylocation:Literal\n    ?locationName <http://www.geonames.org/ontology#name> \"Islamic Republic of Afghanistan\" . # ?locationName:Feature\n    ?nytLocation <http://www.w3.org/2002/07/owl#sameAs> ?location . # ?nytLocation:Concept, ?location:Feature\n    ?nytLocation <http://data.nytimes.com/elements/topicPage> ?news .\n  }\n}\nLIMIT 1000\n",
+  "predicate_selectivity": [
+    {
+      "predicate": "<http://www.geonames.org/ontology#parentFeature>",
+      "cardinality": 585,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://www.geonames.org/ontology#name>",
+      "cardinality": 1780,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
+      "cardinality": 1787,
+      "num_endpoints": 2,
+      "num_possible_classes": 4
+    },
+    {
+      "predicate": "<http://xmlns.com/foaf/0.1/name>",
+      "cardinality": 3505,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    }
+  ]
+}

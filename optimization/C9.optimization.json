@@ -1,0 +1,264 @@
+{
+  "query_id": "C9",
+  "analysis_file": "optimization/C9.analysis.json",
+  "optimization_status": "partial",
+  "metadata_coverage": {
+    "total_predicates": 9,
+    "covered_predicates": 7,
+    "missing_predicates": [
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>"
+    ],
+    "coverage_ratio": 0.7778,
+    "is_partial": true
+  },
+  "unknown_endpoint_triples": [],
+  "optimization_analysis": {
+    "optimization_strategy": "federated-with-service-clauses",
+    "original_query": "SELECT ...",
+    "endpoints_used": [
+      "http://localhost:8892/sparql/",
+      "http://localhost:8895/sparql/",
+      "http://localhost:8897/sparql/"
+    ],
+    "num_endpoints": 3,
+    "optimization_details": {
+      "num_triples": 9,
+      "num_unique_predicates": 9,
+      "num_unique_subjects": 3,
+      "num_unique_objects": 9,
+      "num_variables": 0,
+      "selective_predicates": [
+        {
+          "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>",
+          "cardinality": 1531,
+          "num_endpoints": 1,
+          "num_possible_classes": 2
+        },
+        {
+          "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
+          "cardinality": 1787,
+          "num_endpoints": 2,
+          "num_possible_classes": 4
+        },
+        {
+          "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>",
+          "cardinality": 1861,
+          "num_endpoints": 1,
+          "num_possible_classes": 2
+        }
+      ],
+      "multi_endpoint_predicates": [
+        "<http://www.w3.org/2002/07/owl#sameAs>"
+      ]
+    },
+    "cardinality_estimate": {
+      "estimated_rows": 1531,
+      "estimated_rows_readable": "1.5K",
+      "confidence": "medium",
+      "method": "join-chain-analysis",
+      "reasoning": "Estimated from 3 join chains"
+    },
+    "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "num_predicates": 11,
+        "total_triples": 66834,
+        "total_triples_readable": "66.8K",
+        "predicates": [
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/structure>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/structure>"
+        ],
+        "estimated_retrieved_triples": 1531,
+        "estimated_retrieved_triples_readable": "1.5K"
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "num_predicates": 3,
+        "total_triples": 29116,
+        "total_triples_readable": "29.1K",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "num_predicates": 1,
+        "total_triples": 1787,
+        "total_triples_readable": "1.8K",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": 1787,
+        "estimated_retrieved_triples_readable": "1.8K"
+      }
+    ],
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 11\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions -> http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs) [10.1K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions -> http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer) [10.1K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.9K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.9K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.5K triples]\n\n"
+  },
+  "constraint_map": {
+    "?drugbankDrug": [
+      "http://bio2rdf.org/ns/kegg#Compound",
+      "http://bio2rdf.org/ns/kegg#Drug",
+      "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+      "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer"
+    ],
+    "?Drug": [
+      "http://bio2rdf.org/ns/kegg#Compound",
+      "http://bio2rdf.org/ns/kegg#Drug",
+      "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://www.geonames.org/ontology#Feature"
+    ],
+    "?InteractionName": [
+      "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions"
+    ],
+    "?drugbankDrug2": [
+      "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+      "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer"
+    ],
+    "?IntEffect": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?description": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?structure": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ]
+  },
+  "inferred_variable_classes": {
+    "?InteractionName": [
+      {
+        "class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions",
+        "confidence": 1.0
+      }
+    ],
+    "?IntEffect": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?drugbankDrug": [
+      {
+        "class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "confidence": 0.34100648797138194
+      },
+      {
+        "class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "confidence": 0.34100648797138194
+      },
+      {
+        "class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "confidence": 0.09184691654482292
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Drug",
+        "confidence": 0.07721364008763747
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "confidence": 0.07676135161502337
+      }
+    ],
+    "?Drug": [
+      {
+        "class": "http://www.geonames.org/ontology#Feature",
+        "confidence": 0.2888385676023399
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Drug",
+        "confidence": 0.2428200971928318
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "confidence": 0.241397748359715
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Compound",
+        "confidence": 0.2269435868451133
+      }
+    ],
+    "?drugbankDrug2": [
+      {
+        "class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "confidence": 0.5
+      },
+      {
+        "class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "confidence": 0.5
+      }
+    ],
+    "?description": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?structure": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "optimized_federated_query": "# Smart Federated Query with UNION for Multiple Class Interpretations\n# Each UNION branch uses different endpoints or predicates\n\nSELECT ?Drug ?IntEffect ?InteractionName ?casRegistryNumber ?description ?drugbankDrug ?drugbankDrug2 ?structure\nWHERE {\n  # Scenario 1: ?InteractionName=drug_interactions, ?IntEffect=Literal, ?description=Literal, ?structure=Literal, ?drugbankDrug=Offer, ?Drug=Feature, ?drugbankDrug2=drugs\n  {\n    SERVICE <http://localhost:8892/sparql/> {\n      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> \"Humans and other mammals\" . # ?drugbankDrug:Offer\n      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?description . # ?drugbankDrug:Offer, ?description:Literal\n      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/structure> ?structure . # ?drugbankDrug:Offer, ?structure:Literal\n      ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?drugbankDrug . # ?InteractionName:drug_interactions, ?drugbankDrug:Offer\n      ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?drugbankDrug2 . # ?InteractionName:drug_interactions, ?drugbankDrug2:drugs\n      ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect . # ?InteractionName:drug_interactions, ?IntEffect:Literal\n      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?casRegistryNumber .\n    }\n    SERVICE <http://localhost:8897/sparql/> {\n      ?drugbankDrug <http://www.w3.org/2002/07/owl#sameAs> ?Drug . # ?drugbankDrug:Concept, ?Drug:Feature\n      ?Drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Drug> .\n    }\n  }\n\n  UNION\n\n  # Scenario 2: ?InteractionName=drug_interactions, ?IntEffect=Literal, ?description=Literal, ?structure=Literal, ?drugbankDrug=Offer, ?Drug=Drug, ?drugbankDrug2=drugs\n  {\n    SERVICE <http://localhost:8892/sparql/> {\n      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> \"Humans and other mammals\" . # ?drugbankDrug:Offer\n      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?description . # ?drugbankDrug:Offer, ?description:Literal\n      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/structure> ?structure . # ?drugbankDrug:Offer, ?structure:Literal\n      ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?drugbankDrug . # ?InteractionName:drug_interactions, ?drugbankDrug:Offer\n      ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?drugbankDrug2 . # ?InteractionName:drug_interactions, ?drugbankDrug2:drugs\n      ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect . # ?InteractionName:drug_interactions, ?IntEffect:Literal\n      ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?casRegistryNumber .\n    }\n    SERVICE <http://localhost:8895/sparql/> {\n      ?drugbankDrug <http://www.w3.org/2002/07/owl#sameAs> ?Drug . # ?drugbankDrug:Drug, ?Drug:Drug\n      ?Drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Drug> .\n    }\n  }\n}\nLIMIT 1000\n",
+  "predicate_selectivity": [
+    {
+      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>",
+      "cardinality": 1531,
+      "num_endpoints": 1,
+      "num_possible_classes": 2
+    },
+    {
+      "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
+      "cardinality": 1787,
+      "num_endpoints": 2,
+      "num_possible_classes": 4
+    },
+    {
+      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>",
+      "cardinality": 1861,
+      "num_endpoints": 1,
+      "num_possible_classes": 2
+    },
+    {
+      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/structure>",
+      "cardinality": 4772,
+      "num_endpoints": 1,
+      "num_possible_classes": 2
+    },
+    {
+      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2>",
+      "cardinality": 10096,
+      "num_endpoints": 1,
+      "num_possible_classes": 2
+    },
+    {
+      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1>",
+      "cardinality": 10096,
+      "num_endpoints": 1,
+      "num_possible_classes": 2
+    },
+    {
+      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text>",
+      "cardinality": 10122,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    }
+  ]
+}

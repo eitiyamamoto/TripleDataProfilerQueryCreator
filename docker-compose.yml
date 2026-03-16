@@ -1,0 +1,197 @@
+services:
+
+  linkedtcga-m:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    platform: linux/amd64
+    ports:
+      - "8887:8890"
+    environment:
+      - DBA_PASSWORD=dba
+      - SPARQL_UPDATE=true
+      - DEFAULT_GRAPH=linkedtcga-m
+      - VIRT_Parameters_NumberOfBuffers=1500000
+      - VIRT_Parameters_MaxDirtyBuffers=1200000
+      - VIRT_Parameters_DirsAllowed=., /data
+    volumes:
+      - ./LinkedTCGA-M:/data/toLoad
+    mem_limit: 48g
+
+  linkedtcga-e:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    platform: linux/amd64
+    ports:
+      - "8888:8890"
+    environment:
+      - DBA_PASSWORD=dba
+      - SPARQL_UPDATE=true
+      - DEFAULT_GRAPH=linkedtcga-e
+      - VIRT_Parameters_NumberOfBuffers=1500000
+      - VIRT_Parameters_MaxDirtyBuffers=1200000
+    volumes:
+      - ./LinkedTCGA-E:/data/toLoad
+    mem_limit: 24g
+
+  linkedtcga-a:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    platform: linux/amd64
+    ports:
+      - "8889:8890"
+    environment:
+      - DBA_PASSWORD=dba
+      - SPARQL_UPDATE=true
+      - DEFAULT_GRAPH=linkedtcga-a
+      - VIRT_Parameters_NumberOfBuffers=1000000
+      - VIRT_Parameters_MaxDirtyBuffers=750000
+    volumes:
+      - ./LinkedTCGA-A:/data/toLoad
+    mem_limit: 8g
+
+  chebi:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    platform: linux/amd64
+    ports:
+      - "8890:8890"
+    environment:
+      - DBA_PASSWORD=dba
+      - SPARQL_UPDATE=true
+      - DEFAULT_GRAPH=chebi
+      - VIRT_Parameters_NumberOfBuffers=1000000
+      - VIRT_Parameters_MaxDirtyBuffers=750000
+    volumes:
+      - ./ChEBI:/data/toLoad
+    mem_limit: 8g
+
+  dbpedia-subset:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    platform: linux/amd64
+    ports:
+      - "8891:8890"
+    environment:
+      - DBA_PASSWORD=dba
+      - SPARQL_UPDATE=true
+      - DEFAULT_GRAPH=dbpedia-subset
+      - VIRT_Parameters_NumberOfBuffers=1000000
+      - VIRT_Parameters_MaxDirtyBuffers=750000
+    volumes:
+      - ./DBPedia-Subset:/data/toLoad
+    mem_limit: 16g
+
+  drugbank:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    platform: linux/amd64
+    ports:
+      - "8892:8890"
+    environment:
+      - DBA_PASSWORD=dba
+      - SPARQL_UPDATE=true
+      - DEFAULT_GRAPH=drugbank
+      - VIRT_Parameters_NumberOfBuffers=1000000
+      - VIRT_Parameters_MaxDirtyBuffers=750000
+    volumes:
+      - ./DrugBank:/data/toLoad
+    mem_limit: 8g
+
+  geonames:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    platform: linux/amd64
+    ports:
+      - "8893:8890"
+    environment:
+      - DBA_PASSWORD=dba
+      - SPARQL_UPDATE=true
+      - DEFAULT_GRAPH=geonames
+      - VIRT_Parameters_NumberOfBuffers=1000000
+      - VIRT_Parameters_MaxDirtyBuffers=750000
+    volumes:
+      - ./GeoNames:/data/toLoad
+    mem_limit: 16g
+
+  jamendo:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    platform: linux/amd64
+    ports:
+      - "8894:8890"
+    environment:
+      - DBA_PASSWORD=dba
+      - SPARQL_UPDATE=true
+      - DEFAULT_GRAPH=jamendo
+      - VIRT_Parameters_NumberOfBuffers=1000000
+      - VIRT_Parameters_MaxDirtyBuffers=750000
+    volumes:
+      - ./Jamendo:/data/toLoad
+    mem_limit: 8g
+
+  kegg:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    platform: linux/amd64
+    ports:
+      - "8895:8890"
+    environment:
+      - DBA_PASSWORD=dba
+      - SPARQL_UPDATE=true
+      - DEFAULT_GRAPH=kegg
+      - VIRT_Parameters_NumberOfBuffers=1000000
+      - VIRT_Parameters_MaxDirtyBuffers=750000
+    volumes:
+      - ./KEGG:/data/toLoad
+    mem_limit: 8g
+
+  lmdb:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    platform: linux/amd64
+    ports:
+      - "8896:8890"
+    environment:
+      - DBA_PASSWORD=dba
+      - SPARQL_UPDATE=true
+      - DEFAULT_GRAPH=lmdb
+      - VIRT_Parameters_NumberOfBuffers=1000000
+      - VIRT_Parameters_MaxDirtyBuffers=750000
+    volumes:
+      - ./LMDB:/data/toLoad
+    mem_limit: 8g
+
+  nyt:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    platform: linux/amd64
+    ports:
+      - "8897:8890"
+    environment:
+      - DBA_PASSWORD=dba
+      - SPARQL_UPDATE=true
+      - DEFAULT_GRAPH=nyt
+      - VIRT_Parameters_NumberOfBuffers=1000000
+      - VIRT_Parameters_MaxDirtyBuffers=750000
+    volumes:
+      - ./NYT:/data/toLoad
+    mem_limit: 8g
+
+  swdfood:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    platform: linux/amd64
+    ports:
+      - "8898:8890"
+    environment:
+      - DBA_PASSWORD=dba
+      - SPARQL_UPDATE=true
+      - DEFAULT_GRAPH=swdfood
+      - VIRT_Parameters_NumberOfBuffers=1000000
+      - VIRT_Parameters_MaxDirtyBuffers=750000
+    volumes:
+      - ./SWDFood:/data/toLoad
+    mem_limit: 8g
+
+  affymetrix:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    platform: linux/amd64
+    ports:
+      - "8899:8890"
+    environment:
+      - DBA_PASSWORD=dba
+      - SPARQL_UPDATE=true
+      - DEFAULT_GRAPH=affymetrix
+      - VIRT_Parameters_NumberOfBuffers=1000000
+      - VIRT_Parameters_MaxDirtyBuffers=750000
+    volumes:
+      - ./Affymetrix:/data/toLoad
+    mem_limit: 16g

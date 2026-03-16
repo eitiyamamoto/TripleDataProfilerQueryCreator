@@ -1,0 +1,84 @@
+================================================================================
+FEDERATED QUERY OPTIMIZATION REPORT
+================================================================================
+
+QUERY OVERVIEW
+--------------------------------------------------------------------------------
+Total Triple Patterns: 5
+Unique Predicates: 4
+Endpoints Used: 2
+
+PREDICATE SELECTIVITY (Most Selective First)
+--------------------------------------------------------------------------------
+1. sameAs
+   Cardinality: 1.8K
+   Endpoints: 2
+   Possible Class Pairs: 4
+
+ENDPOINT BREAKDOWN
+--------------------------------------------------------------------------------
+Endpoint: http://localhost:8895/sparql/
+  Predicates: 3
+  Total Triples: 29.1K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 1
+  Total Triples: 1.8K
+  Estimated Retrieved Triples: 1.8K
+
+ESTIMATED RESULT CARDINALITY
+--------------------------------------------------------------------------------
+Method: join-chain-analysis
+Estimated Rows: 1.8K
+Confidence: medium
+Reasoning: Estimated from 3 join chains
+
+OPTIMIZATION RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Start query execution with 'sameAs' (1.8K triples)
+• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+
+--------------------------------------------------------------------------------
+OPTIMIZATION STATUS
+--------------------------------------------------------------------------------
+Status: partial
+Metadata Coverage: 1/4
+Unknown Endpoint Triples: 1
+
+--------------------------------------------------------------------------------
+GENERATED FEDERATED QUERY
+--------------------------------------------------------------------------------
+# Smart Federated Query with UNION for Multiple Class Interpretations
+# Each UNION branch uses different endpoints or predicates
+
+SELECT ?actor ?film ?news ?x ?y
+WHERE {
+  # Scenario 1: ?actor=Concept, ?x=Feature, ?y=Concept
+  {
+    SERVICE <http://localhost:8897/sparql/> {
+      ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?actor:Concept, ?x:Feature
+      ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?y:Concept, ?x:Feature
+      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .
+      ?y <http://data.nytimes.com/elements/topicPage> ?news .
+    }
+    # Unknown endpoint (no metadata)
+      ?film <http://purl.org/dc/terms/title> "Tarzan" .
+  }
+
+  UNION
+
+  # Scenario 2: ?actor=Concept, ?x=Drug, ?y=Drug
+  {
+    SERVICE <http://localhost:8895/sparql/> {
+      ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?y:Drug, ?x:Drug
+      ?y <http://data.nytimes.com/elements/topicPage> ?news .
+    }
+    SERVICE <http://localhost:8897/sparql/> {
+      ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?actor:Concept, ?x:Feature
+      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .
+    }
+    # Unknown endpoint (no metadata)
+      ?film <http://purl.org/dc/terms/title> "Tarzan" .
+  }
+}
+LIMIT 1000

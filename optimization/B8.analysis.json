@@ -1,0 +1,163 @@
+{
+  "scope_tree": {
+    "scope_type": "root",
+    "triples": [],
+    "num_triples": 0,
+    "unique_predicates": [],
+    "subjects": [],
+    "objects": [],
+    "variables": [],
+    "children": [
+      {
+        "scope_type": "union_branch",
+        "triples": [
+          [
+            "<http://tcga.deri.ie/TCGA-D9-A1X3>",
+            "<http://tcga.deri.ie/schema/result>",
+            "?recordNo"
+          ],
+          [
+            "?uri",
+            "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+            "<http://tcga.deri.ie/TCGA-D9-A1X3>"
+          ],
+          [
+            "?recordNo",
+            "<http://tcga.deri.ie/schema/chromosome>",
+            "?chromosome"
+          ],
+          [
+            "?recordNo",
+            "<http://tcga.deri.ie/schema/protein_expression_value>",
+            "?expressionValue"
+          ]
+        ],
+        "num_triples": 4,
+        "unique_predicates": [
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/chromosome>",
+          "<http://tcga.deri.ie/schema/protein_expression_value>",
+          "<http://tcga.deri.ie/schema/result>"
+        ],
+        "subjects": [
+          "<http://tcga.deri.ie/TCGA-D9-A1X3>",
+          "?recordNo",
+          "?uri"
+        ],
+        "objects": [
+          "<http://tcga.deri.ie/TCGA-D9-A1X3>",
+          "?chromosome",
+          "?expressionValue",
+          "?recordNo"
+        ],
+        "variables": [],
+        "label": "LEFT"
+      },
+      {
+        "scope_type": "union_branch",
+        "triples": [
+          [
+            "<http://tcga.deri.ie/TCGA-D9-A1X3>",
+            "<http://tcga.deri.ie/schema/result>",
+            "?results"
+          ],
+          [
+            "?s",
+            "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+            "<http://tcga.deri.ie/TCGA-D9-A1X3>"
+          ],
+          [
+            "?results",
+            "<http://tcga.deri.ie/schema/beta_value>",
+            "?expressionValue"
+          ],
+          [
+            "?results",
+            "<http://tcga.deri.ie/schema/chromosome>",
+            "?chromosome"
+          ]
+        ],
+        "num_triples": 4,
+        "unique_predicates": [
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/beta_value>",
+          "<http://tcga.deri.ie/schema/chromosome>",
+          "<http://tcga.deri.ie/schema/result>"
+        ],
+        "subjects": [
+          "<http://tcga.deri.ie/TCGA-D9-A1X3>",
+          "?results",
+          "?s"
+        ],
+        "objects": [
+          "<http://tcga.deri.ie/TCGA-D9-A1X3>",
+          "?chromosome",
+          "?expressionValue",
+          "?results"
+        ],
+        "variables": [],
+        "label": "RIGHT"
+      }
+    ]
+  },
+  "total_triples": 8,
+  "unique_predicates": [
+    "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+    "<http://tcga.deri.ie/schema/beta_value>",
+    "<http://tcga.deri.ie/schema/chromosome>",
+    "<http://tcga.deri.ie/schema/protein_expression_value>",
+    "<http://tcga.deri.ie/schema/result>"
+  ],
+  "subjects": [
+    "<http://tcga.deri.ie/TCGA-D9-A1X3>",
+    "?recordNo",
+    "?results",
+    "?s",
+    "?uri"
+  ],
+  "objects": [
+    "<http://tcga.deri.ie/TCGA-D9-A1X3>",
+    "?chromosome",
+    "?expressionValue",
+    "?recordNo",
+    "?results"
+  ],
+  "variables": [],
+  "num_unique_predicates": 5,
+  "query_modifiers": {
+    "distinct": false,
+    "reduced": false
+  },
+  "predicate_metadata": {
+    "<http://tcga.deri.ie/schema/chromosome>": [
+      {
+        "endpoint": "http://localhost:8888/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/expression_exon_result",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 57429308,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ]
+  },
+  "endpoints_found": [
+    "http://localhost:8888/sparql/"
+  ],
+  "num_endpoints": 1,
+  "query_id": "B8",
+  "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B8",
+  "metadata_coverage": {
+    "total_predicates": 5,
+    "covered_predicates": 1,
+    "missing_predicates": [
+      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "<http://tcga.deri.ie/schema/beta_value>",
+      "<http://tcga.deri.ie/schema/protein_expression_value>",
+      "<http://tcga.deri.ie/schema/result>"
+    ],
+    "coverage_ratio": 0.2,
+    "is_partial": true
+  }
+}
