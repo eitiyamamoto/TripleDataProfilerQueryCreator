@@ -28,7 +28,7 @@
       "selective_predicates": [
         {
           "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint>",
-          "cardinality": 1159,
+          "cardinality": 1159.0,
           "num_endpoints": 1,
           "num_possible_classes": 2
         }
@@ -62,7 +62,7 @@
   "predicate_selectivity": [
     {
       "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint>",
-      "cardinality": 1159,
+      "cardinality": 1159.0,
       "num_endpoints": 1,
       "num_possible_classes": 2
     }

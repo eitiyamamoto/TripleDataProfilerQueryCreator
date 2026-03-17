@@ -6,21 +6,37 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 9
 Unique Predicates: 9
-Endpoints Used: 1
+Endpoints Used: 4
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
 1. lat
    Cardinality: 1.8K
-   Endpoints: 1
+   Endpoints: 2
    Possible Class Pairs: 2
 2. long
    Cardinality: 1.8K
-   Endpoints: 1
+   Endpoints: 2
    Possible Class Pairs: 2
+3. based_near
+   Cardinality: unknown
+   Endpoints: 2
+   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8893/sparql/
+  Predicates: 2
+  Total Triples: 15.0M
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8896/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8897/sparql/
   Predicates: 4
   Total Triples: 7.1K
@@ -36,12 +52,14 @@ Reasoning: Estimated from 5 join chains
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'lat' (1.8K triples)
+• Use subject/object class constraints to reduce search space for 3 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 4 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
 Status: partial
-Metadata Coverage: 2/9
+Metadata Coverage: 3/9
 Unknown Endpoint Triples: 5
 
 --------------------------------------------------------------------------------
@@ -54,11 +72,14 @@ GENERATED FEDERATED QUERY
 SELECT DISTINCT ?author ?capital ?latitude ?longitude ?paper ?place ?proceedings ?role
 WHERE {
 
+  SERVICE <http://localhost:8896/sparql/> {
+    ?author <http://xmlns.com/foaf/0.1/based_near> ?place .
+    ?place <http://dbpedia.org/ontology/capital> ?capital .
+  }
+
   SERVICE <http://localhost:8897/sparql/> {
     ?place <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?latitude . # ?place:Feature, ?latitude:Literal
     ?place <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?longitude . # ?place:Feature, ?longitude:Literal
-    ?author <http://xmlns.com/foaf/0.1/based_near> ?place .
-    ?place <http://dbpedia.org/ontology/capital> ?capital .
   }
 
   # Unknown endpoint (no metadata)

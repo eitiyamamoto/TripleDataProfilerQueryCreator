@@ -102,90 +102,175 @@
     "reduced": false
   },
   "predicate_metadata": {
+    "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>": [
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org",
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://bio2rdf.org",
+            "http://rdfs.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://data.nytimes.com",
+            "http://localhost:8890",
+            "http://sws.geonames.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://www.geonames.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org",
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://data.linkedmdb.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org",
+            "http://xmlns.com"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8890/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org",
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://bio2rdf.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://artlibre.org",
+            "http://creativecommons.org",
+            "http://dbtune.org",
+            "http://localhost:8890",
+            "http://www.jamendo.com",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://purl.org",
+            "http://www.holygoat.co.uk",
+            "http://www.openlinksw.com",
+            "http://www.w3.org",
+            "http://xmlns.com"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org",
+            "http://www4.wiwiss.fu-berlin.de",
+            "http://xmlns.com"
+          ],
+          "object": [
+            "http://www.openlinksw.com",
+            "http://www.w3.org",
+            "http://www4.wiwiss.fu-berlin.de"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://localhost:8890",
+            "http://sws.geonames.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://www.geonames.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org",
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://bio2rdf.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      }
+    ],
     "<http://bio2rdf.org/ns/chebi#iupacName>": [
       {
         "endpoint": "http://localhost:8890/sparql/",
         "subject_class": "http://bio2rdf.org/ns/chebi#Compound",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
         "triple_count": 15458,
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      }
-    ],
-    "<http://bio2rdf.org/ns/bio2rdf#mass>": [
-      {
-        "endpoint": "http://localhost:8895/sparql/",
-        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 6444,
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      },
-      {
-        "endpoint": "http://localhost:8895/sparql/",
-        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 12063,
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      }
-    ],
-    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>": [
-      {
-        "endpoint": "http://localhost:8892/sparql/",
-        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 4772,
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      },
-      {
-        "endpoint": "http://localhost:8892/sparql/",
-        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 4772,
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      }
-    ],
-    "<http://bio2rdf.org/ns/bio2rdf#inchi>": [
-      {
-        "endpoint": "http://localhost:8890/sparql/",
-        "subject_class": "http://bio2rdf.org/ns/chebi#Compound",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 11736,
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      }
-    ],
-    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/inchiIdentifier>": [
-      {
-        "endpoint": "http://localhost:8892/sparql/",
-        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 4392,
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      },
-      {
-        "endpoint": "http://localhost:8892/sparql/",
-        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 4392,
         "authorities": {
           "subject": [],
           "object": []
@@ -263,25 +348,120 @@
           "object": []
         }
       }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/inchiIdentifier>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4392,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4392,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://bio2rdf.org/ns/bio2rdf#mass>": [
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 6444,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 12063,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://bio2rdf.org/ns/bio2rdf#inchi>": [
+      {
+        "endpoint": "http://localhost:8890/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/chebi#Compound",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 11736,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4772,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4772,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      }
     ]
   },
   "endpoints_found": [
     "http://localhost:8890/sparql/",
     "http://localhost:8892/sparql/",
+    "http://localhost:8893/sparql/",
     "http://localhost:8894/sparql/",
-    "http://localhost:8895/sparql/"
+    "http://localhost:8895/sparql/",
+    "http://localhost:8896/sparql/",
+    "http://localhost:8897/sparql/",
+    "http://localhost:8899/sparql/"
   ],
-  "num_endpoints": 4,
+  "num_endpoints": 8,
   "query_id": "C2",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C2",
   "metadata_coverage": {
     "total_predicates": 8,
-    "covered_predicates": 6,
-    "missing_predicates": [
-      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
-      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
-    ],
-    "coverage_ratio": 0.75,
-    "is_partial": true
+    "covered_predicates": 8,
+    "missing_predicates": [],
+    "coverage_ratio": 1.0,
+    "is_partial": false
   }
 }

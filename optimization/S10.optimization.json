@@ -1,26 +1,29 @@
 {
   "query_id": "S10",
   "analysis_file": "optimization/S10.analysis.json",
-  "optimization_status": "partial",
+  "optimization_status": "complete",
   "metadata_coverage": {
     "total_predicates": 5,
-    "covered_predicates": 4,
-    "missing_predicates": [
-      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
-    ],
-    "coverage_ratio": 0.8,
-    "is_partial": true
+    "covered_predicates": 5,
+    "missing_predicates": [],
+    "coverage_ratio": 1.0,
+    "is_partial": false
   },
   "unknown_endpoint_triples": [],
   "optimization_analysis": {
     "optimization_strategy": "federated-with-service-clauses",
     "original_query": "SELECT ...",
     "endpoints_used": [
+      "http://localhost:8890/sparql/",
       "http://localhost:8892/sparql/",
+      "http://localhost:8893/sparql/",
+      "http://localhost:8894/sparql/",
       "http://localhost:8895/sparql/",
-      "http://localhost:8897/sparql/"
+      "http://localhost:8896/sparql/",
+      "http://localhost:8897/sparql/",
+      "http://localhost:8899/sparql/"
     ],
-    "num_endpoints": 3,
+    "num_endpoints": 8,
     "optimization_details": {
       "num_triples": 5,
       "num_unique_predicates": 5,
@@ -30,24 +33,25 @@
       "selective_predicates": [
         {
           "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-          "cardinality": 1787,
-          "num_endpoints": 2,
-          "num_possible_classes": 4
+          "cardinality": 1787.0,
+          "num_endpoints": 6,
+          "num_possible_classes": 5
         },
         {
           "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2>",
-          "cardinality": 10096,
+          "cardinality": 10096.0,
           "num_endpoints": 1,
           "num_possible_classes": 2
         },
         {
           "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1>",
-          "cardinality": 10096,
+          "cardinality": 10096.0,
           "num_endpoints": 1,
           "num_possible_classes": 2
         }
       ],
       "multi_endpoint_predicates": [
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
         "<http://www.w3.org/2002/07/owl#sameAs>"
       ]
     },
@@ -60,26 +64,64 @@
     },
     "endpoint_breakdown": [
       {
+        "endpoint": "http://localhost:8890/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
         "endpoint": "http://localhost:8892/sparql/",
-        "num_predicates": 5,
+        "num_predicates": 7,
         "total_triples": 50506,
         "total_triples_readable": "50.5K",
         "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
           "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2>",
           "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2>",
-          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text>",
+          "<http://www.w3.org/2002/07/owl#sameAs>",
           "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1>",
-          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1>"
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text>"
         ],
         "estimated_retrieved_triples": 10096,
         "estimated_retrieved_triples_readable": "10.1K"
       },
       {
+        "endpoint": "http://localhost:8893/sparql/",
+        "num_predicates": 2,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "num_predicates": 2,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
         "endpoint": "http://localhost:8895/sparql/",
-        "num_predicates": 3,
+        "num_predicates": 4,
         "total_triples": 29116,
         "total_triples_readable": "29.1K",
         "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
           "<http://www.w3.org/2002/07/owl#sameAs>",
           "<http://www.w3.org/2002/07/owl#sameAs>",
           "<http://www.w3.org/2002/07/owl#sameAs>"
@@ -88,18 +130,42 @@
         "estimated_retrieved_triples_readable": "unknown"
       },
       {
+        "endpoint": "http://localhost:8896/sparql/",
+        "num_predicates": 2,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
         "endpoint": "http://localhost:8897/sparql/",
-        "num_predicates": 1,
+        "num_predicates": 2,
         "total_triples": 1787,
         "total_triples_readable": "1.8K",
         "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
           "<http://www.w3.org/2002/07/owl#sameAs>"
         ],
         "estimated_retrieved_triples": 1787,
         "estimated_retrieved_triples_readable": "1.8K"
+      },
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 5\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions -> http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs) [10.1K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions -> http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer) [10.1K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions -> http://www.w3.org/2000/01/rdf-schema#Literal) [10.1K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions -> http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer) [10.1K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions -> http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs) [10.1K triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8899/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 2\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8890/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 2\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 2\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 2\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 4\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 7\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions -> http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs) [10.1K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions -> http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer) [10.1K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions -> http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer) [10.1K triples]\n\n"
   },
   "constraint_map": {
     "?y": [
@@ -195,26 +261,32 @@
   "predicate_selectivity": [
     {
       "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-      "cardinality": 1787,
-      "num_endpoints": 2,
-      "num_possible_classes": 4
+      "cardinality": 1787.0,
+      "num_endpoints": 6,
+      "num_possible_classes": 5
     },
     {
       "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2>",
-      "cardinality": 10096,
+      "cardinality": 10096.0,
       "num_endpoints": 1,
       "num_possible_classes": 2
     },
     {
       "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1>",
-      "cardinality": 10096,
+      "cardinality": 10096.0,
       "num_endpoints": 1,
       "num_possible_classes": 2
     },
     {
       "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text>",
-      "cardinality": 10122,
+      "cardinality": 10122.0,
       "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "cardinality": Infinity,
+      "num_endpoints": 8,
       "num_possible_classes": 1
     }
   ]

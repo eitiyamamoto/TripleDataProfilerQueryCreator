@@ -4,13 +4,12 @@
   "optimization_status": "partial",
   "metadata_coverage": {
     "total_predicates": 4,
-    "covered_predicates": 1,
+    "covered_predicates": 2,
     "missing_predicates": [
-      "<http://data.linkedmdb.org/resource/movie/genre>",
       "<http://dbpedia.org/ontology/director>",
       "<http://dbpedia.org/ontology/nationality>"
     ],
-    "coverage_ratio": 0.25,
+    "coverage_ratio": 0.5,
     "is_partial": true
   },
   "unknown_endpoint_triples": [
@@ -24,10 +23,14 @@
     "optimization_strategy": "federated-with-service-clauses",
     "original_query": "SELECT ...",
     "endpoints_used": [
+      "http://localhost:8892/sparql/",
+      "http://localhost:8893/sparql/",
+      "http://localhost:8894/sparql/",
       "http://localhost:8895/sparql/",
+      "http://localhost:8896/sparql/",
       "http://localhost:8897/sparql/"
     ],
-    "num_endpoints": 2,
+    "num_endpoints": 6,
     "optimization_details": {
       "num_triples": 4,
       "num_unique_predicates": 4,
@@ -37,9 +40,15 @@
       "selective_predicates": [
         {
           "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-          "cardinality": 1787,
-          "num_endpoints": 2,
-          "num_possible_classes": 4
+          "cardinality": 1787.0,
+          "num_endpoints": 6,
+          "num_possible_classes": 5
+        },
+        {
+          "predicate": "<http://data.linkedmdb.org/resource/movie/genre>",
+          "cardinality": 39054.0,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
         }
       ],
       "multi_endpoint_predicates": [
@@ -55,6 +64,39 @@
     },
     "endpoint_breakdown": [
       {
+        "endpoint": "http://localhost:8892/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
         "endpoint": "http://localhost:8895/sparql/",
         "num_predicates": 3,
         "total_triples": 29116,
@@ -68,6 +110,20 @@
         "estimated_retrieved_triples_readable": "unknown"
       },
       {
+        "endpoint": "http://localhost:8896/sparql/",
+        "num_predicates": 4,
+        "total_triples": 117162,
+        "total_triples_readable": "117.2K",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://data.linkedmdb.org/resource/movie/genre>",
+          "<http://data.linkedmdb.org/resource/movie/genre>",
+          "<http://data.linkedmdb.org/resource/movie/genre>"
+        ],
+        "estimated_retrieved_triples": 39054,
+        "estimated_retrieved_triples_readable": "39.1K"
+      },
+      {
         "endpoint": "http://localhost:8897/sparql/",
         "num_predicates": 1,
         "total_triples": 1787,
@@ -79,13 +135,14 @@
         "estimated_retrieved_triples_readable": "1.8K"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 4\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n#   <http://data.linkedmdb.org/resource/movie/genre> (http://data.linkedmdb.org/resource/movie/film -> http://data.linkedmdb.org/resource/movie/film_genre) [39.1K triples]\n#   <http://data.linkedmdb.org/resource/movie/genre> (http://data.linkedmdb.org/resource/movie/film -> http://data.linkedmdb.org/resource/movie/film_genre) [39.1K triples]\n#   <http://data.linkedmdb.org/resource/movie/genre> (http://data.linkedmdb.org/resource/movie/film -> http://data.linkedmdb.org/resource/movie/film_genre) [39.1K triples]\n\n"
   },
   "constraint_map": {
     "?x": [
       "http://bio2rdf.org/ns/kegg#Compound",
       "http://bio2rdf.org/ns/kegg#Drug",
       "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://data.linkedmdb.org/resource/movie/film",
       "http://www.w3.org/2004/02/skos/core#Concept"
     ],
     "?film": [
@@ -93,25 +150,32 @@
       "http://bio2rdf.org/ns/kegg#Drug",
       "http://bio2rdf.org/ns/kegg#Reaction",
       "http://www.geonames.org/ontology#Feature"
+    ],
+    "?genre": [
+      "http://data.linkedmdb.org/resource/movie/film_genre"
     ]
   },
   "inferred_variable_classes": {
     "?x": [
       {
+        "class": "http://data.linkedmdb.org/resource/movie/film",
+        "confidence": 0.3804853548564722
+      },
+      {
         "class": "http://www.w3.org/2004/02/skos/core#Concept",
-        "confidence": 0.2888385676023399
+        "confidence": 0.17893972271192846
       },
       {
         "class": "http://bio2rdf.org/ns/kegg#Drug",
-        "confidence": 0.2428200971928318
+        "confidence": 0.15043060634613412
       },
       {
         "class": "http://bio2rdf.org/ns/kegg#Reaction",
-        "confidence": 0.241397748359715
+        "confidence": 0.14954944041351545
       },
       {
         "class": "http://bio2rdf.org/ns/kegg#Compound",
-        "confidence": 0.2269435868451133
+        "confidence": 0.14059487567194973
       }
     ],
     "?film": [
@@ -131,15 +195,27 @@
         "class": "http://bio2rdf.org/ns/kegg#Compound",
         "confidence": 0.2269435868451133
       }
+    ],
+    "?genre": [
+      {
+        "class": "http://data.linkedmdb.org/resource/movie/film_genre",
+        "confidence": 1.0
+      }
     ]
   },
-  "optimized_federated_query": "# Smart Federated Query with UNION for Multiple Class Interpretations\n# Each UNION branch uses different endpoints or predicates\n\nSELECT ?director ?film ?genre ?x\nWHERE {\n  # Scenario 1: ?x=Concept, ?film=Feature\n  {\n    SERVICE <http://localhost:8897/sparql/> {\n      ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . # ?x:Concept, ?film:Feature\n      ?film <http://dbpedia.org/ontology/director> ?director .\n      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre .\n    }\n    # Unknown endpoint (no metadata)\n      ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .\n  }\n\n  UNION\n\n  # Scenario 2: ?x=Drug, ?film=Drug\n  {\n    SERVICE <http://localhost:8895/sparql/> {\n      ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . # ?x:Drug, ?film:Drug\n      ?film <http://dbpedia.org/ontology/director> ?director .\n      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre .\n    }\n    # Unknown endpoint (no metadata)\n      ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .\n  }\n}\nLIMIT 1000\n",
+  "optimized_federated_query": "# Smart Federated Query with UNION for Multiple Class Interpretations\n# Each UNION branch uses different endpoints or predicates\n\nSELECT ?director ?film ?genre ?x\nWHERE {\n  # Scenario 1: ?genre=film_genre, ?x=film, ?film=Feature\n  {\n    SERVICE <http://localhost:8896/sparql/> {\n      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre . # ?x:film, ?genre:film_genre\n    }\n    SERVICE <http://localhost:8897/sparql/> {\n      ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . # ?x:Concept, ?film:Feature\n      ?film <http://dbpedia.org/ontology/director> ?director .\n    }\n    # Unknown endpoint (no metadata)\n      ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .\n  }\n\n  UNION\n\n  # Scenario 2: ?genre=film_genre, ?x=film, ?film=Drug\n  {\n    SERVICE <http://localhost:8895/sparql/> {\n      ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . # ?x:Drug, ?film:Drug\n      ?film <http://dbpedia.org/ontology/director> ?director .\n    }\n    SERVICE <http://localhost:8896/sparql/> {\n      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre . # ?x:film, ?genre:film_genre\n    }\n    # Unknown endpoint (no metadata)\n      ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .\n  }\n}\nLIMIT 1000\n",
   "predicate_selectivity": [
     {
       "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-      "cardinality": 1787,
-      "num_endpoints": 2,
-      "num_possible_classes": 4
+      "cardinality": 1787.0,
+      "num_endpoints": 6,
+      "num_possible_classes": 5
+    },
+    {
+      "predicate": "<http://data.linkedmdb.org/resource/movie/genre>",
+      "cardinality": 39054.0,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
     }
   ]
 }

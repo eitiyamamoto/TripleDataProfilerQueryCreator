@@ -1,16 +1,13 @@
 {
   "query_id": "S12",
   "analysis_file": "optimization/S12.analysis.json",
-  "optimization_status": "partial",
+  "optimization_status": "complete",
   "metadata_coverage": {
     "total_predicates": 6,
-    "covered_predicates": 4,
-    "missing_predicates": [
-      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
-      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
-    ],
-    "coverage_ratio": 0.6667,
-    "is_partial": true
+    "covered_predicates": 6,
+    "missing_predicates": [],
+    "coverage_ratio": 1.0,
+    "is_partial": false
   },
   "unknown_endpoint_triples": [],
   "optimization_analysis": {
@@ -19,10 +16,14 @@
     "endpoints_used": [
       "http://localhost:8890/sparql/",
       "http://localhost:8892/sparql/",
+      "http://localhost:8893/sparql/",
       "http://localhost:8894/sparql/",
-      "http://localhost:8895/sparql/"
+      "http://localhost:8895/sparql/",
+      "http://localhost:8896/sparql/",
+      "http://localhost:8897/sparql/",
+      "http://localhost:8899/sparql/"
     ],
-    "num_endpoints": 4,
+    "num_endpoints": 8,
     "optimization_details": {
       "num_triples": 6,
       "num_unique_predicates": 6,
@@ -32,26 +33,27 @@
       "selective_predicates": [
         {
           "predicate": "<http://purl.org/dc/elements/1.1/title>",
-          "cardinality": 4131,
+          "cardinality": 4131.0,
           "num_endpoints": 3,
           "num_possible_classes": 7
         },
         {
           "predicate": "<http://bio2rdf.org/ns/bio2rdf#url>",
-          "cardinality": 4245,
+          "cardinality": 4245.0,
           "num_endpoints": 2,
           "num_possible_classes": 5
         },
         {
           "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
-          "cardinality": 4772,
+          "cardinality": 4772.0,
           "num_endpoints": 1,
           "num_possible_classes": 2
         }
       ],
       "multi_endpoint_predicates": [
         "<http://bio2rdf.org/ns/bio2rdf#url>",
-        "<http://purl.org/dc/elements/1.1/title>"
+        "<http://purl.org/dc/elements/1.1/title>",
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
       ]
     },
     "cardinality_estimate": {
@@ -64,35 +66,50 @@
     "endpoint_breakdown": [
       {
         "endpoint": "http://localhost:8890/sparql/",
-        "num_predicates": 3,
+        "num_predicates": 4,
         "total_triples": 102165,
         "total_triples_readable": "102.2K",
         "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+          "<http://purl.org/dc/elements/1.1/title>",
           "<http://bio2rdf.org/ns/bio2rdf#url>",
-          "<http://bio2rdf.org/ns/bio2rdf#image>",
-          "<http://purl.org/dc/elements/1.1/title>"
+          "<http://bio2rdf.org/ns/bio2rdf#image>"
         ],
         "estimated_retrieved_triples": 34055,
         "estimated_retrieved_triples_readable": "34.1K"
       },
       {
         "endpoint": "http://localhost:8892/sparql/",
-        "num_predicates": 2,
+        "num_predicates": 4,
         "total_triples": 9544,
         "total_triples_readable": "9.5K",
         "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
           "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
-          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>"
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
         ],
         "estimated_retrieved_triples": 4772,
         "estimated_retrieved_triples_readable": "4.8K"
       },
       {
+        "endpoint": "http://localhost:8893/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
         "endpoint": "http://localhost:8894/sparql/",
-        "num_predicates": 2,
+        "num_predicates": 3,
         "total_triples": 51402,
         "total_triples_readable": "51.4K",
         "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
           "<http://purl.org/dc/elements/1.1/title>",
           "<http://purl.org/dc/elements/1.1/title>"
         ],
@@ -101,24 +118,58 @@
       },
       {
         "endpoint": "http://localhost:8895/sparql/",
-        "num_predicates": 8,
+        "num_predicates": 9,
         "total_triples": 68406,
         "total_triples_readable": "68.4K",
         "predicates": [
-          "<http://bio2rdf.org/ns/bio2rdf#url>",
-          "<http://bio2rdf.org/ns/bio2rdf#url>",
-          "<http://bio2rdf.org/ns/bio2rdf#url>",
-          "<http://bio2rdf.org/ns/bio2rdf#url>",
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
           "<http://purl.org/dc/elements/1.1/title>",
           "<http://purl.org/dc/elements/1.1/title>",
           "<http://purl.org/dc/elements/1.1/title>",
-          "<http://purl.org/dc/elements/1.1/title>"
+          "<http://purl.org/dc/elements/1.1/title>",
+          "<http://bio2rdf.org/ns/bio2rdf#url>",
+          "<http://bio2rdf.org/ns/bio2rdf#url>",
+          "<http://bio2rdf.org/ns/bio2rdf#url>",
+          "<http://bio2rdf.org/ns/bio2rdf#url>"
         ],
         "estimated_retrieved_triples": 4245,
         "estimated_retrieved_triples_readable": "4.2K"
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 2\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.8K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.8K triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 2\n#   <http://purl.org/dc/elements/1.1/title> (http://purl.org/ontology/mo/Track -> http://www.w3.org/2000/01/rdf-schema#Literal) [45.6K triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://purl.org/ontology/mo/Record -> http://www.w3.org/2000/01/rdf-schema#Literal) [5.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 8\n#   <http://bio2rdf.org/ns/bio2rdf#url> (http://bio2rdf.org/ns/kegg#Reaction -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.8K triples]\n#   <http://bio2rdf.org/ns/bio2rdf#url> (http://bio2rdf.org/ns/kegg#Drug -> http://www.w3.org/2000/01/rdf-schema#Literal) [8.1K triples]\n#   <http://bio2rdf.org/ns/bio2rdf#url> (http://bio2rdf.org/ns/kegg#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [14.1K triples]\n#   <http://bio2rdf.org/ns/bio2rdf#url> (http://bio2rdf.org/ns/kegg#Enzyme -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.2K triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://bio2rdf.org/ns/kegg#Reaction -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.8K triples]\n\n# Endpoint: http://localhost:8890/sparql/\n# Predicates: 3\n#   <http://bio2rdf.org/ns/bio2rdf#url> (http://bio2rdf.org/ns/chebi#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [34.1K triples]\n#   <http://bio2rdf.org/ns/bio2rdf#image> (http://bio2rdf.org/ns/chebi#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [34.1K triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://bio2rdf.org/ns/chebi#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [34.1K triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8899/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 4\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.8K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.8K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 3\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://purl.org/ontology/mo/Track -> http://www.w3.org/2000/01/rdf-schema#Literal) [45.6K triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://purl.org/ontology/mo/Record -> http://www.w3.org/2000/01/rdf-schema#Literal) [5.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 9\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://bio2rdf.org/ns/kegg#Reaction -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.8K triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://bio2rdf.org/ns/kegg#Drug -> http://www.w3.org/2000/01/rdf-schema#Literal) [8.1K triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://bio2rdf.org/ns/kegg#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [14.1K triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://bio2rdf.org/ns/kegg#Enzyme -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.1K triples]\n\n# Endpoint: http://localhost:8890/sparql/\n# Predicates: 4\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://purl.org/dc/elements/1.1/title> (http://bio2rdf.org/ns/chebi#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [34.1K triples]\n#   <http://bio2rdf.org/ns/bio2rdf#url> (http://bio2rdf.org/ns/chebi#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [34.1K triples]\n#   <http://bio2rdf.org/ns/bio2rdf#image> (http://bio2rdf.org/ns/chebi#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [34.1K triples]\n\n"
   },
   "constraint_map": {
     "?drug": [
@@ -213,25 +264,37 @@
   "predicate_selectivity": [
     {
       "predicate": "<http://purl.org/dc/elements/1.1/title>",
-      "cardinality": 4131,
+      "cardinality": 4131.0,
       "num_endpoints": 3,
       "num_possible_classes": 7
     },
     {
       "predicate": "<http://bio2rdf.org/ns/bio2rdf#url>",
-      "cardinality": 4245,
+      "cardinality": 4245.0,
       "num_endpoints": 2,
       "num_possible_classes": 5
     },
     {
       "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
-      "cardinality": 4772,
+      "cardinality": 4772.0,
       "num_endpoints": 1,
       "num_possible_classes": 2
     },
     {
       "predicate": "<http://bio2rdf.org/ns/bio2rdf#image>",
-      "cardinality": 34055,
+      "cardinality": 34055.0,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "cardinality": Infinity,
+      "num_endpoints": 8,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>",
+      "cardinality": Infinity,
       "num_endpoints": 1,
       "num_possible_classes": 1
     }

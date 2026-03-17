@@ -6,40 +6,56 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 12
 Unique Predicates: 12
-Endpoints Used: 2
+Endpoints Used: 6
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
 1. population
    Cardinality: 1.3K
-   Endpoints: 1
+   Endpoints: 2
    Possible Class Pairs: 1
 2. countryCode
    Cardinality: 1.8K
-   Endpoints: 1
+   Endpoints: 2
    Possible Class Pairs: 1
 3. lat
    Cardinality: 1.8K
-   Endpoints: 1
+   Endpoints: 2
    Possible Class Pairs: 2
 4. long
    Cardinality: 1.8K
-   Endpoints: 1
+   Endpoints: 2
    Possible Class Pairs: 2
 5. name
    Cardinality: 1.8K
-   Endpoints: 1
+   Endpoints: 2
    Possible Class Pairs: 1
 6. sameAs
    Cardinality: 1.8K
-   Endpoints: 2
-   Possible Class Pairs: 4
+   Endpoints: 6
+   Possible Class Pairs: 5
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8892/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8893/sparql/
+  Predicates: 6
+  Total Triples: 30.1M
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 3
   Total Triples: 29.1K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8896/sparql/
+  Predicates: 1
+  Total Triples: 0
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8897/sparql/
   Predicates: 8
@@ -56,7 +72,8 @@ Reasoning: Estimated from 2 join chains
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'population' (1.3K triples)
-• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+• Use subject/object class constraints to reduce search space for 6 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 6 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
@@ -72,7 +89,7 @@ GENERATED FEDERATED QUERY
 
 SELECT DISTINCT ?NYTplace ?capital ?countryCode ?countryName ?ethnicGroup ?foundingDate ?geonameplace ?largestCity ?latitude ?longitude ?motto ?nationalAnthem ?population
 WHERE {
-  # Scenario 1: ?NYTplace=Feature, ?countryCode=Literal, ?countryName=Literal, ?population=Literal, ?latitude=Literal, ?longitude=Literal, ?geonameplace=Feature
+  # Scenario 1: ?countryCode=Literal, ?countryName=Literal, ?population=Literal, ?latitude=Literal, ?longitude=Literal, ?NYTplace=Feature, ?geonameplace=Feature
   {
     SERVICE <http://localhost:8897/sparql/> {
       ?NYTplace <http://www.geonames.org/ontology#population> ?population . # ?NYTplace:Feature, ?population:Literal
@@ -92,7 +109,7 @@ WHERE {
 
   UNION
 
-  # Scenario 2: ?NYTplace=Feature, ?countryCode=Literal, ?countryName=Literal, ?population=Literal, ?latitude=Literal, ?longitude=Literal, ?geonameplace=Drug
+  # Scenario 2: ?countryCode=Literal, ?countryName=Literal, ?population=Literal, ?latitude=Literal, ?longitude=Literal, ?NYTplace=Feature, ?geonameplace=Drug
   {
     SERVICE <http://localhost:8895/sparql/> {
       ?NYTplace <http://www.w3.org/2002/07/owl#sameAs> ?geonameplace . # ?NYTplace:Drug, ?geonameplace:Drug

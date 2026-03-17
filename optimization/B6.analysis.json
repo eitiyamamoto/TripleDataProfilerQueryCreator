@@ -124,7 +124,170 @@
     "reduced": false
   },
   "predicate_metadata": {
-    "<http://tcga.deri.ie/schema/start>": [
+    "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>": [
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org",
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://bio2rdf.org",
+            "http://rdfs.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://data.nytimes.com",
+            "http://localhost:8890",
+            "http://sws.geonames.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://www.geonames.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org",
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://data.linkedmdb.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org",
+            "http://xmlns.com"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8890/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org",
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://bio2rdf.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://artlibre.org",
+            "http://creativecommons.org",
+            "http://dbtune.org",
+            "http://localhost:8890",
+            "http://www.jamendo.com",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://purl.org",
+            "http://www.holygoat.co.uk",
+            "http://www.openlinksw.com",
+            "http://www.w3.org",
+            "http://xmlns.com"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org",
+            "http://www4.wiwiss.fu-berlin.de",
+            "http://xmlns.com"
+          ],
+          "object": [
+            "http://www.openlinksw.com",
+            "http://www.w3.org",
+            "http://www4.wiwiss.fu-berlin.de"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://localhost:8890",
+            "http://sws.geonames.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://www.geonames.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org",
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://bio2rdf.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      }
+    ],
+    "<http://tcga.deri.ie/schema/stop>": [
       {
         "endpoint": "http://localhost:8888/sparql/",
         "subject_class": "http://tcga.deri.ie/schema/expression_exon_result",
@@ -136,7 +299,23 @@
         }
       }
     ],
-    "<http://tcga.deri.ie/schema/stop>": [
+    "<http://bio2rdf.org/affymetrix_vocabulary:x-symbol>": [
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      }
+    ],
+    "<http://tcga.deri.ie/schema/start>": [
       {
         "endpoint": "http://localhost:8888/sparql/",
         "subject_class": "http://tcga.deri.ie/schema/expression_exon_result",
@@ -159,26 +338,47 @@
           "object": []
         }
       }
+    ],
+    "<http://bio2rdf.org/affymetrix_vocabulary:x-geneid>": [
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      }
     ]
   },
   "endpoints_found": [
-    "http://localhost:8888/sparql/"
+    "http://localhost:8888/sparql/",
+    "http://localhost:8890/sparql/",
+    "http://localhost:8892/sparql/",
+    "http://localhost:8893/sparql/",
+    "http://localhost:8894/sparql/",
+    "http://localhost:8895/sparql/",
+    "http://localhost:8896/sparql/",
+    "http://localhost:8897/sparql/",
+    "http://localhost:8899/sparql/"
   ],
-  "num_endpoints": 1,
+  "num_endpoints": 9,
   "query_id": "B6",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B6",
   "metadata_coverage": {
     "total_predicates": 9,
-    "covered_predicates": 3,
+    "covered_predicates": 6,
     "missing_predicates": [
-      "<http://bio2rdf.org/affymetrix_vocabulary:x-geneid>",
-      "<http://bio2rdf.org/affymetrix_vocabulary:x-symbol>",
       "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
       "<http://tcga.deri.ie/schema/result>",
-      "<http://tcga.deri.ie/schema/scaled_estimate>",
-      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+      "<http://tcga.deri.ie/schema/scaled_estimate>"
     ],
-    "coverage_ratio": 0.3333,
+    "coverage_ratio": 0.6667,
     "is_partial": true
   }
 }

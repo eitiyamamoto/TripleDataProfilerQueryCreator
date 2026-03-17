@@ -138,18 +138,6 @@
     "reduced": false
   },
   "predicate_metadata": {
-    "<http://www.geonames.org/ontology#population>": [
-      {
-        "endpoint": "http://localhost:8897/sparql/",
-        "subject_class": "http://www.geonames.org/ontology#Feature",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 1283,
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      }
-    ],
     "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>": [
       {
         "endpoint": "http://localhost:8897/sparql/",
@@ -166,6 +154,16 @@
         "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
         "triple_count": 1787,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 7479714,
         "authorities": {
           "subject": [],
           "object": []
@@ -192,14 +190,12 @@
           "subject": [],
           "object": []
         }
-      }
-    ],
-    "<http://www.geonames.org/ontology#name>": [
+      },
       {
-        "endpoint": "http://localhost:8897/sparql/",
+        "endpoint": "http://localhost:8893/sparql/",
         "subject_class": "http://www.geonames.org/ontology#Feature",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 1780,
+        "triple_count": 7479714,
         "authorities": {
           "subject": [],
           "object": []
@@ -224,6 +220,70 @@
             "http://rdf.insee.fr",
             "http://sws.geonames.org",
             "http://www.ordnancesurvey.co.uk"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://dbpedia.org",
+            "http://mpii.de",
+            "http://sws.geonames.org",
+            "http://zitgist.com"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://dbtune.org"
+          ],
+          "object": [
+            "http://zitgist.com"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": [
+            "http://bio2rdf.org",
+            "http://data.linkedct.org",
+            "http://dbpedia.org",
+            "http://purl.org",
+            "http://www.dbpedia.org",
+            "http://www4.wiwiss.fu-berlin.de"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://sws.geonames.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
           ]
         }
       },
@@ -270,6 +330,50 @@
         }
       }
     ],
+    "<http://www.geonames.org/ontology#name>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1780,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 7479714,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www.geonames.org/ontology#population>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1283,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 235318,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
     "<http://www.geonames.org/ontology#countryCode>": [
       {
         "endpoint": "http://localhost:8897/sparql/",
@@ -280,14 +384,28 @@
           "subject": [],
           "object": []
         }
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 7474323,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
       }
     ]
   },
   "endpoints_found": [
+    "http://localhost:8892/sparql/",
+    "http://localhost:8893/sparql/",
+    "http://localhost:8894/sparql/",
     "http://localhost:8895/sparql/",
+    "http://localhost:8896/sparql/",
     "http://localhost:8897/sparql/"
   ],
-  "num_endpoints": 2,
+  "num_endpoints": 6,
   "query_id": "C4",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C4",
   "metadata_coverage": {

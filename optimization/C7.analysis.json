@@ -133,6 +133,16 @@
           "subject": [],
           "object": []
         }
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 7479714,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
       }
     ],
     "<http://www.w3.org/2003/01/geo/wgs84_pos#long>": [
@@ -155,28 +165,70 @@
           "subject": [],
           "object": []
         }
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 7479714,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://xmlns.com/foaf/0.1/based_near>": [
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://sws.geonames.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://dbtune.org"
+          ],
+          "object": [
+            "http://sws.geonames.org"
+          ]
+        }
       }
     ]
   },
   "endpoints_found": [
+    "http://localhost:8893/sparql/",
+    "http://localhost:8894/sparql/",
+    "http://localhost:8896/sparql/",
     "http://localhost:8897/sparql/"
   ],
-  "num_endpoints": 1,
+  "num_endpoints": 4,
   "query_id": "C7",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C7",
   "metadata_coverage": {
     "total_predicates": 9,
-    "covered_predicates": 2,
+    "covered_predicates": 3,
     "missing_predicates": [
       "<http://data.semanticweb.org/ns/swc/ontology#heldBy>",
       "<http://data.semanticweb.org/ns/swc/ontology#isPartOf>",
       "<http://data.semanticweb.org/ns/swc/ontology#isRoleAt>",
       "<http://data.semanticweb.org/ns/swc/ontology#relatedToEvent>",
       "<http://dbpedia.org/ontology/capital>",
-      "<http://swrc.ontoware.org/ontology#author>",
-      "<http://xmlns.com/foaf/0.1/based_near>"
+      "<http://swrc.ontoware.org/ontology#author>"
     ],
-    "coverage_ratio": 0.2222,
+    "coverage_ratio": 0.3333,
     "is_partial": true
   }
 }

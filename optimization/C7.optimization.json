@@ -4,17 +4,16 @@
   "optimization_status": "partial",
   "metadata_coverage": {
     "total_predicates": 9,
-    "covered_predicates": 2,
+    "covered_predicates": 3,
     "missing_predicates": [
       "<http://data.semanticweb.org/ns/swc/ontology#heldBy>",
       "<http://data.semanticweb.org/ns/swc/ontology#isPartOf>",
       "<http://data.semanticweb.org/ns/swc/ontology#isRoleAt>",
       "<http://data.semanticweb.org/ns/swc/ontology#relatedToEvent>",
       "<http://dbpedia.org/ontology/capital>",
-      "<http://swrc.ontoware.org/ontology#author>",
-      "<http://xmlns.com/foaf/0.1/based_near>"
+      "<http://swrc.ontoware.org/ontology#author>"
     ],
-    "coverage_ratio": 0.2222,
+    "coverage_ratio": 0.3333,
     "is_partial": true
   },
   "unknown_endpoint_triples": [
@@ -48,9 +47,12 @@
     "optimization_strategy": "federated-with-service-clauses",
     "original_query": "SELECT ...",
     "endpoints_used": [
+      "http://localhost:8893/sparql/",
+      "http://localhost:8894/sparql/",
+      "http://localhost:8896/sparql/",
       "http://localhost:8897/sparql/"
     ],
-    "num_endpoints": 1,
+    "num_endpoints": 4,
     "optimization_details": {
       "num_triples": 9,
       "num_unique_predicates": 9,
@@ -60,18 +62,28 @@
       "selective_predicates": [
         {
           "predicate": "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>",
-          "cardinality": 1780,
-          "num_endpoints": 1,
+          "cardinality": 1780.0,
+          "num_endpoints": 2,
           "num_possible_classes": 2
         },
         {
           "predicate": "<http://www.w3.org/2003/01/geo/wgs84_pos#long>",
-          "cardinality": 1780,
-          "num_endpoints": 1,
+          "cardinality": 1780.0,
+          "num_endpoints": 2,
           "num_possible_classes": 2
+        },
+        {
+          "predicate": "<http://xmlns.com/foaf/0.1/based_near>",
+          "cardinality": Infinity,
+          "num_endpoints": 2,
+          "num_possible_classes": 1
         }
       ],
-      "multi_endpoint_predicates": []
+      "multi_endpoint_predicates": [
+        "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>",
+        "<http://www.w3.org/2003/01/geo/wgs84_pos#long>",
+        "<http://xmlns.com/foaf/0.1/based_near>"
+      ]
     },
     "cardinality_estimate": {
       "estimated_rows": 1780,
@@ -81,6 +93,40 @@
       "reasoning": "Estimated from 5 join chains"
     },
     "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "num_predicates": 2,
+        "total_triples": 14959428,
+        "total_triples_readable": "15.0M",
+        "predicates": [
+          "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>",
+          "<http://www.w3.org/2003/01/geo/wgs84_pos#long>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://xmlns.com/foaf/0.1/based_near>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://xmlns.com/foaf/0.1/based_near>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
       {
         "endpoint": "http://localhost:8897/sparql/",
         "num_predicates": 4,
@@ -96,7 +142,7 @@
         "estimated_retrieved_triples_readable": "1.8K"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 4\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#lat> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#lat> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#long> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#long> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 1\n#   <http://xmlns.com/foaf/0.1/based_near> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 1\n#   <http://xmlns.com/foaf/0.1/based_near> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 4\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#lat> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#lat> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#long> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#long> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 2\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#lat> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.5M triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#long> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.5M triples]\n\n"
   },
   "constraint_map": {
     "?place": [
@@ -114,11 +160,11 @@
     "?place": [
       {
         "class": "http://www.geonames.org/ontology#Feature",
-        "confidence": 0.5001302398684916
+        "confidence": 0.5957941009147435
       },
       {
         "class": "http://www.w3.org/2004/02/skos/core#Concept",
-        "confidence": 0.4998697601315083
+        "confidence": 0.4042058990852564
       }
     ],
     "?latitude": [
@@ -134,19 +180,25 @@
       }
     ]
   },
-  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Note: Multiple class interpretations exist but all route to same endpoints\n# A single query retrieves all data regardless of class ambiguity\n\nSELECT DISTINCT ?author ?capital ?latitude ?longitude ?paper ?place ?proceedings ?role\nWHERE {\n\n  SERVICE <http://localhost:8897/sparql/> {\n    ?place <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?latitude . # ?place:Feature, ?latitude:Literal\n    ?place <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?longitude . # ?place:Feature, ?longitude:Literal\n    ?author <http://xmlns.com/foaf/0.1/based_near> ?place .\n    ?place <http://dbpedia.org/ontology/capital> ?capital .\n  }\n\n  # Unknown endpoint (no metadata)\n    ?proceedings <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/conference/eswc/2010> .\n    ?role <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/conference/eswc/2010> .\n    ?role <http://data.semanticweb.org/ns/swc/ontology#heldBy> ?author .\n    ?paper <http://swrc.ontoware.org/ontology#author> ?author .\n    ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> ?proceedings .\n}\nLIMIT 1000\n",
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Note: Multiple class interpretations exist but all route to same endpoints\n# A single query retrieves all data regardless of class ambiguity\n\nSELECT DISTINCT ?author ?capital ?latitude ?longitude ?paper ?place ?proceedings ?role\nWHERE {\n\n  SERVICE <http://localhost:8896/sparql/> {\n    ?author <http://xmlns.com/foaf/0.1/based_near> ?place .\n    ?place <http://dbpedia.org/ontology/capital> ?capital .\n  }\n\n  SERVICE <http://localhost:8897/sparql/> {\n    ?place <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?latitude . # ?place:Feature, ?latitude:Literal\n    ?place <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?longitude . # ?place:Feature, ?longitude:Literal\n  }\n\n  # Unknown endpoint (no metadata)\n    ?proceedings <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/conference/eswc/2010> .\n    ?role <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/conference/eswc/2010> .\n    ?role <http://data.semanticweb.org/ns/swc/ontology#heldBy> ?author .\n    ?paper <http://swrc.ontoware.org/ontology#author> ?author .\n    ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> ?proceedings .\n}\nLIMIT 1000\n",
   "predicate_selectivity": [
     {
       "predicate": "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>",
-      "cardinality": 1780,
-      "num_endpoints": 1,
+      "cardinality": 1780.0,
+      "num_endpoints": 2,
       "num_possible_classes": 2
     },
     {
       "predicate": "<http://www.w3.org/2003/01/geo/wgs84_pos#long>",
-      "cardinality": 1780,
-      "num_endpoints": 1,
+      "cardinality": 1780.0,
+      "num_endpoints": 2,
       "num_possible_classes": 2
+    },
+    {
+      "predicate": "<http://xmlns.com/foaf/0.1/based_near>",
+      "cardinality": Infinity,
+      "num_endpoints": 2,
+      "num_possible_classes": 1
     }
   ]
 }

@@ -1,0 +1,238 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sbm: <http://sparqlbuilder.org/2015/09/rdf-metadata-schema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a void:Dataset ;
+    void:propertyPartition [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ],
+        [ a void:Dataset ;
+            void:property sd:resultFormat ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ],
+        [ a void:Dataset ;
+            void:property rdf:_4 ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ],
+        [ a void:Dataset ;
+            void:property rdf:_1 ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#version> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ],
+        [ a void:Dataset ;
+            void:property sd:feature ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ],
+        [ a void:Dataset ;
+            void:property <http://tcga.deri.ie/schema/bcr_patient_barcode> ;
+            sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                    sbm:authority <http://tcga.deri.ie> ;
+                    sbm:authorityCount "302"^^xsd:long ;
+                    sbm:relationType sbm:Subject ],
+                [ a sbm:AuthorityRelation ;
+                    sbm:authority <http://tcga.deri.ie> ;
+                    sbm:authorityCount "302"^^xsd:long ;
+                    sbm:relationType sbm:Object ] ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ],
+        [ a void:Dataset ;
+            void:property sd:endpoint ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ],
+        [ a void:Dataset ;
+            void:property rdf:_2 ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ],
+        [ a void:Dataset ;
+            void:property <http://tcga.deri.ie/schema/result> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ],
+        [ a void:Dataset ;
+            void:property rdf:_3 ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ],
+        [ a void:Dataset ;
+            void:property rdf:type ],
+        [ a void:Dataset ;
+            void:property rdf:_5 ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ],
+        [ a void:Dataset ;
+            void:property sd:supportedLanguage ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ],
+        [ a void:Dataset ;
+            void:property dcterms:modified ;
+            sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                    sbm:authority <http://localhost:8890> ;
+                    sbm:authorityCount "1"^^xsd:long ;
+                    sbm:relationType sbm:Subject ] ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ],
+        [ a void:Dataset ;
+            void:property rdfs:subClassOf ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ],
+        [ a void:Dataset ;
+            void:property dcterms:created ;
+            sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                    sbm:authority <http://localhost:8890> ;
+                    sbm:authorityCount "1"^^xsd:long ;
+                    sbm:relationType sbm:Subject ] ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ],
+        [ a void:Dataset ;
+            void:property <http://tcga.deri.ie/schema/position> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#item> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ],
+        [ a void:Dataset ;
+            void:property sd:url ],
+        [ a void:Dataset ;
+            void:property <http://tcga.deri.ie/schema/beta_value> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ],
+        [ a void:Dataset ;
+            void:property <http://tcga.deri.ie/schema/chromosome> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ],
+        [ a void:Dataset ;
+            void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ] .
+

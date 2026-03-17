@@ -1,0 +1,1857 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sbm: <http://sparqlbuilder.org/2015/09/rdf-metadata-schema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sd:Service ;
+    sd:defaultDataset [ a sd:Dataset ;
+            void:classPartition [ a void:Dataset ;
+                    void:class void:Dataset ;
+                    void:entities "2"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://bio2rdf.org/dataset_vocabulary:Endpoint> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ;
+                    void:entities "1421288"^^xsd:long ] ;
+            void:classes "3"^^xsd:long ;
+            void:properties "27"^^xsd:long ;
+            void:propertyPartition [ a void:Dataset ;
+                    void:property void:sparqlEndpoint ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://affymetrix.bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:refseq-version> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://vocab.sindice.net/analytics#type> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://vocab.sindice.net> ;
+                            sbm:authorityCount "28"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://vocab.sindice.net> ;
+                            sbm:authorityCount "28"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:jgi-date> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:refseq-date> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:genbank-date> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://vocab.sindice.net/domain_uri> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://sindice.com> ;
+                            sbm:authorityCount "26"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://vocab.sindice.net> ;
+                            sbm:authorityCount "26"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:entrezgene-date> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:chip_type> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "63"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "139"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "139"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "47"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:function> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2026888"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2026888"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "19"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "12"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:netaffx-annotation-date> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:ensembl-date> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:ipi-date> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "57"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:seeAlso ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.affymetrix.com> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property sd:endpoint ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:location> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1539152"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1539152"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:genome-version-create_date> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "17"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "45"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:rgap-version> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "6"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_type> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://rdfs.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property owl:versionInfo ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:netaffx-annotation-netaffx-build> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:first ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:mirbase-version> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://vocab.sindice.net/analytics#target> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://vocab.sindice.net> ;
+                            sbm:authorityCount "227"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://vocab.sindice.net> ;
+                            sbm:authorityCount "454"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:genome-version-ucsc> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "12"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property sd:url ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:jgi-version> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "53"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-uniprot> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2209190"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2209190"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_predicate_unique_subject_unique_literal_count> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "49"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "49"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "45"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:comment ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property dcterms:extent ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "730"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "4"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "53"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "39"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property sd:supportedLanguage ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property rdf:type ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "51"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "50"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1421291"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1421289"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "270"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "270"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://rdfs.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:netaffx-annotation-docgen-method> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:domain ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "21"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "21"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:isDefinedBy ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:unigene-date> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "22"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_type_relation_type_count> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://vocab.sindice.net/analytics#source> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://vocab.sindice.net> ;
+                            sbm:authorityCount "227"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://vocab.sindice.net> ;
+                            sbm:authorityCount "227"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "7"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "99"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "99"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_url> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://affymetrix.bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:tair-date> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-geneid> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "844034"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "844034"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-ensembl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "577425"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "577425"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-agi> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "22619"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "22619"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "56"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "56"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_type_count> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "53"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "45"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property owl:priorVersion ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.daml.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "98"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "98"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property dcterms:creator ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <https://github.com> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_predicate_object_count> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "30"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "30"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "47"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "4"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:genbank-version> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "39"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-unigene> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1276880"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1276880"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-interpro> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "75765"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "75765"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property foaf:homepage ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://affymetrix.com> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:create_date> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "63"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:subPropertyOf ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_object_count> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "32"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_predicate_unique_subject_unique_object_count> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "30"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "30"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "47"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:netaffx-annotation-docgen-version> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-sgd> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "21482"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "21482"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "4"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:xcontains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:xquery_contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:xquery_contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:spatial_contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:xpath_contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:spatial_contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:xpath_contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:xcontains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "42"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "39"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-flybase> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "28938"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "28938"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property void:dataDump ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://download.bio2rdf.org> ;
+                            sbm:authorityCount "63"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "63"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_literal_count> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "49"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:genechip-array> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1766999"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1766999"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property owl:complementOf ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "130"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_object_type> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://rdfs.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "743"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <mailto:somebody@example.domain> ;
+                            sbm:authorityCount "743"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property rdf:rest ],
+                [ a void:Dataset ;
+                    void:property rdf:_5 ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:_3 ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "10"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "10"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:genome-version-ncbi> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property dcterms:publisher ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-rgd> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "591"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "591"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:subClassOf ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "12"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w2.org> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w2.org> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "12"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "172"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "172"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://vocab.sindice.net/analytics#cardinality> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://vocab.sindice.net> ;
+                            sbm:authorityCount "281"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property dcterms:modified ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "743"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "40"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:ensembl-version> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_subject_type> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://rdfs.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "29"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://vocab.sindice.net/analytics#publishedIn> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://vocab.sindice.net> ;
+                            sbm:authorityCount "227"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://sindice.com> ;
+                            sbm:authorityCount "227"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property rdf:_2 ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "13"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "13"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-mgi> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "63770"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "63770"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://vocab.sindice.net/analytics#label> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://purl.org> ;
+                            sbm:authorityCount "4"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://vocab.sindice.net> ;
+                            sbm:authorityCount "311"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "88"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://rdfs.org> ;
+                            sbm:authorityCount "6"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://xmlns.com> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "101"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://vocab.sindice.net> ;
+                            sbm:authorityCount "28"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "83"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property sd:feature ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-refseq> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2297401"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2297401"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-wormbase> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "17588"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "17588"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:netaffx-annotation-tabular-format-version> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:process> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2293133"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "2293133"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_predicate_literal_count> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "49"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "49"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:range ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "20"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "20"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "39"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_count> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "81"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:transcript-assignment> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "5107752"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "5107752"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:rgap-date> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_subject_count> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "81"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_predicate> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "9"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "160"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://rdfs.org> ;
+                            sbm:authorityCount "7"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "134"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://purl.org> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://xmlns.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:mirbase-date> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-symbol> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "848740"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "848740"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:tair-version> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:_4 ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "37"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property owl:unionOf ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://vocab.sindice.net/domain> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://vocab.sindice.net> ;
+                            sbm:authorityCount "26"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property sd:resultFormat ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:_1 ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "66"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "66"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "6"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-omim> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "231054"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "231054"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:genome-species> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <bio2rdf_dataset:bio2rdf-affymetrix-20121004> ;
+                            sbm:authorityCount "18"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property owl:imports ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:x-ec> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "101482"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "101482"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:trans-membrane> ;
+                    void:triples "230899"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "230899"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:sequence-source> ;
+                    void:triples "1067108"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1067108"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:chromosomal-location> ;
+                    void:triples "410316"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "410316"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property void:inDataset ;
+                    void:triples "1421288"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1421288"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1421288"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1421288"^^xsd:long ;
+                            sbm:objectClass void:Dataset ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_unique_predicate_count> ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/dataset_vocabulary:Endpoint> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:annotation-notes> ;
+                    void:triples "1460345"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1460345"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:genome-version> ;
+                    void:triples "985699"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "985699"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:annotation-date> ;
+                    void:triples "1471218"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1471218"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:pathway> ;
+                    void:triples "58345"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "58345"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property dcterms:rights ;
+                    void:triples "5"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "5"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass void:Dataset ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:species-scientific-name> ;
+                    void:triples "1422596"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1422596"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:unigene-cluster-type> ;
+                    void:triples "732894"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "732894"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:representative-public-id> ;
+                    void:triples "1420523"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1420523"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_triple_count> ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/dataset_vocabulary:Endpoint> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:target-description> ;
+                    void:triples "1463070"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1463070"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "1"^^xsd:long ;
+                    void:property prov:wasDerivedFrom ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass void:Dataset ;
+                            sbm:subjectClass void:Dataset ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_unique_object_count> ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/dataset_vocabulary:Endpoint> ] ],
+                [ a void:Dataset ;
+                    void:classes "4"^^xsd:long ;
+                    void:property rdfs:label ;
+                    void:triples "1767002"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1766999"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ],
+                        [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/dataset_vocabulary:Endpoint> ],
+                        [ a sbm:ClassRelation ;
+                            void:triples "2"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass void:Dataset ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:qtl> ;
+                    void:triples "1705"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1705"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:annotation-description> ;
+                    void:triples "1421452"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1421452"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:transcript> ;
+                    void:triples "1419620"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1419620"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:probe-set-id> ;
+                    void:triples "1421288"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1421288"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/dataset_vocabulary:has_unique_subject_count> ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/dataset_vocabulary:Endpoint> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property dcterms:created ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass void:Dataset ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:alignments> ;
+                    void:triples "1106577"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1106577"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:sequence-type> ;
+                    void:triples "1327251"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "1327251"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://bio2rdf.org/affymetrix_vocabulary:gene-title> ;
+                    void:triples "823327"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "823327"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ] ] ;
+            void:triples "44207146"^^xsd:long ;
+            sbm:crawlLog [ a sbm:CrawlLog ;
+                    sbm:crawlEndTime "2026-03-04T09:38:51+09:00"^^xsd:dateTime ;
+                    sbm:crawlStartTime "2026-03-03T18:55:58+09:00"^^xsd:dateTime ;
+                    sbm:endpointAccesses "41"^^xsd:long ] ;
+            sd:namedGraph [ a sd:NamedGraph ;
+                    sd:name <file:///Users/yamamotobikutorueiichi/codes/federated_query/tripledataprofiler/largerdfbench/affymetrix> ] ] ;
+    sd:endpoint <http://localhost:8899/sparql/> .
+

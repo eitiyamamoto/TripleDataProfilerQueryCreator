@@ -31,7 +31,7 @@
       "selective_predicates": [
         {
           "predicate": "<http://tcga.deri.ie/schema/chromosome>",
-          "cardinality": 57429308,
+          "cardinality": 57429308.0,
           "num_endpoints": 1,
           "num_possible_classes": 1
         }
@@ -64,7 +64,7 @@
   "predicate_selectivity": [
     {
       "predicate": "<http://tcga.deri.ie/schema/chromosome>",
-      "cardinality": 57429308,
+      "cardinality": 57429308.0,
       "num_endpoints": 1,
       "num_possible_classes": 1
     }

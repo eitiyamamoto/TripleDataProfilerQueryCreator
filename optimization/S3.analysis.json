@@ -75,6 +75,169 @@
     "reduced": false
   },
   "predicate_metadata": {
+    "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>": [
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org",
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://bio2rdf.org",
+            "http://rdfs.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://data.nytimes.com",
+            "http://localhost:8890",
+            "http://sws.geonames.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://www.geonames.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org",
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://data.linkedmdb.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org",
+            "http://xmlns.com"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8890/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org",
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://bio2rdf.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://artlibre.org",
+            "http://creativecommons.org",
+            "http://dbtune.org",
+            "http://localhost:8890",
+            "http://www.jamendo.com",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://purl.org",
+            "http://www.holygoat.co.uk",
+            "http://www.openlinksw.com",
+            "http://www.w3.org",
+            "http://xmlns.com"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org",
+            "http://www4.wiwiss.fu-berlin.de",
+            "http://xmlns.com"
+          ],
+          "object": [
+            "http://www.openlinksw.com",
+            "http://www.w3.org",
+            "http://www4.wiwiss.fu-berlin.de"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://localhost:8890",
+            "http://sws.geonames.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://www.geonames.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org",
+            "http://localhost:8890",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ],
+          "object": [
+            "http://bio2rdf.org",
+            "http://www.openlinksw.com",
+            "http://www.w3.org"
+          ]
+        }
+      }
+    ],
     "<http://www.w3.org/2002/07/owl#sameAs>": [
       {
         "endpoint": "http://localhost:8897/sparql/",
@@ -93,6 +256,70 @@
             "http://rdf.insee.fr",
             "http://sws.geonames.org",
             "http://www.ordnancesurvey.co.uk"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://dbpedia.org",
+            "http://mpii.de",
+            "http://sws.geonames.org",
+            "http://zitgist.com"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://dbtune.org"
+          ],
+          "object": [
+            "http://zitgist.com"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": [
+            "http://bio2rdf.org",
+            "http://data.linkedct.org",
+            "http://dbpedia.org",
+            "http://purl.org",
+            "http://www.dbpedia.org",
+            "http://www4.wiwiss.fu-berlin.de"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://sws.geonames.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
           ]
         }
       },
@@ -138,25 +365,45 @@
           ]
         }
       }
+    ],
+    "<http://data.nytimes.com/elements/topicPage>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://data.nytimes.com"
+          ],
+          "object": [
+            "http://topics.nytimes.com"
+          ]
+        }
+      }
     ]
   },
   "endpoints_found": [
+    "http://localhost:8890/sparql/",
+    "http://localhost:8892/sparql/",
+    "http://localhost:8893/sparql/",
+    "http://localhost:8894/sparql/",
     "http://localhost:8895/sparql/",
-    "http://localhost:8897/sparql/"
+    "http://localhost:8896/sparql/",
+    "http://localhost:8897/sparql/",
+    "http://localhost:8899/sparql/"
   ],
-  "num_endpoints": 2,
+  "num_endpoints": 8,
   "query_id": "S3",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S3",
   "metadata_coverage": {
     "total_predicates": 5,
-    "covered_predicates": 1,
+    "covered_predicates": 3,
     "missing_predicates": [
-      "<http://data.nytimes.com/elements/topicPage>",
       "<http://dbpedia.org/ontology/nationality>",
-      "<http://dbpedia.org/ontology/party>",
-      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+      "<http://dbpedia.org/ontology/party>"
     ],
-    "coverage_ratio": 0.2,
+    "coverage_ratio": 0.6,
     "is_partial": true
   }
 }

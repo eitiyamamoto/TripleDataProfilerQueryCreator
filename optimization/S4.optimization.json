@@ -1,33 +1,27 @@
 {
   "query_id": "S4",
   "analysis_file": "optimization/S4.analysis.json",
-  "optimization_status": "partial",
+  "optimization_status": "complete",
   "metadata_coverage": {
     "total_predicates": 4,
-    "covered_predicates": 1,
-    "missing_predicates": [
-      "<http://data.linkedmdb.org/resource/movie/actor>",
-      "<http://data.nytimes.com/elements/topicPage>",
-      "<http://purl.org/dc/terms/title>"
-    ],
-    "coverage_ratio": 0.25,
-    "is_partial": true
+    "covered_predicates": 4,
+    "missing_predicates": [],
+    "coverage_ratio": 1.0,
+    "is_partial": false
   },
-  "unknown_endpoint_triples": [
-    [
-      "?film",
-      "<http://purl.org/dc/terms/title>",
-      "\"Tarzan\""
-    ]
-  ],
+  "unknown_endpoint_triples": [],
   "optimization_analysis": {
     "optimization_strategy": "federated-with-service-clauses",
     "original_query": "SELECT ...",
     "endpoints_used": [
+      "http://localhost:8892/sparql/",
+      "http://localhost:8893/sparql/",
+      "http://localhost:8894/sparql/",
       "http://localhost:8895/sparql/",
+      "http://localhost:8896/sparql/",
       "http://localhost:8897/sparql/"
     ],
-    "num_endpoints": 2,
+    "num_endpoints": 6,
     "optimization_details": {
       "num_triples": 5,
       "num_unique_predicates": 4,
@@ -37,9 +31,21 @@
       "selective_predicates": [
         {
           "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-          "cardinality": 1787,
-          "num_endpoints": 2,
-          "num_possible_classes": 4
+          "cardinality": 1787.0,
+          "num_endpoints": 6,
+          "num_possible_classes": 5
+        },
+        {
+          "predicate": "<http://purl.org/dc/terms/title>",
+          "cardinality": 85620.0,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        },
+        {
+          "predicate": "<http://data.linkedmdb.org/resource/movie/actor>",
+          "cardinality": 583947.0,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
         }
       ],
       "multi_endpoint_predicates": [
@@ -55,6 +61,39 @@
     },
     "endpoint_breakdown": [
       {
+        "endpoint": "http://localhost:8892/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
         "endpoint": "http://localhost:8895/sparql/",
         "num_predicates": 3,
         "total_triples": 29116,
@@ -68,25 +107,45 @@
         "estimated_retrieved_triples_readable": "unknown"
       },
       {
+        "endpoint": "http://localhost:8896/sparql/",
+        "num_predicates": 5,
+        "total_triples": 1837461,
+        "total_triples_readable": "1.8M",
+        "predicates": [
+          "<http://data.linkedmdb.org/resource/movie/actor>",
+          "<http://data.linkedmdb.org/resource/movie/actor>",
+          "<http://data.linkedmdb.org/resource/movie/actor>",
+          "<http://purl.org/dc/terms/title>",
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": 85620,
+        "estimated_retrieved_triples_readable": "85.6K"
+      },
+      {
         "endpoint": "http://localhost:8897/sparql/",
-        "num_predicates": 1,
+        "num_predicates": 2,
         "total_triples": 1787,
         "total_triples_readable": "1.8K",
         "predicates": [
+          "<http://data.nytimes.com/elements/topicPage>",
           "<http://www.w3.org/2002/07/owl#sameAs>"
         ],
         "estimated_retrieved_triples": 1787,
         "estimated_retrieved_triples_readable": "1.8K"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 2\n#   <http://data.nytimes.com/elements/topicPage> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 5\n#   <http://data.linkedmdb.org/resource/movie/actor> (http://data.linkedmdb.org/resource/movie/film -> http://xmlns.com/foaf/0.1/Person) [583.9K triples]\n#   <http://data.linkedmdb.org/resource/movie/actor> (http://data.linkedmdb.org/resource/movie/film -> http://xmlns.com/foaf/0.1/Person) [583.9K triples]\n#   <http://data.linkedmdb.org/resource/movie/actor> (http://data.linkedmdb.org/resource/movie/film -> http://xmlns.com/foaf/0.1/Person) [583.9K triples]\n#   <http://purl.org/dc/terms/title> (http://data.linkedmdb.org/resource/movie/film -> http://www.w3.org/2000/01/rdf-schema#Literal) [85.6K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n"
   },
   "constraint_map": {
+    "?film": [
+      "http://data.linkedmdb.org/resource/movie/film"
+    ],
     "?actor": [
       "http://bio2rdf.org/ns/kegg#Compound",
       "http://bio2rdf.org/ns/kegg#Drug",
       "http://bio2rdf.org/ns/kegg#Reaction",
-      "http://www.w3.org/2004/02/skos/core#Concept"
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://xmlns.com/foaf/0.1/Person"
     ],
     "?x": [
       "http://bio2rdf.org/ns/kegg#Compound",
@@ -102,22 +161,32 @@
     ]
   },
   "inferred_variable_classes": {
+    "?film": [
+      {
+        "class": "http://data.linkedmdb.org/resource/movie/film",
+        "confidence": 1.0
+      }
+    ],
     "?actor": [
       {
+        "class": "http://xmlns.com/foaf/0.1/Person",
+        "confidence": 0.32843623241282344
+      },
+      {
         "class": "http://www.w3.org/2004/02/skos/core#Concept",
-        "confidence": 0.2888385676023399
+        "confidence": 0.19397351668351082
       },
       {
         "class": "http://bio2rdf.org/ns/kegg#Drug",
-        "confidence": 0.2428200971928318
+        "confidence": 0.16306917931670256
       },
       {
         "class": "http://bio2rdf.org/ns/kegg#Reaction",
-        "confidence": 0.241397748359715
+        "confidence": 0.16211398137551142
       },
       {
         "class": "http://bio2rdf.org/ns/kegg#Compound",
-        "confidence": 0.2269435868451133
+        "confidence": 0.1524070902114519
       }
     ],
     "?x": [
@@ -157,13 +226,31 @@
       }
     ]
   },
-  "optimized_federated_query": "# Smart Federated Query with UNION for Multiple Class Interpretations\n# Each UNION branch uses different endpoints or predicates\n\nSELECT ?actor ?film ?news ?x ?y\nWHERE {\n  # Scenario 1: ?actor=Concept, ?x=Feature, ?y=Concept\n  {\n    SERVICE <http://localhost:8897/sparql/> {\n      ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?actor:Concept, ?x:Feature\n      ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?y:Concept, ?x:Feature\n      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .\n      ?y <http://data.nytimes.com/elements/topicPage> ?news .\n    }\n    # Unknown endpoint (no metadata)\n      ?film <http://purl.org/dc/terms/title> \"Tarzan\" .\n  }\n\n  UNION\n\n  # Scenario 2: ?actor=Concept, ?x=Drug, ?y=Drug\n  {\n    SERVICE <http://localhost:8895/sparql/> {\n      ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?y:Drug, ?x:Drug\n      ?y <http://data.nytimes.com/elements/topicPage> ?news .\n    }\n    SERVICE <http://localhost:8897/sparql/> {\n      ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?actor:Concept, ?x:Feature\n      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .\n    }\n    # Unknown endpoint (no metadata)\n      ?film <http://purl.org/dc/terms/title> \"Tarzan\" .\n  }\n}\nLIMIT 1000\n",
+  "optimized_federated_query": "# Smart Federated Query with UNION for Multiple Class Interpretations\n# Each UNION branch uses different endpoints or predicates\n\nSELECT ?actor ?film ?news ?x ?y\nWHERE {\n  # Scenario 1: ?film=film, ?actor=Person, ?x=Feature, ?y=Concept\n  {\n    SERVICE <http://localhost:8896/sparql/> {\n      ?film <http://purl.org/dc/terms/title> \"Tarzan\" . # ?film:film\n      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor . # ?film:film, ?actor:Person\n    }\n    SERVICE <http://localhost:8897/sparql/> {\n      ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?actor:Concept, ?x:Feature\n      ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?y:Concept, ?x:Feature\n      ?y <http://data.nytimes.com/elements/topicPage> ?news .\n    }\n  }\n\n  UNION\n\n  # Scenario 2: ?film=film, ?actor=Person, ?x=Drug, ?y=Concept\n  {\n    SERVICE <http://localhost:8895/sparql/> {\n      ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?actor:Drug, ?x:Drug\n      ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?y:Drug, ?x:Drug\n    }\n    SERVICE <http://localhost:8896/sparql/> {\n      ?film <http://purl.org/dc/terms/title> \"Tarzan\" . # ?film:film\n      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor . # ?film:film, ?actor:Person\n    }\n    SERVICE <http://localhost:8897/sparql/> {\n      ?y <http://data.nytimes.com/elements/topicPage> ?news .\n    }\n  }\n}\nLIMIT 1000\n",
   "predicate_selectivity": [
     {
       "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-      "cardinality": 1787,
-      "num_endpoints": 2,
-      "num_possible_classes": 4
+      "cardinality": 1787.0,
+      "num_endpoints": 6,
+      "num_possible_classes": 5
+    },
+    {
+      "predicate": "<http://purl.org/dc/terms/title>",
+      "cardinality": 85620.0,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://data.linkedmdb.org/resource/movie/actor>",
+      "cardinality": 583947.0,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://data.nytimes.com/elements/topicPage>",
+      "cardinality": Infinity,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
     }
   ]
 }

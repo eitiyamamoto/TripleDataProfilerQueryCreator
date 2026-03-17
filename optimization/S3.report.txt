@@ -6,25 +6,57 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 5
 Unique Predicates: 5
-Endpoints Used: 2
+Endpoints Used: 8
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
 1. sameAs
    Cardinality: 1.8K
-   Endpoints: 2
-   Possible Class Pairs: 4
+   Endpoints: 6
+   Possible Class Pairs: 5
+2. type
+   Cardinality: unknown
+   Endpoints: 8
+   Possible Class Pairs: 1
+3. topicPage
+   Cardinality: unknown
+   Endpoints: 1
+   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8890/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8892/sparql/
+  Predicates: 2
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8893/sparql/
+  Predicates: 2
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 2
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
-  Predicates: 3
+  Predicates: 4
   Total Triples: 29.1K
   Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8896/sparql/
+  Predicates: 2
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8897/sparql/
-  Predicates: 1
+  Predicates: 3
   Total Triples: 1.8K
   Estimated Retrieved Triples: 1.8K
+Endpoint: http://localhost:8899/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
@@ -36,44 +68,31 @@ Reasoning: Estimated from 2 join chains
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'sameAs' (1.8K triples)
-• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+• Use subject/object class constraints to reduce search space for 2 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 8 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
 Status: partial
-Metadata Coverage: 1/5
+Metadata Coverage: 3/5
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
 --------------------------------------------------------------------------------
-# Smart Federated Query with UNION for Multiple Class Interpretations
-# Each UNION branch uses different endpoints or predicates
+# Smart Federated Query with Class Constraints
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
 
 SELECT ?page ?party ?president ?x
 WHERE {
-  # Scenario 1: ?x=Concept, ?president=Feature
-  {
-    SERVICE <http://localhost:8897/sparql/> {
-      ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . # ?x:Concept, ?president:Feature
-      ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> .
-      ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .
-      ?president <http://dbpedia.org/ontology/party> ?party .
-      ?x <http://data.nytimes.com/elements/topicPage> ?page .
-    }
-  }
 
-  UNION
-
-  # Scenario 2: ?x=Drug, ?president=Drug
-  {
-    SERVICE <http://localhost:8895/sparql/> {
-      ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . # ?x:Drug, ?president:Drug
-      ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> .
-      ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .
-      ?president <http://dbpedia.org/ontology/party> ?party .
-      ?x <http://data.nytimes.com/elements/topicPage> ?page .
-    }
+  SERVICE <http://localhost:8897/sparql/> {
+    ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . # ?x:Concept, ?president:Feature
+    ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> .
+    ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .
+    ?president <http://dbpedia.org/ontology/party> ?party .
+    ?x <http://data.nytimes.com/elements/topicPage> ?page .
   }
 }
 LIMIT 1000

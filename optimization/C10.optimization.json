@@ -4,17 +4,16 @@
   "optimization_status": "partial",
   "metadata_coverage": {
     "total_predicates": 10,
-    "covered_predicates": 3,
+    "covered_predicates": 4,
     "missing_predicates": [
       "<http://dbpedia.org/ontology/country>",
       "<http://dbpedia.org/ontology/populationDensity>",
       "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
       "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
       "<http://tcga.deri.ie/schema/drug_name>",
-      "<http://tcga.deri.ie/schema/gender>",
-      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
+      "<http://tcga.deri.ie/schema/gender>"
     ],
-    "coverage_ratio": 0.3,
+    "coverage_ratio": 0.4,
     "is_partial": true
   },
   "unknown_endpoint_triples": [
@@ -60,19 +59,19 @@
       "selective_predicates": [
         {
           "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication>",
-          "cardinality": 1463,
+          "cardinality": 1463.0,
           "num_endpoints": 1,
           "num_possible_classes": 2
         },
         {
           "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula>",
-          "cardinality": 4721,
+          "cardinality": 4721.0,
           "num_endpoints": 1,
           "num_possible_classes": 2
         },
         {
           "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
-          "cardinality": 4772,
+          "cardinality": 4772.0,
           "num_endpoints": 1,
           "num_possible_classes": 2
         }
@@ -89,22 +88,23 @@
     "endpoint_breakdown": [
       {
         "endpoint": "http://localhost:8892/sparql/",
-        "num_predicates": 6,
+        "num_predicates": 7,
         "total_triples": 21912,
         "total_triples_readable": "21.9K",
         "predicates": [
-          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula>",
-          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula>",
           "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication>",
           "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula>",
           "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
-          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>"
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>"
         ],
         "estimated_retrieved_triples": 1463,
         "estimated_retrieved_triples_readable": "1.5K"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 6\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.7K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.7K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.5K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.5K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.8K triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 7\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.5K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.5K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.7K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.7K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.8K triples]\n\n"
   },
   "constraint_map": {
     "?drgBnkDrg": [
@@ -155,21 +155,27 @@
   "predicate_selectivity": [
     {
       "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication>",
-      "cardinality": 1463,
+      "cardinality": 1463.0,
       "num_endpoints": 1,
       "num_possible_classes": 2
     },
     {
       "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula>",
-      "cardinality": 4721,
+      "cardinality": 4721.0,
       "num_endpoints": 1,
       "num_possible_classes": 2
     },
     {
       "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>",
-      "cardinality": 4772,
+      "cardinality": 4772.0,
       "num_endpoints": 1,
       "num_possible_classes": 2
+    },
+    {
+      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>",
+      "cardinality": Infinity,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
     }
   ]
 }

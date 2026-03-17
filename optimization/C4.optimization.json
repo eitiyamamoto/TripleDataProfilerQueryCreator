@@ -21,10 +21,14 @@
     "optimization_strategy": "federated-with-service-clauses",
     "original_query": "SELECT ...",
     "endpoints_used": [
+      "http://localhost:8892/sparql/",
+      "http://localhost:8893/sparql/",
+      "http://localhost:8894/sparql/",
       "http://localhost:8895/sparql/",
+      "http://localhost:8896/sparql/",
       "http://localhost:8897/sparql/"
     ],
-    "num_endpoints": 2,
+    "num_endpoints": 6,
     "optimization_details": {
       "num_triples": 12,
       "num_unique_predicates": 12,
@@ -34,25 +38,30 @@
       "selective_predicates": [
         {
           "predicate": "<http://www.geonames.org/ontology#population>",
-          "cardinality": 1283,
-          "num_endpoints": 1,
+          "cardinality": 1283.0,
+          "num_endpoints": 2,
           "num_possible_classes": 1
         },
         {
           "predicate": "<http://www.geonames.org/ontology#countryCode>",
-          "cardinality": 1761,
-          "num_endpoints": 1,
+          "cardinality": 1761.0,
+          "num_endpoints": 2,
           "num_possible_classes": 1
         },
         {
           "predicate": "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>",
-          "cardinality": 1780,
-          "num_endpoints": 1,
+          "cardinality": 1780.0,
+          "num_endpoints": 2,
           "num_possible_classes": 2
         }
       ],
       "multi_endpoint_predicates": [
-        "<http://www.w3.org/2002/07/owl#sameAs>"
+        "<http://www.geonames.org/ontology#countryCode>",
+        "<http://www.geonames.org/ontology#name>",
+        "<http://www.geonames.org/ontology#population>",
+        "<http://www.w3.org/2002/07/owl#sameAs>",
+        "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>",
+        "<http://www.w3.org/2003/01/geo/wgs84_pos#long>"
       ]
     },
     "cardinality_estimate": {
@@ -63,6 +72,44 @@
       "reasoning": "Estimated from 2 join chains"
     },
     "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "num_predicates": 6,
+        "total_triples": 30148783,
+        "total_triples_readable": "30.1M",
+        "predicates": [
+          "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>",
+          "<http://www.w3.org/2003/01/geo/wgs84_pos#long>",
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.geonames.org/ontology#name>",
+          "<http://www.geonames.org/ontology#population>",
+          "<http://www.geonames.org/ontology#countryCode>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
       {
         "endpoint": "http://localhost:8895/sparql/",
         "num_predicates": 3,
@@ -77,25 +124,36 @@
         "estimated_retrieved_triples_readable": "unknown"
       },
       {
+        "endpoint": "http://localhost:8896/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
         "endpoint": "http://localhost:8897/sparql/",
         "num_predicates": 8,
         "total_triples": 13745,
         "total_triples_readable": "13.7K",
         "predicates": [
-          "<http://www.geonames.org/ontology#population>",
           "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>",
           "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>",
           "<http://www.w3.org/2003/01/geo/wgs84_pos#long>",
           "<http://www.w3.org/2003/01/geo/wgs84_pos#long>",
-          "<http://www.geonames.org/ontology#name>",
           "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.geonames.org/ontology#name>",
+          "<http://www.geonames.org/ontology#population>",
           "<http://www.geonames.org/ontology#countryCode>"
         ],
         "estimated_retrieved_triples": 1283,
         "estimated_retrieved_triples_readable": "1.3K"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 8\n#   <http://www.geonames.org/ontology#population> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.3K triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#lat> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#lat> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#long> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#long> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 8\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#lat> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#lat> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#long> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#long> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 6\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#lat> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.5M triples]\n#   <http://www.w3.org/2003/01/geo/wgs84_pos#long> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.5M triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n#   <http://www.geonames.org/ontology#name> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.5M triples]\n#   <http://www.geonames.org/ontology#population> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [235.3K triples]\n\n"
   },
   "constraint_map": {
     "?NYTplace": [
@@ -131,7 +189,11 @@
     "?NYTplace": [
       {
         "class": "http://www.geonames.org/ontology#Feature",
-        "confidence": 1.0
+        "confidence": 0.5802017952302314
+      },
+      {
+        "class": "http://www.w3.org/2004/02/skos/core#Concept",
+        "confidence": 0.2305679206005661
       }
     ],
     "?countryCode": [
@@ -183,43 +245,43 @@
       }
     ]
   },
-  "optimized_federated_query": "# Smart Federated Query with UNION for Multiple Class Interpretations\n# Each UNION branch uses different endpoints or predicates\n\nSELECT DISTINCT ?NYTplace ?capital ?countryCode ?countryName ?ethnicGroup ?foundingDate ?geonameplace ?largestCity ?latitude ?longitude ?motto ?nationalAnthem ?population\nWHERE {\n  # Scenario 1: ?NYTplace=Feature, ?countryCode=Literal, ?countryName=Literal, ?population=Literal, ?latitude=Literal, ?longitude=Literal, ?geonameplace=Feature\n  {\n    SERVICE <http://localhost:8897/sparql/> {\n      ?NYTplace <http://www.geonames.org/ontology#population> ?population . # ?NYTplace:Feature, ?population:Literal\n      ?NYTplace <http://www.geonames.org/ontology#countryCode> ?countryCode . # ?NYTplace:Feature, ?countryCode:Literal\n      ?NYTplace <http://www.geonames.org/ontology#name> ?countryName . # ?NYTplace:Feature, ?countryName:Literal\n      ?NYTplace <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?latitude . # ?NYTplace:Feature, ?latitude:Literal\n      ?NYTplace <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?longitude . # ?NYTplace:Feature, ?longitude:Literal\n      ?NYTplace <http://www.w3.org/2002/07/owl#sameAs> ?geonameplace . # ?NYTplace:Concept, ?geonameplace:Feature\n      ?geonameplace <http://dbpedia.org/ontology/anthem> ?nationalAnthem .\n      ?geonameplace <http://dbpedia.org/ontology/capital> ?capital .\n      ?geonameplace <http://dbpedia.org/ontology/ethnicGroup> ?ethnicGroup .\n      ?geonameplace <http://dbpedia.org/ontology/foundingDate> ?foundingDate .\n      ?geonameplace <http://dbpedia.org/ontology/largestCity> ?largestCity .\n      ?geonameplace <http://dbpedia.org/ontology/motto> ?motto .\n    }\n  }\n\n  UNION\n\n  # Scenario 2: ?NYTplace=Feature, ?countryCode=Literal, ?countryName=Literal, ?population=Literal, ?latitude=Literal, ?longitude=Literal, ?geonameplace=Drug\n  {\n    SERVICE <http://localhost:8895/sparql/> {\n      ?NYTplace <http://www.w3.org/2002/07/owl#sameAs> ?geonameplace . # ?NYTplace:Drug, ?geonameplace:Drug\n      ?geonameplace <http://dbpedia.org/ontology/anthem> ?nationalAnthem .\n      ?geonameplace <http://dbpedia.org/ontology/capital> ?capital .\n      ?geonameplace <http://dbpedia.org/ontology/ethnicGroup> ?ethnicGroup .\n      ?geonameplace <http://dbpedia.org/ontology/foundingDate> ?foundingDate .\n      ?geonameplace <http://dbpedia.org/ontology/largestCity> ?largestCity .\n      ?geonameplace <http://dbpedia.org/ontology/motto> ?motto .\n    }\n    SERVICE <http://localhost:8897/sparql/> {\n      ?NYTplace <http://www.geonames.org/ontology#population> ?population . # ?NYTplace:Feature, ?population:Literal\n      ?NYTplace <http://www.geonames.org/ontology#countryCode> ?countryCode . # ?NYTplace:Feature, ?countryCode:Literal\n      ?NYTplace <http://www.geonames.org/ontology#name> ?countryName . # ?NYTplace:Feature, ?countryName:Literal\n      ?NYTplace <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?latitude . # ?NYTplace:Feature, ?latitude:Literal\n      ?NYTplace <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?longitude . # ?NYTplace:Feature, ?longitude:Literal\n    }\n  }\n}\nLIMIT 1000\n",
+  "optimized_federated_query": "# Smart Federated Query with UNION for Multiple Class Interpretations\n# Each UNION branch uses different endpoints or predicates\n\nSELECT DISTINCT ?NYTplace ?capital ?countryCode ?countryName ?ethnicGroup ?foundingDate ?geonameplace ?largestCity ?latitude ?longitude ?motto ?nationalAnthem ?population\nWHERE {\n  # Scenario 1: ?countryCode=Literal, ?countryName=Literal, ?population=Literal, ?latitude=Literal, ?longitude=Literal, ?NYTplace=Feature, ?geonameplace=Feature\n  {\n    SERVICE <http://localhost:8897/sparql/> {\n      ?NYTplace <http://www.geonames.org/ontology#population> ?population . # ?NYTplace:Feature, ?population:Literal\n      ?NYTplace <http://www.geonames.org/ontology#countryCode> ?countryCode . # ?NYTplace:Feature, ?countryCode:Literal\n      ?NYTplace <http://www.geonames.org/ontology#name> ?countryName . # ?NYTplace:Feature, ?countryName:Literal\n      ?NYTplace <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?latitude . # ?NYTplace:Feature, ?latitude:Literal\n      ?NYTplace <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?longitude . # ?NYTplace:Feature, ?longitude:Literal\n      ?NYTplace <http://www.w3.org/2002/07/owl#sameAs> ?geonameplace . # ?NYTplace:Concept, ?geonameplace:Feature\n      ?geonameplace <http://dbpedia.org/ontology/anthem> ?nationalAnthem .\n      ?geonameplace <http://dbpedia.org/ontology/capital> ?capital .\n      ?geonameplace <http://dbpedia.org/ontology/ethnicGroup> ?ethnicGroup .\n      ?geonameplace <http://dbpedia.org/ontology/foundingDate> ?foundingDate .\n      ?geonameplace <http://dbpedia.org/ontology/largestCity> ?largestCity .\n      ?geonameplace <http://dbpedia.org/ontology/motto> ?motto .\n    }\n  }\n\n  UNION\n\n  # Scenario 2: ?countryCode=Literal, ?countryName=Literal, ?population=Literal, ?latitude=Literal, ?longitude=Literal, ?NYTplace=Feature, ?geonameplace=Drug\n  {\n    SERVICE <http://localhost:8895/sparql/> {\n      ?NYTplace <http://www.w3.org/2002/07/owl#sameAs> ?geonameplace . # ?NYTplace:Drug, ?geonameplace:Drug\n      ?geonameplace <http://dbpedia.org/ontology/anthem> ?nationalAnthem .\n      ?geonameplace <http://dbpedia.org/ontology/capital> ?capital .\n      ?geonameplace <http://dbpedia.org/ontology/ethnicGroup> ?ethnicGroup .\n      ?geonameplace <http://dbpedia.org/ontology/foundingDate> ?foundingDate .\n      ?geonameplace <http://dbpedia.org/ontology/largestCity> ?largestCity .\n      ?geonameplace <http://dbpedia.org/ontology/motto> ?motto .\n    }\n    SERVICE <http://localhost:8897/sparql/> {\n      ?NYTplace <http://www.geonames.org/ontology#population> ?population . # ?NYTplace:Feature, ?population:Literal\n      ?NYTplace <http://www.geonames.org/ontology#countryCode> ?countryCode . # ?NYTplace:Feature, ?countryCode:Literal\n      ?NYTplace <http://www.geonames.org/ontology#name> ?countryName . # ?NYTplace:Feature, ?countryName:Literal\n      ?NYTplace <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?latitude . # ?NYTplace:Feature, ?latitude:Literal\n      ?NYTplace <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?longitude . # ?NYTplace:Feature, ?longitude:Literal\n    }\n  }\n}\nLIMIT 1000\n",
   "predicate_selectivity": [
     {
       "predicate": "<http://www.geonames.org/ontology#population>",
-      "cardinality": 1283,
-      "num_endpoints": 1,
+      "cardinality": 1283.0,
+      "num_endpoints": 2,
       "num_possible_classes": 1
     },
     {
       "predicate": "<http://www.geonames.org/ontology#countryCode>",
-      "cardinality": 1761,
-      "num_endpoints": 1,
+      "cardinality": 1761.0,
+      "num_endpoints": 2,
       "num_possible_classes": 1
     },
     {
       "predicate": "<http://www.w3.org/2003/01/geo/wgs84_pos#lat>",
-      "cardinality": 1780,
-      "num_endpoints": 1,
+      "cardinality": 1780.0,
+      "num_endpoints": 2,
       "num_possible_classes": 2
     },
     {
       "predicate": "<http://www.w3.org/2003/01/geo/wgs84_pos#long>",
-      "cardinality": 1780,
-      "num_endpoints": 1,
+      "cardinality": 1780.0,
+      "num_endpoints": 2,
       "num_possible_classes": 2
     },
     {
       "predicate": "<http://www.geonames.org/ontology#name>",
-      "cardinality": 1780,
-      "num_endpoints": 1,
+      "cardinality": 1780.0,
+      "num_endpoints": 2,
       "num_possible_classes": 1
     },
     {
       "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-      "cardinality": 1787,
-      "num_endpoints": 2,
-      "num_possible_classes": 4
+      "cardinality": 1787.0,
+      "num_endpoints": 6,
+      "num_possible_classes": 5
     }
   ]
 }

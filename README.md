@@ -82,6 +82,33 @@ curl -s "http://localhost:8892/sparql/?query=ASK%20%7B%20?s%20?p%20?o%20%7D&form
 
 ## Query analysis and optimization
 
+### ロジック概要
+
+このリポジトリの処理は、基本的に以下の 3 段階で動きます。
+
+1. **トリプル抽出（`sparql_triple_extractor.py`）**
+  - SPARQL を algebra に変換して、`BGP`/`Join`/`Union`/`SubSelect`（`ToMultiSet`）を再帰走査します。
+  - トリプルはスコープ木（root・UNION分岐・subquery）として保持し、`scope_tree` に保存します。
+  - 述語ごとに `tripleprofile/*.ttl` を参照して、`endpoint`・`subject_class`・`object_class`・`triple_count`・authority 情報を付与します。
+  - 最後に、抽出した述語のうちメタデータが付与できた割合を `metadata_coverage` として計算します。
+
+2. **連合クエリ最適化（`federated_query_optimizer.py`）**
+  - `*.analysis.json` を入力に、述語メタデータから到達可能エンドポイントを推定します。
+  - 可能なトリプルを endpoint 単位に束ねて `SERVICE` 句を構築し、`optimized_federated_query` を生成します。
+  - 推定不能なトリプルは `unknown_endpoint_triples` に残し、最適化状態（例: partial）を出力します。
+
+3. **実行（`run_optimized_queries.py`）**
+  - `*.optimization.json` を読み込み、`SERVICE <...>` を抽出して事前チェックを行います。
+  - `--service-endpoint-mode` に応じて、実行前に SERVICE URL を書き換えます。
+    - `none`: 変更なし
+    - `host.docker.internal`: `localhost` を `host.docker.internal` に変換
+    - `docker-service`: `localhost:889x` を compose サービス名（`drugbank` など）+ `:8890` に変換
+  - クエリは `--submit-endpoint` に POST し、JSON レスポンスを保存します。失敗時はリトライ設定に従って再試行します。
+
+補足:
+- 実行結果行数は SPARQL JSON の `results.bindings` 件数で算出します。
+- バッチ実行時は query ごとの詳細と全体集計を `run_summary.json` に保存します。
+
 ### 1) Extract triples and metadata from queries
 
 Run for all benchmark query files:

@@ -24,6 +24,18 @@ class FederatedQueryOptimizer:
         self.endpoint_map = defaultdict(list)  # {endpoint: [predicate info]}
         self.predicate_to_endpoints = defaultdict(list)  # {predicate: [endpoint info]}
         self.selective_predicates = []  # Most selective predicates
+
+    def _count_or_inf(self, value) -> float:
+        """Return numeric triple count or infinity when unavailable."""
+        if isinstance(value, (int, float)):
+            return float(value)
+        return float('inf')
+
+    def _count_or_zero(self, value) -> float:
+        """Return numeric triple count or zero when unavailable."""
+        if isinstance(value, (int, float)):
+            return float(value)
+        return 0.0
         
     def load_query_analysis(self, analysis_data):
         """Load query analysis from dict or file path"""
@@ -75,7 +87,7 @@ class FederatedQueryOptimizer:
         for predicate, endpoint_list in self.predicate_to_endpoints.items():
             # Use minimum cardinality across all endpoints
             min_cardinality = min(
-                [ep.get('triple_count', float('inf')) for ep in endpoint_list],
+                [self._count_or_inf(ep.get('triple_count')) for ep in endpoint_list],
                 default=float('inf')
             )
             unique_endpoints = {
@@ -232,7 +244,7 @@ class FederatedQueryOptimizer:
             # Get min cardinality for this predicate across endpoints
             endpoints = self.predicate_to_endpoints.get(p, [])
             if endpoints:
-                min_card = min([ep.get('triple_count', float('inf')) for ep in endpoints])
+                min_card = min([self._count_or_inf(ep.get('triple_count')) for ep in endpoints])
                 cardinalities.append(min_card)
         
         if not cardinalities:
@@ -315,7 +327,7 @@ class FederatedQueryOptimizer:
         # Sort endpoints by data size (smallest first for faster iteration)
         sorted_endpoints = sorted(
             self.endpoint_map.items(),
-            key=lambda x: sum(p.get('triple_count', 0) for p in x[1])
+            key=lambda x: sum(self._count_or_zero(p.get('triple_count')) for p in x[1])
         )
         
         for endpoint, predicates in sorted_endpoints:
@@ -326,7 +338,7 @@ class FederatedQueryOptimizer:
                 query_parts.append(
                     f"#   {pred['predicate']} "
                     f"({pred['subject_class']} -> {pred['object_class']}) "
-                    f"[{self._format_number(pred['triple_count'])} triples]\n"
+                    f"[{self._format_number(self._count_or_inf(pred.get('triple_count')))} triples]\n"
                 )
             
             query_parts.append("\n")
@@ -678,6 +690,13 @@ class SmartFederatedQueryBuilder:
 
         return max(candidates, key=score)
 
+    def _candidate_count_or_inf(self, candidate: Dict) -> float:
+        """Return candidate triple_count as numeric value or infinity."""
+        count = candidate.get('triple_count')
+        if isinstance(count, (int, float)):
+            return float(count)
+        return float('inf')
+
     def _assign_endpoints(self) -> List[Dict]:
         """Assign each triple to best endpoint candidate using class constraints and join affinity."""
         assigned = []
@@ -686,7 +705,9 @@ class SmartFederatedQueryBuilder:
         # Process selective triples first
         sorted_triples = sorted(
             self.triple_patterns,
-            key=lambda t: min([c.get('triple_count', float('inf')) for c in self.metadata.get(t[1], [])] or [float('inf')])
+            key=lambda t: min(
+                [self._candidate_count_or_inf(c) for c in self.metadata.get(t[1], [])] or [float('inf')]
+            )
         )
 
         for triple in sorted_triples:

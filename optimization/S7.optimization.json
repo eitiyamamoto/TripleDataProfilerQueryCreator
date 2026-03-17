@@ -1,25 +1,27 @@
 {
   "query_id": "S7",
   "analysis_file": "optimization/S7.analysis.json",
-  "optimization_status": "partial",
+  "optimization_status": "complete",
   "metadata_coverage": {
     "total_predicates": 4,
-    "covered_predicates": 3,
-    "missing_predicates": [
-      "<http://data.nytimes.com/elements/topicPage>"
-    ],
-    "coverage_ratio": 0.75,
-    "is_partial": true
+    "covered_predicates": 4,
+    "missing_predicates": [],
+    "coverage_ratio": 1.0,
+    "is_partial": false
   },
   "unknown_endpoint_triples": [],
   "optimization_analysis": {
     "optimization_strategy": "federated-with-service-clauses",
     "original_query": "SELECT ...",
     "endpoints_used": [
+      "http://localhost:8892/sparql/",
+      "http://localhost:8893/sparql/",
+      "http://localhost:8894/sparql/",
       "http://localhost:8895/sparql/",
+      "http://localhost:8896/sparql/",
       "http://localhost:8897/sparql/"
     ],
-    "num_endpoints": 2,
+    "num_endpoints": 6,
     "optimization_details": {
       "num_triples": 4,
       "num_unique_predicates": 4,
@@ -29,24 +31,26 @@
       "selective_predicates": [
         {
           "predicate": "<http://www.geonames.org/ontology#parentFeature>",
-          "cardinality": 585,
-          "num_endpoints": 1,
+          "cardinality": 585.0,
+          "num_endpoints": 2,
           "num_possible_classes": 1
         },
         {
           "predicate": "<http://www.geonames.org/ontology#name>",
-          "cardinality": 1780,
-          "num_endpoints": 1,
+          "cardinality": 1780.0,
+          "num_endpoints": 2,
           "num_possible_classes": 1
         },
         {
           "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-          "cardinality": 1787,
-          "num_endpoints": 2,
-          "num_possible_classes": 4
+          "cardinality": 1787.0,
+          "num_endpoints": 6,
+          "num_possible_classes": 5
         }
       ],
       "multi_endpoint_predicates": [
+        "<http://www.geonames.org/ontology#name>",
+        "<http://www.geonames.org/ontology#parentFeature>",
         "<http://www.w3.org/2002/07/owl#sameAs>"
       ]
     },
@@ -58,6 +62,41 @@
       "reasoning": "Estimated from 3 join chains"
     },
     "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "num_predicates": 3,
+        "total_triples": 14959427,
+        "total_triples_readable": "15.0M",
+        "predicates": [
+          "<http://www.geonames.org/ontology#parentFeature>",
+          "<http://www.geonames.org/ontology#name>",
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
       {
         "endpoint": "http://localhost:8895/sparql/",
         "num_predicates": 3,
@@ -72,20 +111,32 @@
         "estimated_retrieved_triples_readable": "unknown"
       },
       {
+        "endpoint": "http://localhost:8896/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
         "endpoint": "http://localhost:8897/sparql/",
-        "num_predicates": 3,
+        "num_predicates": 4,
         "total_triples": 4152,
         "total_triples_readable": "4.2K",
         "predicates": [
           "<http://www.geonames.org/ontology#parentFeature>",
           "<http://www.geonames.org/ontology#name>",
+          "<http://data.nytimes.com/elements/topicPage>",
           "<http://www.w3.org/2002/07/owl#sameAs>"
         ],
         "estimated_retrieved_triples": 585,
         "estimated_retrieved_triples_readable": "585"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 3\n#   <http://www.geonames.org/ontology#parentFeature> (http://www.geonames.org/ontology#Feature -> http://www.geonames.org/ontology#Feature) [585 triples]\n#   <http://www.geonames.org/ontology#name> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 4\n#   <http://www.geonames.org/ontology#parentFeature> (http://www.geonames.org/ontology#Feature -> http://www.geonames.org/ontology#Feature) [585 triples]\n#   <http://www.geonames.org/ontology#name> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8K triples]\n#   <http://data.nytimes.com/elements/topicPage> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 3\n#   <http://www.geonames.org/ontology#parentFeature> (http://www.geonames.org/ontology#Feature -> http://www.geonames.org/ontology#Feature) [7.5M triples]\n#   <http://www.geonames.org/ontology#name> (http://www.geonames.org/ontology#Feature -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.5M triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n"
   },
   "constraint_map": {
     "?parent": [
@@ -114,7 +165,19 @@
     "?location": [
       {
         "class": "http://www.geonames.org/ontology#Feature",
-        "confidence": 1.0
+        "confidence": 0.5180418865119363
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Drug",
+        "confidence": 0.16456054930521924
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "confidence": 0.1635966154793652
+      },
+      {
+        "class": "http://bio2rdf.org/ns/kegg#Compound",
+        "confidence": 0.15380094870347924
       }
     ],
     "?y": [
@@ -136,25 +199,31 @@
       }
     ]
   },
-  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Note: Multiple class interpretations exist but all route to same endpoints\n# A single query retrieves all data regardless of class ambiguity\n\nSELECT ?location ?news ?parent ?y\nWHERE {\n\n  SERVICE <http://localhost:8897/sparql/> {\n    ?location <http://www.geonames.org/ontology#parentFeature> ?parent . # ?location:Feature, ?parent:Feature\n    ?parent <http://www.geonames.org/ontology#name> \"California\" . # ?parent:Feature\n    ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . # ?y:Concept, ?location:Feature\n    ?y <http://data.nytimes.com/elements/topicPage> ?news .\n  }\n}\nLIMIT 1000\n",
+  "optimized_federated_query": "# Smart Federated Query with UNION for Multiple Class Interpretations\n# Each UNION branch uses different endpoints or predicates\n\nSELECT ?location ?news ?parent ?y\nWHERE {\n  # Scenario 1: ?parent=Feature, ?location=Feature, ?y=Concept\n  {\n    SERVICE <http://localhost:8897/sparql/> {\n      ?location <http://www.geonames.org/ontology#parentFeature> ?parent . # ?location:Feature, ?parent:Feature\n      ?parent <http://www.geonames.org/ontology#name> \"California\" . # ?parent:Feature\n      ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . # ?y:Concept, ?location:Feature\n      ?y <http://data.nytimes.com/elements/topicPage> ?news .\n    }\n  }\n\n  UNION\n\n  # Scenario 2: ?parent=Feature, ?location=Drug, ?y=Drug\n  {\n    SERVICE <http://localhost:8895/sparql/> {\n      ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . # ?y:Drug, ?location:Drug\n    }\n    SERVICE <http://localhost:8897/sparql/> {\n      ?location <http://www.geonames.org/ontology#parentFeature> ?parent . # ?location:Feature, ?parent:Feature\n      ?parent <http://www.geonames.org/ontology#name> \"California\" . # ?parent:Feature\n      ?y <http://data.nytimes.com/elements/topicPage> ?news .\n    }\n  }\n}\nLIMIT 1000\n",
   "predicate_selectivity": [
     {
       "predicate": "<http://www.geonames.org/ontology#parentFeature>",
-      "cardinality": 585,
-      "num_endpoints": 1,
+      "cardinality": 585.0,
+      "num_endpoints": 2,
       "num_possible_classes": 1
     },
     {
       "predicate": "<http://www.geonames.org/ontology#name>",
-      "cardinality": 1780,
-      "num_endpoints": 1,
+      "cardinality": 1780.0,
+      "num_endpoints": 2,
       "num_possible_classes": 1
     },
     {
       "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-      "cardinality": 1787,
-      "num_endpoints": 2,
-      "num_possible_classes": 4
+      "cardinality": 1787.0,
+      "num_endpoints": 6,
+      "num_possible_classes": 5
+    },
+    {
+      "predicate": "<http://data.nytimes.com/elements/topicPage>",
+      "cardinality": Infinity,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
     }
   ]
 }

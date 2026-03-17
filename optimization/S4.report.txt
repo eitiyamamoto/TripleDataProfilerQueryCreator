@@ -6,23 +6,51 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 5
 Unique Predicates: 4
-Endpoints Used: 2
+Endpoints Used: 6
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
 1. sameAs
    Cardinality: 1.8K
-   Endpoints: 2
-   Possible Class Pairs: 4
+   Endpoints: 6
+   Possible Class Pairs: 5
+2. title
+   Cardinality: 85.6K
+   Endpoints: 1
+   Possible Class Pairs: 1
+3. actor
+   Cardinality: 583.9K
+   Endpoints: 1
+   Possible Class Pairs: 1
+4. topicPage
+   Cardinality: unknown
+   Endpoints: 1
+   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8892/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8893/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 3
   Total Triples: 29.1K
   Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8896/sparql/
+  Predicates: 5
+  Total Triples: 1.8M
+  Estimated Retrieved Triples: 85.6K
 Endpoint: http://localhost:8897/sparql/
-  Predicates: 1
+  Predicates: 2
   Total Triples: 1.8K
   Estimated Retrieved Triples: 1.8K
 
@@ -37,13 +65,13 @@ OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'sameAs' (1.8K triples)
 • Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 6 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 1/4
-Unknown Endpoint Triples: 1
+Status: complete
+Metadata Coverage: 4/4
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
@@ -53,32 +81,34 @@ GENERATED FEDERATED QUERY
 
 SELECT ?actor ?film ?news ?x ?y
 WHERE {
-  # Scenario 1: ?actor=Concept, ?x=Feature, ?y=Concept
+  # Scenario 1: ?film=film, ?actor=Person, ?x=Feature, ?y=Concept
   {
+    SERVICE <http://localhost:8896/sparql/> {
+      ?film <http://purl.org/dc/terms/title> "Tarzan" . # ?film:film
+      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor . # ?film:film, ?actor:Person
+    }
     SERVICE <http://localhost:8897/sparql/> {
       ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?actor:Concept, ?x:Feature
       ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?y:Concept, ?x:Feature
-      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .
       ?y <http://data.nytimes.com/elements/topicPage> ?news .
     }
-    # Unknown endpoint (no metadata)
-      ?film <http://purl.org/dc/terms/title> "Tarzan" .
   }
 
   UNION
 
-  # Scenario 2: ?actor=Concept, ?x=Drug, ?y=Drug
+  # Scenario 2: ?film=film, ?actor=Person, ?x=Drug, ?y=Concept
   {
     SERVICE <http://localhost:8895/sparql/> {
+      ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?actor:Drug, ?x:Drug
       ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?y:Drug, ?x:Drug
-      ?y <http://data.nytimes.com/elements/topicPage> ?news .
+    }
+    SERVICE <http://localhost:8896/sparql/> {
+      ?film <http://purl.org/dc/terms/title> "Tarzan" . # ?film:film
+      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor . # ?film:film, ?actor:Person
     }
     SERVICE <http://localhost:8897/sparql/> {
-      ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . # ?actor:Concept, ?x:Feature
-      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .
+      ?y <http://data.nytimes.com/elements/topicPage> ?news .
     }
-    # Unknown endpoint (no metadata)
-      ?film <http://purl.org/dc/terms/title> "Tarzan" .
   }
 }
 LIMIT 1000

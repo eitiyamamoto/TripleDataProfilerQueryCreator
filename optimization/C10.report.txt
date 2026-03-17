@@ -22,11 +22,15 @@ PREDICATE SELECTIVITY (Most Selective First)
    Cardinality: 4.8K
    Endpoints: 1
    Possible Class Pairs: 2
+4. keggCompoundId
+   Cardinality: unknown
+   Endpoints: 1
+   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
 Endpoint: http://localhost:8892/sparql/
-  Predicates: 6
+  Predicates: 7
   Total Triples: 21.9K
   Estimated Retrieved Triples: 1.5K
 
@@ -45,7 +49,7 @@ OPTIMIZATION RECOMMENDATIONS
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
 Status: partial
-Metadata Coverage: 3/10
+Metadata Coverage: 4/10
 Unknown Endpoint Triples: 5
 
 --------------------------------------------------------------------------------

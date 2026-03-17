@@ -93,7 +93,7 @@ class PredicateMetadataLoader:
             PREFIX sbm: <http://sparqlbuilder.org/2015/09/rdf-metadata-schema#>
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             
-            SELECT ?predicate ?subjectClass ?objectClass ?tripleCount
+            SELECT ?predicate ?subjectClass ?objectClass ?tripleCount ?partitionTriples
             WHERE {
                 ?partition a void:Dataset ;
                     void:property ?predicate .
@@ -118,7 +118,18 @@ class PredicateMetadataLoader:
             predicate = str(row.predicate)
             subject_class = str(row.subjectClass) if row.subjectClass else None
             object_class = str(row.objectClass) if row.objectClass else None
-            triple_count = int(row.tripleCount) if row.tripleCount else None
+            class_relation_triples = self._safe_int(row.tripleCount)
+            partition_triples = self._safe_int(row.partitionTriples)
+
+            if class_relation_triples is not None:
+                triple_count = class_relation_triples
+                triple_count_source = 'class_relation'
+            elif partition_triples is not None:
+                triple_count = partition_triples
+                triple_count_source = 'partition'
+            else:
+                triple_count = None
+                triple_count_source = 'unknown'
             predicate_authorities = authority_by_predicate.get(
                 predicate,
                 {'subject': set(), 'object': set()}
@@ -129,6 +140,7 @@ class PredicateMetadataLoader:
                 'subject_class': subject_class,
                 'object_class': object_class,
                 'triple_count': triple_count,
+                'triple_count_source': triple_count_source,
                 'authorities': {
                     'subject': sorted(predicate_authorities['subject']),
                     'object': sorted(predicate_authorities['object'])
@@ -139,6 +151,16 @@ class PredicateMetadataLoader:
                 self.predicate_index[predicate] = []
             
             self.predicate_index[predicate].append(metadata)
+
+    def _safe_int(self, value):
+        """Convert rdflib Literal-like values to int when possible."""
+        if value is None:
+            return None
+
+        try:
+            return int(value)
+        except (TypeError, ValueError):
+            return None
 
     def _extract_authorities(self, graph):
         """Extract authority domains per predicate and relation type."""

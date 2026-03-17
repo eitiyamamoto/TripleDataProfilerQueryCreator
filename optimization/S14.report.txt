@@ -6,7 +6,7 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 5
 Unique Predicates: 5
-Endpoints Used: 2
+Endpoints Used: 3
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
@@ -22,15 +22,27 @@ PREDICATE SELECTIVITY (Most Selective First)
    Cardinality: 6.4K
    Endpoints: 1
    Possible Class Pairs: 2
+4. xRef
+   Cardinality: unknown
+   Endpoints: 2
+   Possible Class Pairs: 1
+5. casRegistryNumber
+   Cardinality: unknown
+   Endpoints: 1
+   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8890/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8892/sparql/
-  Predicates: 4
+  Predicates: 5
   Total Triples: 5.0K
   Estimated Retrieved Triples: 993
 Endpoint: http://localhost:8895/sparql/
-  Predicates: 2
+  Predicates: 3
   Total Triples: 18.5K
   Estimated Retrieved Triples: 6.4K
 
@@ -44,12 +56,14 @@ Reasoning: Estimated from 2 join chains
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'biotransformation' (993 triples)
+• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 3 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 3/5
+Status: complete
+Metadata Coverage: 5/5
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY

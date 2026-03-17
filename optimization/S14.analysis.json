@@ -95,25 +95,33 @@
         }
       }
     ],
-    "<http://bio2rdf.org/ns/bio2rdf#mass>": [
+    "<http://bio2rdf.org/ns/bio2rdf#xRef>": [
       {
-        "endpoint": "http://localhost:8895/sparql/",
-        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 6444,
+        "endpoint": "http://localhost:8890/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
         "authorities": {
-          "subject": [],
-          "object": []
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
         }
       },
       {
         "endpoint": "http://localhost:8895/sparql/",
-        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 12063,
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
         "authorities": {
-          "subject": [],
-          "object": []
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
         }
       }
     ],
@@ -138,23 +146,59 @@
           "object": []
         }
       }
+    ],
+    "<http://bio2rdf.org/ns/bio2rdf#mass>": [
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 6444,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 12063,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
+        }
+      }
     ]
   },
   "endpoints_found": [
+    "http://localhost:8890/sparql/",
     "http://localhost:8892/sparql/",
     "http://localhost:8895/sparql/"
   ],
-  "num_endpoints": 2,
+  "num_endpoints": 3,
   "query_id": "S14",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S14",
   "metadata_coverage": {
     "total_predicates": 5,
-    "covered_predicates": 3,
-    "missing_predicates": [
-      "<http://bio2rdf.org/ns/bio2rdf#xRef>",
-      "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>"
-    ],
-    "coverage_ratio": 0.6,
-    "is_partial": true
+    "covered_predicates": 5,
+    "missing_predicates": [],
+    "coverage_ratio": 1.0,
+    "is_partial": false
   }
 }

@@ -6,21 +6,41 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 4
 Unique Predicates: 4
-Endpoints Used: 2
+Endpoints Used: 6
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
 1. sameAs
    Cardinality: 1.8K
-   Endpoints: 2
-   Possible Class Pairs: 4
+   Endpoints: 6
+   Possible Class Pairs: 5
+2. genre
+   Cardinality: 39.1K
+   Endpoints: 1
+   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8892/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8893/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 3
   Total Triples: 29.1K
   Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8896/sparql/
+  Predicates: 4
+  Total Triples: 117.2K
+  Estimated Retrieved Triples: 39.1K
 Endpoint: http://localhost:8897/sparql/
   Predicates: 1
   Total Triples: 1.8K
@@ -37,12 +57,13 @@ OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'sameAs' (1.8K triples)
 • Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 6 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
 Status: partial
-Metadata Coverage: 1/4
+Metadata Coverage: 2/4
 Unknown Endpoint Triples: 1
 
 --------------------------------------------------------------------------------
@@ -53,12 +74,14 @@ GENERATED FEDERATED QUERY
 
 SELECT ?director ?film ?genre ?x
 WHERE {
-  # Scenario 1: ?x=Concept, ?film=Feature
+  # Scenario 1: ?genre=film_genre, ?x=film, ?film=Feature
   {
+    SERVICE <http://localhost:8896/sparql/> {
+      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre . # ?x:film, ?genre:film_genre
+    }
     SERVICE <http://localhost:8897/sparql/> {
       ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . # ?x:Concept, ?film:Feature
       ?film <http://dbpedia.org/ontology/director> ?director .
-      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre .
     }
     # Unknown endpoint (no metadata)
       ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .
@@ -66,12 +89,14 @@ WHERE {
 
   UNION
 
-  # Scenario 2: ?x=Drug, ?film=Drug
+  # Scenario 2: ?genre=film_genre, ?x=film, ?film=Drug
   {
     SERVICE <http://localhost:8895/sparql/> {
       ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . # ?x:Drug, ?film:Drug
       ?film <http://dbpedia.org/ontology/director> ?director .
-      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre .
+    }
+    SERVICE <http://localhost:8896/sparql/> {
+      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre . # ?x:film, ?genre:film_genre
     }
     # Unknown endpoint (no metadata)
       ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .

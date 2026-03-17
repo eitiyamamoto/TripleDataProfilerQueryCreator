@@ -4,16 +4,13 @@
   "optimization_status": "partial",
   "metadata_coverage": {
     "total_predicates": 9,
-    "covered_predicates": 3,
+    "covered_predicates": 6,
     "missing_predicates": [
-      "<http://bio2rdf.org/affymetrix_vocabulary:x-geneid>",
-      "<http://bio2rdf.org/affymetrix_vocabulary:x-symbol>",
       "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
       "<http://tcga.deri.ie/schema/result>",
-      "<http://tcga.deri.ie/schema/scaled_estimate>",
-      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+      "<http://tcga.deri.ie/schema/scaled_estimate>"
     ],
-    "coverage_ratio": 0.3333,
+    "coverage_ratio": 0.6667,
     "is_partial": true
   },
   "unknown_endpoint_triples": [],
@@ -21,9 +18,17 @@
     "optimization_strategy": "federated-with-service-clauses",
     "original_query": "SELECT ...",
     "endpoints_used": [
-      "http://localhost:8888/sparql/"
+      "http://localhost:8888/sparql/",
+      "http://localhost:8890/sparql/",
+      "http://localhost:8892/sparql/",
+      "http://localhost:8893/sparql/",
+      "http://localhost:8894/sparql/",
+      "http://localhost:8895/sparql/",
+      "http://localhost:8896/sparql/",
+      "http://localhost:8897/sparql/",
+      "http://localhost:8899/sparql/"
     ],
-    "num_endpoints": 1,
+    "num_endpoints": 9,
     "optimization_details": {
       "num_triples": 10,
       "num_unique_predicates": 9,
@@ -32,25 +37,27 @@
       "num_variables": 0,
       "selective_predicates": [
         {
-          "predicate": "<http://tcga.deri.ie/schema/start>",
-          "cardinality": 57429308,
+          "predicate": "<http://tcga.deri.ie/schema/stop>",
+          "cardinality": 57429308.0,
           "num_endpoints": 1,
           "num_possible_classes": 1
         },
         {
-          "predicate": "<http://tcga.deri.ie/schema/stop>",
-          "cardinality": 57429308,
+          "predicate": "<http://tcga.deri.ie/schema/start>",
+          "cardinality": 57429308.0,
           "num_endpoints": 1,
           "num_possible_classes": 1
         },
         {
           "predicate": "<http://tcga.deri.ie/schema/chromosome>",
-          "cardinality": 57429308,
+          "cardinality": 57429308.0,
           "num_endpoints": 1,
           "num_possible_classes": 1
         }
       ],
-      "multi_endpoint_predicates": []
+      "multi_endpoint_predicates": [
+        "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+      ]
     },
     "cardinality_estimate": {
       "estimated_rows": 57429308,
@@ -66,15 +73,105 @@
         "total_triples": 172287924,
         "total_triples_readable": "172.3M",
         "predicates": [
-          "<http://tcga.deri.ie/schema/start>",
           "<http://tcga.deri.ie/schema/stop>",
+          "<http://tcga.deri.ie/schema/start>",
           "<http://tcga.deri.ie/schema/chromosome>"
         ],
         "estimated_retrieved_triples": 57429308,
         "estimated_retrieved_triples_readable": "57.4M"
+      },
+      {
+        "endpoint": "http://localhost:8890/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "num_predicates": 3,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+          "<http://bio2rdf.org/affymetrix_vocabulary:x-symbol>",
+          "<http://bio2rdf.org/affymetrix_vocabulary:x-geneid>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8888/sparql/\n# Predicates: 3\n#   <http://tcga.deri.ie/schema/start> (http://tcga.deri.ie/schema/expression_exon_result -> http://www.w3.org/2000/01/rdf-schema#Literal) [57.4M triples]\n#   <http://tcga.deri.ie/schema/stop> (http://tcga.deri.ie/schema/expression_exon_result -> http://www.w3.org/2000/01/rdf-schema#Literal) [57.4M triples]\n#   <http://tcga.deri.ie/schema/chromosome> (http://tcga.deri.ie/schema/expression_exon_result -> http://www.w3.org/2000/01/rdf-schema#Literal) [57.4M triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8899/sparql/\n# Predicates: 3\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://bio2rdf.org/affymetrix_vocabulary:x-symbol> (None -> None) [unknown triples]\n#   <http://bio2rdf.org/affymetrix_vocabulary:x-geneid> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8890/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8888/sparql/\n# Predicates: 3\n#   <http://tcga.deri.ie/schema/stop> (http://tcga.deri.ie/schema/expression_exon_result -> http://www.w3.org/2000/01/rdf-schema#Literal) [57.4M triples]\n#   <http://tcga.deri.ie/schema/start> (http://tcga.deri.ie/schema/expression_exon_result -> http://www.w3.org/2000/01/rdf-schema#Literal) [57.4M triples]\n#   <http://tcga.deri.ie/schema/chromosome> (http://tcga.deri.ie/schema/expression_exon_result -> http://www.w3.org/2000/01/rdf-schema#Literal) [57.4M triples]\n\n"
   },
   "constraint_map": {
     "?geneId": [
@@ -134,23 +231,41 @@
       }
     ]
   },
-  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Variables are constrained by inferred class types and grouped by endpoint\n\nSELECT DISTINCT ?chromosome ?geneExpVal ?geneId ?lookupChromosome ?patient ?recordNo ?s ?start ?stop ?uri\nWHERE {\n\n  SERVICE <http://localhost:8888/sparql/> {\n    ?geneId <http://tcga.deri.ie/schema/chromosome> ?lookupChromosome . # ?geneId:expression_exon_result, ?lookupChromosome:Literal\n    ?recordNo <http://tcga.deri.ie/schema/chromosome> ?chromosome . # ?recordNo:expression_exon_result, ?chromosome:Literal\n    ?recordNo <http://tcga.deri.ie/schema/start> ?start . # ?recordNo:expression_exon_result, ?start:Literal\n    ?recordNo <http://tcga.deri.ie/schema/stop> ?stop . # ?recordNo:expression_exon_result, ?stop:Literal\n    ?geneId <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://tcga.deri.ie/schema/expression_gene_lookup> .\n    ?s <http://bio2rdf.org/affymetrix_vocabulary:x-geneid> ?geneId .\n    ?s <http://bio2rdf.org/affymetrix_vocabulary:x-symbol> <http://bio2rdf.org/symbol:KRAS> .\n    ?patient <http://tcga.deri.ie/schema/result> ?recordNo .\n    ?recordNo <http://tcga.deri.ie/schema/scaled_estimate> ?geneExpVal .\n    ?uri <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .\n  }\n}\nLIMIT 1000\n",
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Variables are constrained by inferred class types and grouped by endpoint\n\nSELECT DISTINCT ?chromosome ?geneExpVal ?geneId ?lookupChromosome ?patient ?recordNo ?s ?start ?stop ?uri\nWHERE {\n\n  SERVICE <http://localhost:8888/sparql/> {\n    ?geneId <http://tcga.deri.ie/schema/chromosome> ?lookupChromosome . # ?geneId:expression_exon_result, ?lookupChromosome:Literal\n    ?recordNo <http://tcga.deri.ie/schema/chromosome> ?chromosome . # ?recordNo:expression_exon_result, ?chromosome:Literal\n    ?recordNo <http://tcga.deri.ie/schema/start> ?start . # ?recordNo:expression_exon_result, ?start:Literal\n    ?recordNo <http://tcga.deri.ie/schema/stop> ?stop . # ?recordNo:expression_exon_result, ?stop:Literal\n    ?geneId <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://tcga.deri.ie/schema/expression_gene_lookup> .\n    ?patient <http://tcga.deri.ie/schema/result> ?recordNo .\n    ?recordNo <http://tcga.deri.ie/schema/scaled_estimate> ?geneExpVal .\n    ?uri <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .\n  }\n\n  SERVICE <http://localhost:8899/sparql/> {\n    ?s <http://bio2rdf.org/affymetrix_vocabulary:x-geneid> ?geneId .\n    ?s <http://bio2rdf.org/affymetrix_vocabulary:x-symbol> <http://bio2rdf.org/symbol:KRAS> .\n  }\n}\nLIMIT 1000\n",
   "predicate_selectivity": [
     {
-      "predicate": "<http://tcga.deri.ie/schema/start>",
-      "cardinality": 57429308,
+      "predicate": "<http://tcga.deri.ie/schema/stop>",
+      "cardinality": 57429308.0,
       "num_endpoints": 1,
       "num_possible_classes": 1
     },
     {
-      "predicate": "<http://tcga.deri.ie/schema/stop>",
-      "cardinality": 57429308,
+      "predicate": "<http://tcga.deri.ie/schema/start>",
+      "cardinality": 57429308.0,
       "num_endpoints": 1,
       "num_possible_classes": 1
     },
     {
       "predicate": "<http://tcga.deri.ie/schema/chromosome>",
-      "cardinality": 57429308,
+      "cardinality": 57429308.0,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "cardinality": Infinity,
+      "num_endpoints": 8,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://bio2rdf.org/affymetrix_vocabulary:x-symbol>",
+      "cardinality": Infinity,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://bio2rdf.org/affymetrix_vocabulary:x-geneid>",
+      "cardinality": Infinity,
       "num_endpoints": 1,
       "num_possible_classes": 1
     }

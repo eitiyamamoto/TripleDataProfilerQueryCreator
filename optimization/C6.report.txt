@@ -6,14 +6,14 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 9
 Unique Predicates: 8
-Endpoints Used: 2
+Endpoints Used: 6
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
 1. sameAs
    Cardinality: 1.8K
-   Endpoints: 2
-   Possible Class Pairs: 4
+   Endpoints: 6
+   Possible Class Pairs: 5
 2. first_use
    Cardinality: 7.2K
    Endpoints: 1
@@ -22,23 +22,51 @@ PREDICATE SELECTIVITY (Most Selective First)
    Cardinality: 7.2K
    Endpoints: 1
    Possible Class Pairs: 1
-4. associated_article_count
+4. number_of_variants
    Cardinality: 9.9K
    Endpoints: 1
    Possible Class Pairs: 1
-5. number_of_variants
+5. associated_article_count
    Cardinality: 9.9K
+   Endpoints: 1
+   Possible Class Pairs: 1
+6. title
+   Cardinality: 85.6K
+   Endpoints: 1
+   Possible Class Pairs: 1
+7. actor
+   Cardinality: 583.9K
+   Endpoints: 1
+   Possible Class Pairs: 1
+8. topicPage
+   Cardinality: unknown
    Endpoints: 1
    Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8892/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8893/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 3
   Total Triples: 29.1K
   Estimated Retrieved Triples: unknown
-Endpoint: http://localhost:8897/sparql/
+Endpoint: http://localhost:8896/sparql/
   Predicates: 5
+  Total Triples: 1.8M
+  Estimated Retrieved Triples: 85.6K
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 6
   Total Triples: 36.1K
   Estimated Retrieved Triples: 1.8K
 
@@ -53,12 +81,13 @@ OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'sameAs' (1.8K triples)
 • Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 6 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 5/8
+Status: complete
+Metadata Coverage: 8/8
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
@@ -68,8 +97,12 @@ GENERATED FEDERATED QUERY
 
 SELECT ?actor ?articleCount ?dbpediaURI ?film ?filmTitle ?first_use ?latest_use ?news ?nytURI ?variants
 WHERE {
-  # Scenario 1: ?nytURI=Concept, ?articleCount=Literal, ?first_use=Literal, ?latest_use=Literal, ?variants=Literal, ?dbpediaURI=Feature, ?actor=Concept
+  # Scenario 1: ?nytURI=Concept, ?articleCount=Literal, ?first_use=Literal, ?latest_use=Literal, ?variants=Literal, ?film=film, ?filmTitle=Literal, ?dbpediaURI=Feature, ?actor=Person
   {
+    SERVICE <http://localhost:8896/sparql/> {
+      ?film <http://purl.org/dc/terms/title> ?filmTitle . # ?film:film, ?filmTitle:Literal
+      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor . # ?film:film, ?actor:Person
+    }
     SERVICE <http://localhost:8897/sparql/> {
       ?nytURI <http://www.w3.org/2002/07/owl#sameAs> ?dbpediaURI . # ?nytURI:Concept, ?dbpediaURI:Feature
       ?actor <http://www.w3.org/2002/07/owl#sameAs> ?dbpediaURI . # ?actor:Concept, ?dbpediaURI:Feature
@@ -78,19 +111,19 @@ WHERE {
       ?nytURI <http://data.nytimes.com/elements/associated_article_count> ?articleCount . # ?nytURI:Concept, ?articleCount:Literal
       ?nytURI <http://data.nytimes.com/elements/number_of_variants> ?variants . # ?nytURI:Concept, ?variants:Literal
       ?nytURI <http://data.nytimes.com/elements/topicPage> ?news .
-      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .
-      ?film <http://purl.org/dc/terms/title> ?filmTitle .
     }
   }
 
   UNION
 
-  # Scenario 2: ?nytURI=Concept, ?articleCount=Literal, ?first_use=Literal, ?latest_use=Literal, ?variants=Literal, ?dbpediaURI=Drug, ?actor=Drug
+  # Scenario 2: ?nytURI=Concept, ?articleCount=Literal, ?first_use=Literal, ?latest_use=Literal, ?variants=Literal, ?film=film, ?filmTitle=Literal, ?dbpediaURI=Drug, ?actor=Person
   {
     SERVICE <http://localhost:8895/sparql/> {
       ?actor <http://www.w3.org/2002/07/owl#sameAs> ?dbpediaURI . # ?actor:Drug, ?dbpediaURI:Drug
-      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .
-      ?film <http://purl.org/dc/terms/title> ?filmTitle .
+    }
+    SERVICE <http://localhost:8896/sparql/> {
+      ?film <http://purl.org/dc/terms/title> ?filmTitle . # ?film:film, ?filmTitle:Literal
+      ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor . # ?film:film, ?actor:Person
     }
     SERVICE <http://localhost:8897/sparql/> {
       ?nytURI <http://www.w3.org/2002/07/owl#sameAs> ?dbpediaURI . # ?nytURI:Concept, ?dbpediaURI:Feature

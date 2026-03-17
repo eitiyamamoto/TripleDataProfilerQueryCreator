@@ -6,14 +6,18 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 11
 Unique Predicates: 11
-Endpoints Used: 4
+Endpoints Used: 8
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
 1. label
    Cardinality: 1
-   Endpoints: 4
-   Possible Class Pairs: 14
+   Endpoints: 8
+   Possible Class Pairs: 67
+2. based_near
+   Cardinality: unknown
+   Endpoints: 2
+   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
@@ -25,9 +29,25 @@ Endpoint: http://localhost:8892/sparql/
   Predicates: 6
   Total Triples: 24.3K
   Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8893/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 2
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 4
   Total Triples: 34.1K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8896/sparql/
+  Predicates: 53
+  Total Triples: 740.5K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 1
+  Total Triples: 0
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8899/sparql/
   Predicates: 3
@@ -44,40 +64,62 @@ Reasoning: Estimated from 4 join chains
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'label' (1 triples)
-• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
-• Use SERVICE clauses to parallelize execution across 4 endpoints
+• Use subject/object class constraints to reduce search space for 2 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 8 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
 Status: partial
-Metadata Coverage: 1/11
+Metadata Coverage: 2/11
 Unknown Endpoint Triples: 2
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
 --------------------------------------------------------------------------------
-# Smart Federated Query with Class Constraints
-# Note: Multiple class interpretations exist but all route to same endpoints
-# A single query retrieves all data regardless of class ambiguity
+# Smart Federated Query with UNION for Multiple Class Interpretations
+# Each UNION branch uses different endpoints or predicates
 
 SELECT DISTINCT ?affiliation ?author ?capital ?fullnames ?governmentType ?language ?leaderTitle ?paper ?place ?populationDensity ?proceedingAddress
 WHERE {
-
-  SERVICE <http://localhost:8899/sparql/> {
-    ?author <http://www.w3.org/2000/01/rdf-schema#label> ?fullnames . # ?author:dataset_vocabulary:Endpoint, ?fullnames:Literal
-    ?paper <http://swrc.ontoware.org/ontology#author> ?author .
-    ?author <http://swrc.ontoware.org/ontology#affiliation> ?affiliation .
-    ?author <http://xmlns.com/foaf/0.1/based_near> ?place .
-    ?place <http://dbpedia.org/ontology/capital> ?capital .
-    ?place <http://dbpedia.org/ontology/governmentType> ?governmentType .
-    ?place <http://dbpedia.org/ontology/language> ?language .
-    ?place <http://dbpedia.org/ontology/leaderTitle> ?leaderTitle .
-    ?place <http://dbpedia.org/ontology/populationDensity> ?populationDensity .
+  # Scenario 1: ?fullnames=Literal, ?author=dataset_vocabulary:Endpoint
+  {
+    SERVICE <http://localhost:8896/sparql/> {
+      ?author <http://xmlns.com/foaf/0.1/based_near> ?place .
+      ?place <http://dbpedia.org/ontology/capital> ?capital .
+      ?place <http://dbpedia.org/ontology/governmentType> ?governmentType .
+      ?place <http://dbpedia.org/ontology/language> ?language .
+      ?place <http://dbpedia.org/ontology/leaderTitle> ?leaderTitle .
+      ?place <http://dbpedia.org/ontology/populationDensity> ?populationDensity .
+    }
+    SERVICE <http://localhost:8899/sparql/> {
+      ?author <http://www.w3.org/2000/01/rdf-schema#label> ?fullnames . # ?author:dataset_vocabulary:Endpoint, ?fullnames:Literal
+      ?paper <http://swrc.ontoware.org/ontology#author> ?author .
+      ?author <http://swrc.ontoware.org/ontology#affiliation> ?affiliation .
+    }
+    # Unknown endpoint (no metadata)
+      ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/conference/iswc/2009/proceedings> .
+      <http://data.semanticweb.org/conference/iswc/2009/proceedings> <http://swrc.ontoware.org/ontology#address> ?proceedingAddress .
   }
 
-  # Unknown endpoint (no metadata)
-    ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/conference/iswc/2009/proceedings> .
-    <http://data.semanticweb.org/conference/iswc/2009/proceedings> <http://swrc.ontoware.org/ontology#address> ?proceedingAddress .
+  UNION
+
+  # Scenario 2: ?fullnames=Literal, ?author=film_collection
+  {
+    SERVICE <http://localhost:8896/sparql/> {
+      ?author <http://www.w3.org/2000/01/rdf-schema#label> ?fullnames . # ?author:film_collection, ?fullnames:Literal
+      ?paper <http://swrc.ontoware.org/ontology#author> ?author .
+      ?author <http://swrc.ontoware.org/ontology#affiliation> ?affiliation .
+      ?author <http://xmlns.com/foaf/0.1/based_near> ?place .
+      ?place <http://dbpedia.org/ontology/capital> ?capital .
+      ?place <http://dbpedia.org/ontology/governmentType> ?governmentType .
+      ?place <http://dbpedia.org/ontology/language> ?language .
+      ?place <http://dbpedia.org/ontology/leaderTitle> ?leaderTitle .
+      ?place <http://dbpedia.org/ontology/populationDensity> ?populationDensity .
+    }
+    # Unknown endpoint (no metadata)
+      ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/conference/iswc/2009/proceedings> .
+      <http://data.semanticweb.org/conference/iswc/2009/proceedings> <http://swrc.ontoware.org/ontology#address> ?proceedingAddress .
+  }
 }
 LIMIT 1000

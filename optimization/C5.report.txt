@@ -6,14 +6,30 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 8
 Unique Predicates: 7
-Endpoints Used: 4
+Endpoints Used: 8
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
 1. label
    Cardinality: 1
-   Endpoints: 4
-   Possible Class Pairs: 14
+   Endpoints: 8
+   Possible Class Pairs: 67
+2. actor_name
+   Cardinality: 50.6K
+   Endpoints: 1
+   Possible Class Pairs: 2
+3. date
+   Cardinality: 74.1K
+   Endpoints: 1
+   Possible Class Pairs: 1
+4. title
+   Cardinality: 85.6K
+   Endpoints: 1
+   Possible Class Pairs: 1
+5. actor
+   Cardinality: 583.9K
+   Endpoints: 1
+   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
@@ -25,9 +41,25 @@ Endpoint: http://localhost:8892/sparql/
   Predicates: 6
   Total Triples: 24.3K
   Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8893/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 4
   Total Triples: 34.1K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8896/sparql/
+  Predicates: 59
+  Total Triples: 2.8M
+  Estimated Retrieved Triples: 50.6K
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 1
+  Total Triples: 0
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8899/sparql/
   Predicates: 3
@@ -45,36 +77,88 @@ OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'label' (1 triples)
 • Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
-• Use SERVICE clauses to parallelize execution across 4 endpoints
+• Use SERVICE clauses to parallelize execution across 8 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
 Status: partial
-Metadata Coverage: 1/7
-Unknown Endpoint Triples: 4
+Metadata Coverage: 5/7
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
 --------------------------------------------------------------------------------
-# Smart Federated Query with Class Constraints
-# Note: Multiple class interpretations exist but all route to same endpoints
-# A single query retrieves all data regardless of class ambiguity
+# Smart Federated Query with UNION for Multiple Class Interpretations
+# Each UNION branch uses different endpoints or predicates
 
 SELECT ?actor ?actor_name ?actor_name_en ?birthDate ?imdbactor ?movie ?movieDate ?movieTitle ?spouseName ?spouseURI
 WHERE {
-
-  SERVICE <http://localhost:8899/sparql/> {
-    ?actor <http://www.w3.org/2000/01/rdf-schema#label> ?actor_name_en . # ?actor:dataset_vocabulary:Endpoint, ?actor_name_en:Literal
-    ?spouseURI <http://www.w3.org/2000/01/rdf-schema#label> ?spouseName . # ?spouseURI:dataset_vocabulary:Endpoint, ?spouseName:Literal
-    ?actor <http://dbpedia.org/ontology/spouse> ?spouseURI .
-    ?actor <http://dbpedia.org/ontology/birthDate> ?birthDate .
+  # Scenario 1: ?movie=film, ?movieDate=Literal, ?movieTitle=Literal, ?imdbactor=Person, ?actor_name_en=Literal, ?actor_name=Literal, ?spouseName=Literal, ?actor=dataset_vocabulary:Endpoint, ?spouseURI=dataset_vocabulary:Endpoint
+  {
+    SERVICE <http://localhost:8896/sparql/> {
+      ?imdbactor <http://data.linkedmdb.org/resource/movie/actor_name> ?actor_name . # ?imdbactor:Person, ?actor_name:Literal
+      ?movie <http://purl.org/dc/terms/date> ?movieDate . # ?movie:film, ?movieDate:Literal
+      ?movie <http://purl.org/dc/terms/title> ?movieTitle . # ?movie:film, ?movieTitle:Literal
+      ?movie <http://data.linkedmdb.org/resource/movie/actor> ?imdbactor . # ?movie:film, ?imdbactor:Person
+    }
+    SERVICE <http://localhost:8899/sparql/> {
+      ?actor <http://www.w3.org/2000/01/rdf-schema#label> ?actor_name_en . # ?actor:dataset_vocabulary:Endpoint, ?actor_name_en:Literal
+      ?spouseURI <http://www.w3.org/2000/01/rdf-schema#label> ?spouseName . # ?spouseURI:dataset_vocabulary:Endpoint, ?spouseName:Literal
+      ?actor <http://dbpedia.org/ontology/spouse> ?spouseURI .
+      ?actor <http://dbpedia.org/ontology/birthDate> ?birthDate .
+    }
   }
 
-  # Unknown endpoint (no metadata)
-    ?movie <http://data.linkedmdb.org/resource/movie/actor> ?imdbactor .
-    ?movie <http://purl.org/dc/terms/date> ?movieDate .
-    ?movie <http://purl.org/dc/terms/title> ?movieTitle .
-    ?imdbactor <http://data.linkedmdb.org/resource/movie/actor_name> ?actor_name .
+  UNION
+
+  # Scenario 2: ?movie=film, ?movieDate=Literal, ?movieTitle=Literal, ?imdbactor=Person, ?actor_name_en=Literal, ?actor_name=Literal, ?spouseName=Literal, ?actor=dataset_vocabulary:Endpoint, ?spouseURI=film_collection
+  {
+    SERVICE <http://localhost:8896/sparql/> {
+      ?spouseURI <http://www.w3.org/2000/01/rdf-schema#label> ?spouseName . # ?spouseURI:film_collection, ?spouseName:Literal
+      ?imdbactor <http://data.linkedmdb.org/resource/movie/actor_name> ?actor_name . # ?imdbactor:Person, ?actor_name:Literal
+      ?movie <http://purl.org/dc/terms/date> ?movieDate . # ?movie:film, ?movieDate:Literal
+      ?movie <http://purl.org/dc/terms/title> ?movieTitle . # ?movie:film, ?movieTitle:Literal
+      ?movie <http://data.linkedmdb.org/resource/movie/actor> ?imdbactor . # ?movie:film, ?imdbactor:Person
+    }
+    SERVICE <http://localhost:8899/sparql/> {
+      ?actor <http://www.w3.org/2000/01/rdf-schema#label> ?actor_name_en . # ?actor:dataset_vocabulary:Endpoint, ?actor_name_en:Literal
+      ?actor <http://dbpedia.org/ontology/spouse> ?spouseURI .
+      ?actor <http://dbpedia.org/ontology/birthDate> ?birthDate .
+    }
+  }
+
+  UNION
+
+  # Scenario 3: ?movie=film, ?movieDate=Literal, ?movieTitle=Literal, ?imdbactor=Person, ?actor_name_en=Literal, ?actor_name=Literal, ?spouseName=Literal, ?actor=film_collection, ?spouseURI=dataset_vocabulary:Endpoint
+  {
+    SERVICE <http://localhost:8896/sparql/> {
+      ?actor <http://www.w3.org/2000/01/rdf-schema#label> ?actor_name_en . # ?actor:film_collection, ?actor_name_en:Literal
+      ?imdbactor <http://data.linkedmdb.org/resource/movie/actor_name> ?actor_name . # ?imdbactor:Person, ?actor_name:Literal
+      ?movie <http://purl.org/dc/terms/date> ?movieDate . # ?movie:film, ?movieDate:Literal
+      ?movie <http://purl.org/dc/terms/title> ?movieTitle . # ?movie:film, ?movieTitle:Literal
+      ?movie <http://data.linkedmdb.org/resource/movie/actor> ?imdbactor . # ?movie:film, ?imdbactor:Person
+      ?actor <http://dbpedia.org/ontology/spouse> ?spouseURI .
+      ?actor <http://dbpedia.org/ontology/birthDate> ?birthDate .
+    }
+    SERVICE <http://localhost:8899/sparql/> {
+      ?spouseURI <http://www.w3.org/2000/01/rdf-schema#label> ?spouseName . # ?spouseURI:dataset_vocabulary:Endpoint, ?spouseName:Literal
+    }
+  }
+
+  UNION
+
+  # Scenario 4: ?movie=film, ?movieDate=Literal, ?movieTitle=Literal, ?imdbactor=Person, ?actor_name_en=Literal, ?actor_name=Literal, ?spouseName=Literal, ?actor=film_collection, ?spouseURI=film_collection
+  {
+    SERVICE <http://localhost:8896/sparql/> {
+      ?actor <http://www.w3.org/2000/01/rdf-schema#label> ?actor_name_en . # ?actor:film_collection, ?actor_name_en:Literal
+      ?spouseURI <http://www.w3.org/2000/01/rdf-schema#label> ?spouseName . # ?spouseURI:film_collection, ?spouseName:Literal
+      ?imdbactor <http://data.linkedmdb.org/resource/movie/actor_name> ?actor_name . # ?imdbactor:Person, ?actor_name:Literal
+      ?movie <http://purl.org/dc/terms/date> ?movieDate . # ?movie:film, ?movieDate:Literal
+      ?movie <http://purl.org/dc/terms/title> ?movieTitle . # ?movie:film, ?movieTitle:Literal
+      ?movie <http://data.linkedmdb.org/resource/movie/actor> ?imdbactor . # ?movie:film, ?imdbactor:Person
+      ?actor <http://dbpedia.org/ontology/spouse> ?spouseURI .
+      ?actor <http://dbpedia.org/ontology/birthDate> ?birthDate .
+    }
+  }
 }
 LIMIT 1000

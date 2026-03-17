@@ -104,7 +104,581 @@
     "reduced": false
   },
   "predicate_metadata": {
+    "<http://purl.org/dc/terms/date>": [
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 74111,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
     "<http://www.w3.org/2000/01/rdf-schema#label>": [
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "subject_class": "http://bio2rdf.org/affymetrix_vocabulary:Probeset",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1766999,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "subject_class": "http://bio2rdf.org/dataset_vocabulary:Endpoint",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8899/sparql/",
+        "subject_class": "http://rdfs.org/ns/void#Dataset",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://www.w3.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_cut",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 45259,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/country",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 247,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_collection",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/actor",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 50603,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_festival_focus",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 13,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_screening_venue",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 23,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_film_distributor_relationship",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 15256,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_job",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4004,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/writer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 17335,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/special_film_performance_type",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 11,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_art_director",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 365,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_awards_ceremony",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 127,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_location",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1315,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_festival_event",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 685,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/cinematographer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3263,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_set_designer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 206,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_film_company_relationship",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 36,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_featured_song",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 72,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_casting_director",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 273,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_festival",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 566,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://xmlns.com/foaf/0.1/Person",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 74337,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_series",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 205,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/dubbing_performance",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 118,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/oddlinker/interlink",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 162199,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_company",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 338,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_subject",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1249,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/producer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 14882,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/performance",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 197271,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://xmlns.com/foaf/0.1/Agent",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 691,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_distribution_medium",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 10,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_story_contributor",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 740,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_crew_gig",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 17237,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/content_rating",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 107,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_theorist",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 28,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/music_contributor",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4529,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/personal_film_appearance_type",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 5,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_character",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 15752,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/production_company",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1926,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 85620,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_festival_sponsor",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 70,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_crewmember",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 25,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_distributor",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 169,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_critic",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 152,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_costume_designer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 353,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_format",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 57,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/personal_film_appearance",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1120,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/editor",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3290,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/content_rating_system",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 46,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_genre",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 409,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_regional_release_date",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 418,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/director",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 17156,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film_production_designer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 293,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
       {
         "endpoint": "http://localhost:8890/sparql/",
         "subject_class": "http://bio2rdf.org/ns/chebi#Compound",
@@ -112,6 +686,18 @@
         "triple_count": 50477,
         "authorities": {
           "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://www.w3.org"
+          ],
           "object": []
         }
       },
@@ -176,32 +762,14 @@
         }
       },
       {
-        "endpoint": "http://localhost:8899/sparql/",
-        "subject_class": "http://bio2rdf.org/affymetrix_vocabulary:Probeset",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 1766999,
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
         "authorities": {
-          "subject": [],
-          "object": []
-        }
-      },
-      {
-        "endpoint": "http://localhost:8899/sparql/",
-        "subject_class": "http://bio2rdf.org/dataset_vocabulary:Endpoint",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 1,
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      },
-      {
-        "endpoint": "http://localhost:8899/sparql/",
-        "subject_class": "http://rdfs.org/ns/void#Dataset",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 2,
-        "authorities": {
-          "subject": [],
+          "subject": [
+            "http://www.w3.org"
+          ],
           "object": []
         }
       },
@@ -245,29 +813,107 @@
           "object": []
         }
       }
+    ],
+    "<http://purl.org/dc/terms/title>": [
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 85620,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://data.linkedmdb.org/resource/movie/actor>": [
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 583947,
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://data.linkedmdb.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 583947,
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://data.linkedmdb.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 583947,
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://data.linkedmdb.org"
+          ]
+        }
+      }
+    ],
+    "<http://data.linkedmdb.org/resource/movie/actor_name>": [
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://xmlns.com/foaf/0.1/Person",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 50603,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/actor",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 50603,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
     ]
   },
   "endpoints_found": [
     "http://localhost:8890/sparql/",
     "http://localhost:8892/sparql/",
+    "http://localhost:8893/sparql/",
+    "http://localhost:8894/sparql/",
     "http://localhost:8895/sparql/",
+    "http://localhost:8896/sparql/",
+    "http://localhost:8897/sparql/",
     "http://localhost:8899/sparql/"
   ],
-  "num_endpoints": 4,
+  "num_endpoints": 8,
   "query_id": "C5",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C5",
   "metadata_coverage": {
     "total_predicates": 7,
-    "covered_predicates": 1,
+    "covered_predicates": 5,
     "missing_predicates": [
-      "<http://data.linkedmdb.org/resource/movie/actor>",
-      "<http://data.linkedmdb.org/resource/movie/actor_name>",
       "<http://dbpedia.org/ontology/birthDate>",
-      "<http://dbpedia.org/ontology/spouse>",
-      "<http://purl.org/dc/terms/date>",
-      "<http://purl.org/dc/terms/title>"
+      "<http://dbpedia.org/ontology/spouse>"
     ],
-    "coverage_ratio": 0.1429,
+    "coverage_ratio": 0.7143,
     "is_partial": true
   }
 }

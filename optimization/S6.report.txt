@@ -6,29 +6,41 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 4
 Unique Predicates: 4
-Endpoints Used: 2
+Endpoints Used: 4
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
 1. parentFeature
    Cardinality: 585
-   Endpoints: 1
+   Endpoints: 2
    Possible Class Pairs: 1
 2. name
    Cardinality: 1.8K
-   Endpoints: 1
+   Endpoints: 2
    Possible Class Pairs: 1
 3. name
    Cardinality: 3.5K
    Endpoints: 1
    Possible Class Pairs: 1
+4. based_near
+   Cardinality: unknown
+   Endpoints: 2
+   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8893/sparql/
+  Predicates: 2
+  Total Triples: 15.0M
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8894/sparql/
-  Predicates: 1
+  Predicates: 2
   Total Triples: 3.5K
   Estimated Retrieved Triples: 3.5K
+Endpoint: http://localhost:8896/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8897/sparql/
   Predicates: 2
   Total Triples: 2.4K
@@ -44,12 +56,14 @@ Reasoning: Estimated from 3 join chains
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'parentFeature' (585 triples)
+• Use subject/object class constraints to reduce search space for 3 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 4 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 3/4
+Status: complete
+Metadata Coverage: 4/4
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY

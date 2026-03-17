@@ -6,7 +6,7 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 7
 Unique Predicates: 7
-Endpoints Used: 2
+Endpoints Used: 8
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
@@ -26,17 +26,53 @@ PREDICATE SELECTIVITY (Most Selective First)
    Cardinality: 8.4K
    Endpoints: 1
    Possible Class Pairs: 1
+5. type
+   Cardinality: unknown
+   Endpoints: 8
+   Possible Class Pairs: 1
+6. drugCategory
+   Cardinality: unknown
+   Endpoints: 1
+   Possible Class Pairs: 1
+7. keggCompoundId
+   Cardinality: unknown
+   Endpoints: 1
+   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8890/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8892/sparql/
-  Predicates: 2
+  Predicates: 5
   Total Triples: 3.7K
   Estimated Retrieved Triples: 1.9K
+Endpoint: http://localhost:8893/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
-  Predicates: 3
+  Predicates: 4
   Total Triples: 23.4K
   Estimated Retrieved Triples: 7.2K
+Endpoint: http://localhost:8896/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8899/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
@@ -48,12 +84,14 @@ Reasoning: Estimated from 3 join chains
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'description' (1.9K triples)
+• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 8 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 4/7
+Status: complete
+Metadata Coverage: 7/7
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY

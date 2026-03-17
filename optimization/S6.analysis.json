@@ -68,6 +68,18 @@
     "reduced": false
   },
   "predicate_metadata": {
+    "<http://xmlns.com/foaf/0.1/name>": [
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": "http://purl.org/ontology/mo/MusicArtist",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3505,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
     "<http://www.geonames.org/ontology#parentFeature>": [
       {
         "endpoint": "http://localhost:8897/sparql/",
@@ -82,17 +94,19 @@
             "http://sws.geonames.org"
           ]
         }
-      }
-    ],
-    "<http://xmlns.com/foaf/0.1/name>": [
+      },
       {
-        "endpoint": "http://localhost:8894/sparql/",
-        "subject_class": "http://purl.org/ontology/mo/MusicArtist",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 3505,
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.geonames.org/ontology#Feature",
+        "triple_count": 7479713,
         "authorities": {
-          "subject": [],
-          "object": []
+          "subject": [
+            "http://sws.geonames.org"
+          ],
+          "object": [
+            "http://sws.geonames.org"
+          ]
         }
       }
     ],
@@ -106,23 +120,63 @@
           "subject": [],
           "object": []
         }
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": "http://www.geonames.org/ontology#Feature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 7479714,
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://xmlns.com/foaf/0.1/based_near>": [
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://sws.geonames.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://dbtune.org"
+          ],
+          "object": [
+            "http://sws.geonames.org"
+          ]
+        }
       }
     ]
   },
   "endpoints_found": [
+    "http://localhost:8893/sparql/",
     "http://localhost:8894/sparql/",
+    "http://localhost:8896/sparql/",
     "http://localhost:8897/sparql/"
   ],
-  "num_endpoints": 2,
+  "num_endpoints": 4,
   "query_id": "S6",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S6",
   "metadata_coverage": {
     "total_predicates": 4,
-    "covered_predicates": 3,
-    "missing_predicates": [
-      "<http://xmlns.com/foaf/0.1/based_near>"
-    ],
-    "coverage_ratio": 0.75,
-    "is_partial": true
+    "covered_predicates": 4,
+    "missing_predicates": [],
+    "coverage_ratio": 1.0,
+    "is_partial": false
   }
 }

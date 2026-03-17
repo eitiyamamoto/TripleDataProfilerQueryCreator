@@ -4,7 +4,7 @@
   "optimization_status": "partial",
   "metadata_coverage": {
     "total_predicates": 11,
-    "covered_predicates": 1,
+    "covered_predicates": 2,
     "missing_predicates": [
       "<http://data.semanticweb.org/ns/swc/ontology#isPartOf>",
       "<http://dbpedia.org/ontology/capital>",
@@ -14,10 +14,9 @@
       "<http://dbpedia.org/ontology/populationDensity>",
       "<http://swrc.ontoware.org/ontology#address>",
       "<http://swrc.ontoware.org/ontology#affiliation>",
-      "<http://swrc.ontoware.org/ontology#author>",
-      "<http://xmlns.com/foaf/0.1/based_near>"
+      "<http://swrc.ontoware.org/ontology#author>"
     ],
-    "coverage_ratio": 0.0909,
+    "coverage_ratio": 0.1818,
     "is_partial": true
   },
   "unknown_endpoint_triples": [
@@ -38,10 +37,14 @@
     "endpoints_used": [
       "http://localhost:8890/sparql/",
       "http://localhost:8892/sparql/",
+      "http://localhost:8893/sparql/",
+      "http://localhost:8894/sparql/",
       "http://localhost:8895/sparql/",
+      "http://localhost:8896/sparql/",
+      "http://localhost:8897/sparql/",
       "http://localhost:8899/sparql/"
     ],
-    "num_endpoints": 4,
+    "num_endpoints": 8,
     "optimization_details": {
       "num_triples": 11,
       "num_unique_predicates": 11,
@@ -51,13 +54,20 @@
       "selective_predicates": [
         {
           "predicate": "<http://www.w3.org/2000/01/rdf-schema#label>",
-          "cardinality": 1,
-          "num_endpoints": 4,
-          "num_possible_classes": 14
+          "cardinality": 1.0,
+          "num_endpoints": 8,
+          "num_possible_classes": 67
+        },
+        {
+          "predicate": "<http://xmlns.com/foaf/0.1/based_near>",
+          "cardinality": Infinity,
+          "num_endpoints": 2,
+          "num_possible_classes": 1
         }
       ],
       "multi_endpoint_predicates": [
-        "<http://www.w3.org/2000/01/rdf-schema#label>"
+        "<http://www.w3.org/2000/01/rdf-schema#label>",
+        "<http://xmlns.com/foaf/0.1/based_near>"
       ]
     },
     "cardinality_estimate": {
@@ -96,6 +106,29 @@
         "estimated_retrieved_triples_readable": "unknown"
       },
       {
+        "endpoint": "http://localhost:8893/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://www.w3.org/2000/01/rdf-schema#label>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "num_predicates": 2,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
+          "<http://xmlns.com/foaf/0.1/based_near>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
         "endpoint": "http://localhost:8895/sparql/",
         "num_predicates": 4,
         "total_triples": 34146,
@@ -104,6 +137,80 @@
           "<http://www.w3.org/2000/01/rdf-schema#label>",
           "<http://www.w3.org/2000/01/rdf-schema#label>",
           "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "num_predicates": 53,
+        "total_triples": 740462,
+        "total_triples_readable": "740.5K",
+        "predicates": [
+          "<http://xmlns.com/foaf/0.1/based_near>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>",
+          "<http://www.w3.org/2000/01/rdf-schema#label>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "num_predicates": 1,
+        "total_triples": 0,
+        "total_triples_readable": "0",
+        "predicates": [
           "<http://www.w3.org/2000/01/rdf-schema#label>"
         ],
         "estimated_retrieved_triples": null,
@@ -123,7 +230,7 @@
         "estimated_retrieved_triples_readable": "1"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 6\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/enzymes -> http://www.w3.org/2000/01/rdf-schema#Literal) [53 triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.8K triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.8K triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.6K triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions -> http://www.w3.org/2000/01/rdf-schema#Literal) [10.1K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 4\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/ns/kegg#Reaction -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.8K triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/ns/kegg#Drug -> http://www.w3.org/2000/01/rdf-schema#Literal) [8.1K triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/ns/kegg#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [14.1K triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/ns/kegg#Enzyme -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.1K triples]\n\n# Endpoint: http://localhost:8890/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/ns/chebi#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [50.5K triples]\n\n# Endpoint: http://localhost:8899/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/affymetrix_vocabulary:Probeset -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8M triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/dataset_vocabulary:Endpoint -> http://www.w3.org/2000/01/rdf-schema#Literal) [1 triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://rdfs.org/ns/void#Dataset -> http://www.w3.org/2000/01/rdf-schema#Literal) [2 triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 2\n#   <http://xmlns.com/foaf/0.1/based_near> (None -> None) [unknown triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2000/01/rdf-schema#label> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2000/01/rdf-schema#label> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 6\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/enzymes -> http://www.w3.org/2000/01/rdf-schema#Literal) [53 triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.8K triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.8K triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.6K triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions -> http://www.w3.org/2000/01/rdf-schema#Literal) [10.1K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 4\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/ns/kegg#Reaction -> http://www.w3.org/2000/01/rdf-schema#Literal) [7.8K triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/ns/kegg#Drug -> http://www.w3.org/2000/01/rdf-schema#Literal) [8.1K triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/ns/kegg#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [14.1K triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/ns/kegg#Enzyme -> http://www.w3.org/2000/01/rdf-schema#Literal) [4.1K triples]\n\n# Endpoint: http://localhost:8890/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/ns/chebi#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [50.5K triples]\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 53\n#   <http://xmlns.com/foaf/0.1/based_near> (None -> None) [unknown triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://data.linkedmdb.org/resource/movie/film_cut -> http://www.w3.org/2000/01/rdf-schema#Literal) [45.3K triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://data.linkedmdb.org/resource/movie/country -> http://www.w3.org/2000/01/rdf-schema#Literal) [247 triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://data.linkedmdb.org/resource/movie/film_collection -> http://www.w3.org/2000/01/rdf-schema#Literal) [1 triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://data.linkedmdb.org/resource/movie/actor -> http://www.w3.org/2000/01/rdf-schema#Literal) [50.6K triples]\n\n# Endpoint: http://localhost:8899/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/affymetrix_vocabulary:Probeset -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.8M triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://bio2rdf.org/dataset_vocabulary:Endpoint -> http://www.w3.org/2000/01/rdf-schema#Literal) [1 triples]\n#   <http://www.w3.org/2000/01/rdf-schema#label> (http://rdfs.org/ns/void#Dataset -> http://www.w3.org/2000/01/rdf-schema#Literal) [2 triples]\n\n"
   },
   "constraint_map": {
     "?author": [
@@ -134,13 +241,65 @@
       "http://bio2rdf.org/ns/kegg#Drug",
       "http://bio2rdf.org/ns/kegg#Enzyme",
       "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://data.linkedmdb.org/resource/movie/actor",
+      "http://data.linkedmdb.org/resource/movie/cinematographer",
+      "http://data.linkedmdb.org/resource/movie/content_rating",
+      "http://data.linkedmdb.org/resource/movie/content_rating_system",
+      "http://data.linkedmdb.org/resource/movie/country",
+      "http://data.linkedmdb.org/resource/movie/director",
+      "http://data.linkedmdb.org/resource/movie/dubbing_performance",
+      "http://data.linkedmdb.org/resource/movie/editor",
+      "http://data.linkedmdb.org/resource/movie/film",
+      "http://data.linkedmdb.org/resource/movie/film_art_director",
+      "http://data.linkedmdb.org/resource/movie/film_awards_ceremony",
+      "http://data.linkedmdb.org/resource/movie/film_casting_director",
+      "http://data.linkedmdb.org/resource/movie/film_character",
+      "http://data.linkedmdb.org/resource/movie/film_collection",
+      "http://data.linkedmdb.org/resource/movie/film_company",
+      "http://data.linkedmdb.org/resource/movie/film_costume_designer",
+      "http://data.linkedmdb.org/resource/movie/film_crew_gig",
+      "http://data.linkedmdb.org/resource/movie/film_crewmember",
+      "http://data.linkedmdb.org/resource/movie/film_critic",
+      "http://data.linkedmdb.org/resource/movie/film_cut",
+      "http://data.linkedmdb.org/resource/movie/film_distribution_medium",
+      "http://data.linkedmdb.org/resource/movie/film_distributor",
+      "http://data.linkedmdb.org/resource/movie/film_featured_song",
+      "http://data.linkedmdb.org/resource/movie/film_festival",
+      "http://data.linkedmdb.org/resource/movie/film_festival_event",
+      "http://data.linkedmdb.org/resource/movie/film_festival_focus",
+      "http://data.linkedmdb.org/resource/movie/film_festival_sponsor",
+      "http://data.linkedmdb.org/resource/movie/film_film_company_relationship",
+      "http://data.linkedmdb.org/resource/movie/film_film_distributor_relationship",
+      "http://data.linkedmdb.org/resource/movie/film_format",
+      "http://data.linkedmdb.org/resource/movie/film_genre",
+      "http://data.linkedmdb.org/resource/movie/film_job",
+      "http://data.linkedmdb.org/resource/movie/film_location",
+      "http://data.linkedmdb.org/resource/movie/film_production_designer",
+      "http://data.linkedmdb.org/resource/movie/film_regional_release_date",
+      "http://data.linkedmdb.org/resource/movie/film_screening_venue",
+      "http://data.linkedmdb.org/resource/movie/film_series",
+      "http://data.linkedmdb.org/resource/movie/film_set_designer",
+      "http://data.linkedmdb.org/resource/movie/film_story_contributor",
+      "http://data.linkedmdb.org/resource/movie/film_subject",
+      "http://data.linkedmdb.org/resource/movie/film_theorist",
+      "http://data.linkedmdb.org/resource/movie/music_contributor",
+      "http://data.linkedmdb.org/resource/movie/performance",
+      "http://data.linkedmdb.org/resource/movie/personal_film_appearance",
+      "http://data.linkedmdb.org/resource/movie/personal_film_appearance_type",
+      "http://data.linkedmdb.org/resource/movie/producer",
+      "http://data.linkedmdb.org/resource/movie/production_company",
+      "http://data.linkedmdb.org/resource/movie/special_film_performance_type",
+      "http://data.linkedmdb.org/resource/movie/writer",
+      "http://data.linkedmdb.org/resource/oddlinker/interlink",
       "http://rdfs.org/ns/void#Dataset",
       "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions",
       "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
       "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/enzymes",
       "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/references",
       "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets",
-      "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer"
+      "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+      "http://xmlns.com/foaf/0.1/Agent",
+      "http://xmlns.com/foaf/0.1/Person"
     ],
     "?fullnames": [
       "http://www.w3.org/2000/01/rdf-schema#Literal"
@@ -150,23 +309,23 @@
     "?author": [
       {
         "class": "http://bio2rdf.org/dataset_vocabulary:Endpoint",
-        "confidence": 0.17763778286929535
+        "confidence": 0.03560194161636166
+      },
+      {
+        "class": "http://data.linkedmdb.org/resource/movie/film_collection",
+        "confidence": 0.03560194161636166
       },
       {
         "class": "http://rdfs.org/ns/void#Dataset",
-        "confidence": 0.17141762643236808
+        "confidence": 0.03435530566574826
       },
       {
-        "class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/enzymes",
-        "confidence": 0.10281026998696087
+        "class": "http://data.linkedmdb.org/resource/movie/personal_film_appearance_type",
+        "confidence": 0.03152442575457821
       },
       {
-        "class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/references",
-        "confidence": 0.09133962966311028
-      },
-      {
-        "class": "http://bio2rdf.org/ns/kegg#Enzyme",
-        "confidence": 0.05114329716697681
+        "class": "http://data.linkedmdb.org/resource/movie/film_distribution_medium",
+        "confidence": 0.028497115132067097
       }
     ],
     "?fullnames": [
@@ -176,13 +335,19 @@
       }
     ]
   },
-  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Note: Multiple class interpretations exist but all route to same endpoints\n# A single query retrieves all data regardless of class ambiguity\n\nSELECT DISTINCT ?affiliation ?author ?capital ?fullnames ?governmentType ?language ?leaderTitle ?paper ?place ?populationDensity ?proceedingAddress\nWHERE {\n\n  SERVICE <http://localhost:8899/sparql/> {\n    ?author <http://www.w3.org/2000/01/rdf-schema#label> ?fullnames . # ?author:dataset_vocabulary:Endpoint, ?fullnames:Literal\n    ?paper <http://swrc.ontoware.org/ontology#author> ?author .\n    ?author <http://swrc.ontoware.org/ontology#affiliation> ?affiliation .\n    ?author <http://xmlns.com/foaf/0.1/based_near> ?place .\n    ?place <http://dbpedia.org/ontology/capital> ?capital .\n    ?place <http://dbpedia.org/ontology/governmentType> ?governmentType .\n    ?place <http://dbpedia.org/ontology/language> ?language .\n    ?place <http://dbpedia.org/ontology/leaderTitle> ?leaderTitle .\n    ?place <http://dbpedia.org/ontology/populationDensity> ?populationDensity .\n  }\n\n  # Unknown endpoint (no metadata)\n    ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/conference/iswc/2009/proceedings> .\n    <http://data.semanticweb.org/conference/iswc/2009/proceedings> <http://swrc.ontoware.org/ontology#address> ?proceedingAddress .\n}\nLIMIT 1000\n",
+  "optimized_federated_query": "# Smart Federated Query with UNION for Multiple Class Interpretations\n# Each UNION branch uses different endpoints or predicates\n\nSELECT DISTINCT ?affiliation ?author ?capital ?fullnames ?governmentType ?language ?leaderTitle ?paper ?place ?populationDensity ?proceedingAddress\nWHERE {\n  # Scenario 1: ?fullnames=Literal, ?author=dataset_vocabulary:Endpoint\n  {\n    SERVICE <http://localhost:8896/sparql/> {\n      ?author <http://xmlns.com/foaf/0.1/based_near> ?place .\n      ?place <http://dbpedia.org/ontology/capital> ?capital .\n      ?place <http://dbpedia.org/ontology/governmentType> ?governmentType .\n      ?place <http://dbpedia.org/ontology/language> ?language .\n      ?place <http://dbpedia.org/ontology/leaderTitle> ?leaderTitle .\n      ?place <http://dbpedia.org/ontology/populationDensity> ?populationDensity .\n    }\n    SERVICE <http://localhost:8899/sparql/> {\n      ?author <http://www.w3.org/2000/01/rdf-schema#label> ?fullnames . # ?author:dataset_vocabulary:Endpoint, ?fullnames:Literal\n      ?paper <http://swrc.ontoware.org/ontology#author> ?author .\n      ?author <http://swrc.ontoware.org/ontology#affiliation> ?affiliation .\n    }\n    # Unknown endpoint (no metadata)\n      ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/conference/iswc/2009/proceedings> .\n      <http://data.semanticweb.org/conference/iswc/2009/proceedings> <http://swrc.ontoware.org/ontology#address> ?proceedingAddress .\n  }\n\n  UNION\n\n  # Scenario 2: ?fullnames=Literal, ?author=film_collection\n  {\n    SERVICE <http://localhost:8896/sparql/> {\n      ?author <http://www.w3.org/2000/01/rdf-schema#label> ?fullnames . # ?author:film_collection, ?fullnames:Literal\n      ?paper <http://swrc.ontoware.org/ontology#author> ?author .\n      ?author <http://swrc.ontoware.org/ontology#affiliation> ?affiliation .\n      ?author <http://xmlns.com/foaf/0.1/based_near> ?place .\n      ?place <http://dbpedia.org/ontology/capital> ?capital .\n      ?place <http://dbpedia.org/ontology/governmentType> ?governmentType .\n      ?place <http://dbpedia.org/ontology/language> ?language .\n      ?place <http://dbpedia.org/ontology/leaderTitle> ?leaderTitle .\n      ?place <http://dbpedia.org/ontology/populationDensity> ?populationDensity .\n    }\n    # Unknown endpoint (no metadata)\n      ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/conference/iswc/2009/proceedings> .\n      <http://data.semanticweb.org/conference/iswc/2009/proceedings> <http://swrc.ontoware.org/ontology#address> ?proceedingAddress .\n  }\n}\nLIMIT 1000\n",
   "predicate_selectivity": [
     {
       "predicate": "<http://www.w3.org/2000/01/rdf-schema#label>",
-      "cardinality": 1,
-      "num_endpoints": 4,
-      "num_possible_classes": 14
+      "cardinality": 1.0,
+      "num_endpoints": 8,
+      "num_possible_classes": 67
+    },
+    {
+      "predicate": "<http://xmlns.com/foaf/0.1/based_near>",
+      "cardinality": Infinity,
+      "num_endpoints": 2,
+      "num_possible_classes": 1
     }
   ]
 }

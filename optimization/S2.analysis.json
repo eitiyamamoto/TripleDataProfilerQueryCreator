@@ -57,6 +57,22 @@
     "reduced": false
   },
   "predicate_metadata": {
+    "<http://data.nytimes.com/elements/topicPage>": [
+      {
+        "endpoint": "http://localhost:8897/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://data.nytimes.com"
+          ],
+          "object": [
+            "http://topics.nytimes.com"
+          ]
+        }
+      }
+    ],
     "<http://www.w3.org/2002/07/owl#sameAs>": [
       {
         "endpoint": "http://localhost:8897/sparql/",
@@ -75,6 +91,70 @@
             "http://rdf.insee.fr",
             "http://sws.geonames.org",
             "http://www.ordnancesurvey.co.uk"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://dbpedia.org",
+            "http://mpii.de",
+            "http://sws.geonames.org",
+            "http://zitgist.com"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://dbtune.org"
+          ],
+          "object": [
+            "http://zitgist.com"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": [
+            "http://bio2rdf.org",
+            "http://data.linkedct.org",
+            "http://dbpedia.org",
+            "http://purl.org",
+            "http://www.dbpedia.org",
+            "http://www4.wiwiss.fu-berlin.de"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8893/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": null,
+        "authorities": {
+          "subject": [
+            "http://sws.geonames.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
           ]
         }
       },
@@ -123,20 +203,23 @@
     ]
   },
   "endpoints_found": [
+    "http://localhost:8892/sparql/",
+    "http://localhost:8893/sparql/",
+    "http://localhost:8894/sparql/",
     "http://localhost:8895/sparql/",
+    "http://localhost:8896/sparql/",
     "http://localhost:8897/sparql/"
   ],
-  "num_endpoints": 2,
+  "num_endpoints": 6,
   "query_id": "S2",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S2",
   "metadata_coverage": {
     "total_predicates": 3,
-    "covered_predicates": 1,
+    "covered_predicates": 2,
     "missing_predicates": [
-      "<http://data.nytimes.com/elements/topicPage>",
       "<http://dbpedia.org/ontology/party>"
     ],
-    "coverage_ratio": 0.3333,
+    "coverage_ratio": 0.6667,
     "is_partial": true
   }
 }

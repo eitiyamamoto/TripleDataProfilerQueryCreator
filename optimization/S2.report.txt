@@ -6,23 +6,43 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 3
 Unique Predicates: 3
-Endpoints Used: 2
+Endpoints Used: 6
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
 1. sameAs
    Cardinality: 1.8K
-   Endpoints: 2
-   Possible Class Pairs: 4
+   Endpoints: 6
+   Possible Class Pairs: 5
+2. topicPage
+   Cardinality: unknown
+   Endpoints: 1
+   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8892/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8893/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8894/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 3
   Total Triples: 29.1K
   Estimated Retrieved Triples: unknown
-Endpoint: http://localhost:8897/sparql/
+Endpoint: http://localhost:8896/sparql/
   Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 2
   Total Triples: 1.8K
   Estimated Retrieved Triples: 1.8K
 
@@ -37,30 +57,45 @@ OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'sameAs' (1.8K triples)
 • Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 6 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
 Status: partial
-Metadata Coverage: 1/3
+Metadata Coverage: 2/3
 Unknown Endpoint Triples: 1
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
 --------------------------------------------------------------------------------
-# Smart Federated Query with Class Constraints
-# Note: Multiple class interpretations exist but all route to same endpoints
-# A single query retrieves all data regardless of class ambiguity
+# Smart Federated Query with UNION for Multiple Class Interpretations
+# Each UNION branch uses different endpoints or predicates
 
 SELECT ?page ?party ?x
 WHERE {
-
-  SERVICE <http://localhost:8897/sparql/> {
-    ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> . # ?x:Concept
-    ?x <http://data.nytimes.com/elements/topicPage> ?page .
+  # Scenario 1: ?x=Concept
+  {
+    SERVICE <http://localhost:8897/sparql/> {
+      ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> . # ?x:Concept
+      ?x <http://data.nytimes.com/elements/topicPage> ?page .
+    }
+    # Unknown endpoint (no metadata)
+      <http://dbpedia.org/resource/Barack_Obama> <http://dbpedia.org/ontology/party> ?party .
   }
 
-  # Unknown endpoint (no metadata)
-    <http://dbpedia.org/resource/Barack_Obama> <http://dbpedia.org/ontology/party> ?party .
+  UNION
+
+  # Scenario 2: ?x=Drug
+  {
+    SERVICE <http://localhost:8896/sparql/> {
+      ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .
+    }
+    SERVICE <http://localhost:8897/sparql/> {
+      ?x <http://data.nytimes.com/elements/topicPage> ?page .
+    }
+    # Unknown endpoint (no metadata)
+      <http://dbpedia.org/resource/Barack_Obama> <http://dbpedia.org/ontology/party> ?party .
+  }
 }
 LIMIT 1000

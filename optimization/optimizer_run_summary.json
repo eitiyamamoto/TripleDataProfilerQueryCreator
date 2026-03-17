@@ -37,7 +37,7 @@
   "total_queries": 32,
   "processed": 32,
   "failed": 0,
-  "partial_optimizations": 32,
+  "partial_optimizations": 19,
   "queries": [
     {
       "query_id": "B1",
@@ -117,7 +117,7 @@
       "status": "ok",
       "optimization_file": "optimization/C1.optimization.json",
       "report_file": "optimization/C1.report.txt",
-      "optimization_status": "partial",
+      "optimization_status": "complete",
       "unknown_endpoint_triples": 0
     },
     {
@@ -135,7 +135,7 @@
       "status": "ok",
       "optimization_file": "optimization/C2.optimization.json",
       "report_file": "optimization/C2.report.txt",
-      "optimization_status": "partial",
+      "optimization_status": "complete",
       "unknown_endpoint_triples": 0
     },
     {
@@ -144,7 +144,7 @@
       "status": "ok",
       "optimization_file": "optimization/C3.optimization.json",
       "report_file": "optimization/C3.report.txt",
-      "optimization_status": "partial",
+      "optimization_status": "complete",
       "unknown_endpoint_triples": 0
     },
     {
@@ -163,7 +163,7 @@
       "optimization_file": "optimization/C5.optimization.json",
       "report_file": "optimization/C5.report.txt",
       "optimization_status": "partial",
-      "unknown_endpoint_triples": 4
+      "unknown_endpoint_triples": 0
     },
     {
       "query_id": "C6",
@@ -171,7 +171,7 @@
       "status": "ok",
       "optimization_file": "optimization/C6.optimization.json",
       "report_file": "optimization/C6.report.txt",
-      "optimization_status": "partial",
+      "optimization_status": "complete",
       "unknown_endpoint_triples": 0
     },
     {
@@ -198,7 +198,7 @@
       "status": "ok",
       "optimization_file": "optimization/C9.optimization.json",
       "report_file": "optimization/C9.report.txt",
-      "optimization_status": "partial",
+      "optimization_status": "complete",
       "unknown_endpoint_triples": 0
     },
     {
@@ -216,7 +216,7 @@
       "status": "ok",
       "optimization_file": "optimization/S10.optimization.json",
       "report_file": "optimization/S10.report.txt",
-      "optimization_status": "partial",
+      "optimization_status": "complete",
       "unknown_endpoint_triples": 0
     },
     {
@@ -225,7 +225,7 @@
       "status": "ok",
       "optimization_file": "optimization/S11.optimization.json",
       "report_file": "optimization/S11.report.txt",
-      "optimization_status": "partial",
+      "optimization_status": "complete",
       "unknown_endpoint_triples": 0
     },
     {
@@ -234,7 +234,7 @@
       "status": "ok",
       "optimization_file": "optimization/S12.optimization.json",
       "report_file": "optimization/S12.report.txt",
-      "optimization_status": "partial",
+      "optimization_status": "complete",
       "unknown_endpoint_triples": 0
     },
     {
@@ -243,8 +243,8 @@
       "status": "ok",
       "optimization_file": "optimization/S13.optimization.json",
       "report_file": "optimization/S13.report.txt",
-      "optimization_status": "partial",
-      "unknown_endpoint_triples": 1
+      "optimization_status": "complete",
+      "unknown_endpoint_triples": 0
     },
     {
       "query_id": "S14",
@@ -252,7 +252,7 @@
       "status": "ok",
       "optimization_file": "optimization/S14.optimization.json",
       "report_file": "optimization/S14.report.txt",
-      "optimization_status": "partial",
+      "optimization_status": "complete",
       "unknown_endpoint_triples": 0
     },
     {
@@ -279,8 +279,8 @@
       "status": "ok",
       "optimization_file": "optimization/S4.optimization.json",
       "report_file": "optimization/S4.report.txt",
-      "optimization_status": "partial",
-      "unknown_endpoint_triples": 1
+      "optimization_status": "complete",
+      "unknown_endpoint_triples": 0
     },
     {
       "query_id": "S5",
@@ -297,7 +297,7 @@
       "status": "ok",
       "optimization_file": "optimization/S6.optimization.json",
       "report_file": "optimization/S6.report.txt",
-      "optimization_status": "partial",
+      "optimization_status": "complete",
       "unknown_endpoint_triples": 0
     },
     {
@@ -306,7 +306,7 @@
       "status": "ok",
       "optimization_file": "optimization/S7.optimization.json",
       "report_file": "optimization/S7.report.txt",
-      "optimization_status": "partial",
+      "optimization_status": "complete",
       "unknown_endpoint_triples": 0
     },
     {

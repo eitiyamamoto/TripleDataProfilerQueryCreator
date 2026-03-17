@@ -6,7 +6,7 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 6
 Unique Predicates: 6
-Endpoints Used: 4
+Endpoints Used: 8
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
@@ -26,25 +26,49 @@ PREDICATE SELECTIVITY (Most Selective First)
    Cardinality: 34.1K
    Endpoints: 1
    Possible Class Pairs: 1
+5. type
+   Cardinality: unknown
+   Endpoints: 8
+   Possible Class Pairs: 1
+6. keggCompoundId
+   Cardinality: unknown
+   Endpoints: 1
+   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
 Endpoint: http://localhost:8890/sparql/
-  Predicates: 3
+  Predicates: 4
   Total Triples: 102.2K
   Estimated Retrieved Triples: 34.1K
 Endpoint: http://localhost:8892/sparql/
-  Predicates: 2
+  Predicates: 4
   Total Triples: 9.5K
   Estimated Retrieved Triples: 4.8K
+Endpoint: http://localhost:8893/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8894/sparql/
-  Predicates: 2
+  Predicates: 3
   Total Triples: 51.4K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
-  Predicates: 8
+  Predicates: 9
   Total Triples: 68.4K
   Estimated Retrieved Triples: 4.2K
+Endpoint: http://localhost:8896/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8897/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8899/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
@@ -56,14 +80,14 @@ Reasoning: Estimated from 3 join chains
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'title' (4.1K triples)
-• Use subject/object class constraints to reduce search space for 2 predicates that span multiple endpoints
-• Use SERVICE clauses to parallelize execution across 4 endpoints
+• Use subject/object class constraints to reduce search space for 3 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 8 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 4/6
+Status: complete
+Metadata Coverage: 6/6
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY

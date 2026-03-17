@@ -1,0 +1,1133 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sbm: <http://sparqlbuilder.org/2015/09/rdf-metadata-schema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sd:Service ;
+    sd:defaultDataset [ a sd:Dataset ;
+            void:classPartition [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#ExhibitionChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#SemanticWebChallengeChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#IndustryChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#SponsorshipChair> ;
+                    void:entities "3"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Paper> ;
+                    void:entities "50"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#SponsorshipManagers> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#SystemDemonstration> ;
+                    void:entities "17"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#LocalOrganiser> ;
+                    void:entities "3"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/nsswc/ontology#SponsorChair> ;
+                    void:entities "0"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class rdf:Seq ;
+                    void:entities "334"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PosterandDemoChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#DemosChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#DemoChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#SessionEvent> ;
+                    void:entities "151"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PaperSession> ;
+                    void:entities "18"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Poster> ;
+                    void:entities "79"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Chair> ;
+                    void:entities "107"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> ;
+                    void:entities "120"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember> ;
+                    void:entities "169"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#TutorialPresenter> ;
+                    void:entities "24"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://swrc.ontoware.org/ontology#Proceedings> ;
+                    void:entities "42"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#DemoandPostersChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#SessionChair> ;
+                    void:entities "49"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#SocialEvent> ;
+                    void:entities "3"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent> ;
+                    void:entities "16"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PhDSymposiumChair> ;
+                    void:entities "3"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#WebmasterandConferenceAdministrator> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#WorkshopChair> ;
+                    void:entities "6"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#TutorialsChair> ;
+                    void:entities "3"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Place> ;
+                    void:entities "14"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class owl:Thing ;
+                    void:entities "390"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://rdfs.org/sioc/ns#Site> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#ConferenceOpeningEvent> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#GeneralChair> ;
+                    void:entities "4"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Reception> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#TrackEvent> ;
+                    void:entities "34"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Proceedings> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class foaf:Person ;
+                    void:entities "4078"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class foaf:Organization ;
+                    void:entities "972"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Treasurer> ;
+                    void:entities "2"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PanelChair> ;
+                    void:entities "2"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PublicityChair> ;
+                    void:entities "4"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#MealEvent> ;
+                    void:entities "12"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PhDSymposium> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#ProgrammeChair> ;
+                    void:entities "7"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://purl.org/rss/1.0/channel> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class foaf:Image ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Programme> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#LocalChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#MetadataChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#DevelopersTrackChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PrintedProceedingsChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#TutorialEvent> ;
+                    void:entities "44"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class foaf:Group ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#SemanticWebIn-UseChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#DogfoodTsar> ;
+                    void:entities "2"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#SemanticWebTechnologiesCoordinator> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PosterSession> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Webmaster> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class owl:Ontology ;
+                    void:entities "11"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+                    void:entities "361"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#MeetingRoomPlace> ;
+                    void:entities "14"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PanelsChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#ConferenceVenuePlace> ;
+                    void:entities "2"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Sponsorship> ;
+                    void:entities "10"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#OrganisingCommitteeMember> ;
+                    void:entities "13"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#SystemDescription> ;
+                    void:entities "10"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#VolunteersChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#LocalOrganisingCommittee> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#ConferenceChair> ;
+                    void:entities "2"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#ProceedingsChair> ;
+                    void:entities "3"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#SemanticWebTechnologiesCo-ordinator> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> ;
+                    void:entities "422"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#BreakEvent> ;
+                    void:entities "8"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#RefereedPaperTrackChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#ConferenceDinner> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PanelEvent> ;
+                    void:entities "14"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Administrator> ;
+                    void:entities "2"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#TutorialChair> ;
+                    void:entities "3"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#FellowshipChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#WorkshopOrganiser> ;
+                    void:entities "34"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#DoctoralConsortiumChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#ConferencePCO> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Delegate> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#AcademicEvent> ;
+                    void:entities "2"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class foaf:Document ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#IW3C2Liaison> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://www.w3.org/2002/12/cal/ical#DemoSession> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#GeneralViceChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://swrc.ontoware.org/ontology#InProceedings> ;
+                    void:entities "1755"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#KeynoteTalk> ;
+                    void:entities "25"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PostersChair> ;
+                    void:entities "2"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PosterChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#PCMember> ;
+                    void:entities "19"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://swrc.ontoware.org/ontology#ResearchTopic> ;
+                    void:entities "59"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#SemanticWebinUseChairs> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#WorkshopsChair> ;
+                    void:entities "3"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Role> ;
+                    void:entities "6"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#TalkEvent> ;
+                    void:entities "252"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://swrc.ontoware.org/ontology#ConferenceEvent> ;
+                    void:entities "2"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#SWChallengeChair> ;
+                    void:entities "1"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://data.semanticweb.org/ns/swc/ontology#Presenter> ;
+                    void:entities "103"^^xsd:long ],
+                [ a void:Dataset ;
+                    void:class <http://sw.deri.org/2005/08/conf/cfp.owl#CallForPapers> ;
+                    void:entities "1"^^xsd:long ] ;
+            void:classes "103"^^xsd:long ;
+            void:properties "93"^^xsd:long ;
+            void:propertyPartition [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property owl:versionInfo ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:first ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property owl:sameAs ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://iws.seu.edu.cn> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.umbrich.net> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www4.wiwiss.fu-berlin.de> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.cs.man.ac.uk> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.isi.edu> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dblp.l3s.de> ;
+                            sbm:authorityCount "6"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.aifb.kit.edu> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbpedia.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://simia.net> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.cs.utexas.edu> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.wikier.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://apassant.net> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://olafhartig.de> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.polleres.net> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://revyu.com> ;
+                            sbm:authorityCount "234"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.johnbreslin.com> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.anjeve.de> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.ibiblio.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://sw-app.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <hhttp://www.aifb.kit.edu> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.ivan-herman.net> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www-sop.inria.fr> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://g1o.net> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.eswc2006.org> ;
+                            sbm:authorityCount "420"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://identifiers.kmi.open.ac.uk> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://foafbuilder.qdos.com> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://semanticweb.org> ;
+                            sbm:authorityCount "298"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://harth.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.blogweb.co.kr> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://captsolo.net> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://moustaki.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://id.ecs.soton.ac.uk> ;
+                            sbm:authorityCount "5"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://data.semanticweb.org> ;
+                            sbm:authorityCount "1630"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://kmi.open.ac.uk> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://ontoworld.org> ;
+                            sbm:authorityCount "596"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://richard.cyganiak.de> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://consuminglinkeddata.org> ;
+                            sbm:authorityCount "30"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://users.ox.ac.uk> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://homepages.cwi.nl> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://foaf.qdos.com> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.informatik.uni-leipzig.de> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.uni-koblenz.de> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.w3.org/1999/xhtml/vocab#icon> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://sdow2008.semanticweb.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://sdow2008.semanticweb.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://data.semanticweb.org/ns/swc/ontology#url> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.eswc2006.org> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://data.semanticweb.org> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:subClassOf ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://swrc.ontoware.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w2.org> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "13"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "12"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w2.org> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property owl:complementOf ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property owl:unionOf ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "22"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property dcterms:modified ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "743"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property owl:priorVersion ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.daml.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:_13 ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "39"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "45"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "4"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "45"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:_10 ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "6"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "4"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "53"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "99"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "99"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://data.semanticweb.org/ns/swc/ontology#hasTopic> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://data.semanticweb.org> ;
+                            sbm:authorityCount "1028"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://dbpedia.org> ;
+                            sbm:authorityCount "1028"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "172"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "172"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "47"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "57"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property dcterms:created ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "743"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "47"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "98"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "98"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://data.semanticweb.org/ns/swc/ontology#isPanelistAt> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://data.semanticweb.org> ;
+                            sbm:authorityCount "42"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://data.semanticweb.org> ;
+                            sbm:authorityCount "42"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "19"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "4"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "39"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:_9 ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "42"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://swrc.ontoware.org/ontology#affiliation> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://data.semanticweb.org> ;
+                            sbm:authorityCount "3817"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://data.semanticweb.org> ;
+                            sbm:authorityCount "3817"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:range ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "20"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "20"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "6"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "29"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.w3.org/1999/xhtml/vocab#meta> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://people.aifb.kit.edu> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "12"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://data.semanticweb.org/ns/swc/ontology#hasProgramme> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://data.semanticweb.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.eswc2006.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "7"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "56"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "56"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#editorList> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://data.semanticweb.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://data.semanticweb.org> ;
+                            sbm:authorityCount "32"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:_12 ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "40"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "45"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property foaf:workplaceHomepage ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.csc.liv.ac.uk> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.mondeca.com> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.polimi.it> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://hcs.science.uva.nl> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.iti.gr> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.fokus.fraunhofer.de> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.ontotext.bg> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.europarl.europa.eu> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.oracle.com> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.dis.uniroma1.it> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority 
