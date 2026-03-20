@@ -6,20 +6,44 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 0
 Unique Predicates: 5
-Endpoints Used: 1
+Endpoints Used: 3
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
-1. chromosome
-   Cardinality: 57.4M
+1. bcr_patient_barcode
+   Cardinality: 10
+   Endpoints: 2
+   Possible Class Pairs: 71
+2. result
+   Cardinality: 90
+   Endpoints: 2
+   Possible Class Pairs: 36
+3. chromosome
+   Cardinality: 9.6K
+   Endpoints: 3
+   Possible Class Pairs: 8
+4. protein_expression_value
+   Cardinality: 26.1K
+   Endpoints: 1
+   Possible Class Pairs: 1
+5. beta_value
+   Cardinality: 83.0M
    Endpoints: 1
    Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8887/sparql/
+  Predicates: 4
+  Total Triples: 249.0M
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8888/sparql/
   Predicates: 1
   Total Triples: 57.4M
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8889/sparql/
+  Predicates: 160
+  Total Triples: 45.6M
   Estimated Retrieved Triples: unknown
 
 ESTIMATED RESULT CARDINALITY
@@ -30,13 +54,15 @@ Confidence: low
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Start query execution with 'chromosome' (57.4M triples)
+• Start query execution with 'bcr_patient_barcode' (10 triples)
+• Use subject/object class constraints to reduce search space for 3 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 3 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 1/5
+Status: complete
+Metadata Coverage: 5/5
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
@@ -44,7 +70,7 @@ GENERATED FEDERATED QUERY
 # Smart Federated Query with Class Constraints
 # Variables are constrained by inferred class types and grouped by endpoint
 
-SELECT *
+SELECT ?chromosome ?expressionValue
 WHERE {
 }
 LIMIT 1000

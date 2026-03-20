@@ -58,6 +58,7 @@
   },
   "constraint_map": {},
   "inferred_variable_classes": {},
+  "inferred_variable_authorities": {},
   "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Variables are constrained by inferred class types and grouped by endpoint\n\nSELECT *\nWHERE {\n}\nLIMIT 1000\n",
   "predicate_selectivity": [
     {

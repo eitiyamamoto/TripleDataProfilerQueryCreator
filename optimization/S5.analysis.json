@@ -68,12 +68,2848 @@
     "reduced": false
   },
   "predicate_metadata": {
+    "<http://data.linkedmdb.org/resource/movie/genre>": [
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
+        "object_class": "http://data.linkedmdb.org/resource/movie/film_genre",
+        "triple_count": 39054,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://data.linkedmdb.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
+        "object_class": "http://data.linkedmdb.org/resource/movie/film_genre",
+        "triple_count": 39054,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://data.linkedmdb.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
+        "object_class": "http://data.linkedmdb.org/resource/movie/film_genre",
+        "triple_count": 39054,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://data.linkedmdb.org"
+          ]
+        }
+      }
+    ],
+    "<http://dbpedia.org/ontology/nationality>": [
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Pope",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 1,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 2574,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 2589,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Comedian",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 768,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 2574,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Comedian",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 771,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Architect",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 636,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Congressman",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 336,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/PrimeMinister",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 243,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 1365,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 2574,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Politician",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 9480,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 2583,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FictionalCharacter",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 561,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 1638,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://dbpedia.org/ontology/PopulatedPlace",
+        "triple_count": 2583,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Governor",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 225,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/IceHockeyPlayer",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Scientist",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 10770,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/IceHockeyPlayer",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ChristianBishop",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 195,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Ambassador",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 144,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 1365,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Comedian",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 768,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 2589,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Chancellor",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Cleric",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 198,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 276,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Chancellor",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/IceHockeyPlayer",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Cleric",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 198,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Astronaut",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 1701,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Comedian",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 771,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Senator",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 135,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/OfficeHolder",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 4554,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Astronaut",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 1701,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://dbpedia.org/ontology/PopulatedPlace",
+        "triple_count": 2583,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Artist",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 17136,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Ambassador",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 99,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Architect",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 579,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Astronaut",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 1701,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FictionalCharacter",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 561,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Scientist",
+        "object_class": "http://dbpedia.org/ontology/Continent",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Governor",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 225,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 276,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/IceHockeyPlayer",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MemberOfParliament",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 5394,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Astronaut",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 1704,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FormulaOneRacer",
+        "object_class": "http://dbpedia.org/ontology/PopulatedPlace",
+        "triple_count": 626,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 1359,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FictionalCharacter",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 813,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 276,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ChristianBishop",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 195,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FormulaOneRacer",
+        "object_class": "http://dbpedia.org/ontology/Island",
+        "triple_count": 2,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Architect",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 585,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Scientist",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 10770,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Mayor",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 165,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Scientist",
+        "object_class": "http://dbpedia.org/ontology/Continent",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ChristianBishop",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 195,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/OfficeHolder",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 4554,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 2589,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/OfficeHolder",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 4554,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Judge",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 240,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Actor",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Astronaut",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 1701,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Astronaut",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 1704,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 276,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FictionalCharacter",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 813,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ChristianBishop",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 195,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Judge",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 240,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Actor",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 276,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 2583,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Governor",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 225,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 276,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MemberOfParliament",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 5394,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Athlete",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 6432,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FormulaOneRacer",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 626,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Senator",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 135,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 1365,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Comedian",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 771,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FormulaOneRacer",
+        "object_class": "http://dbpedia.org/ontology/EthnicGroup",
+        "triple_count": 1,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Mayor",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 165,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Ambassador",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 102,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/President",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 939,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Pope",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 1,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Ambassador",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 102,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Astronaut",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 1704,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Boxer",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 562,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Mayor",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 165,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Comedian",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 768,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 1365,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Pope",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 1,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Comedian",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 771,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/IceHockeyPlayer",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ChristianBishop",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 195,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Architect",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 585,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Actor",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 276,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Architect",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 585,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Ambassador",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 99,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 276,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 2589,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Boxer",
+        "object_class": "http://dbpedia.org/ontology/PopulatedPlace",
+        "triple_count": 562,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FictionalCharacter",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 813,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Boxer",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 526,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Boxer",
+        "object_class": "http://dbpedia.org/ontology/Settlement",
+        "triple_count": 1,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ChristianBishop",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 195,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Ambassador",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 144,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Astronaut",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 1701,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FictionalCharacter",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 540,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Architect",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 585,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Congressman",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 336,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Politician",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 9480,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 2589,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Architect",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 585,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Boxer",
+        "object_class": "http://dbpedia.org/ontology/EthnicGroup",
+        "triple_count": 77,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Scientist",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 10854,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Ambassador",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 144,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 1365,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Astronaut",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 1701,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 1638,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Chancellor",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://dbpedia.org/ontology/PopulatedPlace",
+        "triple_count": 2583,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Chancellor",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Ambassador",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 102,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Astronaut",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 1701,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Architect",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 585,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FictionalCharacter",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 540,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/IceHockeyPlayer",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 2583,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Astronaut",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 1701,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Astronaut",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 1701,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Architect",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 636,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FictionalCharacter",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 540,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Boxer",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 562,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Politician",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 9480,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Scientist",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 10770,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Scientist",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 10854,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Congressman",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 336,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/PrimeMinister",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 243,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Chancellor",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Artist",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 17136,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FormulaOneRacer",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 624,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Senator",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 135,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Comedian",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 900,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/President",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 939,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Athlete",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 6432,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 1638,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Architect",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 579,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 1359,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Pope",
+        "object_class": "http://dbpedia.org/ontology/PopulatedPlace",
+        "triple_count": 1,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Boxer",
+        "object_class": "htp://dbpedia.org/ontology/Island",
+        "triple_count": 35,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://dbpedia.org/ontology/PopulatedPlace",
+        "triple_count": 1365,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Comedian",
+        "object_class": "http://dbpedia.org/ontology/Place",
+        "triple_count": 771,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Ambassador",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 99,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Scientist",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 10854,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FormulaOneRacer",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 627,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Comedian",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 900,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Architect",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 636,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 276,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Boxer",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 639,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FormulaOneRacer",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 626,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://dbpedia.org/ontology/PopulatedPlace",
+        "triple_count": 1365,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://dbpedia.org/ontology/PopulatedPlace",
+        "triple_count": 1365,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Architect",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 579,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Comedian",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 900,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FictionalCharacter",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 561,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Athlete",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 6432,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Judge",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 240,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Artist",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 17136,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 1365,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/PrimeMinister",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 243,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/President",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 939,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MemberOfParliament",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 5394,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Pope",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 1,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 2589,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Chancellor",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Scientist",
+        "object_class": "http://dbpedia.org/ontology/Continent",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Comedian",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 771,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Cleric",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 198,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://dbpedia.org/ontology/Country",
+        "triple_count": 1359,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      }
+    ],
     "<http://www.w3.org/2002/07/owl#sameAs>": [
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": 1630,
+        "triple_count_source": "partition",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": [
+            "hhttp://www.aifb.kit.edu",
+            "http://apassant.net",
+            "http://captsolo.net",
+            "http://consuminglinkeddata.org",
+            "http://dblp.l3s.de",
+            "http://dbpedia.org",
+            "http://foaf.qdos.com",
+            "http://foafbuilder.qdos.com",
+            "http://g1o.net",
+            "http://harth.org",
+            "http://homepages.cwi.nl",
+            "http://id.ecs.soton.ac.uk",
+            "http://identifiers.kmi.open.ac.uk",
+            "http://iws.seu.edu.cn",
+            "http://kmi.open.ac.uk",
+            "http://moustaki.org",
+            "http://olafhartig.de",
+            "http://ontoworld.org",
+            "http://revyu.com",
+            "http://richard.cyganiak.de",
+            "http://semanticweb.org",
+            "http://simia.net",
+            "http://sw-app.org",
+            "http://users.ox.ac.uk",
+            "http://www-sop.inria.fr",
+            "http://www.aifb.kit.edu",
+            "http://www.anjeve.de",
+            "http://www.blogweb.co.kr",
+            "http://www.cs.man.ac.uk",
+            "http://www.cs.utexas.edu",
+            "http://www.eswc2006.org",
+            "http://www.ibiblio.org",
+            "http://www.informatik.uni-leipzig.de",
+            "http://www.isi.edu",
+            "http://www.ivan-herman.net",
+            "http://www.johnbreslin.com",
+            "http://www.polleres.net",
+            "http://www.umbrich.net",
+            "http://www.uni-koblenz.de",
+            "http://www.w3.org",
+            "http://www.wikier.org",
+            "http://www4.wiwiss.fu-berlin.de"
+          ]
+        }
+      },
       {
         "endpoint": "http://localhost:8897/sparql/",
         "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
         "object_class": "http://www.geonames.org/ontology#Feature",
         "triple_count": 1787,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
             "http://data.nytimes.com",
@@ -93,7 +2929,8 @@
         "endpoint": "http://localhost:8896/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 63162,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://data.linkedmdb.org"
@@ -107,10 +2944,27 @@
         }
       },
       {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": 61455,
+        "triple_count_source": "partition",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://data.nytimes.com",
+            "http://linkedgeodata.org"
+          ]
+        }
+      },
+      {
         "endpoint": "http://localhost:8894/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 1697,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://dbtune.org"
@@ -124,7 +2978,8 @@
         "endpoint": "http://localhost:8892/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 9521,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://www4.wiwiss.fu-berlin.de"
@@ -143,7 +2998,8 @@
         "endpoint": "http://localhost:8893/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 117915,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://sws.geonames.org"
@@ -158,6 +3014,7 @@
         "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
         "object_class": "http://bio2rdf.org/ns/kegg#Reaction",
         "triple_count": 7827,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
             "http://bio2rdf.org"
@@ -172,6 +3029,7 @@
         "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
         "object_class": "http://bio2rdf.org/ns/kegg#Drug",
         "triple_count": 7426,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
             "http://bio2rdf.org"
@@ -186,6 +3044,7 @@
         "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
         "object_class": "http://bio2rdf.org/ns/kegg#Compound",
         "triple_count": 13863,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
             "http://bio2rdf.org"
@@ -196,70 +3055,747 @@
         }
       }
     ],
-    "<http://data.linkedmdb.org/resource/movie/genre>": [
+    "<http://dbpedia.org/ontology/director>": [
       {
-        "endpoint": "http://localhost:8896/sparql/",
-        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
-        "object_class": "http://data.linkedmdb.org/resource/movie/film_genre",
-        "triple_count": 39054,
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://dbpedia.org/ontology/SoccerManager",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
-            "http://data.linkedmdb.org"
+            "http://dbpedia.org"
           ],
           "object": [
-            "http://data.linkedmdb.org"
+            "http://dbpedia.org"
           ]
         }
       },
       {
-        "endpoint": "http://localhost:8896/sparql/",
-        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
-        "object_class": "http://data.linkedmdb.org/resource/movie/film_genre",
-        "triple_count": 39054,
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Album",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 168,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
-            "http://data.linkedmdb.org"
+            "http://dbpedia.org"
           ],
           "object": [
-            "http://data.linkedmdb.org"
+            "http://dbpedia.org"
           ]
         }
       },
       {
-        "endpoint": "http://localhost:8896/sparql/",
-        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
-        "object_class": "http://data.linkedmdb.org/resource/movie/film_genre",
-        "triple_count": 39054,
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 39,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
-            "http://data.linkedmdb.org"
+            "http://dbpedia.org"
           ],
           "object": [
-            "http://data.linkedmdb.org"
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 18,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://dbpedia.org/ontology/Work",
+        "triple_count": 36,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 69258,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 33711,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 69258,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "object_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 15,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://dbpedia.org/ontology/SoccerManager",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 39,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://dbpedia.org/ontology/Work",
+        "triple_count": 36,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://dbpedia.org/ontology/SoccerManager",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Album",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 168,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "object_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "object_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "triple_count": 6,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MusicalWork",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 168,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Album",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 15,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 69258,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://dbpedia.org/ontology/MilitaryPerson",
+        "triple_count": 9,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MusicalWork",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 168,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 33711,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 18,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MusicalWork",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 168,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 15,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://dbpedia.org/ontology/Work",
+        "triple_count": 36,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MusicalWork",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 15,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Album",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 15,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MusicalWork",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 15,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://www.opengis.net/gml/_Feature",
+        "triple_count": 18,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MusicalWork",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 15,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Album",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 15,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 33711,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Album",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 168,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 15,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://dbpedia.org/ontology/MilitaryPerson",
+        "triple_count": 9,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "object_class": "http://dbpedia.org/ontology/Person",
+        "triple_count": 39,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://dbpedia.org/ontology/MilitaryPerson",
+        "triple_count": 9,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://dbpedia.org"
           ]
         }
       }
     ]
   },
   "endpoints_found": [
+    "http://localhost:8891/sparql/",
     "http://localhost:8892/sparql/",
     "http://localhost:8893/sparql/",
     "http://localhost:8894/sparql/",
     "http://localhost:8895/sparql/",
     "http://localhost:8896/sparql/",
-    "http://localhost:8897/sparql/"
+    "http://localhost:8897/sparql/",
+    "http://localhost:8898/sparql/"
   ],
-  "num_endpoints": 6,
+  "num_endpoints": 8,
   "query_id": "S5",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S5",
   "metadata_coverage": {
     "total_predicates": 4,
-    "covered_predicates": 2,
-    "missing_predicates": [
-      "<http://dbpedia.org/ontology/director>",
-      "<http://dbpedia.org/ontology/nationality>"
-    ],
-    "coverage_ratio": 0.5,
-    "is_partial": true
+    "covered_predicates": 4,
+    "missing_predicates": [],
+    "coverage_ratio": 1.0,
+    "is_partial": false
   }
 }

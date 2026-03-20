@@ -68,24 +68,13 @@
     "reduced": false
   },
   "predicate_metadata": {
-    "<http://xmlns.com/foaf/0.1/name>": [
-      {
-        "endpoint": "http://localhost:8894/sparql/",
-        "subject_class": "http://purl.org/ontology/mo/MusicArtist",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 3505,
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      }
-    ],
     "<http://www.geonames.org/ontology#parentFeature>": [
       {
         "endpoint": "http://localhost:8897/sparql/",
         "subject_class": "http://www.geonames.org/ontology#Feature",
         "object_class": "http://www.geonames.org/ontology#Feature",
         "triple_count": 585,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
             "http://sws.geonames.org"
@@ -100,6 +89,7 @@
         "subject_class": "http://www.geonames.org/ontology#Feature",
         "object_class": "http://www.geonames.org/ontology#Feature",
         "triple_count": 7479713,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
             "http://sws.geonames.org"
@@ -116,8 +106,11 @@
         "subject_class": "http://www.geonames.org/ontology#Feature",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
         "triple_count": 1780,
+        "triple_count_source": "class_relation",
         "authorities": {
-          "subject": [],
+          "subject": [
+            "http://sws.geonames.org"
+          ],
           "object": []
         }
       },
@@ -126,18 +119,2382 @@
         "subject_class": "http://www.geonames.org/ontology#Feature",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
         "triple_count": 7479714,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [],
           "object": []
         }
       }
     ],
+    "<http://xmlns.com/foaf/0.1/name>": [
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://xmlns.com/foaf/0.1/Organization",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1511,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://xmlns.com/foaf/0.1/Person",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4350,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/River",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 18829,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Colour",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 658,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Monarch",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2003,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Plant",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 18520,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BaseballPlayer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 11351,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Organisation",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 476397,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Brain",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 582,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Mammal",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 7829,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Musical",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1033,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Embryology",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 70,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MusicGenre",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 587,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/AmericanFootballTeam",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 59,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/HistoricPlace",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 23520,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ChemicalCompound",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2289,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Bone",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 368,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/City",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 13867,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Canal",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 98,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Island",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1842,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FigureSkater",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1678,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/GreenAlga",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 321,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BodyOfWater",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 27539,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Person",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1020024,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/OfficeHolder",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 17382,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Cleric",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 5463,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Boxer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1741,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MusicalArtist",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 26670,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BadmintonPlayer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 442,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Activity",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 732,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Language",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4090,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ComicsCreator",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1757,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Event",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 12231,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Insect",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 25382,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Judge",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 965,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/LaunchPad",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 156,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Hospital",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1130,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Nerve",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 409,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Airport",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 12498,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Lymph",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 130,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FloweringPlant",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4802,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Park",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 841,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MemberOfParliament",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4722,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/AdministrativeRegion",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 52744,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Broadcast",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2962,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Reptile",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 5302,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Criminal",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1037,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ChristianBishop",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2393,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Gnetophytes",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 10,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Company",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 31198,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Congressman",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1998,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Bird",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 11483,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Cycad",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 160,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/GrandPrix",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 656,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Artist",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 78041,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Saint",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2443,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Band",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 22047,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Person",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1020024,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Amphibian",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 6554,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Monument",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/PokerPlayer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 13,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Airline",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2552,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Archaea",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 159,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Fern",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 485,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Cardinal",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 607,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Fish",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 10564,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Disease",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3061,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Scientist",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 8544,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Lake",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 8562,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/PrimeMinister",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1820,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Ambassador",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 264,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Animal",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 78997,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/President",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2397,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Mayor",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 733,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/RecordLabel",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1031,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Rocket",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 149,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Organisation",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 476397,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ClubMoss",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 44,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/PlayboyPlaymate",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 648,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Building",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 33259,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/ProtectedArea",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4835,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/AdultActor",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1022,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Person",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1020024,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/EurovisionSongContestEntry",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1076,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Drug",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 142,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/AnatomicalStructure",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3292,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Race",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 408,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MilitaryConflict",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 8058,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Automobile",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 9389,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/PopulatedPlace",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 904548,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Road",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 11694,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Eukaryote",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 100777,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Journalist",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1373,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Grape",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 241,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MilitaryUnit",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 12393,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Cave",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 131,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MeanOfTransportation",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 9596,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Arachnid",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1674,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/College",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 97,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Philosopher",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 982,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Magazine",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2190,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FilmFestival",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 186,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/GaelicGamesPlayer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2148,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Planet",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 12201,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Conifer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 521,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 66846,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/NascarDriver",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 565,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Settlement",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 720837,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Mollusca",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 6776,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/AutomobileEngine",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 560,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Chancellor",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 88,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Newspaper",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3261,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Film",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 49752,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Pope",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 20,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Game",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 651,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Actor",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 35010,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/IceHockeyPlayer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 411,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Beverage",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 469,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Convention",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 335,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1252,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Artery",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 414,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Fungus",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2911,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Lighthouse",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 714,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/PopulatedPlace",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 904548,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MilitaryPerson",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 15362,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MountainRange",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1518,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Senator",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 976,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/RugbyPlayer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3581,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MusicalWork",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 131655,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/GridironFootballPlayer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4075,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Cricketer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 8568,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Crustacean",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 444,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Legislature",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 416,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Protein",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1596,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/BritishRoyalty",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 5855,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MusicFestival",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 613,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Architect",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 672,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Muscle",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 424,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/MixedMartialArtsEvent",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 729,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Moss",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 281,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Bridge",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2623,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Organisation",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 476397,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/AmericanFootballPlayer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 715,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/LunarCrater",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Settlement",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 720837,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Governor",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 2221,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Device",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4261,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 66846,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/RadioStation",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 15730,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Currency",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 262,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Country",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 6651,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Model",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 807,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Cyclist",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3377,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 38389,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Book",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 21992,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Astronaut",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 632,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Athlete",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 136011,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Comedian",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 632,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/EthnicGroup",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3087,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/School",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 66846,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Award",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 561,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Settlement",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 720837,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Infrastructure",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 11694,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/CollegeCoach",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3525,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/CanadianFootballTeam",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 20,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 416,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Non-ProfitOrganisation",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1422,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FictionalCharacter",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 5,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/FormulaOneRacer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 690,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Mountain",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1704,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Album",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 94461,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/PopulatedPlace",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 904548,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Bacteria",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 153,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": "http://dbpedia.org/ontology/Politician",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 20918,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": "http://purl.org/ontology/mo/MusicArtist",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3505,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbtune.org"
+          ],
+          "object": []
+        }
+      }
+    ],
     "<http://xmlns.com/foaf/0.1/based_near>": [
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent",
+        "object_class": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+        "triple_count": 18,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": [
+            "http://data.semanticweb.org",
+            "http://dbpedia.org",
+            "http://sws.geonames.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent",
+        "object_class": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+        "triple_count": 18,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": [
+            "http://data.semanticweb.org",
+            "http://dbpedia.org",
+            "http://sws.geonames.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent",
+        "object_class": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+        "triple_count": 18,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": [
+            "http://data.semanticweb.org",
+            "http://dbpedia.org",
+            "http://sws.geonames.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://data.semanticweb.org/ns/swc/ontology#Place",
+        "object_class": "http://www.w3.org/2002/07/owl#Thing",
+        "triple_count": 2,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": [
+            "http://data.semanticweb.org",
+            "http://dbpedia.org",
+            "http://sws.geonames.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://xmlns.com/foaf/0.1/Organization",
+        "object_class": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+        "triple_count": 355,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": [
+            "http://data.semanticweb.org",
+            "http://dbpedia.org",
+            "http://sws.geonames.org"
+          ]
+        }
+      },
       {
         "endpoint": "http://localhost:8896/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 16587,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://data.linkedmdb.org"
@@ -151,7 +2508,8 @@
         "endpoint": "http://localhost:8894/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 3244,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://dbtune.org"
@@ -164,12 +2522,14 @@
     ]
   },
   "endpoints_found": [
+    "http://localhost:8891/sparql/",
     "http://localhost:8893/sparql/",
     "http://localhost:8894/sparql/",
     "http://localhost:8896/sparql/",
-    "http://localhost:8897/sparql/"
+    "http://localhost:8897/sparql/",
+    "http://localhost:8898/sparql/"
   ],
-  "num_endpoints": 4,
+  "num_endpoints": 6,
   "query_id": "S6",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S6",
   "metadata_coverage": {

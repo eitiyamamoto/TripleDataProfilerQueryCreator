@@ -492,8 +492,10 @@ class SmartFederatedQueryBuilder:
         self.query_modifiers = analysis_data.get('query_modifiers', {})
         if 'distinct' not in self.query_modifiers and 'reduced' not in self.query_modifiers:
             self.query_modifiers = self._load_query_modifiers_from_query_file()
+        self.select_variables = self._load_select_variables_from_query_file()
         self.constraint_map = self._build_constraint_map()
         self.inferred_var_class = self._infer_variable_classes()
+        self.inferred_var_authority = self._infer_variable_authorities()
 
     def _load_query_modifiers_from_query_file(self) -> Dict[str, bool]:
         """Backfill query modifiers from original query file when metadata is missing."""
@@ -516,6 +518,64 @@ class SmartFederatedQueryBuilder:
             'distinct': after_select.startswith('DISTINCT'),
             'reduced': after_select.startswith('REDUCED')
         }
+
+    def _load_select_variables_from_query_file(self) -> List[str]:
+        """Load projected variables from original query file SELECT clause."""
+        query_file = self.analysis.get('query_file')
+        if not query_file:
+            return []
+
+        try:
+            query_text = Path(query_file).read_text()
+        except OSError:
+            return []
+
+        tokens = " ".join(query_text.split()).split()
+        if not tokens:
+            return []
+
+        upper_tokens = [token.upper() for token in tokens]
+        try:
+            select_index = upper_tokens.index('SELECT')
+        except ValueError:
+            return []
+
+        i = select_index + 1
+        while i < len(tokens) and upper_tokens[i] in {'DISTINCT', 'REDUCED'}:
+            i += 1
+
+        if i >= len(tokens):
+            return []
+
+        if tokens[i] == '*':
+            return []
+
+        select_vars = []
+        while i < len(tokens):
+            token = tokens[i]
+            token_upper = upper_tokens[i]
+
+            if token_upper == 'WHERE':
+                break
+
+            if token.startswith('?'):
+                cleaned = token.rstrip(',;')
+                if cleaned not in select_vars:
+                    select_vars.append(cleaned)
+
+            i += 1
+
+        return select_vars
+
+    def _get_projection_variables(self) -> List[str]:
+        """Return SELECT projection variables from query or fallback to inferred vars."""
+        if self.select_variables:
+            return self.select_variables
+
+        return sorted({
+            term for s, _, o in self.triple_patterns for term in (s, o)
+            if isinstance(term, str) and term.startswith('?') and term not in {'?enzyme', '?Chemicalreaction'}
+        })
 
     def _build_select_clause(self, projection: str) -> str:
         """Build SELECT clause preserving original query modifiers."""
@@ -555,6 +615,36 @@ class SmartFederatedQueryBuilder:
                 return False
 
         return True
+
+    def _candidate_matches_variable_authority(self, triple, candidate: Dict,
+                                              var_authority_state: Dict[str, Set[str]]) -> bool:
+        """Check candidate against inferred/propagated variable authorities."""
+        s, _, o = triple
+        authorities = candidate.get('authorities') or {}
+
+        if isinstance(s, str) and s.startswith('?'):
+            required_subject = set(var_authority_state.get(s, set()))
+            if required_subject:
+                supported_subject = set(authorities.get('subject', []))
+                if supported_subject and required_subject.isdisjoint(supported_subject):
+                    return False
+
+        if isinstance(o, str) and o.startswith('?'):
+            required_object = set(var_authority_state.get(o, set()))
+            if required_object:
+                supported_object = set(authorities.get('object', []))
+                if supported_object and required_object.isdisjoint(supported_object):
+                    return False
+
+        return True
+
+    def _candidate_supports_triple_authorities(self, triple, candidate: Dict,
+                                               var_authority_state: Dict[str, Set[str]]) -> bool:
+        """Validate both bound URI and variable authority constraints for a triple."""
+        return (
+            self._candidate_matches_authority(triple, candidate)
+            and self._candidate_matches_variable_authority(triple, candidate, var_authority_state)
+        )
     
     def _build_constraint_map(self) -> Dict:
         """Build a map of variable constraints from triple patterns and metadata"""
@@ -645,14 +735,125 @@ class SmartFederatedQueryBuilder:
 
         return dict(inferred)
 
-    def _choose_best_candidate(self, triple, var_endpoint_affinity: Dict[str, Set[str]]) -> Optional[Dict]:
+    def _infer_variable_authorities(self) -> Dict[str, Set[str]]:
+        """Infer possible authorities per variable from predicate role metadata.
+
+        Uses deterministic constraints when only one metadata row exists for a predicate,
+        then intersects with weighted fallback candidates from all metadata rows.
+        """
+        deterministic = defaultdict(set)
+        weighted_scores = defaultdict(lambda: defaultdict(float))
+
+        for s, p, o in self.triple_patterns:
+            candidates = self.metadata.get(p, [])
+
+            # Deterministic authority constraints when all metadata rows agree
+            # on subject/object authority sets (common for duplicated rows).
+            if candidates:
+                subject_signatures = {
+                    tuple(sorted((c.get('authorities') or {}).get('subject', []) or []))
+                    for c in candidates
+                }
+                object_signatures = {
+                    tuple(sorted((c.get('authorities') or {}).get('object', []) or []))
+                    for c in candidates
+                }
+
+                if isinstance(s, str) and s.startswith('?') and len(subject_signatures) == 1:
+                    only_subject = next(iter(subject_signatures))
+                    if only_subject:
+                        deterministic[s].update(only_subject)
+
+                if isinstance(o, str) and o.startswith('?') and len(object_signatures) == 1:
+                    only_object = next(iter(object_signatures))
+                    if only_object:
+                        deterministic[o].update(only_object)
+
+            for c in candidates:
+                tc = c.get('triple_count') or 1
+                weight = 1.0 / math.log10(tc + 10)
+                auth = c.get('authorities') or {}
+
+                if isinstance(s, str) and s.startswith('?'):
+                    for authority in (auth.get('subject', []) or []):
+                        weighted_scores[s][authority] += weight
+
+                if isinstance(o, str) and o.startswith('?'):
+                    for authority in (auth.get('object', []) or []):
+                        weighted_scores[o][authority] += weight
+
+        inferred = {}
+        for var, scores in weighted_scores.items():
+            if not scores:
+                if deterministic[var]:
+                    inferred[var] = set(deterministic[var])
+                continue
+
+            sorted_authorities = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+            top_score = sorted_authorities[0][1]
+            threshold = top_score * 0.2
+            selected = {authority for authority, score in sorted_authorities if score >= threshold}
+
+            if deterministic[var]:
+                intersection = set(deterministic[var]).intersection(selected)
+                inferred[var] = intersection if intersection else set(deterministic[var])
+            else:
+                inferred[var] = selected
+
+        for var, authorities in deterministic.items():
+            if var not in inferred and authorities:
+                inferred[var] = set(authorities)
+
+        return {var: vals for var, vals in inferred.items() if vals}
+
+    def _initial_var_authority_state(self, authority_overrides: Optional[Dict[str, Set[str]]] = None) -> Dict[str, Set[str]]:
+        """Create mutable variable authority constraints for assignment/scenario flow."""
+        state = {
+            var: set(authorities)
+            for var, authorities in self.inferred_var_authority.items()
+        }
+        if authority_overrides:
+            for var, values in authority_overrides.items():
+                if not values:
+                    continue
+                override_set = set(values)
+                if state.get(var):
+                    intersection = state[var].intersection(override_set)
+                    state[var] = intersection if intersection else override_set
+                else:
+                    state[var] = override_set
+        return state
+
+    def _narrow_var_authority(self, var_authority_state: Dict[str, Set[str]],
+                              term: str, candidate_role_authorities: List[str]):
+        """Intersect variable authority domain with selected candidate role authorities."""
+        if not isinstance(term, str) or not term.startswith('?'):
+            return
+
+        candidate_set = set(candidate_role_authorities or [])
+        if not candidate_set:
+            return
+
+        current = var_authority_state.get(term)
+        if current:
+            intersection = current.intersection(candidate_set)
+            if intersection:
+                var_authority_state[term] = intersection
+        else:
+            var_authority_state[term] = set(candidate_set)
+
+    def _choose_best_candidate(self, triple, var_endpoint_affinity: Dict[str, Set[str]],
+                               var_authority_state: Dict[str, Set[str]]) -> Optional[Dict]:
         """Choose best endpoint metadata candidate for one triple pattern."""
         s, p, o = triple
         candidates = self.metadata.get(p, [])
         if not candidates:
             return None
 
-        candidates = [c for c in candidates if self._candidate_matches_authority(triple, c)]
+        candidates = [
+            c for c in candidates
+            if self._candidate_supports_triple_authorities(triple, c, var_authority_state)
+        ]
         if not candidates:
             return None
 
@@ -697,10 +898,11 @@ class SmartFederatedQueryBuilder:
             return float(count)
         return float('inf')
 
-    def _assign_endpoints(self) -> List[Dict]:
+    def _assign_endpoints(self, authority_overrides: Optional[Dict[str, Set[str]]] = None) -> List[Dict]:
         """Assign each triple to best endpoint candidate using class constraints and join affinity."""
         assigned = []
         var_endpoint_affinity = defaultdict(set)
+        var_authority_state = self._initial_var_authority_state(authority_overrides)
 
         # Process selective triples first
         sorted_triples = sorted(
@@ -712,7 +914,7 @@ class SmartFederatedQueryBuilder:
 
         for triple in sorted_triples:
             s, p, o = triple
-            candidate = self._choose_best_candidate(triple, var_endpoint_affinity)
+            candidate = self._choose_best_candidate(triple, var_endpoint_affinity, var_authority_state)
 
             if not candidate:
                 endpoint_votes = defaultdict(int)
@@ -745,6 +947,10 @@ class SmartFederatedQueryBuilder:
             if o.startswith('?'):
                 var_endpoint_affinity[o].add(endpoint)
 
+            candidate_authorities = candidate.get('authorities') or {}
+            self._narrow_var_authority(var_authority_state, s, candidate_authorities.get('subject', []))
+            self._narrow_var_authority(var_authority_state, o, candidate_authorities.get('object', []))
+
             assigned.append({
                 'triple': triple,
                 'endpoint': endpoint,
@@ -762,9 +968,9 @@ class SmartFederatedQueryBuilder:
         different endpoints, generate UNION query to cover all cases.
         """
         # Check if we need UNION (any variable with multiple class possibilities)
-        needs_union = any(
-            len(classes) > 1 for classes in self.inferred_var_class.values()
-        )
+        has_class_ambiguity = any(len(classes) > 1 for classes in self.inferred_var_class.values())
+        has_authority_ambiguity = any(len(authorities) > 1 for authorities in self.inferred_var_authority.values())
+        needs_union = has_class_ambiguity or has_authority_ambiguity
         
         if needs_union:
             # Check if different interpretations actually lead to different queries
@@ -778,10 +984,7 @@ class SmartFederatedQueryBuilder:
         query.append("# Smart Federated Query with Class Constraints\n")
         query.append("# Variables are constrained by inferred class types and grouped by endpoint\n\n")
         
-        projection_vars = sorted({
-            term for s, _, o in self.triple_patterns for term in (s, o)
-            if isinstance(term, str) and term.startswith('?') and term not in {'?enzyme', '?Chemicalreaction'}
-        })
+        projection_vars = self._get_projection_variables()
         projection = " ".join(projection_vars) if projection_vars else "*"
 
         query.append(f"{self._build_select_clause(projection)}\n")
@@ -836,8 +1039,8 @@ class SmartFederatedQueryBuilder:
     
     def _generate_union_query_if_needed(self) -> str:
         """Generate UNION query only if different scenarios produce different endpoint assignments."""
-        # Generate all class interpretation scenarios
-        scenarios = self._generate_class_scenarios()
+        # Generate all class and authority interpretation scenarios
+        scenarios = self._generate_combined_scenarios()
         
         # Get endpoint assignment signature for each scenario
         scenario_signatures = []
@@ -860,7 +1063,7 @@ class SmartFederatedQueryBuilder:
         # Generate UNION query for distinct scenarios
         return self._generate_union_query_for_multiple_cases(unique_scenarios)
     
-    def _get_scenario_signature(self, scenario: Dict[str, str]) -> str:
+    def _get_scenario_signature(self, scenario: Dict[str, Dict]) -> str:
         """Get a signature representing the endpoint assignment for a scenario.
         
         Returns a string that uniquely identifies which endpoints and predicates
@@ -868,13 +1071,15 @@ class SmartFederatedQueryBuilder:
         """
         # Temporarily set single-class interpretation
         original_inferred = self.inferred_var_class
+        class_scenario = scenario.get('classes', {})
+        authority_scenario = scenario.get('authorities', {})
         self.inferred_var_class = {
-            var: [(cls, 1.0)] for var, cls in scenario.items()
+            var: [(cls, 1.0)] for var, cls in class_scenario.items()
         }
         
         try:
             # Assign endpoints for this scenario
-            assigned = self._assign_endpoints()
+            assigned = self._assign_endpoints(authority_overrides=authority_scenario)
             
             # Create signature: sorted list of (endpoint, subject, predicate, object)
             signature_parts = []
@@ -889,17 +1094,14 @@ class SmartFederatedQueryBuilder:
             # Restore original inferred classes
             self.inferred_var_class = original_inferred
     
-    def _generate_simple_query_with_note(self, scenario: Dict[str, str]) -> str:
+    def _generate_simple_query_with_note(self, scenario: Dict[str, Dict]) -> str:
         """Generate simple query with note about class ambiguity being irrelevant."""
         query = []
         query.append("# Smart Federated Query with Class Constraints\n")
         query.append("# Note: Multiple class interpretations exist but all route to same endpoints\n")
         query.append("# A single query retrieves all data regardless of class ambiguity\n\n")
         
-        projection_vars = sorted({
-            term for s, _, o in self.triple_patterns for term in (s, o)
-            if isinstance(term, str) and term.startswith('?') and term not in {'?enzyme', '?Chemicalreaction'}
-        })
+        projection_vars = self._get_projection_variables()
         projection = " ".join(projection_vars) if projection_vars else "*"
 
         query.append(f"{self._build_select_clause(projection)}\n")
@@ -952,16 +1154,13 @@ class SmartFederatedQueryBuilder:
         
         return "".join(query)
     
-    def _generate_union_query_for_multiple_cases(self, scenarios: List[Dict[str, str]]) -> str:
+    def _generate_union_query_for_multiple_cases(self, scenarios: List[Dict[str, Dict]]) -> str:
         """Generate UNION query covering distinct class interpretation scenarios."""
         query = []
         query.append("# Smart Federated Query with UNION for Multiple Class Interpretations\n")
         query.append("# Each UNION branch uses different endpoints or predicates\n\n")
         
-        projection_vars = sorted({
-            term for s, _, o in self.triple_patterns for term in (s, o)
-            if isinstance(term, str) and term.startswith('?') and term not in {'?enzyme', '?Chemicalreaction'}
-        })
+        projection_vars = self._get_projection_variables()
         projection = " ".join(projection_vars) if projection_vars else "*"
 
         query.append(f"{self._build_select_clause(projection)}\n")
@@ -972,8 +1171,16 @@ class SmartFederatedQueryBuilder:
                 query.append("\n  UNION\n\n")
             
             query.append(f"  # Scenario {i+1}: ")
-            scenario_desc = ", ".join([f"{var}={self._shorten_uri(cls)}" 
-                                        for var, cls in scenario.items()])
+            class_desc = [
+                f"{var}={self._shorten_uri(cls)}"
+                for var, cls in scenario.get('classes', {}).items()
+            ]
+            auth_desc = [
+                f"{var}={auth.split('://', 1)[-1]}"
+                for var, auth_set in scenario.get('authorities', {}).items()
+                for auth in sorted(auth_set)
+            ]
+            scenario_desc = ", ".join(class_desc + auth_desc)
             query.append(f"{scenario_desc}\n")
             query.append("  {\n")
             
@@ -1033,38 +1240,106 @@ class SmartFederatedQueryBuilder:
         
         # Limit to 4 scenarios max to keep query manageable
         scenarios = scenarios[:4]
-        return [s for s in scenarios if self._scenario_matches_authority(s)]
+        return scenarios
 
-    def _scenario_matches_authority(self, scenario: Dict[str, str]) -> bool:
+    def _generate_authority_scenarios(self) -> List[Dict[str, Set[str]]]:
+        """Generate authority interpretation scenarios for variables with multiple candidates."""
+        multi_authority_vars = {
+            var: sorted(list(authorities))
+            for var, authorities in self.inferred_var_authority.items()
+            if len(authorities) > 1
+        }
+        single_authority_vars = {
+            var: set(authorities)
+            for var, authorities in self.inferred_var_authority.items()
+            if len(authorities) == 1
+        }
+
+        if not multi_authority_vars:
+            return [single_authority_vars] if single_authority_vars else [{}]
+
+        import itertools
+
+        var_options = {}
+        for var, authorities in multi_authority_vars.items():
+            var_options[var] = authorities[:2]
+
+        vars_list = list(var_options.keys())
+        options_list = [var_options[v] for v in vars_list]
+
+        scenarios = []
+        for combination in itertools.product(*options_list):
+            scenario = dict(single_authority_vars)
+            scenario.update({var: {auth} for var, auth in zip(vars_list, combination)})
+            scenarios.append(scenario)
+
+        return scenarios[:4]
+
+    def _generate_combined_scenarios(self) -> List[Dict[str, Dict]]:
+        """Generate combined class+authority scenarios with authority feasibility checks."""
+        class_scenarios = self._generate_class_scenarios()
+        authority_scenarios = self._generate_authority_scenarios()
+
+        combined = []
+        for class_scenario in class_scenarios:
+            for authority_scenario in authority_scenarios:
+                scenario = {
+                    'classes': class_scenario,
+                    'authorities': authority_scenario
+                }
+                if self._scenario_matches_authority(scenario):
+                    combined.append(scenario)
+                if len(combined) >= 8:
+                    return combined
+
+        return combined or [{'classes': {}, 'authorities': {}}]
+
+    def _scenario_matches_authority(self, scenario: Dict[str, Dict]) -> bool:
         """Validate that scenario can satisfy authority constraints."""
+        class_scenario = scenario.get('classes', {})
+        authority_scenario = scenario.get('authorities', {})
         original_inferred = self.inferred_var_class
         self.inferred_var_class = {
-            var: [(cls, 1.0)] for var, cls in scenario.items()
+            var: [(cls, 1.0)] for var, cls in class_scenario.items()
         }
+        var_authority_state = self._initial_var_authority_state(authority_scenario)
 
         try:
             for triple in self.triple_patterns:
+                s, _, o = triple
                 predicate = triple[1]
                 candidates = self.metadata.get(predicate, [])
                 if not candidates:
                     continue
-                if not any(self._candidate_matches_authority(triple, c) for c in candidates):
+                valid_candidates = [
+                    c for c in candidates
+                    if self._candidate_supports_triple_authorities(triple, c, var_authority_state)
+                ]
+                if not valid_candidates:
                     return False
+
+                # Propagate narrowed authorities with strongest (lowest triple_count) candidate
+                best = min(valid_candidates, key=self._candidate_count_or_inf)
+                best_auth = best.get('authorities') or {}
+                self._narrow_var_authority(var_authority_state, s, best_auth.get('subject', []))
+                self._narrow_var_authority(var_authority_state, o, best_auth.get('object', []))
             return True
         finally:
             self.inferred_var_class = original_inferred
     
-    def _generate_query_for_scenario(self, scenario: Dict[str, str]) -> str:
+    def _generate_query_for_scenario(self, scenario: Dict[str, Dict]) -> str:
         """Generate query fragment for a specific class scenario."""
+        class_scenario = scenario.get('classes', {})
+        authority_scenario = scenario.get('authorities', {})
         # Temporarily set single-class interpretation
         original_inferred = self.inferred_var_class
         self.inferred_var_class = {
-            var: [(cls, 1.0)] for var, cls in scenario.items()
+            var: [(cls, 1.0)] for var, cls in class_scenario.items()
         }
         
         try:
             # Assign endpoints for this scenario
-            assigned = self._assign_endpoints()
+            assigned = self._assign_endpoints(authority_overrides=authority_scenario)
             endpoint_groups = defaultdict(list)
             for row in assigned:
                 endpoint_groups[row['endpoint']].append(row)
@@ -1210,6 +1485,10 @@ def main():
                 var: [{'class': cls, 'confidence': conf} for cls, conf in classes]
                 for var, classes in smart_builder.inferred_var_class.items()
             }
+            serializable_inferred_authorities = {
+                var: sorted(list(authorities))
+                for var, authorities in smart_builder.inferred_var_authority.items()
+            }
 
             assigned_triples = smart_builder._assign_endpoints()
             unknown_assignments = [
@@ -1229,6 +1508,7 @@ def main():
                 'optimization_analysis': result,
                 'constraint_map': serializable_constraints,
                 'inferred_variable_classes': serializable_inferred,
+                'inferred_variable_authorities': serializable_inferred_authorities,
                 'optimized_federated_query': smart_query,
                 'predicate_selectivity': optimizer.selective_predicates
             }

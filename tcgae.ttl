@@ -1,0 +1,54 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sbm: <http://sparqlbuilder.org/2015/09/rdf-metadata-schema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sd:Service ;
+    sd:defaultDataset [ a sd:Dataset ;
+            void:classPartition [ a void:Dataset ;
+                    void:class <http://tcga.deri.ie/schema/expression_exon_result> ;
+                    void:entities "57429308"^^xsd:long ] ;
+            void:classes "1"^^xsd:long ;
+            void:properties "4"^^xsd:long ;
+            void:propertyPartition [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://tcga.deri.ie/schema/start> ;
+                    void:triples "57429308"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "57429308"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://tcga.deri.ie/schema/expression_exon_result> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://tcga.deri.ie/schema/RPKM> ;
+                    void:triples "57429308"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "57429308"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://tcga.deri.ie/schema/expression_exon_result> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://tcga.deri.ie/schema/stop> ;
+                    void:triples "57429308"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "57429308"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://tcga.deri.ie/schema/expression_exon_result> ] ],
+                [ a void:Dataset ;
+                    void:classes "2"^^xsd:long ;
+                    void:property <http://tcga.deri.ie/schema/chromosome> ;
+                    void:triples "57429308"^^xsd:long ;
+                    sbm:classRelation [ a sbm:ClassRelation ;
+                            void:triples "57429308"^^xsd:long ;
+                            sbm:objectClass rdfs:Literal ;
+                            sbm:subjectClass <http://tcga.deri.ie/schema/expression_exon_result> ] ] ;
+            void:triples "344576146"^^xsd:long ;
+            sbm:crawlLog [ a sbm:CrawlLog ;
+                    sbm:crawlEndTime "2026-03-09T21:44:02+09:00"^^xsd:dateTime ;
+                    sbm:crawlStartTime "2026-03-09T18:22:29+09:00"^^xsd:dateTime ;
+                    sbm:endpointAccesses "10"^^xsd:long ] ;
+            sd:namedGraph [ a sd:NamedGraph ;
+                    sd:name <file:///Users/yamamotobikutorueiichi/codes/federated_query/tripledataprofiler/largerdfbench/linkedtcga-e> ] ] ;
+    sd:endpoint <http://localhost:8888/sparql/> .
+

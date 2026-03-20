@@ -4,7 +4,7 @@
   "total_queries": 32,
   "processed": 32,
   "failed": 0,
-  "partial_metadata": 19,
+  "partial_metadata": 4,
   "queries": [
     {
       "query_id": "B1",
@@ -12,13 +12,9 @@
       "status": "ok",
       "analysis_file": "optimization/B1.analysis.json",
       "total_triples": 6,
-      "num_endpoints": 1,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
-        "<http://tcga.deri.ie/schema/result>",
-        "<http://tcga.deri.ie/schema/scaled_estimate>"
-      ]
+      "num_endpoints": 3,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "B2",
@@ -26,15 +22,9 @@
       "status": "ok",
       "analysis_file": "optimization/B2.analysis.json",
       "total_triples": 6,
-      "num_endpoints": 1,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
-        "<http://tcga.deri.ie/schema/disease_acronym>",
-        "<http://tcga.deri.ie/schema/result>",
-        "<http://tcga.deri.ie/schema/tumor_type>",
-        "<http://tcga.deri.ie/schema/tumor_weight>"
-      ]
+      "num_endpoints": 3,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "B3",
@@ -42,17 +32,9 @@
       "status": "ok",
       "analysis_file": "optimization/B3.analysis.json",
       "total_triples": 7,
-      "num_endpoints": 0,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis>",
-        "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
-        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
-        "<http://tcga.deri.ie/schema/beta_value>",
-        "<http://tcga.deri.ie/schema/drug_name>",
-        "<http://tcga.deri.ie/schema/result>",
-        "<http://tcga.deri.ie/schema/vital_status>"
-      ]
+      "num_endpoints": 2,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "B4",
@@ -60,14 +42,9 @@
       "status": "ok",
       "analysis_file": "optimization/B4.analysis.json",
       "total_triples": 8,
-      "num_endpoints": 1,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://dbpedia.org/ontology/country>",
-        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
-        "<http://tcga.deri.ie/schema/reads_per_million_miRNA_mapped>",
-        "<http://tcga.deri.ie/schema/result>"
-      ]
+      "num_endpoints": 4,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "B5",
@@ -75,14 +52,9 @@
       "status": "ok",
       "analysis_file": "optimization/B5.analysis.json",
       "total_triples": 11,
-      "num_endpoints": 9,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
-        "<http://tcga.deri.ie/schema/beta_value>",
-        "<http://tcga.deri.ie/schema/position>",
-        "<http://tcga.deri.ie/schema/result>"
-      ]
+      "num_endpoints": 13,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "B6",
@@ -90,13 +62,9 @@
       "status": "ok",
       "analysis_file": "optimization/B6.analysis.json",
       "total_triples": 10,
-      "num_endpoints": 9,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
-        "<http://tcga.deri.ie/schema/result>",
-        "<http://tcga.deri.ie/schema/scaled_estimate>"
-      ]
+      "num_endpoints": 13,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "B7",
@@ -104,13 +72,9 @@
       "status": "ok",
       "analysis_file": "optimization/B7.analysis.json",
       "total_triples": 5,
-      "num_endpoints": 0,
+      "num_endpoints": 3,
       "metadata_partial": true,
       "missing_predicates": [
-        "<http://dbpedia.org/ontology/country>",
-        "<http://dbpedia.org/ontology/populationDensity>",
-        "<http://tcga.deri.ie/schema/bcr_aliquot_barcode>",
-        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
         "?p"
       ]
     },
@@ -120,14 +84,9 @@
       "status": "ok",
       "analysis_file": "optimization/B8.analysis.json",
       "total_triples": 8,
-      "num_endpoints": 1,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
-        "<http://tcga.deri.ie/schema/beta_value>",
-        "<http://tcga.deri.ie/schema/protein_expression_value>",
-        "<http://tcga.deri.ie/schema/result>"
-      ]
+      "num_endpoints": 3,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "C1",
@@ -135,7 +94,7 @@
       "status": "ok",
       "analysis_file": "optimization/C1.analysis.json",
       "total_triples": 8,
-      "num_endpoints": 4,
+      "num_endpoints": 5,
       "metadata_partial": false,
       "missing_predicates": []
     },
@@ -145,16 +104,9 @@
       "status": "ok",
       "analysis_file": "optimization/C10.analysis.json",
       "total_triples": 10,
-      "num_endpoints": 1,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://dbpedia.org/ontology/country>",
-        "<http://dbpedia.org/ontology/populationDensity>",
-        "<http://tcga.deri.ie/schema/bcr_drug_barcode>",
-        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
-        "<http://tcga.deri.ie/schema/drug_name>",
-        "<http://tcga.deri.ie/schema/gender>"
-      ]
+      "num_endpoints": 4,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "C2",
@@ -162,7 +114,7 @@
       "status": "ok",
       "analysis_file": "optimization/C2.analysis.json",
       "total_triples": 8,
-      "num_endpoints": 8,
+      "num_endpoints": 12,
       "metadata_partial": false,
       "missing_predicates": []
     },
@@ -172,7 +124,7 @@
       "status": "ok",
       "analysis_file": "optimization/C3.analysis.json",
       "total_triples": 8,
-      "num_endpoints": 8,
+      "num_endpoints": 12,
       "metadata_partial": false,
       "missing_predicates": []
     },
@@ -182,16 +134,9 @@
       "status": "ok",
       "analysis_file": "optimization/C4.analysis.json",
       "total_triples": 12,
-      "num_endpoints": 6,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://dbpedia.org/ontology/anthem>",
-        "<http://dbpedia.org/ontology/capital>",
-        "<http://dbpedia.org/ontology/ethnicGroup>",
-        "<http://dbpedia.org/ontology/foundingDate>",
-        "<http://dbpedia.org/ontology/largestCity>",
-        "<http://dbpedia.org/ontology/motto>"
-      ]
+      "num_endpoints": 8,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "C5",
@@ -199,12 +144,9 @@
       "status": "ok",
       "analysis_file": "optimization/C5.analysis.json",
       "total_triples": 8,
-      "num_endpoints": 8,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://dbpedia.org/ontology/birthDate>",
-        "<http://dbpedia.org/ontology/spouse>"
-      ]
+      "num_endpoints": 11,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "C6",
@@ -212,7 +154,7 @@
       "status": "ok",
       "analysis_file": "optimization/C6.analysis.json",
       "total_triples": 9,
-      "num_endpoints": 6,
+      "num_endpoints": 8,
       "metadata_partial": false,
       "missing_predicates": []
     },
@@ -222,16 +164,9 @@
       "status": "ok",
       "analysis_file": "optimization/C7.analysis.json",
       "total_triples": 9,
-      "num_endpoints": 4,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://data.semanticweb.org/ns/swc/ontology#heldBy>",
-        "<http://data.semanticweb.org/ns/swc/ontology#isPartOf>",
-        "<http://data.semanticweb.org/ns/swc/ontology#isRoleAt>",
-        "<http://data.semanticweb.org/ns/swc/ontology#relatedToEvent>",
-        "<http://dbpedia.org/ontology/capital>",
-        "<http://swrc.ontoware.org/ontology#author>"
-      ]
+      "num_endpoints": 6,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "C8",
@@ -239,19 +174,9 @@
       "status": "ok",
       "analysis_file": "optimization/C8.analysis.json",
       "total_triples": 11,
-      "num_endpoints": 8,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://data.semanticweb.org/ns/swc/ontology#isPartOf>",
-        "<http://dbpedia.org/ontology/capital>",
-        "<http://dbpedia.org/ontology/governmentType>",
-        "<http://dbpedia.org/ontology/language>",
-        "<http://dbpedia.org/ontology/leaderTitle>",
-        "<http://dbpedia.org/ontology/populationDensity>",
-        "<http://swrc.ontoware.org/ontology#address>",
-        "<http://swrc.ontoware.org/ontology#affiliation>",
-        "<http://swrc.ontoware.org/ontology#author>"
-      ]
+      "num_endpoints": 11,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "C9",
@@ -259,7 +184,7 @@
       "status": "ok",
       "analysis_file": "optimization/C9.analysis.json",
       "total_triples": 9,
-      "num_endpoints": 8,
+      "num_endpoints": 12,
       "metadata_partial": false,
       "missing_predicates": []
     },
@@ -269,7 +194,7 @@
       "status": "ok",
       "analysis_file": "optimization/S1.analysis.json",
       "total_triples": 3,
-      "num_endpoints": 6,
+      "num_endpoints": 8,
       "metadata_partial": true,
       "missing_predicates": [
         "?predicate"
@@ -281,7 +206,7 @@
       "status": "ok",
       "analysis_file": "optimization/S10.analysis.json",
       "total_triples": 5,
-      "num_endpoints": 8,
+      "num_endpoints": 12,
       "metadata_partial": false,
       "missing_predicates": []
     },
@@ -291,7 +216,7 @@
       "status": "ok",
       "analysis_file": "optimization/S11.analysis.json",
       "total_triples": 7,
-      "num_endpoints": 8,
+      "num_endpoints": 12,
       "metadata_partial": false,
       "missing_predicates": []
     },
@@ -301,7 +226,7 @@
       "status": "ok",
       "analysis_file": "optimization/S12.analysis.json",
       "total_triples": 6,
-      "num_endpoints": 8,
+      "num_endpoints": 12,
       "metadata_partial": false,
       "missing_predicates": []
     },
@@ -311,7 +236,7 @@
       "status": "ok",
       "analysis_file": "optimization/S13.analysis.json",
       "total_triples": 5,
-      "num_endpoints": 8,
+      "num_endpoints": 12,
       "metadata_partial": false,
       "missing_predicates": []
     },
@@ -331,11 +256,9 @@
       "status": "ok",
       "analysis_file": "optimization/S2.analysis.json",
       "total_triples": 3,
-      "num_endpoints": 6,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://dbpedia.org/ontology/party>"
-      ]
+      "num_endpoints": 8,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "S3",
@@ -343,12 +266,9 @@
       "status": "ok",
       "analysis_file": "optimization/S3.analysis.json",
       "total_triples": 5,
-      "num_endpoints": 8,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://dbpedia.org/ontology/nationality>",
-        "<http://dbpedia.org/ontology/party>"
-      ]
+      "num_endpoints": 12,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "S4",
@@ -356,7 +276,7 @@
       "status": "ok",
       "analysis_file": "optimization/S4.analysis.json",
       "total_triples": 5,
-      "num_endpoints": 6,
+      "num_endpoints": 8,
       "metadata_partial": false,
       "missing_predicates": []
     },
@@ -366,12 +286,9 @@
       "status": "ok",
       "analysis_file": "optimization/S5.analysis.json",
       "total_triples": 4,
-      "num_endpoints": 6,
-      "metadata_partial": true,
-      "missing_predicates": [
-        "<http://dbpedia.org/ontology/director>",
-        "<http://dbpedia.org/ontology/nationality>"
-      ]
+      "num_endpoints": 8,
+      "metadata_partial": false,
+      "missing_predicates": []
     },
     {
       "query_id": "S6",
@@ -379,7 +296,7 @@
       "status": "ok",
       "analysis_file": "optimization/S6.analysis.json",
       "total_triples": 4,
-      "num_endpoints": 4,
+      "num_endpoints": 6,
       "metadata_partial": false,
       "missing_predicates": []
     },
@@ -389,7 +306,7 @@
       "status": "ok",
       "analysis_file": "optimization/S7.analysis.json",
       "total_triples": 4,
-      "num_endpoints": 6,
+      "num_endpoints": 8,
       "metadata_partial": false,
       "missing_predicates": []
     },
@@ -411,7 +328,7 @@
       "status": "ok",
       "analysis_file": "optimization/S9.analysis.json",
       "total_triples": 3,
-      "num_endpoints": 6,
+      "num_endpoints": 8,
       "metadata_partial": true,
       "missing_predicates": [
         "?predicate"

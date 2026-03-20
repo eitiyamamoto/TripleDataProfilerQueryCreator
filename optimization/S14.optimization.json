@@ -39,10 +39,10 @@
           "num_possible_classes": 2
         },
         {
-          "predicate": "<http://bio2rdf.org/ns/bio2rdf#mass>",
-          "cardinality": 6444.0,
+          "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>",
+          "cardinality": 2240.0,
           "num_endpoints": 1,
-          "num_possible_classes": 2
+          "num_possible_classes": 1
         }
       ],
       "multi_endpoint_predicates": [
@@ -60,8 +60,8 @@
       {
         "endpoint": "http://localhost:8890/sparql/",
         "num_predicates": 1,
-        "total_triples": 0,
-        "total_triples_readable": "0",
+        "total_triples": 29147,
+        "total_triples_readable": "29.1K",
         "predicates": [
           "<http://bio2rdf.org/ns/bio2rdf#xRef>"
         ],
@@ -71,14 +71,14 @@
       {
         "endpoint": "http://localhost:8892/sparql/",
         "num_predicates": 5,
-        "total_triples": 5048,
-        "total_triples_readable": "5.0K",
+        "total_triples": 7288,
+        "total_triples_readable": "7.3K",
         "predicates": [
-          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>",
-          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>",
           "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation>",
           "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation>",
-          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>"
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>",
+          "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>"
         ],
         "estimated_retrieved_triples": 993,
         "estimated_retrieved_triples_readable": "993"
@@ -86,8 +86,8 @@
       {
         "endpoint": "http://localhost:8895/sparql/",
         "num_predicates": 3,
-        "total_triples": 18507,
-        "total_triples_readable": "18.5K",
+        "total_triples": 91703,
+        "total_triples_readable": "91.7K",
         "predicates": [
           "<http://bio2rdf.org/ns/bio2rdf#xRef>",
           "<http://bio2rdf.org/ns/bio2rdf#mass>",
@@ -97,7 +97,7 @@
         "estimated_retrieved_triples_readable": "6.4K"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8890/sparql/\n# Predicates: 1\n#   <http://bio2rdf.org/ns/bio2rdf#xRef> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 5\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.5K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.5K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [993 triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [993 triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://bio2rdf.org/ns/bio2rdf#xRef> (None -> None) [unknown triples]\n#   <http://bio2rdf.org/ns/bio2rdf#mass> (http://bio2rdf.org/ns/kegg#Drug -> http://www.w3.org/2000/01/rdf-schema#Literal) [6.4K triples]\n#   <http://bio2rdf.org/ns/bio2rdf#mass> (http://bio2rdf.org/ns/kegg#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [12.1K triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 5\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [993 triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [993 triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> (None -> None) [2.2K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> (http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.5K triples]\n#   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> (http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer -> http://www.w3.org/2000/01/rdf-schema#Literal) [1.5K triples]\n\n# Endpoint: http://localhost:8890/sparql/\n# Predicates: 1\n#   <http://bio2rdf.org/ns/bio2rdf#xRef> (None -> None) [29.1K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://bio2rdf.org/ns/bio2rdf#xRef> (None -> None) [73.2K triples]\n#   <http://bio2rdf.org/ns/bio2rdf#mass> (http://bio2rdf.org/ns/kegg#Drug -> http://www.w3.org/2000/01/rdf-schema#Literal) [6.4K triples]\n#   <http://bio2rdf.org/ns/bio2rdf#mass> (http://bio2rdf.org/ns/kegg#Compound -> http://www.w3.org/2000/01/rdf-schema#Literal) [12.1K triples]\n\n"
   },
   "constraint_map": {
     "?drug": [
@@ -149,6 +149,17 @@
       }
     ]
   },
+  "inferred_variable_authorities": {
+    "?drug": [
+      "http://www4.wiwiss.fu-berlin.de"
+    ],
+    "?cas": [
+      "http://bio2rdf.org"
+    ],
+    "?keggDrug": [
+      "http://bio2rdf.org"
+    ]
+  },
   "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Note: Multiple class interpretations exist but all route to same endpoints\n# A single query retrieves all data regardless of class ambiguity\n\nSELECT ?cas ?drug ?keggDrug ?mass ?transform\nWHERE {\n\n  SERVICE <http://localhost:8892/sparql/> {\n    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> ?transform . # ?drug:drugs, ?transform:Literal\n    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> \"Humans and other mammals\" . # ?drug:drugs\n    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?cas .\n  }\n\n  SERVICE <http://localhost:8895/sparql/> {\n    ?keggDrug <http://bio2rdf.org/ns/bio2rdf#mass> ?mass . # ?keggDrug:Drug, ?mass:Literal\n    ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?cas .\n  }\n}\nLIMIT 1000\n",
   "predicate_selectivity": [
     {
@@ -164,6 +175,12 @@
       "num_possible_classes": 2
     },
     {
+      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>",
+      "cardinality": 2240.0,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
       "predicate": "<http://bio2rdf.org/ns/bio2rdf#mass>",
       "cardinality": 6444.0,
       "num_endpoints": 1,
@@ -171,14 +188,8 @@
     },
     {
       "predicate": "<http://bio2rdf.org/ns/bio2rdf#xRef>",
-      "cardinality": Infinity,
+      "cardinality": 29147.0,
       "num_endpoints": 2,
-      "num_possible_classes": 1
-    },
-    {
-      "predicate": "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber>",
-      "cardinality": Infinity,
-      "num_endpoints": 1,
       "num_possible_classes": 1
     }
   ]

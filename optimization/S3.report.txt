@@ -6,76 +6,100 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 5
 Unique Predicates: 5
-Endpoints Used: 8
+Endpoints Used: 12
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
-1. sameAs
-   Cardinality: 1.8K
-   Endpoints: 6
-   Possible Class Pairs: 5
-2. type
-   Cardinality: unknown
+1. nationality
+   Cardinality: 1
+   Endpoints: 1
+   Possible Class Pairs: 74
+2. sameAs
+   Cardinality: 1.6K
    Endpoints: 8
-   Possible Class Pairs: 1
+   Possible Class Pairs: 5
 3. topicPage
-   Cardinality: unknown
+   Cardinality: 7.4K
+   Endpoints: 1
+   Possible Class Pairs: 1
+4. type
+   Cardinality: 9.7K
+   Endpoints: 12
+   Possible Class Pairs: 1
+5. party
+   Cardinality: 30.6K
    Endpoints: 1
    Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
-Endpoint: http://localhost:8890/sparql/
+Endpoint: http://localhost:8887/sparql/
   Predicates: 1
   Total Triples: 0
   Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8889/sparql/
+  Predicates: 1
+  Total Triples: 5.8M
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8890/sparql/
+  Predicates: 1
+  Total Triples: 50.8K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8891/sparql/
+  Predicates: 185
+  Total Triples: 407.2K
+  Estimated Retrieved Triples: 1
 Endpoint: http://localhost:8892/sparql/
   Predicates: 2
-  Total Triples: 0
+  Total Triples: 34.3K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8893/sparql/
   Predicates: 2
-  Total Triples: 0
+  Total Triples: 7.6M
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8894/sparql/
   Predicates: 2
-  Total Triples: 0
+  Total Triples: 292.3K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 4
-  Total Triples: 29.1K
+  Total Triples: 63.7K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8896/sparql/
   Predicates: 2
-  Total Triples: 0
+  Total Triples: 804.0K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8897/sparql/
   Predicates: 3
-  Total Triples: 1.8K
+  Total Triples: 21.3K
   Estimated Retrieved Triples: 1.8K
+Endpoint: http://localhost:8898/sparql/
+  Predicates: 2
+  Total Triples: 11.3K
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8899/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 1.4M
   Estimated Retrieved Triples: unknown
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
 Method: join-chain-analysis
-Estimated Rows: 1.8K
+Estimated Rows: 1
 Confidence: medium
 Reasoning: Estimated from 2 join chains
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Start query execution with 'sameAs' (1.8K triples)
+• Start query execution with 'nationality' (1 triples)
 • Use subject/object class constraints to reduce search space for 2 predicates that span multiple endpoints
-• Use SERVICE clauses to parallelize execution across 8 endpoints
+• Use SERVICE clauses to parallelize execution across 12 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 3/5
+Status: complete
+Metadata Coverage: 5/5
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
@@ -84,14 +108,17 @@ GENERATED FEDERATED QUERY
 # Note: Multiple class interpretations exist but all route to same endpoints
 # A single query retrieves all data regardless of class ambiguity
 
-SELECT ?page ?party ?president ?x
+SELECT ?president ?party ?page
 WHERE {
+
+  SERVICE <http://localhost:8891/sparql/> {
+    ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> . # ?president:Pope
+    ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .
+    ?president <http://dbpedia.org/ontology/party> ?party .
+  }
 
   SERVICE <http://localhost:8897/sparql/> {
     ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . # ?x:Concept, ?president:Feature
-    ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> .
-    ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .
-    ?president <http://dbpedia.org/ontology/party> ?party .
     ?x <http://data.nytimes.com/elements/topicPage> ?page .
   }
 }

@@ -6,135 +6,134 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 8
 Unique Predicates: 7
-Endpoints Used: 8
+Endpoints Used: 12
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
-1. parentFeature
+1. based_near
+   Cardinality: 2
+   Endpoints: 3
+   Possible Class Pairs: 4
+2. name
+   Cardinality: 3
+   Endpoints: 3
+   Possible Class Pairs: 165
+3. parentFeature
    Cardinality: 585
    Endpoints: 2
    Possible Class Pairs: 1
-2. name
+4. sameAs
+   Cardinality: 1.6K
+   Endpoints: 8
+   Possible Class Pairs: 5
+5. name
    Cardinality: 1.8K
    Endpoints: 2
-   Possible Class Pairs: 1
-3. sameAs
-   Cardinality: 1.8K
-   Endpoints: 6
-   Possible Class Pairs: 5
-4. name
-   Cardinality: 3.5K
-   Endpoints: 1
-   Possible Class Pairs: 1
-5. type
-   Cardinality: unknown
-   Endpoints: 8
    Possible Class Pairs: 1
 6. topicPage
-   Cardinality: unknown
+   Cardinality: 7.4K
    Endpoints: 1
    Possible Class Pairs: 1
-7. based_near
-   Cardinality: unknown
-   Endpoints: 2
+7. type
+   Cardinality: 9.7K
+   Endpoints: 12
    Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
-Endpoint: http://localhost:8890/sparql/
+Endpoint: http://localhost:8887/sparql/
   Predicates: 1
   Total Triples: 0
   Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8889/sparql/
+  Predicates: 1
+  Total Triples: 5.8M
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8890/sparql/
+  Predicates: 1
+  Total Triples: 50.8K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8891/sparql/
+  Predicates: 174
+  Total Triples: 11.1M
+  Estimated Retrieved Triples: 3
 Endpoint: http://localhost:8892/sparql/
   Predicates: 2
-  Total Triples: 0
+  Total Triples: 34.3K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8893/sparql/
   Predicates: 4
-  Total Triples: 15.0M
+  Total Triples: 22.6M
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8894/sparql/
   Predicates: 4
-  Total Triples: 3.5K
-  Estimated Retrieved Triples: 3.5K
+  Total Triples: 299.1K
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 4
-  Total Triples: 29.1K
+  Total Triples: 63.7K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8896/sparql/
   Predicates: 3
-  Total Triples: 0
+  Total Triples: 820.5K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8897/sparql/
   Predicates: 5
-  Total Triples: 4.2K
+  Total Triples: 23.6K
   Estimated Retrieved Triples: 585
+Endpoint: http://localhost:8898/sparql/
+  Predicates: 9
+  Total Triples: 17.6K
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8899/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 1.4M
   Estimated Retrieved Triples: unknown
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
 Method: join-chain-analysis
-Estimated Rows: 585
+Estimated Rows: 2
 Confidence: medium
 Reasoning: Estimated from 4 join chains
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Start query execution with 'parentFeature' (585 triples)
-• Use subject/object class constraints to reduce search space for 5 predicates that span multiple endpoints
-• Use SERVICE clauses to parallelize execution across 8 endpoints
+• Start query execution with 'based_near' (2 triples)
+• Use subject/object class constraints to reduce search space for 6 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 12 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: complete
+Status: partial
 Metadata Coverage: 7/7
+Unknown Endpoint Triples: 1
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
 --------------------------------------------------------------------------------
-# Smart Federated Query with UNION for Multiple Class Interpretations
-# Each UNION branch uses different endpoints or predicates
+# Smart Federated Query with Class Constraints
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
 
-SELECT DISTINCT ?anylocation ?artist ?location ?locationName ?name ?news ?nytLocation
+SELECT DISTINCT ?artist ?name ?location ?anylocation
 WHERE {
-  # Scenario 1: ?artist=MusicArtist, ?name=Literal, ?locationName=Feature, ?anylocation=Literal, ?location=Feature, ?nytLocation=Concept
-  {
-    SERVICE <http://localhost:8894/sparql/> {
-      ?artist <http://xmlns.com/foaf/0.1/name> ?name . # ?artist:MusicArtist, ?name:Literal
-      ?artist <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/mo/MusicArtist> .
-      ?artist <http://xmlns.com/foaf/0.1/based_near> ?location .
-    }
-    SERVICE <http://localhost:8897/sparql/> {
-      ?location <http://www.geonames.org/ontology#parentFeature> ?locationName . # ?location:Feature, ?locationName:Feature
-      ?locationName <http://www.geonames.org/ontology#name> ?anylocation . # ?locationName:Feature, ?anylocation:Literal
-      ?locationName <http://www.geonames.org/ontology#name> "Islamic Republic of Afghanistan" . # ?locationName:Feature
-      ?nytLocation <http://www.w3.org/2002/07/owl#sameAs> ?location . # ?nytLocation:Concept, ?location:Feature
-      ?nytLocation <http://data.nytimes.com/elements/topicPage> ?news .
-    }
+
+  SERVICE <http://localhost:8891/sparql/> {
+    ?artist <http://xmlns.com/foaf/0.1/name> ?name . # ?artist:Monument, ?name:Literal
+    ?artist <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/mo/MusicArtist> .
   }
 
-  UNION
-
-  # Scenario 2: ?artist=MusicArtist, ?name=Literal, ?locationName=Feature, ?anylocation=Literal, ?location=Drug, ?nytLocation=Drug
-  {
-    SERVICE <http://localhost:8894/sparql/> {
-      ?artist <http://xmlns.com/foaf/0.1/name> ?name . # ?artist:MusicArtist, ?name:Literal
-      ?artist <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/mo/MusicArtist> .
-      ?artist <http://xmlns.com/foaf/0.1/based_near> ?location .
-    }
-    SERVICE <http://localhost:8895/sparql/> {
-      ?nytLocation <http://www.w3.org/2002/07/owl#sameAs> ?location . # ?nytLocation:Drug, ?location:Drug
-    }
-    SERVICE <http://localhost:8897/sparql/> {
-      ?location <http://www.geonames.org/ontology#parentFeature> ?locationName . # ?location:Feature, ?locationName:Feature
-      ?locationName <http://www.geonames.org/ontology#name> ?anylocation . # ?locationName:Feature, ?anylocation:Literal
-      ?locationName <http://www.geonames.org/ontology#name> "Islamic Republic of Afghanistan" . # ?locationName:Feature
-      ?nytLocation <http://data.nytimes.com/elements/topicPage> ?news .
-    }
+  SERVICE <http://localhost:8897/sparql/> {
+    ?location <http://www.geonames.org/ontology#parentFeature> ?locationName . # ?location:Feature, ?locationName:Feature
+    ?nytLocation <http://www.w3.org/2002/07/owl#sameAs> ?location . # ?nytLocation:Concept, ?location:Feature
+    ?locationName <http://www.geonames.org/ontology#name> ?anylocation . # ?locationName:Feature, ?anylocation:Literal
+    ?locationName <http://www.geonames.org/ontology#name> "Islamic Republic of Afghanistan" . # ?locationName:Feature
+    ?nytLocation <http://data.nytimes.com/elements/topicPage> ?news .
   }
+
+  # Unknown endpoint (no metadata)
+    ?artist <http://xmlns.com/foaf/0.1/based_near> ?location .
 }
 LIMIT 1000

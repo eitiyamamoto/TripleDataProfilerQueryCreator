@@ -6,28 +6,32 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 0
 Unique Predicates: 2
-Endpoints Used: 6
+Endpoints Used: 8
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
 1. sameAs
-   Cardinality: 1.8K
-   Endpoints: 6
+   Cardinality: 1.6K
+   Endpoints: 8
    Possible Class Pairs: 5
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8891/sparql/
+  Predicates: 1
+  Total Triples: 61.5K
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8892/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 9.5K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8893/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 117.9K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8894/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 1.7K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 3
@@ -35,11 +39,15 @@ Endpoint: http://localhost:8895/sparql/
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8896/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 63.2K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8897/sparql/
   Predicates: 1
   Total Triples: 1.8K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8898/sparql/
+  Predicates: 1
+  Total Triples: 1.6K
   Estimated Retrieved Triples: unknown
 
 ESTIMATED RESULT CARDINALITY
@@ -50,9 +58,9 @@ Confidence: low
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Start query execution with 'sameAs' (1.8K triples)
+• Start query execution with 'sameAs' (1.6K triples)
 • Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
-• Use SERVICE clauses to parallelize execution across 6 endpoints
+• Use SERVICE clauses to parallelize execution across 8 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
@@ -66,7 +74,7 @@ GENERATED FEDERATED QUERY
 # Smart Federated Query with Class Constraints
 # Variables are constrained by inferred class types and grouped by endpoint
 
-SELECT *
+SELECT ?predicate ?object
 WHERE {
 }
 LIMIT 1000

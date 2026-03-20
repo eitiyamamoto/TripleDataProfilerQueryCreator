@@ -1,0 +1,50 @@
+{
+  "input": "largerdfbench/tcgae.ttl",
+  "local_authority_mode": "endpoint",
+  "literal_only_mode": true,
+  "local_authorities": [
+    "localhost:8888"
+  ],
+  "predicate_stats": [
+    {
+      "predicate": "http://tcga.deri.ie/schema/RPKM",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 229717232,
+      "literal_triples": 229717232,
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://tcga.deri.ie/schema/chromosome",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 229717232,
+      "literal_triples": 229717232,
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://tcga.deri.ie/schema/start",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 229717232,
+      "literal_triples": 229717232,
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://tcga.deri.ie/schema/stop",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 229717232,
+      "literal_triples": 229717232,
+      "possible_mapping": false,
+      "status": "not-mapping"
+    }
+  ]
+}

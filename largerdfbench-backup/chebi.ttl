@@ -1,0 +1,254 @@
+PREFIX sbm:  <http://sparqlbuilder.org/2015/09/rdf-metadata-schema#>
+PREFIX sd:   <http://www.w3.org/ns/sparql-service-description#>
+PREFIX void: <http://rdfs.org/ns/void#>
+
+[ a                  sd:Service;
+  sd:defaultDataset  [ a                       sd:Dataset;
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://bio2rdf.org/ns/chebi#Compound>;
+                                                 void:entities  "50477"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classes            "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       void:properties         "23"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/chebi#has_functional_parent>;
+                                                 void:triples       "3760"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "3760"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/chebi#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/chebi#has_role>;
+                                                 void:triples       "2262"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "2262"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/chebi#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/dc/elements/1.1/identifier>;
+                                                 void:triples       "34055"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "34055"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www.w3.org/2000/01/rdf-schema#seeAlso>;
+                                                 void:triples       "16422"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "16422"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/chebi#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/bio2rdf#formula>;
+                                                 void:triples       "39553"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "39553"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/chebi#is_enantiomer_of>;
+                                                 void:triples       "1142"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1142"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/chebi#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/dc/elements/1.1/title>;
+                                                 void:triples       "34055"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "34055"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/chebi#iupacName>;
+                                                 void:triples       "15458"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "15458"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/chebi#is_conjugate_base_of>;
+                                                 void:triples       "1236"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1236"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/chebi#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/dc/elements/1.1/modified>;
+                                                 void:triples       "34055"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "34055"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/chebi#has_part>;
+                                                 void:triples       "668"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "668"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/chebi#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/bio2rdf#url>;
+                                                 void:triples       "34055"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "34055"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/chebi#is_substituent_group_from>;
+                                                 void:triples       "704"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "704"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/chebi#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/bio2rdf#smiles>;
+                                                 void:triples       "11948"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "11948"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/chebi#is_tautomer_of>;
+                                                 void:triples       "388"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "388"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/chebi#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/chebi#has_parent_hydride>;
+                                                 void:triples       "584"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "584"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/chebi#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/chebi#is_conjugate_acid_of>;
+                                                 void:triples       "1236"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1236"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/chebi#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www.w3.org/2000/01/rdf-schema#comment>;
+                                                 void:triples       "270"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "270"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/chebi#is_a>;
+                                                 void:triples       "40566"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "40566"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/chebi#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/bio2rdf#image>;
+                                                 void:triples       "34055"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "34055"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www.w3.org/2000/01/rdf-schema#label>;
+                                                 void:triples       "50477"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "50477"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/bio2rdf#synonym>;
+                                                 void:triples       "34695"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "34695"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/bio2rdf#inchi>;
+                                                 void:triples       "11736"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "11736"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/chebi#Compound>
+                                                                    ]
+                                               ];
+                       void:triples            "4772706"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       sbm:crawlLog            [ a                     sbm:CrawlLog;
+                                                 sbm:crawlEndTime      "2026-03-05T23:15:53+09:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+                                                 sbm:crawlStartTime    "2026-03-05T17:15:41+09:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+                                                 sbm:endpointAccesses  "18"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       sd:namedGraph           [ a        sd:NamedGraph;
+                                                 sd:name  <chebi>
+                                               ]
+                     ];
+  sd:endpoint        <http://localhost:8890/sparql/>
+] .

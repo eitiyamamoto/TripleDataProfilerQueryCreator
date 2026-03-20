@@ -1,34 +1,24 @@
 {
   "query_id": "B2",
   "analysis_file": "optimization/B2.analysis.json",
-  "optimization_status": "partial",
+  "optimization_status": "complete",
   "metadata_coverage": {
     "total_predicates": 6,
-    "covered_predicates": 1,
-    "missing_predicates": [
-      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
-      "<http://tcga.deri.ie/schema/disease_acronym>",
-      "<http://tcga.deri.ie/schema/result>",
-      "<http://tcga.deri.ie/schema/tumor_type>",
-      "<http://tcga.deri.ie/schema/tumor_weight>"
-    ],
-    "coverage_ratio": 0.1667,
-    "is_partial": true
+    "covered_predicates": 6,
+    "missing_predicates": [],
+    "coverage_ratio": 1.0,
+    "is_partial": false
   },
-  "unknown_endpoint_triples": [
-    [
-      "?patient",
-      "<http://tcga.deri.ie/schema/disease_acronym>",
-      "<http://tcga.deri.ie/lusc>"
-    ]
-  ],
+  "unknown_endpoint_triples": [],
   "optimization_analysis": {
     "optimization_strategy": "federated-with-service-clauses",
     "original_query": "SELECT ...",
     "endpoints_used": [
-      "http://localhost:8888/sparql/"
+      "http://localhost:8887/sparql/",
+      "http://localhost:8888/sparql/",
+      "http://localhost:8889/sparql/"
     ],
-    "num_endpoints": 1,
+    "num_endpoints": 3,
     "optimization_details": {
       "num_triples": 6,
       "num_unique_predicates": 6,
@@ -37,22 +27,49 @@
       "num_variables": 0,
       "selective_predicates": [
         {
-          "predicate": "<http://tcga.deri.ie/schema/RPKM>",
-          "cardinality": 57429308.0,
+          "predicate": "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "cardinality": 10.0,
+          "num_endpoints": 2,
+          "num_possible_classes": 71
+        },
+        {
+          "predicate": "<http://tcga.deri.ie/schema/tumor_type>",
+          "cardinality": 84.0,
           "num_endpoints": 1,
-          "num_possible_classes": 1
+          "num_possible_classes": 6
+        },
+        {
+          "predicate": "<http://tcga.deri.ie/schema/result>",
+          "cardinality": 90.0,
+          "num_endpoints": 2,
+          "num_possible_classes": 36
         }
       ],
-      "multi_endpoint_predicates": []
+      "multi_endpoint_predicates": [
+        "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+        "<http://tcga.deri.ie/schema/result>"
+      ]
     },
     "cardinality_estimate": {
-      "estimated_rows": 57429308,
-      "estimated_rows_readable": "57.4M",
+      "estimated_rows": 10,
+      "estimated_rows_readable": "10",
       "confidence": "medium",
       "method": "join-chain-analysis",
       "reasoning": "Estimated from 3 join chains"
     },
     "endpoint_breakdown": [
+      {
+        "endpoint": "http://localhost:8887/sparql/",
+        "num_predicates": 2,
+        "total_triples": 83006307,
+        "total_triples_readable": "83.0M",
+        "predicates": [
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
       {
         "endpoint": "http://localhost:8888/sparql/",
         "num_predicates": 1,
@@ -63,13 +80,235 @@
         ],
         "estimated_retrieved_triples": 57429308,
         "estimated_retrieved_triples_readable": "57.4M"
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "num_predicates": 180,
+        "total_triples": 39847324,
+        "total_triples_readable": "39.8M",
+        "predicates": [
+          "<http://tcga.deri.ie/schema/tumor_weight>",
+          "<http://tcga.deri.ie/schema/tumor_weight>",
+          "<http://tcga.deri.ie/schema/tumor_weight>",
+          "<http://tcga.deri.ie/schema/tumor_weight>",
+          "<http://tcga.deri.ie/schema/tumor_weight>",
+          "<http://tcga.deri.ie/schema/tumor_weight>",
+          "<http://tcga.deri.ie/schema/tumor_weight>",
+          "<http://tcga.deri.ie/schema/tumor_weight>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/result>",
+          "<http://tcga.deri.ie/schema/disease_acronym>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>",
+          "<http://tcga.deri.ie/schema/tumor_type>"
+        ],
+        "estimated_retrieved_triples": 36,
+        "estimated_retrieved_triples_readable": "36"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8888/sparql/\n# Predicates: 1\n#   <http://tcga.deri.ie/schema/RPKM> (http://tcga.deri.ie/schema/expression_exon_result -> http://www.w3.org/2000/01/rdf-schema#Literal) [57.4M triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8889/sparql/\n# Predicates: 180\n#   <http://tcga.deri.ie/schema/tumor_weight> (http://tcga.deri.ie/schema/clinical_cqcf -> http://www.w3.org/2000/01/rdf-schema#Literal) [3.4K triples]\n#   <http://tcga.deri.ie/schema/tumor_weight> (http://tcga.deri.ie/schema/patient -> http://www.w3.org/2000/01/rdf-schema#Literal) [3.4K triples]\n#   <http://tcga.deri.ie/schema/tumor_weight> (http://tcga.deri.ie/schema/clinical_cqcf -> http://www.w3.org/2000/01/rdf-schema#Literal) [3.4K triples]\n#   <http://tcga.deri.ie/schema/tumor_weight> (http://tcga.deri.ie/schema/patient -> http://www.w3.org/2000/01/rdf-schema#Literal) [3.4K triples]\n#   <http://tcga.deri.ie/schema/tumor_weight> (http://tcga.deri.ie/schema/clinical_nte -> http://www.w3.org/2000/01/rdf-schema#Literal) [466 triples]\n\n# Endpoint: http://localhost:8888/sparql/\n# Predicates: 1\n#   <http://tcga.deri.ie/schema/RPKM> (http://tcga.deri.ie/schema/expression_exon_result -> http://www.w3.org/2000/01/rdf-schema#Literal) [57.4M triples]\n\n# Endpoint: http://localhost:8887/sparql/\n# Predicates: 2\n#   <http://tcga.deri.ie/schema/result> (None -> None) [83.0M triples]\n#   <http://tcga.deri.ie/schema/bcr_patient_barcode> (None -> None) [302 triples]\n\n"
   },
   "constraint_map": {
+    "?patient": [
+      "http://tcga.deri.ie/schema/biospecimen_cqcf",
+      "http://tcga.deri.ie/schema/clinical_cqcf",
+      "http://tcga.deri.ie/schema/clinical_nte",
+      "http://tcga.deri.ie/schema/clinical_omf",
+      "http://tcga.deri.ie/schema/normal_control",
+      "http://tcga.deri.ie/schema/patient",
+      "http://tcga.deri.ie/schema/tumor_sample"
+    ],
     "?results": [
-      "http://tcga.deri.ie/schema/expression_exon_result"
+      "http://tcga.deri.ie/schema/copy_number_result",
+      "http://tcga.deri.ie/schema/expression_exon_result",
+      "http://tcga.deri.ie/schema/expression_gene_result",
+      "http://tcga.deri.ie/schema/expression_protein_result",
+      "http://tcga.deri.ie/schema/miRNA_result",
+      "http://tcga.deri.ie/schema/snp_result"
+    ],
+    "?tumorType": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?weight": [
+      "http://www.w3.org/2000/01/rdf-schema#Literal"
+    ],
+    "?s": [
+      "http://tcga.deri.ie/schema/biospecimen_cqcf",
+      "http://tcga.deri.ie/schema/clinical_cqcf",
+      "http://tcga.deri.ie/schema/clinical_nte",
+      "http://tcga.deri.ie/schema/clinical_omf",
+      "http://tcga.deri.ie/schema/drug",
+      "http://tcga.deri.ie/schema/follow_up",
+      "http://tcga.deri.ie/schema/normal_control",
+      "http://tcga.deri.ie/schema/patient",
+      "http://tcga.deri.ie/schema/radiation",
+      "http://tcga.deri.ie/schema/tumor_sample"
     ],
     "?exonValue": [
       "http://www.w3.org/2000/01/rdf-schema#Literal"
@@ -87,10 +326,107 @@
         "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
         "confidence": 1.0
       }
+    ],
+    "?patient": [
+      {
+        "class": "http://tcga.deri.ie/schema/clinical_omf",
+        "confidence": 0.2097263628689681
+      },
+      {
+        "class": "http://tcga.deri.ie/schema/clinical_nte",
+        "confidence": 0.18866680105691574
+      },
+      {
+        "class": "http://tcga.deri.ie/schema/patient",
+        "confidence": 0.12867535757892612
+      },
+      {
+        "class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "confidence": 0.1286753575789261
+      },
+      {
+        "class": "http://tcga.deri.ie/schema/normal_control",
+        "confidence": 0.11493789892989019
+      }
+    ],
+    "?tumorType": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?weight": [
+      {
+        "class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "confidence": 1.0
+      }
+    ],
+    "?s": [
+      {
+        "class": "http://tcga.deri.ie/schema/clinical_omf",
+        "confidence": 0.2602670928634581
+      },
+      {
+        "class": "http://tcga.deri.ie/schema/clinical_nte",
+        "confidence": 0.19454499912294387
+      },
+      {
+        "class": "http://tcga.deri.ie/schema/radiation",
+        "confidence": 0.07853569876587123
+      },
+      {
+        "class": "http://tcga.deri.ie/schema/follow_up",
+        "confidence": 0.07571245357920414
+      },
+      {
+        "class": "http://tcga.deri.ie/schema/drug",
+        "confidence": 0.07163134040801968
+      }
     ]
   },
-  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Variables are constrained by inferred class types and grouped by endpoint\n\nSELECT DISTINCT ?exonValue ?patient ?results ?s ?tumorType ?weight\nWHERE {\n\n  SERVICE <http://localhost:8888/sparql/> {\n    ?results <http://tcga.deri.ie/schema/RPKM> ?exonValue . # ?results:expression_exon_result, ?exonValue:Literal\n    ?patient <http://tcga.deri.ie/schema/result> ?results .\n    ?patient <http://tcga.deri.ie/schema/tumor_type> ?tumorType .\n    ?patient <http://tcga.deri.ie/schema/tumor_weight> ?weight .\n    ?s <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .\n  }\n\n  # Unknown endpoint (no metadata)\n    ?patient <http://tcga.deri.ie/schema/disease_acronym> <http://tcga.deri.ie/lusc> .\n}\nLIMIT 1000\n",
+  "inferred_variable_authorities": {
+    "?patient": [
+      "http://tcga.deri.ie"
+    ],
+    "?results": [
+      "http://tcga.deri.ie"
+    ],
+    "?s": [
+      "http://tcga.deri.ie"
+    ]
+  },
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Note: Multiple class interpretations exist but all route to same endpoints\n# A single query retrieves all data regardless of class ambiguity\n\nSELECT DISTINCT ?patient ?tumorType ?exonValue\nWHERE {\n\n  SERVICE <http://localhost:8888/sparql/> {\n    ?results <http://tcga.deri.ie/schema/RPKM> ?exonValue . # ?results:expression_exon_result, ?exonValue:Literal\n  }\n\n  SERVICE <http://localhost:8889/sparql/> {\n    ?s <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient . # ?s:clinical_omf, ?patient:clinical_nte\n    ?patient <http://tcga.deri.ie/schema/tumor_type> ?tumorType . # ?patient:clinical_nte, ?tumorType:Literal\n    ?patient <http://tcga.deri.ie/schema/result> ?results . # ?patient:clinical_omf, ?results:copy_number_result\n    ?patient <http://tcga.deri.ie/schema/tumor_weight> ?weight . # ?patient:clinical_nte, ?weight:Literal\n    ?patient <http://tcga.deri.ie/schema/disease_acronym> <http://tcga.deri.ie/lusc> .\n  }\n}\nLIMIT 1000\n",
   "predicate_selectivity": [
+    {
+      "predicate": "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
+      "cardinality": 10.0,
+      "num_endpoints": 2,
+      "num_possible_classes": 71
+    },
+    {
+      "predicate": "<http://tcga.deri.ie/schema/tumor_type>",
+      "cardinality": 84.0,
+      "num_endpoints": 1,
+      "num_possible_classes": 6
+    },
+    {
+      "predicate": "<http://tcga.deri.ie/schema/result>",
+      "cardinality": 90.0,
+      "num_endpoints": 2,
+      "num_possible_classes": 36
+    },
+    {
+      "predicate": "<http://tcga.deri.ie/schema/tumor_weight>",
+      "cardinality": 466.0,
+      "num_endpoints": 1,
+      "num_possible_classes": 3
+    },
+    {
+      "predicate": "<http://tcga.deri.ie/schema/disease_acronym>",
+      "cardinality": 1116.0,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
     {
       "predicate": "<http://tcga.deri.ie/schema/RPKM>",
       "cardinality": 57429308.0,

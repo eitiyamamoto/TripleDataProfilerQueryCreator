@@ -1,0 +1,2936 @@
+{
+  "input": "/Users/yamamotobikutorueiichi/codes/federated_query/tripledataprofiler/largerdfbench/swdfood.ttl",
+  "local_authority_mode": "endpoint",
+  "literal_only_mode": true,
+  "discover_missing_predicates": true,
+  "local_authorities": [
+    "localhost:8898"
+  ],
+  "endpoint": "http://localhost:8898/sparql",
+  "endpoint_predicates_count": 222,
+  "missing_predicates_added": 129,
+  "predicate_stats": [
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#affiliation",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 73005,
+      "literal_triples": 48732,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#completeGraph",
+      "object_class_authorities": [
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 93,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#editorList",
+      "object_class_authorities": [
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 279,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#givesKeynoteTalk",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#hasAcronym",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 13113,
+      "literal_triples": 13113,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#hasLocation",
+      "object_class_authorities": [
+        "data.semanticweb.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 16554,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#hasLogo",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 93,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#hasPart",
+      "object_class_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 149172,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#hasProgramme",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#hasRelatedArtefact",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument",
+      "object_class_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 62868,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#hasRelatedEvent",
+      "object_class_authorities": [
+        "data.semanticweb.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 17949,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#hasRole",
+      "object_class_authorities": [
+        "data.semanticweb.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 150288,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#hasSponsorship",
+      "object_class_authorities": [
+        "data.semanticweb.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 9300,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#hasTopic",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#heldBy",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 176142,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#holdsRole",
+      "object_class_authorities": [
+        "data.semanticweb.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 72075,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#homepage",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#isLocationFor",
+      "object_class_authorities": [
+        "data.semanticweb.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 93,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#isPanelistAt",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#isPartOf",
+      "object_class_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 145638,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#isProvidedBy",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 279,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#isRoleAt",
+      "object_class_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 56823,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#isSubEventOf",
+      "object_class_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 95139,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#isSuperEventOf",
+      "object_class_authorities": [
+        "data.semanticweb.org",
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org",
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 293787,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#moderates",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#moderator",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 837,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#panelist",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 3906,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#paperList",
+      "object_class_authorities": [
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 2604,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#partOf",
+      "object_class_authorities": [
+        "swrc.ontoware.org"
+      ],
+      "external_authorities": [
+        "swrc.ontoware.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 4743,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#relatedToEvent",
+      "object_class_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org",
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org",
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 34782,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#speaker",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 1767,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.semanticweb.org/ns/swc/ontology#uuid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 25296,
+      "literal_triples": 25296,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/elements/1.1/creator",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 397389,
+      "literal_triples": 837,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/elements/1.1/subject",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 211389,
+      "literal_triples": 211389,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/elements/1.1/title",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 150195,
+      "literal_triples": 150195,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/created",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/creator",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 2046,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/extent",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/format",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 93,
+      "literal_triples": 93,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/modified",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/title",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 20832,
+      "literal_triples": 20832,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://purl.org/ontology/bibo/authorList",
+      "object_class_authorities": [
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 14601,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://purl.org/ontology/bibo/editorList",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://rdfs.org/sioc/ns#topic",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 1302,
+      "literal_triples": 1302,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://sw.deri.org/2005/08/conf/cfp.owl#deadline",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 93,
+      "literal_triples": 93,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://sw.deri.org/2005/08/conf/cfp.owl#for",
+      "object_class_authorities": [
+        "data.semanticweb.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 93,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://sw.deri.org/2005/08/conf/cfp.owl#involved",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 372,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://sw.deri.org/2005/08/conf/cfp.owl#takesplace",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 93,
+      "literal_triples": 93,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#abstract",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 165726,
+      "literal_triples": 165726,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#address",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 465,
+      "literal_triples": 465,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#affiliation",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#author",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 408921,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#booktitle",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 3348,
+      "literal_triples": 3348,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#editor",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 13578,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#isbn",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 186,
+      "literal_triples": 186,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#keywords",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 100533,
+      "literal_triples": 100533,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#month",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 147405,
+      "literal_triples": 147405,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#pages",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 30876,
+      "literal_triples": 30876,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#publisher",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 279,
+      "literal_triples": 279,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#series",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 465,
+      "literal_triples": 465,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#title",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 17949,
+      "literal_triples": 17949,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#url",
+      "object_class_authorities": [
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 11160,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#volume",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 93,
+      "literal_triples": 93,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://swrc.ontoware.org/ontology#year",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 147405,
+      "literal_triples": 147405,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList",
+      "object_class_authorities": [
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 13485,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#editorList",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/DAV#ownerUser",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#inheritFrom",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#isGcResistantType",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#item",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#loadAs",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#noInherit",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmGraphMap",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmObjectMap",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmTableName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsStable",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvATables",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvColumns",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvFText",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvFormat",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvGeo",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvTableName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvaAlias",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvaTableName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvcAlias",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftAlias",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftConds",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftTableName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qsUserMaps",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#version",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_1",
+      "object_class_authorities": [
+        "data.semanticweb.org",
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org",
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 31341,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_10",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_11",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_12",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_13",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_2",
+      "object_class_authorities": [
+        "data.semanticweb.org",
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org",
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 26784,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_3",
+      "object_class_authorities": [
+        "data.semanticweb.org",
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org",
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 19995,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_4",
+      "object_class_authorities": [
+        "data.semanticweb.org",
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org",
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 11811,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_5",
+      "object_class_authorities": [
+        "data.semanticweb.org",
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org",
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 6138,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_6",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 930,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_7",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 558,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_8",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 279,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_9",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/xhtml/vocab#alternate",
+      "object_class_authorities": [
+        "purl.org"
+      ],
+      "external_authorities": [
+        "purl.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 93,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/xhtml/vocab#icon",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/xhtml/vocab#meta",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/xhtml/vocab#stylesheet",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 744,
+      "literal_triples": 744,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 93,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 761391,
+      "literal_triples": 761391,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#complementOf",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#imports",
+      "object_class_authorities": [
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 837,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#priorVersion",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#sameAs",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#unionOf",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#versionInfo",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/12/cal/ical#date",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/12/cal/ical#dateTime",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 6324,
+      "literal_triples": 6324,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/12/cal/ical#description",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2697,
+      "literal_triples": 2697,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/12/cal/ical#dtend",
+      "object_class_authorities": [
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 15810,
+      "literal_triples": 6975,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/12/cal/ical#dtstart",
+      "object_class_authorities": [
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 21762,
+      "literal_triples": 13764,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/12/cal/ical#duration",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 26319,
+      "literal_triples": 26319,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/12/cal/ical#summary",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 60636,
+      "literal_triples": 60636,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/12/cal/ical#tzid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 6324,
+      "literal_triples": 6324,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/12/cal/ical#url",
+      "object_class_authorities": [
+        "rdfs.org"
+      ],
+      "external_authorities": [
+        "rdfs.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 186,
+      "literal_triples": 93,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 34131,
+      "literal_triples": 34131,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 34131,
+      "literal_triples": 34131,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2004/02/skos/core#broader",
+      "object_class_authorities": [
+        "swrc.ontoware.org"
+      ],
+      "external_authorities": [
+        "swrc.ontoware.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 3534,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 26412,
+      "literal_triples": 26412,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#endpoint",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#feature",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#resultFormat",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#supportedLanguage",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/based_near",
+      "object_class_authorities": [
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 38223,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/depiction",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 93,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/family_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 161355,
+      "literal_triples": 161355,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/firstName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 161355,
+      "literal_triples": 161355,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/homepage",
+      "object_class_authorities": [
+        "rdfs.org",
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "rdfs.org",
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 232221,
+      "literal_triples": 93,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/made",
+      "object_class_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org",
+        "swrc.ontoware.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 4703940,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/maker",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 455514,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/mbox_sha1sum",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 288300,
+      "literal_triples": 288300,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/member",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 356190,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 545073,
+      "literal_triples": 545073,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/page",
+      "object_class_authorities": [
+        "www.w3.org"
+      ],
+      "external_authorities": [
+        "www.w3.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 10881,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/primaryTopic",
+      "object_class_authorities": [
+        "data.semanticweb.org"
+      ],
+      "external_authorities": [
+        "data.semanticweb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 186,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/status",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 57009,
+      "literal_triples": 57009,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/topic",
+      "object_class_authorities": [
+        "swrc.ontoware.org"
+      ],
+      "external_authorities": [
+        "swrc.ontoware.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 7533,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/workplaceHomepage",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    }
+  ]
+}

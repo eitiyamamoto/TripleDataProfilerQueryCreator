@@ -26,210 +26,74 @@
             void:properties "16"^^xsd:long ;
             void:propertyPartition [ a void:Dataset ;
                     void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+                    void:triples "22"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "22"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "3"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "3"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "53"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property owl:priorVersion ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.daml.org> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+                    void:triples "31"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "31"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property owl:versionInfo ;
+                    void:property <http://bio2rdf.org/ns/bio2rdf#isA> ;
+                    void:triples "13781"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "31"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "31"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "31"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property rdf:_4 ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "13781"^^xsd:long ;
                             sbm:relationType sbm:Object ],
                         [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "13781"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+                    void:triples "8"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:authorityCount "8"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property rdfs:subPropertyOf ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+                    void:triples "130"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "47"^^xsd:long ;
+                            sbm:authorityCount "130"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property rdfs:subClassOf ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w2.org> ;
-                            sbm:authorityCount "3"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "12"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w2.org> ;
-                            sbm:authorityCount "3"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "12"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "47"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "6"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property rdf:first ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property rdf:_3 ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "10"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "10"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+                    void:triples "45"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "45"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+                    void:triples "19"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "19"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+                    void:triples "39"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "39"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "2"^^xsd:long ;
@@ -240,6 +104,7 @@
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
                     void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "2"^^xsd:long ;
@@ -249,435 +114,178 @@
                             sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Object ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "99"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "99"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property rdf:_1 ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "66"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "66"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property dcterms:modified ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://localhost:8890> ;
-                            sbm:authorityCount "743"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "39"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "31"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "39"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "172"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "172"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property rdfs:domain ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "21"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "21"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "31"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property dcterms:extent ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://localhost:8890> ;
-                            sbm:authorityCount "730"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "12"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "31"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "7"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "4"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "139"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "139"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "53"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "37"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "31"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+                    void:triples "47"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "47"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property owl:imports ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "98"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "98"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+                    void:triples "31"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+                    void:triples "40"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "40"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+                    void:triples "4"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "4"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "3"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
                 [ a void:Dataset ;
                     void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property <http://bio2rdf.org/ns/kegg#xPathway> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://bio2rdf.org> ;
-                            sbm:authorityCount "6032"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://bio2rdf.org> ;
-                            sbm:authorityCount "6032"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property sd:url ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://localhost:8890> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://localhost:8890> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://bio2rdf.org/ns/bio2rdf#xRef> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://bio2rdf.org> ;
-                            sbm:authorityCount "73196"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://bio2rdf.org> ;
-                            sbm:authorityCount "73196"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property rdf:rest ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <bif:contains> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <bif:xpath_contains> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <bif:xcontains> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <bif:contains> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <bif:xquery_contains> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <bif:xpath_contains> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <bif:spatial_contains> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <bif:xcontains> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <bif:xquery_contains> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <bif:spatial_contains> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property sd:endpoint ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://localhost:8890> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://localhost:8890> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property rdfs:range ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+                    void:triples "47"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "20"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "20"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property owl:complementOf ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "47"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property sd:resultFormat ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+                    void:triples "4"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "4"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+                    void:triples "31"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property owl:unionOf ;
+                    void:triples "1"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://localhost:8890> ;
-                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:authorityCount "1"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
                     void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+                    void:triples "6"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "6"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property rdf:type ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "270"^^xsd:long ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:subPropertyOf ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Object ],
                         [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://localhost:8890> ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+                    void:triples "53"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "53"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://bio2rdf.org> ;
-                            sbm:authorityCount "34260"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://bio2rdf.org> ;
-                            sbm:authorityCount "34260"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
                         [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "270"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "50"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "51"^^xsd:long ;
+                            sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Object ] ],
                 [ a void:Dataset ;
-                    void:property rdf:_2 ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+                    void:triples "57"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "13"^^xsd:long ;
+                            sbm:authorityCount "57"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Subject ],
                         [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "13"^^xsd:long ;
+                            sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Object ] ],
                 [ a void:Dataset ;
                     void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+                    void:triples "743"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://localhost:8890> ;
                             sbm:authorityCount "743"^^xsd:long ;
@@ -687,89 +295,130 @@
                             sbm:authorityCount "743"^^xsd:long ;
                             sbm:relationType sbm:Object ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+                    void:triples "5"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "31"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
+                            sbm:authority <bif:xpath_contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:xcontains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:spatial_contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:xpath_contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:xquery_contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:xquery_contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:spatial_contains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <bif:xcontains> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+                    void:triples "3"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "31"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
                 [ a void:Dataset ;
-                    void:property sd:feature ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://localhost:8890> ;
+                            sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Subject ],
                         [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
+                            sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Object ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+                    void:property rdf:_1 ;
+                    void:triples "66"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
+                            sbm:authorityCount "66"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "66"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "4"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
                 [ a void:Dataset ;
                     void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+                    void:triples "29"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "29"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+                    void:triples "6"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "39"^^xsd:long ;
+                            sbm:authorityCount "6"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "53"^^xsd:long ;
+                            sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "39"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "42"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "2"^^xsd:long ;
@@ -779,193 +428,663 @@
                             sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Object ] ],
                 [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "4"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property owl:unionOf ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "1"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "45"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "56"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "56"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "40"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "19"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "31"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "2"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "31"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://bio2rdf.org/ns/kegg#xGene> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://bio2rdf.org> ;
-                            sbm:authorityCount "609037"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://bio2rdf.org> ;
-                            sbm:authorityCount "609037"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property dcterms:created ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://localhost:8890> ;
-                            sbm:authorityCount "743"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "57"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://bio2rdf.org/ns/bio2rdf#isA> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://bio2rdf.org> ;
-                            sbm:authorityCount "13781"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://bio2rdf.org> ;
-                            sbm:authorityCount "13781"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property rdf:_5 ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "3"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "3"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property rdfs:isDefinedBy ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "3"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.w3.org> ;
-                            sbm:authorityCount "3"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
-                        [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "8"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "130"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
-                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
-                            sbm:authority <http://www.openlinksw.com> ;
-                            sbm:authorityCount "45"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ],
-                [ a void:Dataset ;
-                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+                    void:triples "2"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.openlinksw.com> ;
                             sbm:authorityCount "2"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
                     void:property sd:supportedLanguage ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+                    void:triples "31"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property owl:priorVersion ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.daml.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+                    void:triples "8"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+                    void:triples "37"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "37"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property dcterms:created ;
+                    void:triples "743"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "743"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property owl:imports ;
+                    void:triples "1"^^xsd:long ;
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://www.w3.org> ;
                             sbm:authorityCount "1"^^xsd:long ;
                             sbm:relationType sbm:Object ],
                         [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:_5 ;
+                    void:triples "3"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:_2 ;
+                    void:triples "13"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "13"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "13"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+                    void:triples "8"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+                    void:triples "8"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property sd:endpoint ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://localhost:8890> ;
                             sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+                    void:triples "8"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+                    void:triples "3"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+                    void:triples "45"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "45"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:subClassOf ;
+                    void:triples "15"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w2.org> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "12"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "12"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w2.org> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property dcterms:modified ;
+                    void:triples "743"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "743"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:domain ;
+                    void:triples "21"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "21"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "21"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property sd:resultFormat ;
+                    void:triples "8"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:range ;
+                    void:triples "20"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "20"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "20"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+                    void:triples "99"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "99"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "99"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+                    void:triples "31"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+                    void:triples "39"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "39"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+                    void:triples "7"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "7"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property sd:feature ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/ns/kegg#xPathway> ;
+                    void:triples "6032"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "6032"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "6032"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:_3 ;
+                    void:triples "10"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "10"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "10"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+                    void:triples "98"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "98"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "98"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+                    void:triples "12"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "12"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+                    void:triples "53"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "53"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/ns/kegg#xGene> ;
+                    void:triples "609037"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "609037"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "609037"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+                    void:triples "47"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "47"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:first ],
+                [ a void:Dataset ;
+                    void:property rdf:_4 ;
+                    void:triples "3"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+                    void:triples "53"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "53"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property dcterms:extent ;
+                    void:triples "730"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "730"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+                    void:triples "4"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "4"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdf:rest ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+                    void:triples "172"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "172"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "172"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+                    void:triples "8"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://bio2rdf.org/ns/bio2rdf#xRef> ;
+                    void:triples "73196"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "73196"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "73196"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+                    void:triples "31"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+                    void:triples "31"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+                    void:triples "31"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+                    void:triples "45"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "45"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property rdfs:isDefinedBy ;
+                    void:triples "3"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "3"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+                    void:triples "39"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "39"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+                    void:triples "8"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property owl:versionInfo ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+                    void:triples "139"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "139"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "139"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+                    void:triples "8"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property owl:complementOf ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+                    void:triples "31"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+                    void:triples "31"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+                    void:triples "39"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "39"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+                    void:triples "2"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "2"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property sd:url ;
+                    void:triples "1"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+                    void:triples "31"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+                    void:triples "31"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+                    void:triples "31"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "31"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+                    void:triples "42"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "42"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+                    void:triples "8"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "8"^^xsd:long ;
+                            sbm:relationType sbm:Object ] ],
+                [ a void:Dataset ;
+                    void:property rdf:type ;
+                    void:triples "34581"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "270"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "34260"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "50"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://localhost:8890> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "51"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "34260"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "270"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ],
+                [ a void:Dataset ;
+                    void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+                    void:triples "56"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "56"^^xsd:long ;
+                            sbm:relationType sbm:Object ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.openlinksw.com> ;
+                            sbm:authorityCount "56"^^xsd:long ;
                             sbm:relationType sbm:Subject ] ],
                 [ a void:Dataset ;
                     void:classes "3"^^xsd:long ;
                     void:property <http://bio2rdf.org/ns/bio2rdf#formula> ;
                     void:triples "20108"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "20108"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "6782"^^xsd:long ;
                             sbm:objectClass rdfs:Literal ;
@@ -978,6 +1097,10 @@
                     void:classes "4"^^xsd:long ;
                     void:property <http://bio2rdf.org/ns/bio2rdf#urlImage> ;
                     void:triples "30015"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "30015"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "7827"^^xsd:long ;
                             sbm:objectClass rdfs:Literal ;
@@ -1018,6 +1141,10 @@
                     void:classes "2"^^xsd:long ;
                     void:property <http://bio2rdf.org/ns/kegg#equation> ;
                     void:triples "7827"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "7827"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "7827"^^xsd:long ;
                             sbm:objectClass rdfs:Literal ;
@@ -1029,11 +1156,11 @@
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://bio2rdf.org> ;
                             sbm:authorityCount "895"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
+                            sbm:relationType sbm:Object ],
                         [ a sbm:AuthorityRelation ;
                             sbm:authority <http://bio2rdf.org> ;
                             sbm:authorityCount "895"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ;
+                            sbm:relationType sbm:Subject ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "895"^^xsd:long ;
                             sbm:objectClass <http://bio2rdf.org/ns/kegg#Compound> ;
@@ -1045,11 +1172,11 @@
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://bio2rdf.org> ;
                             sbm:authorityCount "7226"^^xsd:long ;
-                            sbm:relationType sbm:Object ],
+                            sbm:relationType sbm:Subject ],
                         [ a sbm:AuthorityRelation ;
                             sbm:authority <http://bio2rdf.org> ;
                             sbm:authorityCount "7226"^^xsd:long ;
-                            sbm:relationType sbm:Subject ] ;
+                            sbm:relationType sbm:Object ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "7174"^^xsd:long ;
                             sbm:objectClass <http://bio2rdf.org/ns/kegg#Enzyme> ;
@@ -1074,6 +1201,10 @@
                     void:classes "4"^^xsd:long ;
                     void:property <http://bio2rdf.org/ns/bio2rdf#synonym> ;
                     void:triples "43709"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "43709"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "14260"^^xsd:long ;
                             sbm:objectClass rdfs:Literal ;
@@ -1090,6 +1221,10 @@
                     void:classes "3"^^xsd:long ;
                     void:property <http://bio2rdf.org/ns/bio2rdf#mass> ;
                     void:triples "18507"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "18507"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "6444"^^xsd:long ;
                             sbm:objectClass rdfs:Literal ;
@@ -1102,6 +1237,14 @@
                     void:classes "3"^^xsd:long ;
                     void:property rdfs:comment ;
                     void:triples "5479"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "1"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "5479"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "2281"^^xsd:long ;
                             sbm:objectClass rdfs:Literal ;
@@ -1114,6 +1257,10 @@
                     void:classes "5"^^xsd:long ;
                     void:property dc:identifier ;
                     void:triples "34260"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "34260"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "7827"^^xsd:long ;
                             sbm:objectClass rdfs:Literal ;
@@ -1134,6 +1281,10 @@
                     void:classes "5"^^xsd:long ;
                     void:property <http://bio2rdf.org/ns/bio2rdf#url> ;
                     void:triples "34260"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "34260"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "7827"^^xsd:long ;
                             sbm:objectClass rdfs:Literal ;
@@ -1157,11 +1308,11 @@
                     sbm:authorityRelation [ a sbm:AuthorityRelation ;
                             sbm:authority <http://bio2rdf.org> ;
                             sbm:authorityCount "24575"^^xsd:long ;
-                            sbm:relationType sbm:Subject ],
+                            sbm:relationType sbm:Object ],
                         [ a sbm:AuthorityRelation ;
                             sbm:authority <http://bio2rdf.org> ;
                             sbm:authorityCount "24575"^^xsd:long ;
-                            sbm:relationType sbm:Object ] ;
+                            sbm:relationType sbm:Subject ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "8384"^^xsd:long ;
                             sbm:objectClass <http://bio2rdf.org/ns/kegg#Compound> ;
@@ -1170,6 +1321,14 @@
                     void:classes "5"^^xsd:long ;
                     void:property rdfs:label ;
                     void:triples "34146"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://www.w3.org> ;
+                            sbm:authorityCount "40"^^xsd:long ;
+                            sbm:relationType sbm:Subject ],
+                        [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "34146"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "7827"^^xsd:long ;
                             sbm:objectClass rdfs:Literal ;
@@ -1190,6 +1349,10 @@
                     void:classes "2"^^xsd:long ;
                     void:property <http://bio2rdf.org/ns/kegg#systematicName> ;
                     void:triples "3721"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "3721"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "3721"^^xsd:long ;
                             sbm:objectClass rdfs:Literal ;
@@ -1198,6 +1361,10 @@
                     void:classes "5"^^xsd:long ;
                     void:property dc:title ;
                     void:triples "34146"^^xsd:long ;
+                    sbm:authorityRelation [ a sbm:AuthorityRelation ;
+                            sbm:authority <http://bio2rdf.org> ;
+                            sbm:authorityCount "34146"^^xsd:long ;
+                            sbm:relationType sbm:Subject ] ;
                     sbm:classRelation [ a sbm:ClassRelation ;
                             void:triples "7827"^^xsd:long ;
                             sbm:objectClass rdfs:Literal ;

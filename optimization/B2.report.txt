@@ -6,58 +6,89 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 6
 Unique Predicates: 6
-Endpoints Used: 1
+Endpoints Used: 3
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
-1. RPKM
+1. bcr_patient_barcode
+   Cardinality: 10
+   Endpoints: 2
+   Possible Class Pairs: 71
+2. tumor_type
+   Cardinality: 84
+   Endpoints: 1
+   Possible Class Pairs: 6
+3. result
+   Cardinality: 90
+   Endpoints: 2
+   Possible Class Pairs: 36
+4. tumor_weight
+   Cardinality: 466
+   Endpoints: 1
+   Possible Class Pairs: 3
+5. disease_acronym
+   Cardinality: 1.1K
+   Endpoints: 1
+   Possible Class Pairs: 1
+6. RPKM
    Cardinality: 57.4M
    Endpoints: 1
    Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8887/sparql/
+  Predicates: 2
+  Total Triples: 83.0M
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8888/sparql/
   Predicates: 1
   Total Triples: 57.4M
   Estimated Retrieved Triples: 57.4M
+Endpoint: http://localhost:8889/sparql/
+  Predicates: 180
+  Total Triples: 39.8M
+  Estimated Retrieved Triples: 36
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
 Method: join-chain-analysis
-Estimated Rows: 57.4M
+Estimated Rows: 10
 Confidence: medium
 Reasoning: Estimated from 3 join chains
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Start query execution with 'RPKM' (57.4M triples)
+• Start query execution with 'bcr_patient_barcode' (10 triples)
+• Use subject/object class constraints to reduce search space for 2 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 3 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 1/6
-Unknown Endpoint Triples: 1
+Status: complete
+Metadata Coverage: 6/6
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
 --------------------------------------------------------------------------------
 # Smart Federated Query with Class Constraints
-# Variables are constrained by inferred class types and grouped by endpoint
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
 
-SELECT DISTINCT ?exonValue ?patient ?results ?s ?tumorType ?weight
+SELECT DISTINCT ?patient ?tumorType ?exonValue
 WHERE {
 
   SERVICE <http://localhost:8888/sparql/> {
     ?results <http://tcga.deri.ie/schema/RPKM> ?exonValue . # ?results:expression_exon_result, ?exonValue:Literal
-    ?patient <http://tcga.deri.ie/schema/result> ?results .
-    ?patient <http://tcga.deri.ie/schema/tumor_type> ?tumorType .
-    ?patient <http://tcga.deri.ie/schema/tumor_weight> ?weight .
-    ?s <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .
   }
 
-  # Unknown endpoint (no metadata)
+  SERVICE <http://localhost:8889/sparql/> {
+    ?s <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient . # ?s:clinical_omf, ?patient:clinical_nte
+    ?patient <http://tcga.deri.ie/schema/tumor_type> ?tumorType . # ?patient:clinical_nte, ?tumorType:Literal
+    ?patient <http://tcga.deri.ie/schema/result> ?results . # ?patient:clinical_omf, ?results:copy_number_result
+    ?patient <http://tcga.deri.ie/schema/tumor_weight> ?weight . # ?patient:clinical_nte, ?weight:Literal
     ?patient <http://tcga.deri.ie/schema/disease_acronym> <http://tcga.deri.ie/lusc> .
+  }
 }
 LIMIT 1000

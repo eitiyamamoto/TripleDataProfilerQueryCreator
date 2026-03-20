@@ -1,0 +1,301 @@
+PREFIX sbm:  <http://sparqlbuilder.org/2015/09/rdf-metadata-schema#>
+PREFIX sd:   <http://www.w3.org/ns/sparql-service-description#>
+PREFIX void: <http://rdfs.org/ns/void#>
+
+[ a                  sd:Service;
+  sd:defaultDataset  [ a                       sd:Dataset;
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://bio2rdf.org/ns/kegg#Compound>;
+                                                 void:entities  "14071"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://bio2rdf.org/ns/kegg#Reaction>;
+                                                 void:entities  "7827"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://bio2rdf.org/ns/kegg#Enzyme>;
+                                                 void:entities  "4245"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://bio2rdf.org/ns/kegg#Drug>;
+                                                 void:entities  "8117"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classes            "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       void:properties         "16"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/kegg#systematicName>;
+                                                 void:triples       "3721"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "3721"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Enzyme>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "5"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/dc/elements/1.1/title>;
+                                                 void:triples       "34146"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "7827"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Reaction>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "8117"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Drug>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "14071"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Compound>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4131"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Enzyme>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/bio2rdf#formula>;
+                                                 void:triples       "20108"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "6782"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Drug>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "13326"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/bio2rdf#urlImage>;
+                                                 void:triples       "30015"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "7827"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Reaction>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "8117"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Drug>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "14071"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www.w3.org/2002/07/owl#sameAs>;
+                                                 void:triples       "29116"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "7827"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/kegg#Reaction>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Reaction>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "7426"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/kegg#Drug>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Drug>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "13863"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/kegg#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/kegg#equation>;
+                                                 void:triples       "7827"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "7827"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Reaction>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/kegg#xCofactor>;
+                                                 void:triples       "895"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "895"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/kegg#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Enzyme>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/kegg#xEnzyme>;
+                                                 void:triples       "7174"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "7174"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/kegg#Enzyme>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Reaction>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/kegg#xProduct>;
+                                                 void:triples       "8891"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "8891"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/kegg#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Enzyme>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/bio2rdf#synonym>;
+                                                 void:triples       "43709"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "14260"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Drug>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "12634"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Compound>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "16815"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Enzyme>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/bio2rdf#mass>;
+                                                 void:triples       "18507"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "6444"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Drug>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "12063"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Compound>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www.w3.org/2000/01/rdf-schema#comment>;
+                                                 void:triples       "5479"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "2281"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Reaction>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "3198"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Enzyme>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "5"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/dc/elements/1.1/identifier>;
+                                                 void:triples       "34260"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "7827"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Reaction>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "8117"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Drug>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "14071"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Compound>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4245"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Enzyme>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "5"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/bio2rdf#url>;
+                                                 void:triples       "34260"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "7827"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Reaction>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "8117"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Drug>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "14071"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Compound>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4245"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Enzyme>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://bio2rdf.org/ns/kegg#xSubstrate>;
+                                                 void:triples       "8384"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "8384"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://bio2rdf.org/ns/kegg#Compound>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Enzyme>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "5"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www.w3.org/2000/01/rdf-schema#label>;
+                                                 void:triples       "34146"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "7827"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Reaction>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "8117"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Drug>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "14071"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Compound>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4131"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://bio2rdf.org/ns/kegg#Enzyme>
+                                                                    ]
+                                               ];
+                       void:triples            "1090830"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       sbm:crawlLog            [ a                     sbm:CrawlLog;
+                                                 sbm:crawlEndTime      "2026-03-04T11:59:22+09:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+                                                 sbm:crawlStartTime    "2026-03-03T18:56:35+09:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+                                                 sbm:endpointAccesses  "48"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       sd:namedGraph           [ a        sd:NamedGraph;
+                                                 sd:name  <kegg>
+                                               ]
+                     ];
+  sd:endpoint        <http://localhost:8895/sparql/>
+] .

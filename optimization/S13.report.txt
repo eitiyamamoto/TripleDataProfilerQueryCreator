@@ -6,78 +6,94 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 5
 Unique Predicates: 5
-Endpoints Used: 8
+Endpoints Used: 12
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
 1. title
-   Cardinality: 4.1K
-   Endpoints: 3
-   Possible Class Pairs: 7
-2. type
-   Cardinality: unknown
-   Endpoints: 8
+   Cardinality: 7
+   Endpoints: 4
+   Possible Class Pairs: 14
+2. casRegistryNumber
+   Cardinality: 2.2K
+   Endpoints: 1
    Possible Class Pairs: 1
-3. xRef
-   Cardinality: unknown
+3. drugCategory
+   Cardinality: 4.6K
+   Endpoints: 1
+   Possible Class Pairs: 1
+4. type
+   Cardinality: 9.7K
+   Endpoints: 12
+   Possible Class Pairs: 1
+5. xRef
+   Cardinality: 29.1K
    Endpoints: 2
-   Possible Class Pairs: 1
-4. drugCategory
-   Cardinality: unknown
-   Endpoints: 1
-   Possible Class Pairs: 1
-5. casRegistryNumber
-   Cardinality: unknown
-   Endpoints: 1
    Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8887/sparql/
+  Predicates: 1
+  Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8889/sparql/
+  Predicates: 1
+  Total Triples: 5.8M
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8890/sparql/
   Predicates: 3
-  Total Triples: 34.1K
+  Total Triples: 114.0K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8891/sparql/
+  Predicates: 1
+  Total Triples: 0
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8892/sparql/
   Predicates: 3
-  Total Triples: 0
-  Estimated Retrieved Triples: unknown
+  Total Triples: 31.6K
+  Estimated Retrieved Triples: 2.2K
 Endpoint: http://localhost:8893/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 7.5M
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8894/sparql/
   Predicates: 3
-  Total Triples: 51.4K
+  Total Triples: 342.0K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 6
-  Total Triples: 34.1K
+  Total Triples: 141.9K
   Estimated Retrieved Triples: 4.1K
 Endpoint: http://localhost:8896/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 740.8K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8897/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 12.0K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8898/sparql/
+  Predicates: 8
+  Total Triples: 11.3K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8899/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 1.4M
   Estimated Retrieved Triples: unknown
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
 Method: join-chain-analysis
-Estimated Rows: 4.1K
+Estimated Rows: 7
 Confidence: medium
 Reasoning: Estimated from 2 join chains
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Start query execution with 'title' (4.1K triples)
+• Start query execution with 'title' (7 triples)
 • Use subject/object class constraints to reduce search space for 3 predicates that span multiple endpoints
-• Use SERVICE clauses to parallelize execution across 8 endpoints
+• Use SERVICE clauses to parallelize execution across 12 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
@@ -88,41 +104,22 @@ Metadata Coverage: 5/5
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
 --------------------------------------------------------------------------------
-# Smart Federated Query with UNION for Multiple Class Interpretations
-# Each UNION branch uses different endpoints or predicates
+# Smart Federated Query with Class Constraints
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
 
-SELECT ?drug ?id ?keggDrug ?title
+SELECT ?drug ?title
 WHERE {
-  # Scenario 1: ?title=Literal, ?keggDrug=Enzyme
-  {
-    SERVICE <http://localhost:8892/sparql/> {
-      ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/micronutrient> .
-      ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?id .
-    }
-    SERVICE <http://localhost:8895/sparql/> {
-      ?keggDrug <http://purl.org/dc/elements/1.1/title> ?title . # ?keggDrug:Enzyme, ?title:Literal
-      ?keggDrug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/ns/kegg#Drug> .
-      ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?id .
-    }
+
+  SERVICE <http://localhost:8892/sparql/> {
+    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?id .
+    ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/micronutrient> .
   }
 
-  UNION
-
-  # Scenario 2: ?title=Literal, ?keggDrug=Record
-  {
-    SERVICE <http://localhost:8890/sparql/> {
-      ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?id .
-    }
-    SERVICE <http://localhost:8892/sparql/> {
-      ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/micronutrient> .
-      ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?id .
-    }
-    SERVICE <http://localhost:8894/sparql/> {
-      ?keggDrug <http://purl.org/dc/elements/1.1/title> ?title . # ?keggDrug:Record, ?title:Literal
-    }
-    SERVICE <http://localhost:8899/sparql/> {
-      ?keggDrug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/ns/kegg#Drug> .
-    }
+  SERVICE <http://localhost:8895/sparql/> {
+    ?keggDrug <http://purl.org/dc/elements/1.1/title> ?title . # ?keggDrug:Enzyme, ?title:Literal
+    ?keggDrug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/ns/kegg#Drug> .
+    ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?id .
   }
 }
 LIMIT 1000

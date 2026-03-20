@@ -1,0 +1,1322 @@
+PREFIX sbm:  <http://sparqlbuilder.org/2015/09/rdf-metadata-schema#>
+PREFIX sd:   <http://www.w3.org/ns/sparql-service-description#>
+PREFIX void: <http://rdfs.org/ns/void#>
+
+[ a                  sd:Service;
+  sd:defaultDataset  [ a                       sd:Dataset;
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/enzymes>;
+                                                 void:entities  "53"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+                                                 void:entities  "117"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>;
+                                                 void:entities  "4553"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>;
+                                                 void:entities  "4772"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/references>;
+                                                 void:entities  "96"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions>;
+                                                 void:entities  "10096"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>;
+                                                 void:entities  "4772"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://www.w3.org/2000/01/rdf-schema#Class>;
+                                                 void:entities  "6"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classes            "8"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       void:properties         "91"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/goClassificationFunction>;
+                                                 void:triples       "24104"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "24104"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chromosomeLocation>;
+                                                 void:triples       "1614"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1614"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text>;
+                                                 void:triples       "10122"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "10122"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/mechanismOfAction>;
+                                                 void:triples       "2950"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1475"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1475"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/reaction>;
+                                                 void:triples       "1762"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1762"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>;
+                                                 void:triples       "3062"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1531"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1531"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/goClassificationComponent>;
+                                                 void:triples       "4253"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4253"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/goClassificationProcess>;
+                                                 void:triples       "22639"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "22639"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/absorption>;
+                                                 void:triples       "1950"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "975"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "975"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/locus>;
+                                                 void:triples       "1619"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1619"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/specificFunction>;
+                                                 void:triples       "3686"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "3686"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2>;
+                                                 void:triples       "20192"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "10096"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "10096"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/pubchemCompoundId>;
+                                                 void:triples       "8866"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4433"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4433"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName>;
+                                                 void:triples       "9544"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula>;
+                                                 void:triples       "9442"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4721"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4721"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/synthesisReference>;
+                                                 void:triples       "616"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "308"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "308"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/molecularWeight>;
+                                                 void:triples       "4537"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4537"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/hetId>;
+                                                 void:triples       "6624"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "3312"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "3312"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandName>;
+                                                 void:triples       "36332"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "18166"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "18166"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/structure>;
+                                                 void:triples       "9544"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genbankIdGene>;
+                                                 void:triples       "4310"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4310"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/brandMixture>;
+                                                 void:triples       "7926"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "3963"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "3963"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/experimentalLogs>;
+                                                 void:triples       "386"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "193"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "193"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/limsDrugId>;
+                                                 void:triples       "9544"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/inchiIdentifier>;
+                                                 void:triples       "8784"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4392"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4392"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/molecularWeightMono>;
+                                                 void:triples       "9240"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4620"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4620"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/generalFunction>;
+                                                 void:triples       "4103"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4103"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/pathway>;
+                                                 void:triples       "1321"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1321"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genatlasId>;
+                                                 void:triples       "1665"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1665"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/enzyme>;
+                                                 void:triples       "1624"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "812"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/enzymes>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "812"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/enzymes>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/inchiKey>;
+                                                 void:triples       "8784"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4392"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4392"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/essentiality>;
+                                                 void:triples       "4543"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4543"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/pdbHomologyId>;
+                                                 void:triples       "60"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "30"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "30"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/fdaLabelFiles>;
+                                                 void:triples       "1350"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "675"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "675"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genbankIdProtein>;
+                                                 void:triples       "2859"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "2859"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genecardId>;
+                                                 void:triples       "1533"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1533"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/state>;
+                                                 void:triples       "9544"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/name>;
+                                                 void:triples       "4606"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "53"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/enzymes>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4553"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/patientInformationInsert>;
+                                                 void:triples       "1524"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "762"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "762"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/dpdDrugIdNumber>;
+                                                 void:triples       "1986"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "993"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "993"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/numberOfResidues>;
+                                                 void:triples       "4553"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4553"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/target>;
+                                                 void:triples       "24090"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "12045"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "12045"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/experimentalCaco2Permeability>;
+                                                 void:triples       "164"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "82"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "82"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication>;
+                                                 void:triples       "2926"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1463"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1463"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalIupacName>;
+                                                 void:triples       "9184"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4592"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4592"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint>;
+                                                 void:triples       "2318"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1159"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1159"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genbankId>;
+                                                 void:triples       "142"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "71"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "71"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/experimentalLogpHydrophobicity>;
+                                                 void:triples       "2740"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1370"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1370"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/proteinSequence>;
+                                                 void:triples       "4587"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "53"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/enzymes>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4534"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/signal>;
+                                                 void:triples       "918"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "918"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/ahfsCode>;
+                                                 void:triples       "2030"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1015"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1015"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/transmembraneRegions>;
+                                                 void:triples       "3626"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "3626"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/predictedLogs>;
+                                                 void:triples       "9012"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4506"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4506"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "7"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www.w3.org/2000/01/rdf-schema#label>;
+                                                 void:triples       "24342"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "53"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/enzymes>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4553"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "10096"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "96"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/references>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/geneName>;
+                                                 void:triples       "3923"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "53"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/enzymes>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "3870"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/geneSequence>;
+                                                 void:triples       "4231"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4231"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/massSpecFile>;
+                                                 void:triples       "9544"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/predictedWaterSolubility>;
+                                                 void:triples       "9012"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4506"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4506"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/generalReference>;
+                                                 void:triples       "73"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "73"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/references>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/smilesStringCanonical>;
+                                                 void:triples       "9200"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4600"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4600"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/swissprotName>;
+                                                 void:triples       "4681"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "74"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "74"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4533"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1>;
+                                                 void:triples       "20192"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "10096"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "10096"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drug_interactions>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/updateDate>;
+                                                 void:triples       "9544"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/hprdId>;
+                                                 void:triples       "1241"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1241"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/synonym>;
+                                                 void:triples       "27771"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "7404"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "7404"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "12963"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/halfLife>;
+                                                 void:triples       "2076"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1038"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1038"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/theoreticalPi>;
+                                                 void:triples       "4532"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4532"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/smilesStringIsomeric>;
+                                                 void:triples       "9200"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4600"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4600"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/pdbExperimentalId>;
+                                                 void:triples       "6226"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "3113"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "3113"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/pdrhealthLink>;
+                                                 void:triples       "560"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "280"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "280"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalStructure>;
+                                                 void:triples       "188"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "94"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "94"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/predictedLogpHydrophobicity>;
+                                                 void:triples       "9012"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4506"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4506"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/experimentalWaterSolubility>;
+                                                 void:triples       "2018"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1009"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1009"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugReference>;
+                                                 void:triples       "32"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "32"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/references>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/atcCode>;
+                                                 void:triples       "3800"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1900"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1900"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/creationDate>;
+                                                 void:triples       "9544"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/secondaryAccessionNumber>;
+                                                 void:triples       "8728"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4364"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4364"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/cellularLocation>;
+                                                 void:triples       "4091"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4091"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/targets>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/pharmacology>;
+                                                 void:triples       "2886"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1443"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1443"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/foodInteraction>;
+                                                 void:triples       "1992"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "996"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "996"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/pkaIsoelectricPoint>;
+                                                 void:triples       "614"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "307"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "307"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description>;
+                                                 void:triples       "3722"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1861"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1861"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/reference>;
+                                                 void:triples       "2058"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1029"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1029"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/proteinBinding>;
+                                                 void:triples       "1604"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "802"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "802"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/pubchemSubstanceId>;
+                                                 void:triples       "8800"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4400"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4400"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/primaryAccessionNo>;
+                                                 void:triples       "9544"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4772"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation>;
+                                                 void:triples       "1986"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "993"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "993"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/pharmgkbId>;
+                                                 void:triples       "2312"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1156"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "1156"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/toxicity>;
+                                                 void:triples       "1956"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "978"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "978"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/molecularWeightAverage>;
+                                                 void:triples       "9454"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4727"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "4727"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/msdsFiles>;
+                                                 void:triples       "1658"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "829"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "829"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer>
+                                                                    ]
+                                               ];
+                       void:triples            "517023"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       sbm:crawlLog            [ a                     sbm:CrawlLog;
+                                                 sbm:crawlEndTime      "2026-03-06T15:14:07+09:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+                                                 sbm:crawlStartTime    "2026-03-03T18:57:13+09:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+                                                 sbm:endpointAccesses  "185"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       sd:namedGraph           [ a        sd:NamedGraph;
+                                                 sd:name  <drugbank>
+                                               ]
+                     ];
+  sd:endpoint        <http://localhost:8892/sparql/>
+] .

@@ -18,32 +18,32 @@ PREDICATE SELECTIVITY (Most Selective First)
    Cardinality: 1.5K
    Endpoints: 1
    Possible Class Pairs: 2
-3. mass
+3. casRegistryNumber
+   Cardinality: 2.2K
+   Endpoints: 1
+   Possible Class Pairs: 1
+4. mass
    Cardinality: 6.4K
    Endpoints: 1
    Possible Class Pairs: 2
-4. xRef
-   Cardinality: unknown
+5. xRef
+   Cardinality: 29.1K
    Endpoints: 2
-   Possible Class Pairs: 1
-5. casRegistryNumber
-   Cardinality: unknown
-   Endpoints: 1
    Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
 Endpoint: http://localhost:8890/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 29.1K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8892/sparql/
   Predicates: 5
-  Total Triples: 5.0K
+  Total Triples: 7.3K
   Estimated Retrieved Triples: 993
 Endpoint: http://localhost:8895/sparql/
   Predicates: 3
-  Total Triples: 18.5K
+  Total Triples: 91.7K
   Estimated Retrieved Triples: 6.4K
 
 ESTIMATED RESULT CARDINALITY

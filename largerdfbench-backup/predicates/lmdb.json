@@ -1,0 +1,4208 @@
+{
+  "input": "/Users/yamamotobikutorueiichi/codes/federated_query/tripledataprofiler/largerdfbench/lmdb.ttl",
+  "local_authority_mode": "endpoint",
+  "literal_only_mode": true,
+  "discover_missing_predicates": true,
+  "local_authorities": [
+    "localhost:8896"
+  ],
+  "endpoint": "http://localhost:8896/sparql",
+  "endpoint_predicates_count": 335,
+  "missing_predicates_added": 141,
+  "predicate_stats": [
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/actor",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 339857154,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/actor_actorid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 19633964,
+      "literal_triples": 19633964,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/actor_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 19633964,
+      "literal_triples": 19633964,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/actor_netflix_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 15071472,
+      "literal_triples": 15071472,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/actor_nytimes_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 15071472,
+      "literal_triples": 15071472,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/cinematographer",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/cinematographer_cinematographerid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 1266044,
+      "literal_triples": 1266044,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/cinematographer_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 1266044,
+      "literal_triples": 1266044,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/content_rating_content_ratingid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 20758,
+      "literal_triples": 20758,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/content_rating_country",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 20758,
+      "literal_triples": 20758,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/content_rating_film_rating_system",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 20758,
+      "literal_triples": 20758,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/content_rating_minimum_unaccompanied_age",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 12028,
+      "literal_triples": 12028,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/content_rating_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 20758,
+      "literal_triples": 20758,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/content_rating_system",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 19206,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/content_rating_system_content_rating_systemid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 8924,
+      "literal_triples": 8924,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/content_rating_system_jurisdiction",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 8924,
+      "literal_triples": 8924,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/content_rating_system_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 8924,
+      "literal_triples": 8924,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/costume_designer",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 27936,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/country",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 28960902,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/country_areaInSqKm",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 47918,
+      "literal_triples": 47918,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/country_capital",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 47918,
+      "literal_triples": 47918,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/country_continent",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 47918,
+      "literal_triples": 47918,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/country_currency",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 47918,
+      "literal_triples": 47918,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/country_fips_code",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 47918,
+      "literal_triples": 47918,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/country_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 47918,
+      "literal_triples": 47918,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/country_iso_alpha2",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 47918,
+      "literal_triples": 47918,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/country_iso_alpha3",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 47918,
+      "literal_triples": 47918,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/country_iso_numeric",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 47918,
+      "literal_triples": 47918,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/country_languages",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 47918,
+      "literal_triples": 47918,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/country_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 47918,
+      "literal_triples": 47918,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/country_population",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 47918,
+      "literal_triples": 47918,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/director",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 92852280,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/director_directorid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 6656528,
+      "literal_triples": 6656528,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/director_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 6656528,
+      "literal_triples": 6656528,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/dubbing_performance",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 200790,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/dubbing_performance_actor",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 22892,
+      "literal_triples": 22892,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/dubbing_performance_character",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 22892,
+      "literal_triples": 22892,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/dubbing_performance_dubbing_performanceid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 22892,
+      "literal_triples": 22892,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/dubbing_performance_film",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 22892,
+      "literal_triples": 22892,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/dubbing_performance_language",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 22892,
+      "literal_triples": 22892,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/dubbing_performance_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 22892,
+      "literal_triples": 22892,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/editor",
+      "object_class_authorities": [
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 16141770,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/editor_editorid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 1276520,
+      "literal_triples": 1276520,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/editor_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 1276520,
+      "literal_triples": 1276520,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/executive_producer",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/featured_film_location",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 8503020,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_art_director",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_art_director_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 70810,
+      "literal_triples": 70810,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_art_director_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 70810,
+      "literal_triples": 70810,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_awards_ceremony_film_awards_ceremonyid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 24638,
+      "literal_triples": 24638,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_awards_ceremony_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 24638,
+      "literal_triples": 24638,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_awards_ceremony_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 24638,
+      "literal_triples": 24638,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_casting_director",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 946332,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_casting_director_film_casting_director_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 52962,
+      "literal_triples": 52962,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_casting_director_freebase_url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_casting_director_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 52962,
+      "literal_triples": 52962,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_character",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 3457468,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_character_film_characterid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 3055888,
+      "literal_triples": 3055888,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_character_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 3055888,
+      "literal_triples": 3055888,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_collection",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 29682,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_collection_film_collectionid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 194,
+      "literal_triples": 194,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_collection_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 194,
+      "literal_triples": 194,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_company",
+      "object_class_authorities": [
+        "data.linkedmdb.org",
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org",
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 388,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_company_film_companyid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 131144,
+      "literal_triples": 131144,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_company_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 131144,
+      "literal_triples": 131144,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_costume_designer_film_costume_designerid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 136964,
+      "literal_triples": 136964,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_costume_designer_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 136964,
+      "literal_triples": 136964,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_crew_gig_film",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 3313714,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_crew_gig_film_crew_gigid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 3343978,
+      "literal_triples": 3343978,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_crew_gig_film_job",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 3312356,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_crew_gig_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 3343978,
+      "literal_triples": 3343978,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_crew_gig_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 3343978,
+      "literal_triples": 3343978,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_crew_role",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 3343978,
+      "literal_triples": 3343978,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_crewmember",
+      "object_class_authorities": [
+        "data.linkedmdb.org",
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org",
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 9312,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_crewmember_film_crewmemberid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 9700,
+      "literal_triples": 9700,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_crewmember_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 9700,
+      "literal_triples": 9700,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_critic_film_criticid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 29488,
+      "literal_triples": 29488,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_critic_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 29488,
+      "literal_triples": 29488,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_cut",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 20756448,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_cut_film_cutid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 8780246,
+      "literal_triples": 8780246,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_cut_note",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 4950104,
+      "literal_triples": 4950104,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_distribution_medium",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 18624,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_distribution_medium_film_distribution_mediumid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 1940,
+      "literal_triples": 1940,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_distribution_medium_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 1940,
+      "literal_triples": 1940,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_distributor",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 2958112,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_distributor_film_distributorid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 32786,
+      "literal_triples": 32786,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_distributor_freebase_url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_distributor_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 32786,
+      "literal_triples": 32786,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_featured_song",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 123966,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_featured_song_film_featured_song_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 13968,
+      "literal_triples": 13968,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_featured_song_freebase_url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_featured_song_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 13968,
+      "literal_triples": 13968,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_featured_song_performed_by",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 13968,
+      "literal_triples": 13968,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_event",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 103790,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_event_closing_date",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 132890,
+      "literal_triples": 132890,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_event_film_festival_event_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 132890,
+      "literal_triples": 132890,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_event_freebase_url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 132890,
+      "literal_triples": 132890,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_event_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 132890,
+      "literal_triples": 132890,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_event_opening_date",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 132890,
+      "literal_triples": 132890,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_film_festivalid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 109804,
+      "literal_triples": 109804,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_focus_film_festival_focus_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2522,
+      "literal_triples": 2522,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_focus_freebase_url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_focus_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2522,
+      "literal_triples": 2522,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 109804,
+      "literal_triples": 109804,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_sponsor_film_festival_sponsor_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 13580,
+      "literal_triples": 13580,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_sponsor_freebase_url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_festival_sponsor_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 13580,
+      "literal_triples": 13580,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_film_company_relationship",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_film_company_relationship_film_film_company_relationshipid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 6984,
+      "literal_triples": 6984,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_film_company_relationship_freebase_url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_film_company_relationship_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 6984,
+      "literal_triples": 6984,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_film_company_relationship_role_service",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 6984,
+      "literal_triples": 6984,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_film_distributor_relationship_distributor",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2959664,
+      "literal_triples": 2959664,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_film_distributor_relationship_film_cut",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2959664,
+      "literal_triples": 2959664,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_film_distributor_relationship_film_distribution_medium",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2959664,
+      "literal_triples": 2959664,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_film_distributor_relationship_film_film_distributor_relationshipid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2959664,
+      "literal_triples": 2959664,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_film_distributor_relationship_freebase_url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_film_distributor_relationship_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2959664,
+      "literal_triples": 2959664,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_film_distributor_relationship_region",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2959664,
+      "literal_triples": 2959664,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_film_distributor_relationship_year",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2959664,
+      "literal_triples": 2959664,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_format",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 1756476,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_format_film_formatid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 11058,
+      "literal_triples": 11058,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_format_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 11058,
+      "literal_triples": 11058,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_genre_film_genreid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 79346,
+      "literal_triples": 79346,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_genre_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 79346,
+      "literal_triples": 79346,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_job_film_jobid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 776776,
+      "literal_triples": 776776,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_job_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 776776,
+      "literal_triples": 776776,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_location_film_locationid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 255110,
+      "literal_triples": 255110,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_location_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 255110,
+      "literal_triples": 255110,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_of_distributor",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 2952680,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_production_designer",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 1014426,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_production_designer_film_production_designer_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 56842,
+      "literal_triples": 56842,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_production_designer_freebase_url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_production_designer_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 56842,
+      "literal_triples": 56842,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_regional_release_date",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 721098,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_regional_release_date_film_regional_debut_venue",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 81092,
+      "literal_triples": 81092,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_regional_release_date_film_regional_release_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 81092,
+      "literal_triples": 81092,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_regional_release_date_film_release_distribution_medium",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 81092,
+      "literal_triples": 81092,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_regional_release_date_film_release_region",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 81092,
+      "literal_triples": 81092,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_regional_release_date_freebase_url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_regional_release_date_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 81092,
+      "literal_triples": 81092,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_regional_release_date_release_date",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 81092,
+      "literal_triples": 81092,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_release_region",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 4879294,
+      "literal_triples": 4879294,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_screening_venue_film_screening_venue_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 4462,
+      "literal_triples": 4462,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_screening_venue_freebase_url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_screening_venue_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 4462,
+      "literal_triples": 4462,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_series",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_series_film_seriesid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 39770,
+      "literal_triples": 39770,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_series_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 39770,
+      "literal_triples": 39770,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_set_designer",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 804906,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_set_designer_film_set_designer_id",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 39964,
+      "literal_triples": 39964,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_set_designer_freebase_url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_set_designer_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 39964,
+      "literal_triples": 39964,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_story_contributor",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 2203452,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_story_contributor_film_story_contributorid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 143560,
+      "literal_triples": 143560,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_story_contributor_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 143560,
+      "literal_triples": 143560,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_subject",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 11195352,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_subject_film_subjectid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 242306,
+      "literal_triples": 242306,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_subject_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 242306,
+      "literal_triples": 242306,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_theorist_film_theoristid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 5432,
+      "literal_triples": 5432,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/film_theorist_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 5432,
+      "literal_triples": 5432,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/filmid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 16610280,
+      "literal_triples": 16610280,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/genre",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 22729428,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/initial_release_date",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 14377534,
+      "literal_triples": 14377534,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/language",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/linkid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 31466606,
+      "literal_triples": 31466606,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/location",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 213012,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/music_contributor",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 34296678,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/music_contributor_music_contributorid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 878626,
+      "literal_triples": 878626,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/music_contributor_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 878626,
+      "literal_triples": 878626,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/performance",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 418111322,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/performance_actor",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 38270574,
+      "literal_triples": 38270574,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/performance_character",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 38270574,
+      "literal_triples": 38270574,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/performance_film",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 38270574,
+      "literal_triples": 38270574,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/performance_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 38270574,
+      "literal_triples": 38270574,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/performance_note",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 38270574,
+      "literal_triples": 38270574,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/performance_performanceid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 38270574,
+      "literal_triples": 38270574,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/performance_special_performance_type",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 1124618,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/personal_film_appearance",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/personal_film_appearance_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 217280,
+      "literal_triples": 217280,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/personal_film_appearance_person",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 217280,
+      "literal_triples": 217280,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/personal_film_appearance_personal_film_appearanceid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 217280,
+      "literal_triples": 217280,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/personal_film_appearance_type",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 53350,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/personal_film_appearance_type_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 970,
+      "literal_triples": 970,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/personal_film_appearance_type_of_appearance",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 217280,
+      "literal_triples": 217280,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/personal_film_appearance_type_personal_film_appearance_typeid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 970,
+      "literal_triples": 970,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/prequel",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 6964794,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/producer",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/producer_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2887108,
+      "literal_triples": 2887108,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/producer_producerid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2887108,
+      "literal_triples": 2887108,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/production_company",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 19066320,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/production_company_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 373644,
+      "literal_triples": 373644,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/production_company_production_companyid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 373644,
+      "literal_triples": 373644,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/rating",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 216504,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/relatedBook",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/runtime",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 11086518,
+      "literal_triples": 11086518,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/sequel",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 6964794,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/special_film_performance_type_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2134,
+      "literal_triples": 2134,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/special_film_performance_type_special_film_performance_typeid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 2134,
+      "literal_triples": 2134,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/story_contributor",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/type_of_film_cut",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 4883368,
+      "literal_triples": 4883368,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/writer",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 49846554,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/writer_name",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 3362990,
+      "literal_triples": 3362990,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/movie/writer_writerid",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 3362990,
+      "literal_triples": 3362990,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/oddlinker/link_source",
+      "object_class_authorities": [
+        "data.linkedmdb.org",
+        "xmlns.com"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org",
+        "xmlns.com"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 17694352,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/oddlinker/link_target",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/oddlinker/link_type",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 31466606,
+      "literal_triples": 31466606,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/oddlinker/linkage_date",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 1358,
+      "literal_triples": 1358,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/oddlinker/linkage_method",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 1358,
+      "literal_triples": 1358,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/oddlinker/linkage_run",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 31466606,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://data.linkedmdb.org/resource/oddlinker/linkage_score",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 10786206,
+      "literal_triples": 10786206,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://dbpedia.org/property/hasPhotoCollection",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/created",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/date",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 14377534,
+      "literal_triples": 14377534,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/extent",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/modified",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/title",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 16610280,
+      "literal_triples": 16610280,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/DAV#ownerUser",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#inheritFrom",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#isGcResistantType",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#item",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#loadAs",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#noInherit",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmGraphMap",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmObjectMap",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmTableName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsStable",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvATables",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvColumns",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvFText",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvFormat",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvGeo",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvTableName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvaAlias",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvaTableName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvcAlias",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftAlias",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftConds",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftTableName",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qsUserMaps",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#version",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_1",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_2",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_3",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_4",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_5",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#SeeAlso",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 143649628,
+      "literal_triples": 143649628,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#complementOf",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#imports",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#priorVersion",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#sameAs",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#unionOf",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#versionInfo",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/2004/02/skos/core#subject",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 11195352,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#endpoint",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#feature",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#resultFormat",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#supportedLanguage",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#url",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/based_near",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/made",
+      "object_class_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "external_authorities": [
+        "data.linkedmdb.org"
+      ],
+      "missing_object_class": 0,
+      "total_triples": 20633840,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "possible_mapping": true,
+      "status": "possible-mapping"
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/page",
+      "object_class_authorities": [],
+      "external_authorities": [],
+      "missing_object_class": 0,
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "possible_mapping": false,
+      "status": "not-mapping"
+    }
+  ]
+}

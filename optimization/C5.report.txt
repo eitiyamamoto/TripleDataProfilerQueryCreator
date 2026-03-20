@@ -6,48 +6,64 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 8
 Unique Predicates: 7
-Endpoints Used: 8
+Endpoints Used: 11
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
-1. label
+1. spouse
    Cardinality: 1
-   Endpoints: 8
-   Possible Class Pairs: 67
-2. actor_name
+   Endpoints: 1
+   Possible Class Pairs: 84
+2. title
+   Cardinality: 1
+   Endpoints: 2
+   Possible Class Pairs: 5
+3. label
+   Cardinality: 1
+   Endpoints: 11
+   Possible Class Pairs: 299
+4. birthDate
+   Cardinality: 42
+   Endpoints: 1
+   Possible Class Pairs: 51
+5. actor_name
    Cardinality: 50.6K
    Endpoints: 1
    Possible Class Pairs: 2
-3. date
+6. date
    Cardinality: 74.1K
    Endpoints: 1
    Possible Class Pairs: 1
-4. title
-   Cardinality: 85.6K
-   Endpoints: 1
-   Possible Class Pairs: 1
-5. actor
+7. actor
    Cardinality: 583.9K
    Endpoints: 1
    Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8889/sparql/
+  Predicates: 1
+  Total Triples: 40
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8890/sparql/
   Predicates: 1
   Total Triples: 50.5K
   Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8891/sparql/
+  Predicates: 450
+  Total Triples: 13.2M
+  Estimated Retrieved Triples: 1
 Endpoint: http://localhost:8892/sparql/
   Predicates: 6
   Total Triples: 24.3K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8893/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 40
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8894/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 40
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 4
@@ -59,12 +75,16 @@ Endpoint: http://localhost:8896/sparql/
   Estimated Retrieved Triples: 50.6K
 Endpoint: http://localhost:8897/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 40
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8898/sparql/
+  Predicates: 48
+  Total Triples: 8.4K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8899/sparql/
   Predicates: 3
   Total Triples: 1.8M
-  Estimated Retrieved Triples: 1
+  Estimated Retrieved Triples: unknown
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
@@ -75,90 +95,38 @@ Reasoning: Estimated from 4 join chains
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Start query execution with 'label' (1 triples)
-• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
-• Use SERVICE clauses to parallelize execution across 8 endpoints
+• Start query execution with 'spouse' (1 triples)
+• Use subject/object class constraints to reduce search space for 2 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 11 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 5/7
+Status: complete
+Metadata Coverage: 7/7
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
 --------------------------------------------------------------------------------
-# Smart Federated Query with UNION for Multiple Class Interpretations
-# Each UNION branch uses different endpoints or predicates
+# Smart Federated Query with Class Constraints
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
 
-SELECT ?actor ?actor_name ?actor_name_en ?birthDate ?imdbactor ?movie ?movieDate ?movieTitle ?spouseName ?spouseURI
+SELECT ?actor ?movie ?movieTitle ?movieDate ?birthDate ?spouseName ?actor_name_en ?spouseURI ?imdbactor ?actor_name.
 WHERE {
-  # Scenario 1: ?movie=film, ?movieDate=Literal, ?movieTitle=Literal, ?imdbactor=Person, ?actor_name_en=Literal, ?actor_name=Literal, ?spouseName=Literal, ?actor=dataset_vocabulary:Endpoint, ?spouseURI=dataset_vocabulary:Endpoint
-  {
-    SERVICE <http://localhost:8896/sparql/> {
-      ?imdbactor <http://data.linkedmdb.org/resource/movie/actor_name> ?actor_name . # ?imdbactor:Person, ?actor_name:Literal
-      ?movie <http://purl.org/dc/terms/date> ?movieDate . # ?movie:film, ?movieDate:Literal
-      ?movie <http://purl.org/dc/terms/title> ?movieTitle . # ?movie:film, ?movieTitle:Literal
-      ?movie <http://data.linkedmdb.org/resource/movie/actor> ?imdbactor . # ?movie:film, ?imdbactor:Person
-    }
-    SERVICE <http://localhost:8899/sparql/> {
-      ?actor <http://www.w3.org/2000/01/rdf-schema#label> ?actor_name_en . # ?actor:dataset_vocabulary:Endpoint, ?actor_name_en:Literal
-      ?spouseURI <http://www.w3.org/2000/01/rdf-schema#label> ?spouseName . # ?spouseURI:dataset_vocabulary:Endpoint, ?spouseName:Literal
-      ?actor <http://dbpedia.org/ontology/spouse> ?spouseURI .
-      ?actor <http://dbpedia.org/ontology/birthDate> ?birthDate .
-    }
+
+  SERVICE <http://localhost:8891/sparql/> {
+    ?actor <http://dbpedia.org/ontology/spouse> ?spouseURI . # ?actor:Model, ?spouseURI:Actor
+    ?actor <http://www.w3.org/2000/01/rdf-schema#label> ?actor_name_en . # ?actor:MixedMartialArtsLeague, ?actor_name_en:Literal
+    ?spouseURI <http://www.w3.org/2000/01/rdf-schema#label> ?spouseName . # ?spouseURI:MixedMartialArtsLeague, ?spouseName:Literal
+    ?actor <http://dbpedia.org/ontology/birthDate> ?birthDate . # ?actor:GaelicGamesPlayer, ?birthDate:Literal
   }
 
-  UNION
-
-  # Scenario 2: ?movie=film, ?movieDate=Literal, ?movieTitle=Literal, ?imdbactor=Person, ?actor_name_en=Literal, ?actor_name=Literal, ?spouseName=Literal, ?actor=dataset_vocabulary:Endpoint, ?spouseURI=film_collection
-  {
-    SERVICE <http://localhost:8896/sparql/> {
-      ?spouseURI <http://www.w3.org/2000/01/rdf-schema#label> ?spouseName . # ?spouseURI:film_collection, ?spouseName:Literal
-      ?imdbactor <http://data.linkedmdb.org/resource/movie/actor_name> ?actor_name . # ?imdbactor:Person, ?actor_name:Literal
-      ?movie <http://purl.org/dc/terms/date> ?movieDate . # ?movie:film, ?movieDate:Literal
-      ?movie <http://purl.org/dc/terms/title> ?movieTitle . # ?movie:film, ?movieTitle:Literal
-      ?movie <http://data.linkedmdb.org/resource/movie/actor> ?imdbactor . # ?movie:film, ?imdbactor:Person
-    }
-    SERVICE <http://localhost:8899/sparql/> {
-      ?actor <http://www.w3.org/2000/01/rdf-schema#label> ?actor_name_en . # ?actor:dataset_vocabulary:Endpoint, ?actor_name_en:Literal
-      ?actor <http://dbpedia.org/ontology/spouse> ?spouseURI .
-      ?actor <http://dbpedia.org/ontology/birthDate> ?birthDate .
-    }
-  }
-
-  UNION
-
-  # Scenario 3: ?movie=film, ?movieDate=Literal, ?movieTitle=Literal, ?imdbactor=Person, ?actor_name_en=Literal, ?actor_name=Literal, ?spouseName=Literal, ?actor=film_collection, ?spouseURI=dataset_vocabulary:Endpoint
-  {
-    SERVICE <http://localhost:8896/sparql/> {
-      ?actor <http://www.w3.org/2000/01/rdf-schema#label> ?actor_name_en . # ?actor:film_collection, ?actor_name_en:Literal
-      ?imdbactor <http://data.linkedmdb.org/resource/movie/actor_name> ?actor_name . # ?imdbactor:Person, ?actor_name:Literal
-      ?movie <http://purl.org/dc/terms/date> ?movieDate . # ?movie:film, ?movieDate:Literal
-      ?movie <http://purl.org/dc/terms/title> ?movieTitle . # ?movie:film, ?movieTitle:Literal
-      ?movie <http://data.linkedmdb.org/resource/movie/actor> ?imdbactor . # ?movie:film, ?imdbactor:Person
-      ?actor <http://dbpedia.org/ontology/spouse> ?spouseURI .
-      ?actor <http://dbpedia.org/ontology/birthDate> ?birthDate .
-    }
-    SERVICE <http://localhost:8899/sparql/> {
-      ?spouseURI <http://www.w3.org/2000/01/rdf-schema#label> ?spouseName . # ?spouseURI:dataset_vocabulary:Endpoint, ?spouseName:Literal
-    }
-  }
-
-  UNION
-
-  # Scenario 4: ?movie=film, ?movieDate=Literal, ?movieTitle=Literal, ?imdbactor=Person, ?actor_name_en=Literal, ?actor_name=Literal, ?spouseName=Literal, ?actor=film_collection, ?spouseURI=film_collection
-  {
-    SERVICE <http://localhost:8896/sparql/> {
-      ?actor <http://www.w3.org/2000/01/rdf-schema#label> ?actor_name_en . # ?actor:film_collection, ?actor_name_en:Literal
-      ?spouseURI <http://www.w3.org/2000/01/rdf-schema#label> ?spouseName . # ?spouseURI:film_collection, ?spouseName:Literal
-      ?imdbactor <http://data.linkedmdb.org/resource/movie/actor_name> ?actor_name . # ?imdbactor:Person, ?actor_name:Literal
-      ?movie <http://purl.org/dc/terms/date> ?movieDate . # ?movie:film, ?movieDate:Literal
-      ?movie <http://purl.org/dc/terms/title> ?movieTitle . # ?movie:film, ?movieTitle:Literal
-      ?movie <http://data.linkedmdb.org/resource/movie/actor> ?imdbactor . # ?movie:film, ?imdbactor:Person
-      ?actor <http://dbpedia.org/ontology/spouse> ?spouseURI .
-      ?actor <http://dbpedia.org/ontology/birthDate> ?birthDate .
-    }
+  SERVICE <http://localhost:8896/sparql/> {
+    ?movie <http://purl.org/dc/terms/title> ?movieTitle . # ?movie:film, ?movieTitle:Literal
+    ?imdbactor <http://data.linkedmdb.org/resource/movie/actor_name> ?actor_name . # ?imdbactor:Person, ?actor_name:Literal
+    ?movie <http://purl.org/dc/terms/date> ?movieDate . # ?movie:film, ?movieDate:Literal
+    ?movie <http://data.linkedmdb.org/resource/movie/actor> ?imdbactor . # ?movie:film, ?imdbactor:Person
   }
 }
 LIMIT 1000

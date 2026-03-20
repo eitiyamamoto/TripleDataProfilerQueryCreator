@@ -73,14 +73,17 @@
     "reduced": false
   },
   "predicate_metadata": {
-    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>": [
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation>": [
       {
         "endpoint": "http://localhost:8892/sparql/",
         "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 1531,
+        "triple_count": 993,
+        "triple_count_source": "class_relation",
         "authorities": {
-          "subject": [],
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
           "object": []
         }
       },
@@ -88,9 +91,12 @@
         "endpoint": "http://localhost:8892/sparql/",
         "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 1531,
+        "triple_count": 993,
+        "triple_count_source": "class_relation",
         "authorities": {
-          "subject": [],
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
           "object": []
         }
       }
@@ -100,7 +106,8 @@
         "endpoint": "http://localhost:8890/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 29147,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://bio2rdf.org"
@@ -114,7 +121,8 @@
         "endpoint": "http://localhost:8895/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 73196,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://bio2rdf.org"
@@ -122,28 +130,6 @@
           "object": [
             "http://bio2rdf.org"
           ]
-        }
-      }
-    ],
-    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation>": [
-      {
-        "endpoint": "http://localhost:8892/sparql/",
-        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 993,
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      },
-      {
-        "endpoint": "http://localhost:8892/sparql/",
-        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 993,
-        "authorities": {
-          "subject": [],
-          "object": []
         }
       }
     ],
@@ -153,8 +139,11 @@
         "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
         "triple_count": 6444,
+        "triple_count_source": "class_relation",
         "authorities": {
-          "subject": [],
+          "subject": [
+            "http://bio2rdf.org"
+          ],
           "object": []
         }
       },
@@ -163,8 +152,11 @@
         "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
         "triple_count": 12063,
+        "triple_count_source": "class_relation",
         "authorities": {
-          "subject": [],
+          "subject": [
+            "http://bio2rdf.org"
+          ],
           "object": []
         }
       }
@@ -174,7 +166,8 @@
         "endpoint": "http://localhost:8892/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 2240,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://www4.wiwiss.fu-berlin.de"
@@ -182,6 +175,34 @@
           "object": [
             "http://bio2rdf.org"
           ]
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1531,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1531,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": []
         }
       }
     ]

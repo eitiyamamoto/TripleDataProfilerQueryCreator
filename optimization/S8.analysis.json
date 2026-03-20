@@ -78,8 +78,11 @@
         "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
         "triple_count": 1159,
+        "triple_count_source": "class_relation",
         "authorities": {
-          "subject": [],
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
           "object": []
         }
       },
@@ -88,8 +91,11 @@
         "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
         "triple_count": 1159,
+        "triple_count_source": "class_relation",
         "authorities": {
-          "subject": [],
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
           "object": []
         }
       }

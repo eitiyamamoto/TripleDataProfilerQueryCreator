@@ -73,58 +73,73 @@
     "reduced": false
   },
   "predicate_metadata": {
-    "<http://data.linkedmdb.org/resource/movie/actor>": [
-      {
-        "endpoint": "http://localhost:8896/sparql/",
-        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
-        "object_class": "http://xmlns.com/foaf/0.1/Person",
-        "triple_count": 583947,
-        "authorities": {
-          "subject": [
-            "http://data.linkedmdb.org"
-          ],
-          "object": [
-            "http://data.linkedmdb.org"
-          ]
-        }
-      },
-      {
-        "endpoint": "http://localhost:8896/sparql/",
-        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
-        "object_class": "http://xmlns.com/foaf/0.1/Person",
-        "triple_count": 583947,
-        "authorities": {
-          "subject": [
-            "http://data.linkedmdb.org"
-          ],
-          "object": [
-            "http://data.linkedmdb.org"
-          ]
-        }
-      },
-      {
-        "endpoint": "http://localhost:8896/sparql/",
-        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
-        "object_class": "http://xmlns.com/foaf/0.1/Person",
-        "triple_count": 583947,
-        "authorities": {
-          "subject": [
-            "http://data.linkedmdb.org"
-          ],
-          "object": [
-            "http://data.linkedmdb.org"
-          ]
-        }
-      }
-    ],
     "<http://purl.org/dc/terms/title>": [
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://swrc.ontoware.org/ontology#InProceedings",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 219,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org",
+            "http://sdow2008.semanticweb.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://xmlns.com/foaf/0.1/Image",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org",
+            "http://sdow2008.semanticweb.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://data.semanticweb.org/ns/swc/ontology#TalkEvent",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 3,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org",
+            "http://sdow2008.semanticweb.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://rdfs.org/sioc/ns#Site",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org",
+            "http://sdow2008.semanticweb.org"
+          ],
+          "object": []
+        }
+      },
       {
         "endpoint": "http://localhost:8896/sparql/",
         "subject_class": "http://data.linkedmdb.org/resource/movie/film",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
         "triple_count": 85620,
+        "triple_count_source": "class_relation",
         "authorities": {
-          "subject": [],
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
           "object": []
         }
       }
@@ -134,7 +149,8 @@
         "endpoint": "http://localhost:8897/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 7432,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://data.nytimes.com"
@@ -147,10 +163,67 @@
     ],
     "<http://www.w3.org/2002/07/owl#sameAs>": [
       {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": 1630,
+        "triple_count_source": "partition",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": [
+            "hhttp://www.aifb.kit.edu",
+            "http://apassant.net",
+            "http://captsolo.net",
+            "http://consuminglinkeddata.org",
+            "http://dblp.l3s.de",
+            "http://dbpedia.org",
+            "http://foaf.qdos.com",
+            "http://foafbuilder.qdos.com",
+            "http://g1o.net",
+            "http://harth.org",
+            "http://homepages.cwi.nl",
+            "http://id.ecs.soton.ac.uk",
+            "http://identifiers.kmi.open.ac.uk",
+            "http://iws.seu.edu.cn",
+            "http://kmi.open.ac.uk",
+            "http://moustaki.org",
+            "http://olafhartig.de",
+            "http://ontoworld.org",
+            "http://revyu.com",
+            "http://richard.cyganiak.de",
+            "http://semanticweb.org",
+            "http://simia.net",
+            "http://sw-app.org",
+            "http://users.ox.ac.uk",
+            "http://www-sop.inria.fr",
+            "http://www.aifb.kit.edu",
+            "http://www.anjeve.de",
+            "http://www.blogweb.co.kr",
+            "http://www.cs.man.ac.uk",
+            "http://www.cs.utexas.edu",
+            "http://www.eswc2006.org",
+            "http://www.ibiblio.org",
+            "http://www.informatik.uni-leipzig.de",
+            "http://www.isi.edu",
+            "http://www.ivan-herman.net",
+            "http://www.johnbreslin.com",
+            "http://www.polleres.net",
+            "http://www.umbrich.net",
+            "http://www.uni-koblenz.de",
+            "http://www.w3.org",
+            "http://www.wikier.org",
+            "http://www4.wiwiss.fu-berlin.de"
+          ]
+        }
+      },
+      {
         "endpoint": "http://localhost:8897/sparql/",
         "subject_class": "http://www.w3.org/2004/02/skos/core#Concept",
         "object_class": "http://www.geonames.org/ontology#Feature",
         "triple_count": 1787,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
             "http://data.nytimes.com",
@@ -170,7 +243,8 @@
         "endpoint": "http://localhost:8896/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 63162,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://data.linkedmdb.org"
@@ -184,10 +258,27 @@
         }
       },
       {
+        "endpoint": "http://localhost:8891/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": 61455,
+        "triple_count_source": "partition",
+        "authorities": {
+          "subject": [
+            "http://dbpedia.org"
+          ],
+          "object": [
+            "http://data.nytimes.com",
+            "http://linkedgeodata.org"
+          ]
+        }
+      },
+      {
         "endpoint": "http://localhost:8894/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 1697,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://dbtune.org"
@@ -201,7 +292,8 @@
         "endpoint": "http://localhost:8892/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 9521,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://www4.wiwiss.fu-berlin.de"
@@ -220,7 +312,8 @@
         "endpoint": "http://localhost:8893/sparql/",
         "subject_class": null,
         "object_class": null,
-        "triple_count": null,
+        "triple_count": 117915,
+        "triple_count_source": "partition",
         "authorities": {
           "subject": [
             "http://sws.geonames.org"
@@ -235,6 +328,7 @@
         "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
         "object_class": "http://bio2rdf.org/ns/kegg#Reaction",
         "triple_count": 7827,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
             "http://bio2rdf.org"
@@ -249,6 +343,7 @@
         "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
         "object_class": "http://bio2rdf.org/ns/kegg#Drug",
         "triple_count": 7426,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
             "http://bio2rdf.org"
@@ -263,6 +358,7 @@
         "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
         "object_class": "http://bio2rdf.org/ns/kegg#Compound",
         "triple_count": 13863,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
             "http://bio2rdf.org"
@@ -272,17 +368,66 @@
           ]
         }
       }
+    ],
+    "<http://data.linkedmdb.org/resource/movie/actor>": [
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 583947,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://data.linkedmdb.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 583947,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://data.linkedmdb.org"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8896/sparql/",
+        "subject_class": "http://data.linkedmdb.org/resource/movie/film",
+        "object_class": "http://xmlns.com/foaf/0.1/Person",
+        "triple_count": 583947,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.linkedmdb.org"
+          ],
+          "object": [
+            "http://data.linkedmdb.org"
+          ]
+        }
+      }
     ]
   },
   "endpoints_found": [
+    "http://localhost:8891/sparql/",
     "http://localhost:8892/sparql/",
     "http://localhost:8893/sparql/",
     "http://localhost:8894/sparql/",
     "http://localhost:8895/sparql/",
     "http://localhost:8896/sparql/",
-    "http://localhost:8897/sparql/"
+    "http://localhost:8897/sparql/",
+    "http://localhost:8898/sparql/"
   ],
-  "num_endpoints": 6,
+  "num_endpoints": 8,
   "query_id": "S4",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/S4",
   "metadata_coverage": {

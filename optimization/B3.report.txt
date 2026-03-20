@@ -6,47 +6,89 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 7
 Unique Predicates: 7
-Endpoints Used: 0
+Endpoints Used: 2
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
+1. bcr_drug_barcode
+   Cardinality: 1
+   Endpoints: 1
+   Possible Class Pairs: 24
+2. bcr_patient_barcode
+   Cardinality: 10
+   Endpoints: 2
+   Possible Class Pairs: 71
+3. result
+   Cardinality: 90
+   Endpoints: 2
+   Possible Class Pairs: 36
+4. drug_name
+   Cardinality: 591
+   Endpoints: 1
+   Possible Class Pairs: 1
+5. age_at_initial_pathologic_diagnosis
+   Cardinality: 765
+   Endpoints: 1
+   Possible Class Pairs: 1
+6. vital_status
+   Cardinality: 1.7K
+   Endpoints: 1
+   Possible Class Pairs: 1
+7. beta_value
+   Cardinality: 83.0M
+   Endpoints: 1
+   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8887/sparql/
+  Predicates: 3
+  Total Triples: 166.0M
+  Estimated Retrieved Triples: 83.0M
+Endpoint: http://localhost:8889/sparql/
+  Predicates: 194
+  Total Triples: 39.8M
+  Estimated Retrieved Triples: 3
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
-Method: no-metadata
-Estimated Rows: unknown
-Confidence: low
+Method: join-chain-analysis
+Estimated Rows: 1
+Confidence: medium
+Reasoning: Estimated from 4 join chains
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Query structure is already well-optimized
+• Start query execution with 'bcr_drug_barcode' (1 triples)
+• Use subject/object class constraints to reduce search space for 2 predicates that span multiple endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 0/7
-Unknown Endpoint Triples: 7
+Status: complete
+Metadata Coverage: 7/7
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
 --------------------------------------------------------------------------------
 # Smart Federated Query with Class Constraints
-# Variables are constrained by inferred class types and grouped by endpoint
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
 
-SELECT ?age ?drug ?methylationValue ?patient ?results ?s
+SELECT ?patient ?methylationValue
 WHERE {
 
-  # Unknown endpoint (no metadata)
-    ?patient <http://tcga.deri.ie/schema/vital_status> "Dead" .
-    ?patient <http://tcga.deri.ie/schema/bcr_drug_barcode> ?drug .
-    ?drug <http://tcga.deri.ie/schema/drug_name> "Tarceva" .
-    ?patient <http://tcga.deri.ie/schema/result> ?results .
+  SERVICE <http://localhost:8887/sparql/> {
+    ?results <http://tcga.deri.ie/schema/beta_value> ?methylationValue . # ?results:dna_methylation_result, ?methylationValue:Literal
+  }
+
+  SERVICE <http://localhost:8889/sparql/> {
+    ?patient <http://tcga.deri.ie/schema/bcr_drug_barcode> ?drug . # ?patient:clinical_omf, ?drug:radiation
+    ?s <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient . # ?s:clinical_omf, ?patient:clinical_omf
+    ?patient <http://tcga.deri.ie/schema/result> ?results . # ?patient:clinical_omf, ?results:copy_number_result
+    ?drug <http://tcga.deri.ie/schema/drug_name> "Tarceva" . # ?drug:drug
     ?patient <http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis> ?age .
-    ?s <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .
-    ?results <http://tcga.deri.ie/schema/beta_value> ?methylationValue .
+    ?patient <http://tcga.deri.ie/schema/vital_status> "Dead" .
+  }
 }
 LIMIT 1000

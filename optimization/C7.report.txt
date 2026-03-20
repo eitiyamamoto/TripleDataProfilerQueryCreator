@@ -6,61 +6,92 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 9
 Unique Predicates: 9
-Endpoints Used: 4
+Endpoints Used: 6
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
-1. lat
-   Cardinality: 1.8K
-   Endpoints: 2
-   Possible Class Pairs: 2
+1. relatedToEvent
+   Cardinality: 1
+   Endpoints: 1
+   Possible Class Pairs: 11
 2. long
-   Cardinality: 1.8K
-   Endpoints: 2
-   Possible Class Pairs: 2
-3. based_near
-   Cardinality: unknown
-   Endpoints: 2
-   Possible Class Pairs: 1
+   Cardinality: 1
+   Endpoints: 4
+   Possible Class Pairs: 107
+3. heldBy
+   Cardinality: 1
+   Endpoints: 1
+   Possible Class Pairs: 53
+4. lat
+   Cardinality: 1
+   Endpoints: 4
+   Possible Class Pairs: 108
+5. isRoleAt
+   Cardinality: 1
+   Endpoints: 1
+   Possible Class Pairs: 68
+6. based_near
+   Cardinality: 2
+   Endpoints: 3
+   Possible Class Pairs: 4
+7. capital
+   Cardinality: 3
+   Endpoints: 1
+   Possible Class Pairs: 19
+8. isPartOf
+   Cardinality: 7
+   Endpoints: 1
+   Possible Class Pairs: 3
+9. author
+   Cardinality: 27
+   Endpoints: 1
+   Possible Class Pairs: 5
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8891/sparql/
+  Predicates: 284
+  Total Triples: 13.0M
+  Estimated Retrieved Triples: 1
 Endpoint: http://localhost:8893/sparql/
   Predicates: 2
   Total Triples: 15.0M
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8894/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 3.2K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8896/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 16.6K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8897/sparql/
   Predicates: 4
   Total Triples: 7.1K
-  Estimated Retrieved Triples: 1.8K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8898/sparql/
+  Predicates: 147
+  Total Triples: 10.0K
+  Estimated Retrieved Triples: 1
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
 Method: join-chain-analysis
-Estimated Rows: 1.8K
+Estimated Rows: 1
 Confidence: medium
 Reasoning: Estimated from 5 join chains
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Start query execution with 'lat' (1.8K triples)
+• Start query execution with 'relatedToEvent' (1 triples)
 • Use subject/object class constraints to reduce search space for 3 predicates that span multiple endpoints
-• Use SERVICE clauses to parallelize execution across 4 endpoints
+• Use SERVICE clauses to parallelize execution across 6 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 3/9
-Unknown Endpoint Triples: 5
+Status: complete
+Metadata Coverage: 9/9
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
@@ -69,24 +100,22 @@ GENERATED FEDERATED QUERY
 # Note: Multiple class interpretations exist but all route to same endpoints
 # A single query retrieves all data regardless of class ambiguity
 
-SELECT DISTINCT ?author ?capital ?latitude ?longitude ?paper ?place ?proceedings ?role
+SELECT DISTINCT ?author ?role ?paper ?place ?capital ?latitude ?longitude ?proceedings
 WHERE {
 
-  SERVICE <http://localhost:8896/sparql/> {
-    ?author <http://xmlns.com/foaf/0.1/based_near> ?place .
-    ?place <http://dbpedia.org/ontology/capital> ?capital .
+  SERVICE <http://localhost:8891/sparql/> {
+    ?place <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?latitude . # ?place:BaseballPlayer, ?latitude:Literal
+    ?place <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?longitude . # ?place:Senator, ?longitude:Literal
+    ?place <http://dbpedia.org/ontology/capital> ?capital . # ?place:Country, ?capital:Country
   }
 
-  SERVICE <http://localhost:8897/sparql/> {
-    ?place <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?latitude . # ?place:Feature, ?latitude:Literal
-    ?place <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?longitude . # ?place:Feature, ?longitude:Literal
+  SERVICE <http://localhost:8898/sparql/> {
+    ?proceedings <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/conference/eswc/2010> . # ?proceedings:Proceedings
+    ?role <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/conference/eswc/2010> . # ?role:Chair
+    ?role <http://data.semanticweb.org/ns/swc/ontology#heldBy> ?author . # ?role:IW3C2Liaison, ?author:Person
+    ?author <http://xmlns.com/foaf/0.1/based_near> ?place . # ?author:Place, ?place:Thing
+    ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> ?proceedings . # ?paper:InProceedings, ?proceedings:Proceedings
+    ?paper <http://swrc.ontoware.org/ontology#author> ?author . # ?paper:SystemDescription, ?author:Person
   }
-
-  # Unknown endpoint (no metadata)
-    ?proceedings <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/conference/eswc/2010> .
-    ?role <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/conference/eswc/2010> .
-    ?role <http://data.semanticweb.org/ns/swc/ontology#heldBy> ?author .
-    ?paper <http://swrc.ontoware.org/ontology#author> ?author .
-    ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> ?proceedings .
 }
 LIMIT 1000

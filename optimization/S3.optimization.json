@@ -1,32 +1,33 @@
 {
   "query_id": "S3",
   "analysis_file": "optimization/S3.analysis.json",
-  "optimization_status": "partial",
+  "optimization_status": "complete",
   "metadata_coverage": {
     "total_predicates": 5,
-    "covered_predicates": 3,
-    "missing_predicates": [
-      "<http://dbpedia.org/ontology/nationality>",
-      "<http://dbpedia.org/ontology/party>"
-    ],
-    "coverage_ratio": 0.6,
-    "is_partial": true
+    "covered_predicates": 5,
+    "missing_predicates": [],
+    "coverage_ratio": 1.0,
+    "is_partial": false
   },
   "unknown_endpoint_triples": [],
   "optimization_analysis": {
     "optimization_strategy": "federated-with-service-clauses",
     "original_query": "SELECT ...",
     "endpoints_used": [
+      "http://localhost:8887/sparql/",
+      "http://localhost:8889/sparql/",
       "http://localhost:8890/sparql/",
+      "http://localhost:8891/sparql/",
       "http://localhost:8892/sparql/",
       "http://localhost:8893/sparql/",
       "http://localhost:8894/sparql/",
       "http://localhost:8895/sparql/",
       "http://localhost:8896/sparql/",
       "http://localhost:8897/sparql/",
+      "http://localhost:8898/sparql/",
       "http://localhost:8899/sparql/"
     ],
-    "num_endpoints": 8,
+    "num_endpoints": 12,
     "optimization_details": {
       "num_triples": 5,
       "num_unique_predicates": 5,
@@ -35,20 +36,20 @@
       "num_variables": 0,
       "selective_predicates": [
         {
+          "predicate": "<http://dbpedia.org/ontology/nationality>",
+          "cardinality": 1.0,
+          "num_endpoints": 1,
+          "num_possible_classes": 74
+        },
+        {
           "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-          "cardinality": 1787.0,
-          "num_endpoints": 6,
+          "cardinality": 1630.0,
+          "num_endpoints": 8,
           "num_possible_classes": 5
         },
         {
-          "predicate": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
-          "cardinality": Infinity,
-          "num_endpoints": 8,
-          "num_possible_classes": 1
-        },
-        {
           "predicate": "<http://data.nytimes.com/elements/topicPage>",
-          "cardinality": Infinity,
+          "cardinality": 7432.0,
           "num_endpoints": 1,
           "num_possible_classes": 1
         }
@@ -59,15 +60,15 @@
       ]
     },
     "cardinality_estimate": {
-      "estimated_rows": 1787,
-      "estimated_rows_readable": "1.8K",
+      "estimated_rows": 1,
+      "estimated_rows_readable": "1",
       "confidence": "medium",
       "method": "join-chain-analysis",
       "reasoning": "Estimated from 2 join chains"
     },
     "endpoint_breakdown": [
       {
-        "endpoint": "http://localhost:8890/sparql/",
+        "endpoint": "http://localhost:8887/sparql/",
         "num_predicates": 1,
         "total_triples": 0,
         "total_triples_readable": "0",
@@ -78,13 +79,230 @@
         "estimated_retrieved_triples_readable": "unknown"
       },
       {
+        "endpoint": "http://localhost:8889/sparql/",
+        "num_predicates": 1,
+        "total_triples": 5789857,
+        "total_triples_readable": "5.8M",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8890/sparql/",
+        "num_predicates": 1,
+        "total_triples": 50798,
+        "total_triples_readable": "50.8K",
+        "predicates": [
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8891/sparql/",
+        "num_predicates": 185,
+        "total_triples": 407187,
+        "total_triples_readable": "407.2K",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://dbpedia.org/ontology/party>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": 1,
+        "estimated_retrieved_triples_readable": "1"
+      },
+      {
         "endpoint": "http://localhost:8892/sparql/",
         "num_predicates": 2,
-        "total_triples": 0,
-        "total_triples_readable": "0",
+        "total_triples": 34307,
+        "total_triples_readable": "34.3K",
         "predicates": [
-          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
-          "<http://www.w3.org/2002/07/owl#sameAs>"
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
         ],
         "estimated_retrieved_triples": null,
         "estimated_retrieved_triples_readable": "unknown"
@@ -92,11 +310,11 @@
       {
         "endpoint": "http://localhost:8893/sparql/",
         "num_predicates": 2,
-        "total_triples": 0,
-        "total_triples_readable": "0",
+        "total_triples": 7597950,
+        "total_triples_readable": "7.6M",
         "predicates": [
-          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
-          "<http://www.w3.org/2002/07/owl#sameAs>"
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
         ],
         "estimated_retrieved_triples": null,
         "estimated_retrieved_triples_readable": "unknown"
@@ -104,11 +322,11 @@
       {
         "endpoint": "http://localhost:8894/sparql/",
         "num_predicates": 2,
-        "total_triples": 0,
-        "total_triples_readable": "0",
+        "total_triples": 292309,
+        "total_triples_readable": "292.3K",
         "predicates": [
-          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
-          "<http://www.w3.org/2002/07/owl#sameAs>"
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
         ],
         "estimated_retrieved_triples": null,
         "estimated_retrieved_triples_readable": "unknown"
@@ -116,13 +334,13 @@
       {
         "endpoint": "http://localhost:8895/sparql/",
         "num_predicates": 4,
-        "total_triples": 29116,
-        "total_triples_readable": "29.1K",
+        "total_triples": 63697,
+        "total_triples_readable": "63.7K",
         "predicates": [
-          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
           "<http://www.w3.org/2002/07/owl#sameAs>",
           "<http://www.w3.org/2002/07/owl#sameAs>",
-          "<http://www.w3.org/2002/07/owl#sameAs>"
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
         ],
         "estimated_retrieved_triples": null,
         "estimated_retrieved_triples_readable": "unknown"
@@ -130,11 +348,11 @@
       {
         "endpoint": "http://localhost:8896/sparql/",
         "num_predicates": 2,
-        "total_triples": 0,
-        "total_triples_readable": "0",
+        "total_triples": 803952,
+        "total_triples_readable": "804.0K",
         "predicates": [
-          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
-          "<http://www.w3.org/2002/07/owl#sameAs>"
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
         ],
         "estimated_retrieved_triples": null,
         "estimated_retrieved_triples_readable": "unknown"
@@ -142,21 +360,33 @@
       {
         "endpoint": "http://localhost:8897/sparql/",
         "num_predicates": 3,
-        "total_triples": 1787,
-        "total_triples_readable": "1.8K",
+        "total_triples": 21263,
+        "total_triples_readable": "21.3K",
         "predicates": [
-          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
           "<http://www.w3.org/2002/07/owl#sameAs>",
-          "<http://data.nytimes.com/elements/topicPage>"
+          "<http://data.nytimes.com/elements/topicPage>",
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
         ],
         "estimated_retrieved_triples": 1787,
         "estimated_retrieved_triples_readable": "1.8K"
       },
       {
+        "endpoint": "http://localhost:8898/sparql/",
+        "num_predicates": 2,
+        "total_triples": 11339,
+        "total_triples_readable": "11.3K",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
         "endpoint": "http://localhost:8899/sparql/",
         "num_predicates": 1,
-        "total_triples": 0,
-        "total_triples_readable": "0",
+        "total_triples": 1421612,
+        "total_triples_readable": "1.4M",
         "predicates": [
           "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
         ],
@@ -164,23 +394,74 @@
         "estimated_retrieved_triples_readable": "unknown"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8899/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 2\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8890/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 2\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 2\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 2\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 3\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n#   <http://data.nytimes.com/elements/topicPage> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 4\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8887/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8898/sparql/\n# Predicates: 2\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [1.6K triples]\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [9.7K triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n#   <http://data.nytimes.com/elements/topicPage> (None -> None) [7.4K triples]\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [12.0K triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 2\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [9.5K triples]\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [24.8K triples]\n\n# Endpoint: http://localhost:8890/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [50.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 4\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [34.6K triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 2\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [1.7K triples]\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [290.6K triples]\n\n# Endpoint: http://localhost:8891/sparql/\n# Predicates: 185\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [61.5K triples]\n#   <http://dbpedia.org/ontology/party> (None -> None) [30.6K triples]\n#   <http://dbpedia.org/ontology/nationality> (http://dbpedia.org/ontology/Pope -> http://dbpedia.org/ontology/Country) [1 triples]\n#   <http://dbpedia.org/ontology/nationality> (http://dbpedia.org/ontology/BasketballPlayer -> http://dbpedia.org/ontology/Country) [2.6K triples]\n#   <http://dbpedia.org/ontology/nationality> (http://dbpedia.org/ontology/BasketballPlayer -> http://www.w3.org/2002/07/owl#Thing) [2.6K triples]\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 2\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [63.2K triples]\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [740.8K triples]\n\n# Endpoint: http://localhost:8899/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [1.4M triples]\n\n# Endpoint: http://localhost:8889/sparql/\n# Predicates: 1\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [5.8M triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 2\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [117.9K triples]\n#   <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> (None -> None) [7.5M triples]\n\n"
   },
   "constraint_map": {
+    "?president": [
+      "http://bio2rdf.org/ns/kegg#Compound",
+      "http://bio2rdf.org/ns/kegg#Drug",
+      "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://dbpedia.org/ontology/Actor",
+      "http://dbpedia.org/ontology/Ambassador",
+      "http://dbpedia.org/ontology/Architect",
+      "http://dbpedia.org/ontology/Artist",
+      "http://dbpedia.org/ontology/Astronaut",
+      "http://dbpedia.org/ontology/Athlete",
+      "http://dbpedia.org/ontology/BasketballPlayer",
+      "http://dbpedia.org/ontology/Boxer",
+      "http://dbpedia.org/ontology/Chancellor",
+      "http://dbpedia.org/ontology/ChristianBishop",
+      "http://dbpedia.org/ontology/Cleric",
+      "http://dbpedia.org/ontology/Comedian",
+      "http://dbpedia.org/ontology/ComicsCreator",
+      "http://dbpedia.org/ontology/Congressman",
+      "http://dbpedia.org/ontology/FictionalCharacter",
+      "http://dbpedia.org/ontology/FormulaOneRacer",
+      "http://dbpedia.org/ontology/Governor",
+      "http://dbpedia.org/ontology/IceHockeyPlayer",
+      "http://dbpedia.org/ontology/Judge",
+      "http://dbpedia.org/ontology/Mayor",
+      "http://dbpedia.org/ontology/MemberOfParliament",
+      "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete",
+      "http://dbpedia.org/ontology/OfficeHolder",
+      "http://dbpedia.org/ontology/Politician",
+      "http://dbpedia.org/ontology/Pope",
+      "http://dbpedia.org/ontology/President",
+      "http://dbpedia.org/ontology/PrimeMinister",
+      "http://dbpedia.org/ontology/Scientist",
+      "http://dbpedia.org/ontology/Senator",
+      "http://www.geonames.org/ontology#Feature"
+    ],
     "?x": [
       "http://bio2rdf.org/ns/kegg#Compound",
       "http://bio2rdf.org/ns/kegg#Drug",
       "http://bio2rdf.org/ns/kegg#Reaction",
       "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "?president": [
-      "http://bio2rdf.org/ns/kegg#Compound",
-      "http://bio2rdf.org/ns/kegg#Drug",
-      "http://bio2rdf.org/ns/kegg#Reaction",
-      "http://www.geonames.org/ontology#Feature"
     ]
   },
   "inferred_variable_classes": {
+    "?president": [
+      {
+        "class": "http://dbpedia.org/ontology/IceHockeyPlayer",
+        "confidence": 0.06801449193889164
+      },
+      {
+        "class": "http://dbpedia.org/ontology/Chancellor",
+        "confidence": 0.06292088184496544
+      },
+      {
+        "class": "http://dbpedia.org/ontology/Pope",
+        "confidence": 0.06062737927427759
+      },
+      {
+        "class": "http://dbpedia.org/ontology/ComicsCreator",
+        "confidence": 0.0600666883401426
+      },
+      {
+        "class": "http://dbpedia.org/ontology/BasketballPlayer",
+        "confidence": 0.05548218448038469
+      }
+    ],
     "?x": [
       {
         "class": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -198,43 +479,51 @@
         "class": "http://bio2rdf.org/ns/kegg#Compound",
         "confidence": 0.2269435868451133
       }
-    ],
-    "?president": [
-      {
-        "class": "http://www.geonames.org/ontology#Feature",
-        "confidence": 0.2888385676023399
-      },
-      {
-        "class": "http://bio2rdf.org/ns/kegg#Drug",
-        "confidence": 0.2428200971928318
-      },
-      {
-        "class": "http://bio2rdf.org/ns/kegg#Reaction",
-        "confidence": 0.241397748359715
-      },
-      {
-        "class": "http://bio2rdf.org/ns/kegg#Compound",
-        "confidence": 0.2269435868451133
-      }
     ]
   },
-  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Note: Multiple class interpretations exist but all route to same endpoints\n# A single query retrieves all data regardless of class ambiguity\n\nSELECT ?page ?party ?president ?x\nWHERE {\n\n  SERVICE <http://localhost:8897/sparql/> {\n    ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . # ?x:Concept, ?president:Feature\n    ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> .\n    ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .\n    ?president <http://dbpedia.org/ontology/party> ?party .\n    ?x <http://data.nytimes.com/elements/topicPage> ?page .\n  }\n}\nLIMIT 1000\n",
+  "inferred_variable_authorities": {
+    "?president": [
+      "http://dbpedia.org"
+    ],
+    "?x": [
+      "http://data.nytimes.com"
+    ],
+    "?party": [
+      "http://dbpedia.org"
+    ],
+    "?page": [
+      "http://topics.nytimes.com"
+    ]
+  },
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Note: Multiple class interpretations exist but all route to same endpoints\n# A single query retrieves all data regardless of class ambiguity\n\nSELECT ?president ?party ?page\nWHERE {\n\n  SERVICE <http://localhost:8891/sparql/> {\n    ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> . # ?president:Pope\n    ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .\n    ?president <http://dbpedia.org/ontology/party> ?party .\n  }\n\n  SERVICE <http://localhost:8897/sparql/> {\n    ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . # ?x:Concept, ?president:Feature\n    ?x <http://data.nytimes.com/elements/topicPage> ?page .\n  }\n}\nLIMIT 1000\n",
   "predicate_selectivity": [
     {
+      "predicate": "<http://dbpedia.org/ontology/nationality>",
+      "cardinality": 1.0,
+      "num_endpoints": 1,
+      "num_possible_classes": 74
+    },
+    {
       "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-      "cardinality": 1787.0,
-      "num_endpoints": 6,
+      "cardinality": 1630.0,
+      "num_endpoints": 8,
       "num_possible_classes": 5
     },
     {
-      "predicate": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
-      "cardinality": Infinity,
-      "num_endpoints": 8,
+      "predicate": "<http://data.nytimes.com/elements/topicPage>",
+      "cardinality": 7432.0,
+      "num_endpoints": 1,
       "num_possible_classes": 1
     },
     {
-      "predicate": "<http://data.nytimes.com/elements/topicPage>",
-      "cardinality": Infinity,
+      "predicate": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "cardinality": 9709.0,
+      "num_endpoints": 12,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://dbpedia.org/ontology/party>",
+      "cardinality": 30571.0,
       "num_endpoints": 1,
       "num_possible_classes": 1
     }

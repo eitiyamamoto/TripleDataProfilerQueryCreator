@@ -6,111 +6,143 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 10
 Unique Predicates: 9
-Endpoints Used: 9
+Endpoints Used: 13
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
-1. stop
-   Cardinality: 57.4M
+1. bcr_patient_barcode
+   Cardinality: 10
+   Endpoints: 2
+   Possible Class Pairs: 71
+2. result
+   Cardinality: 90
+   Endpoints: 2
+   Possible Class Pairs: 36
+3. start
+   Cardinality: 9.6K
+   Endpoints: 2
+   Possible Class Pairs: 7
+4. stop
+   Cardinality: 9.6K
+   Endpoints: 2
+   Possible Class Pairs: 7
+5. chromosome
+   Cardinality: 9.6K
+   Endpoints: 3
+   Possible Class Pairs: 8
+6. type
+   Cardinality: 9.7K
+   Endpoints: 12
+   Possible Class Pairs: 1
+7. affymetrix_vocabulary:x-geneid
+   Cardinality: 844.0K
    Endpoints: 1
    Possible Class Pairs: 1
-2. start
-   Cardinality: 57.4M
+8. affymetrix_vocabulary:x-symbol
+   Cardinality: 848.7K
    Endpoints: 1
    Possible Class Pairs: 1
-3. chromosome
-   Cardinality: 57.4M
-   Endpoints: 1
-   Possible Class Pairs: 1
-4. type
-   Cardinality: unknown
-   Endpoints: 8
-   Possible Class Pairs: 1
-5. affymetrix_vocabulary:x-symbol
-   Cardinality: unknown
-   Endpoints: 1
-   Possible Class Pairs: 1
-6. affymetrix_vocabulary:x-geneid
-   Cardinality: unknown
+9. scaled_estimate
+   Cardinality: 5.3M
    Endpoints: 1
    Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8887/sparql/
+  Predicates: 4
+  Total Triples: 166.0M
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8888/sparql/
   Predicates: 3
   Total Triples: 172.3M
-  Estimated Retrieved Triples: 57.4M
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8889/sparql/
+  Predicates: 173
+  Total Triples: 68.2M
+  Estimated Retrieved Triples: 93
 Endpoint: http://localhost:8890/sparql/
+  Predicates: 1
+  Total Triples: 50.8K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8891/sparql/
   Predicates: 1
   Total Triples: 0
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8892/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 24.8K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8893/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 7.5M
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8894/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 290.6K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 34.6K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8896/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 740.8K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8897/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 12.0K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8898/sparql/
+  Predicates: 1
+  Total Triples: 9.7K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8899/sparql/
   Predicates: 3
-  Total Triples: 0
-  Estimated Retrieved Triples: unknown
+  Total Triples: 3.1M
+  Estimated Retrieved Triples: 844.0K
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
 Method: join-chain-analysis
-Estimated Rows: 57.4M
+Estimated Rows: 10
 Confidence: medium
 Reasoning: Estimated from 5 join chains
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Start query execution with 'stop' (57.4M triples)
-• Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
-• Use SERVICE clauses to parallelize execution across 9 endpoints
+• Start query execution with 'bcr_patient_barcode' (10 triples)
+• Use subject/object class constraints to reduce search space for 6 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 13 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 6/9
+Status: complete
+Metadata Coverage: 9/9
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
 --------------------------------------------------------------------------------
 # Smart Federated Query with Class Constraints
-# Variables are constrained by inferred class types and grouped by endpoint
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
 
-SELECT DISTINCT ?chromosome ?geneExpVal ?geneId ?lookupChromosome ?patient ?recordNo ?s ?start ?stop ?uri
+SELECT DISTINCT ?patient ?start ?stop ?geneExpVal
 WHERE {
 
-  SERVICE <http://localhost:8888/sparql/> {
-    ?geneId <http://tcga.deri.ie/schema/chromosome> ?lookupChromosome . # ?geneId:expression_exon_result, ?lookupChromosome:Literal
-    ?recordNo <http://tcga.deri.ie/schema/chromosome> ?chromosome . # ?recordNo:expression_exon_result, ?chromosome:Literal
-    ?recordNo <http://tcga.deri.ie/schema/start> ?start . # ?recordNo:expression_exon_result, ?start:Literal
-    ?recordNo <http://tcga.deri.ie/schema/stop> ?stop . # ?recordNo:expression_exon_result, ?stop:Literal
+  SERVICE <http://localhost:8887/sparql/> {
     ?geneId <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://tcga.deri.ie/schema/expression_gene_lookup> .
-    ?patient <http://tcga.deri.ie/schema/result> ?recordNo .
-    ?recordNo <http://tcga.deri.ie/schema/scaled_estimate> ?geneExpVal .
-    ?uri <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .
+  }
+
+  SERVICE <http://localhost:8889/sparql/> {
+    ?uri <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient . # ?uri:clinical_omf, ?patient:clinical_omf
+    ?patient <http://tcga.deri.ie/schema/result> ?recordNo . # ?patient:clinical_omf, ?recordNo:expression_gene_result
+    ?geneId <http://tcga.deri.ie/schema/chromosome> ?lookupChromosome . # ?geneId:copy_number_result, ?lookupChromosome:Literal
+    ?recordNo <http://tcga.deri.ie/schema/chromosome> ?chromosome . # ?recordNo:expression_gene_result, ?chromosome:Literal
+    ?recordNo <http://tcga.deri.ie/schema/start> ?start . # ?recordNo:expression_gene_result, ?start:Literal
+    ?recordNo <http://tcga.deri.ie/schema/stop> ?stop . # ?recordNo:expression_gene_result, ?stop:Literal
+    ?recordNo <http://tcga.deri.ie/schema/scaled_estimate> ?geneExpVal . # ?recordNo:expression_gene_result, ?geneExpVal:Literal
   }
 
   SERVICE <http://localhost:8899/sparql/> {

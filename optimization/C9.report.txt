@@ -6,7 +6,7 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 9
 Unique Predicates: 9
-Endpoints Used: 8
+Endpoints Used: 12
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
@@ -15,71 +15,87 @@ PREDICATE SELECTIVITY (Most Selective First)
    Endpoints: 1
    Possible Class Pairs: 2
 2. sameAs
-   Cardinality: 1.8K
-   Endpoints: 6
+   Cardinality: 1.6K
+   Endpoints: 8
    Possible Class Pairs: 5
 3. description
    Cardinality: 1.9K
    Endpoints: 1
    Possible Class Pairs: 2
-4. structure
+4. casRegistryNumber
+   Cardinality: 2.2K
+   Endpoints: 1
+   Possible Class Pairs: 1
+5. structure
    Cardinality: 4.8K
    Endpoints: 1
    Possible Class Pairs: 2
-5. interactionDrug2
+6. type
+   Cardinality: 9.7K
+   Endpoints: 12
+   Possible Class Pairs: 1
+7. interactionDrug2
    Cardinality: 10.1K
    Endpoints: 1
    Possible Class Pairs: 2
-6. interactionDrug1
+8. interactionDrug1
    Cardinality: 10.1K
    Endpoints: 1
    Possible Class Pairs: 2
-7. text
+9. text
    Cardinality: 10.1K
-   Endpoints: 1
-   Possible Class Pairs: 1
-8. type
-   Cardinality: unknown
-   Endpoints: 8
-   Possible Class Pairs: 1
-9. casRegistryNumber
-   Cardinality: unknown
    Endpoints: 1
    Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
-Endpoint: http://localhost:8890/sparql/
+Endpoint: http://localhost:8887/sparql/
   Predicates: 1
   Total Triples: 0
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8889/sparql/
+  Predicates: 1
+  Total Triples: 5.8M
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8890/sparql/
+  Predicates: 1
+  Total Triples: 50.8K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8891/sparql/
+  Predicates: 2
+  Total Triples: 61.5K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8892/sparql/
   Predicates: 14
-  Total Triples: 66.8K
+  Total Triples: 103.4K
   Estimated Retrieved Triples: 1.5K
 Endpoint: http://localhost:8893/sparql/
   Predicates: 2
-  Total Triples: 0
+  Total Triples: 7.6M
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8894/sparql/
   Predicates: 2
-  Total Triples: 0
+  Total Triples: 292.3K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 4
-  Total Triples: 29.1K
+  Total Triples: 63.7K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8896/sparql/
   Predicates: 2
-  Total Triples: 0
+  Total Triples: 804.0K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8897/sparql/
   Predicates: 2
-  Total Triples: 1.8K
+  Total Triples: 13.8K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8898/sparql/
+  Predicates: 2
+  Total Triples: 11.3K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8899/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 1.4M
   Estimated Retrieved Triples: unknown
 
 ESTIMATED RESULT CARDINALITY
@@ -93,7 +109,7 @@ OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
 • Start query execution with 'affectedOrganism' (1.5K triples)
 • Use subject/object class constraints to reduce search space for 2 predicates that span multiple endpoints
-• Use SERVICE clauses to parallelize execution across 8 endpoints
+• Use SERVICE clauses to parallelize execution across 12 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
@@ -111,16 +127,19 @@ GENERATED FEDERATED QUERY
 SELECT ?Drug ?IntEffect ?InteractionName ?casRegistryNumber ?description ?drugbankDrug ?drugbankDrug2 ?structure
 WHERE {
 
+  SERVICE <http://localhost:8887/sparql/> {
+    ?Drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Drug> .
+  }
+
   SERVICE <http://localhost:8892/sparql/> {
     ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> "Humans and other mammals" . # ?drugbankDrug:drugs
     ?drugbankDrug <http://www.w3.org/2002/07/owl#sameAs> ?Drug .
     ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?description . # ?drugbankDrug:drugs, ?description:Literal
+    ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?casRegistryNumber .
     ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/structure> ?structure . # ?drugbankDrug:drugs, ?structure:Literal
     ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?drugbankDrug . # ?InteractionName:drug_interactions, ?drugbankDrug:Offer
     ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?drugbankDrug2 . # ?InteractionName:drug_interactions, ?drugbankDrug2:drugs
     ?InteractionName <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect . # ?InteractionName:drug_interactions, ?IntEffect:Literal
-    ?Drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Drug> .
-    ?drugbankDrug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?casRegistryNumber .
   }
 }
 LIMIT 1000

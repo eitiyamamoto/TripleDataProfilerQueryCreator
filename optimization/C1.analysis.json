@@ -102,20 +102,48 @@
     "reduced": false
   },
   "predicate_metadata": {
-    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>": [
+    "<http://bio2rdf.org/ns/kegg#xSubstrate>": [
       {
-        "endpoint": "http://localhost:8892/sparql/",
-        "subject_class": null,
-        "object_class": null,
-        "triple_count": null,
-        "triple_count_source": "unknown",
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Enzyme",
+        "object_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "triple_count": 8384,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [
-            "http://www4.wiwiss.fu-berlin.de"
+            "http://bio2rdf.org"
           ],
           "object": [
             "http://bio2rdf.org"
           ]
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/molecularWeightAverage>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4727,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4727,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": []
         }
       }
     ],
@@ -136,27 +164,204 @@
         }
       }
     ],
-    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/molecularWeightAverage>": [
+    "<http://purl.org/dc/elements/1.1/title>": [
       {
-        "endpoint": "http://localhost:8892/sparql/",
-        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs",
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 4727,
+        "triple_count": 7,
         "triple_count_source": "class_relation",
         "authorities": {
-          "subject": [],
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
           "object": []
         }
       },
       {
-        "endpoint": "http://localhost:8892/sparql/",
-        "subject_class": "http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer",
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://data.semanticweb.org/ns/swc/ontology#Poster",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 4727,
+        "triple_count": 48,
         "triple_count_source": "class_relation",
         "authorities": {
-          "subject": [],
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
           "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://data.semanticweb.org/ns/swc/ontology#SystemDemonstration",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 17,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://data.semanticweb.org/ns/swc/ontology#Paper",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 50,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://data.semanticweb.org/ns/swc/ontology#TutorialEvent",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 15,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://swrc.ontoware.org/ontology#InProceedings",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 1468,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "subject_class": "http://data.semanticweb.org/ns/swc/ontology#SystemDescription",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 10,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://data.semanticweb.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8890/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/chebi#Compound",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 34055,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": "http://purl.org/ontology/mo/Track",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 45634,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbtune.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8894/sparql/",
+        "subject_class": "http://purl.org/ontology/mo/Record",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 5768,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://dbtune.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 7827,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 8117,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 14071,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": []
+        }
+      },
+      {
+        "endpoint": "http://localhost:8895/sparql/",
+        "subject_class": "http://bio2rdf.org/ns/kegg#Enzyme",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 4131,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://bio2rdf.org"
+          ],
+          "object": []
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugType>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": 10195,
+        "triple_count_source": "partition",
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ]
         }
       }
     ],
@@ -168,7 +373,9 @@
         "triple_count": 1861,
         "triple_count_source": "class_relation",
         "authorities": {
-          "subject": [],
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
           "object": []
         }
       },
@@ -179,120 +386,9 @@
         "triple_count": 1861,
         "triple_count_source": "class_relation",
         "authorities": {
-          "subject": [],
-          "object": []
-        }
-      }
-    ],
-    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugType>": [
-      {
-        "endpoint": "http://localhost:8892/sparql/",
-        "subject_class": null,
-        "object_class": null,
-        "triple_count": null,
-        "triple_count_source": "unknown",
-        "authorities": {
           "subject": [
             "http://www4.wiwiss.fu-berlin.de"
           ],
-          "object": [
-            "http://www4.wiwiss.fu-berlin.de"
-          ]
-        }
-      }
-    ],
-    "<http://bio2rdf.org/ns/kegg#xSubstrate>": [
-      {
-        "endpoint": "http://localhost:8895/sparql/",
-        "subject_class": "http://bio2rdf.org/ns/kegg#Enzyme",
-        "object_class": "http://bio2rdf.org/ns/kegg#Compound",
-        "triple_count": 8384,
-        "triple_count_source": "class_relation",
-        "authorities": {
-          "subject": [
-            "http://bio2rdf.org"
-          ],
-          "object": [
-            "http://bio2rdf.org"
-          ]
-        }
-      }
-    ],
-    "<http://purl.org/dc/elements/1.1/title>": [
-      {
-        "endpoint": "http://localhost:8890/sparql/",
-        "subject_class": "http://bio2rdf.org/ns/chebi#Compound",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 34055,
-        "triple_count_source": "class_relation",
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      },
-      {
-        "endpoint": "http://localhost:8894/sparql/",
-        "subject_class": "http://purl.org/ontology/mo/Track",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 45634,
-        "triple_count_source": "class_relation",
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      },
-      {
-        "endpoint": "http://localhost:8894/sparql/",
-        "subject_class": "http://purl.org/ontology/mo/Record",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 5768,
-        "triple_count_source": "class_relation",
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      },
-      {
-        "endpoint": "http://localhost:8895/sparql/",
-        "subject_class": "http://bio2rdf.org/ns/kegg#Reaction",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 7827,
-        "triple_count_source": "class_relation",
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      },
-      {
-        "endpoint": "http://localhost:8895/sparql/",
-        "subject_class": "http://bio2rdf.org/ns/kegg#Drug",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 8117,
-        "triple_count_source": "class_relation",
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      },
-      {
-        "endpoint": "http://localhost:8895/sparql/",
-        "subject_class": "http://bio2rdf.org/ns/kegg#Compound",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 14071,
-        "triple_count_source": "class_relation",
-        "authorities": {
-          "subject": [],
-          "object": []
-        }
-      },
-      {
-        "endpoint": "http://localhost:8895/sparql/",
-        "subject_class": "http://bio2rdf.org/ns/kegg#Enzyme",
-        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
-        "triple_count": 4131,
-        "triple_count_source": "class_relation",
-        "authorities": {
-          "subject": [],
           "object": []
         }
       }
@@ -305,8 +401,27 @@
         "triple_count": 7827,
         "triple_count_source": "class_relation",
         "authorities": {
-          "subject": [],
+          "subject": [
+            "http://bio2rdf.org"
+          ],
           "object": []
+        }
+      }
+    ],
+    "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId>": [
+      {
+        "endpoint": "http://localhost:8892/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": 1331,
+        "triple_count_source": "partition",
+        "authorities": {
+          "subject": [
+            "http://www4.wiwiss.fu-berlin.de"
+          ],
+          "object": [
+            "http://bio2rdf.org"
+          ]
         }
       }
     ]
@@ -315,9 +430,10 @@
     "http://localhost:8890/sparql/",
     "http://localhost:8892/sparql/",
     "http://localhost:8894/sparql/",
-    "http://localhost:8895/sparql/"
+    "http://localhost:8895/sparql/",
+    "http://localhost:8898/sparql/"
   ],
-  "num_endpoints": 4,
+  "num_endpoints": 5,
   "query_id": "C1",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/C1",
   "metadata_coverage": {

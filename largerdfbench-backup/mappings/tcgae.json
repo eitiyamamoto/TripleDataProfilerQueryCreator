@@ -1,0 +1,7 @@
+{
+  "mapping_file": "largerdfbench/predicates/tcgae.json",
+  "endpoint": "http://localhost:8888/sparql/",
+  "query_limit": 1000,
+  "total_predicates_queried": 0,
+  "results": []
+}

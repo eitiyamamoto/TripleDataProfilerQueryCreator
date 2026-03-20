@@ -1,0 +1,1722 @@
+{
+  "mapping_file": "/Users/yamamotobikutorueiichi/codes/federated_query/tripledataprofiler/largerdfbench/predicates/tcgam.json",
+  "endpoint": "http://localhost:8887/sparql",
+  "query_limit": 1000,
+  "total_predicates_queried": 106,
+  "results": [
+    {
+      "predicate": "http://purl.org/dc/terms/created",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://localhost:8890",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 1
+            }
+          ],
+          "total_results": 1
+        }
+      }
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/modified",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://localhost:8890",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 1
+            }
+          ],
+          "total_results": 1
+        }
+      }
+    },
+    {
+      "predicate": "http://tcga.deri.ie/schema/bcr_patient_barcode",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "Remote end closed connection without response"
+        }
+      }
+    },
+    {
+      "predicate": "http://tcga.deri.ie/schema/beta_value",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://tcga.deri.ie/schema/chromosome",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://tcga.deri.ie/schema/position",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://tcga.deri.ie/schema/result",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/DAV#ownerUser",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#inheritFrom",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#isGcResistantType",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#item",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#loadAs",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#noInherit",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmGraphMap",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmObjectMap",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmTableName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsStable",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvATables",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvColumns",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvFText",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvFormat",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvGeo",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvTableName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvaAlias",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvaTableName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvcAlias",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftAlias",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftConds",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftTableName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qsUserMaps",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#version",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_1",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_2",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_3",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_4",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_5",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#endpoint",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#feature",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#resultFormat",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#supportedLanguage",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#url",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "[Errno 54] Connection reset by peer"
+        }
+      }
+    }
+  ]
+}

@@ -146,6 +146,99 @@ python3 federated_query_optimizer.py \
   --output-dir ./optimization
 ```
 
+### 3) TTLメタデータにオーソリティ情報を付与する（オプション）
+
+オーソリティパイプラインは、実際のエンドポイントをクエリして、TTLメタデータファイルに主語と目的語のオーソリティ分布を付与します。これはデータの由来と外部リングパターンを理解するのに役立ちます。
+
+#### パイプラインの概要
+
+`run_authority_pipeline.py` スクリプトは 3 つのステップを順序立てて実行します：
+
+1. **ステップ1: 外部リンク述語を検出** (`detect_external_links.py`)
+   - VoID/SBM メタデータ（Turtle フォーマット）をパースして、外部オブジェクトクラスを持つ述語を特定
+   - オブジェクトクラスのオーソリティをデータセットから導出されたローカルオーソリティと比較
+   - 各述語を以下のように分類：
+     - `not-mapping`: すべてのオブジェクトがローカルまたはリテラル型
+     - `possible-mapping`: 1つ以上の非リテラルオブジェクトが外部オーソリティを指す
+     - `undetermined`: メタデータが不足（object_class が未定義またはオーソリティをパースできない）
+   - `--literal-only-mode` では、非リテラルトリプルが存在する場合、述語を possible-mapping にマーク
+   - `--discover-missing-predicates` モードでは、TTL に存在しない述語についてエンドポイントに問い合わせ
+
+2. **ステップ2: 主語/目的語オーソリティをクエリ** (`query_predicate_authorities.py`)
+   - `possible_mapping=true` または `missing_in_original_ttl=true` にマークされた述語をフィルタリング
+   - SPARQL クエリを実行して、主語と目的語のオーソリティ分布を抽出：
+     - デフォルトグラフと自動発見された名前付きグラフの両方をクエリ
+     - ページネーション（LIMIT/OFFSET）と進捗追跡を使用
+     - すべてのグラフ結果にわたってオーソリティカウントを集約
+   - オーソリティパターンを返す：`[{authority: "example.com", count: 42}, ...]`
+
+3. **ステップ3: TTLをオーソリティ関係で拡張** (`update_ttl_with_authorities.py`)
+   - ステップ2の JSON マッピング結果を読込
+   - 各クエリ述語について、集約された主語/目的語オーソリティを抽出
+   - propertyPartition に `sbm:authorityRelation` エントリを追加：
+     - Type: `sbm:Subject` または `sbm:Object`
+     - Authority: 外部オーソリティの URI
+     - Count: このオーソリティを持つトリプル数（ステップ2クエリ結果から）
+  - リテラル目的語の述語でも主語オーソリティは保持し、`any` のような非具体的な目的語オーソリティは書き込まない
+   - エンドポイントスキャンで発見された述語について、欠落している propertyPartition を作成
+   - 欠落している propertyPartition にトリプルカウントを追加
+  - 既存の `void:triples` と `sbm:authorityRelation` は保持し、未登録のものだけを追記
+
+#### 使用例
+
+データセット上でフルパイプラインを実行：
+
+```bash
+python3 run_authority_pipeline.py \
+  --ttl largerdfbench/LinkedTCGA-M/tcgam.ttl \
+  --endpoint http://localhost:8887/sparql/ \
+  --python python3
+```
+
+以下の 3 つの出力を生成します：
+- `largerdfbench/LinkedTCGA-M/predicates/tcgam.json` - 検出された述語とその分類
+- `largerdfbench/LinkedTCGA-M/mappings/tcgam.json` - エンドポイントクエリから取得した主語/目的語オーソリティ
+- `largerdfbench/LinkedTCGA-M/tcgam_update.ttl` - オーソリティ関係で拡張された TTL
+
+個別ファイルだけを更新する場合：
+
+```bash
+python3 update_ttl_with_authorities.py \
+  tripleprofile/geonames.ttl \
+  mappings/geonames.json \
+  tripleprofile/geonames_updated.ttl
+```
+
+フォルダ内のすべての TTL を一括更新する場合（TTL と JSON は同じ stem 名で対応付け）：
+
+```bash
+python3 update_ttl_with_authorities.py \
+  --ttl-dir tripleprofile \
+  --json-dir mappings \
+  --suffix _updated
+```
+
+この batch モードでは、たとえば `tripleprofile/geonames.ttl` は `mappings/geonames.json` と対応付けられ、
+出力は `tripleprofile/geonames_updated.ttl` に書き出されます。対応する JSON がない TTL はスキップされます。
+
+#### 詳細なオプション
+
+```bash
+python3 run_authority_pipeline.py \
+  --ttl largerdfbench/tcgam.ttl \
+  --endpoint http://localhost:8887/sparql/ \
+  --local-authority-mode full \
+  --literal-only-mode \
+  --discover-missing-predicates \
+  --endpoint-timeout 60
+```
+
+主要フラグ：
+- `--local-authority-mode`: ローカルオーソリティの導出方法（`endpoint`, `endpoint+name`, `endpoint+name+urispace`, または `full`）
+- `--literal-only-mode`: リテラル型トリプルの存在で分類（外部オーソリティを無視）
+- `--discover-missing-predicates`: TTLメタデータに存在しない述語についてエンドポイントをスキャン
+- `--endpoint-timeout`: エンドポイントスキャンのクエリタイムアウト（デフォルト: 30秒）
+
 ## Run optimized queries
 
 Example execution for `C1`:

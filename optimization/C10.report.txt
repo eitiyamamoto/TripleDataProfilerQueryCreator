@@ -6,51 +6,88 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 10
 Unique Predicates: 10
-Endpoints Used: 1
+Endpoints Used: 4
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
-1. indication
+1. country
+   Cardinality: 1
+   Endpoints: 2
+   Possible Class Pairs: 161
+2. bcr_drug_barcode
+   Cardinality: 1
+   Endpoints: 1
+   Possible Class Pairs: 24
+3. bcr_patient_barcode
+   Cardinality: 10
+   Endpoints: 2
+   Possible Class Pairs: 71
+4. populationDensity
+   Cardinality: 78
+   Endpoints: 1
+   Possible Class Pairs: 6
+5. drug_name
+   Cardinality: 591
+   Endpoints: 1
+   Possible Class Pairs: 1
+6. gender
+   Cardinality: 1.1K
+   Endpoints: 1
+   Possible Class Pairs: 1
+7. keggCompoundId
+   Cardinality: 1.3K
+   Endpoints: 1
+   Possible Class Pairs: 1
+8. indication
    Cardinality: 1.5K
    Endpoints: 1
    Possible Class Pairs: 2
-2. chemicalFormula
+9. chemicalFormula
    Cardinality: 4.7K
    Endpoints: 1
    Possible Class Pairs: 2
-3. genericName
+10. genericName
    Cardinality: 4.8K
    Endpoints: 1
    Possible Class Pairs: 2
-4. keggCompoundId
-   Cardinality: unknown
-   Endpoints: 1
-   Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8887/sparql/
+  Predicates: 1
+  Total Triples: 302
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8889/sparql/
+  Predicates: 139
+  Total Triples: 62.8K
+  Estimated Retrieved Triples: 3
+Endpoint: http://localhost:8891/sparql/
+  Predicates: 334
+  Total Triples: 3.1M
+  Estimated Retrieved Triples: 551
 Endpoint: http://localhost:8892/sparql/
   Predicates: 7
-  Total Triples: 21.9K
-  Estimated Retrieved Triples: 1.5K
+  Total Triples: 23.2K
+  Estimated Retrieved Triples: 1.3K
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
 Method: join-chain-analysis
-Estimated Rows: 1.5K
+Estimated Rows: 1
 Confidence: medium
 Reasoning: Estimated from 5 join chains
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Start query execution with 'indication' (1.5K triples)
+• Start query execution with 'country' (1 triples)
+• Use subject/object class constraints to reduce search space for 2 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 4 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 4/10
-Unknown Endpoint Triples: 5
+Status: complete
+Metadata Coverage: 10/10
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
@@ -59,22 +96,26 @@ GENERATED FEDERATED QUERY
 # Note: Multiple class interpretations exist but all route to same endpoints
 # A single query retrieves all data regardless of class ambiguity
 
-SELECT DISTINCT ?compound ?country ?drgBnkDrg ?drugName ?drugbcr ?formula ?gender ?indication ?patient ?popDensity ?uri
+SELECT DISTINCT ?patient ?gender ?country ?popDensity ?drugName ?indication ?formula ?compound
 WHERE {
 
+  SERVICE <http://localhost:8889/sparql/> {
+    ?patient <http://dbpedia.org/ontology/country> ?country .
+    ?patient <http://tcga.deri.ie/schema/bcr_drug_barcode> ?drugbcr . # ?patient:clinical_omf, ?drugbcr:radiation
+    ?uri <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient . # ?uri:clinical_omf, ?patient:clinical_nte
+    ?drugbcr <http://tcga.deri.ie/schema/drug_name> ?drugName . # ?drugbcr:drug, ?drugName:Literal
+    ?patient <http://tcga.deri.ie/schema/gender> ?gender .
+  }
+
+  SERVICE <http://localhost:8891/sparql/> {
+    ?country <http://dbpedia.org/ontology/populationDensity> ?popDensity . # ?country:Country, ?popDensity:Literal
+  }
+
   SERVICE <http://localhost:8892/sparql/> {
+    ?drgBnkDrg <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId> ?compound .
     ?drgBnkDrg <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication> ?indication . # ?drgBnkDrg:drugs, ?indication:Literal
     ?drgBnkDrg <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/chemicalFormula> ?formula . # ?drgBnkDrg:drugs, ?formula:Literal
     ?drgBnkDrg <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> ?drugName . # ?drgBnkDrg:drugs, ?drugName:Literal
-    ?drgBnkDrg <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId> ?compound .
-    ?drugbcr <http://tcga.deri.ie/schema/drug_name> ?drugName .
   }
-
-  # Unknown endpoint (no metadata)
-    ?patient <http://dbpedia.org/ontology/country> ?country .
-    ?patient <http://tcga.deri.ie/schema/bcr_drug_barcode> ?drugbcr .
-    ?patient <http://tcga.deri.ie/schema/gender> ?gender .
-    ?uri <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .
-    ?country <http://dbpedia.org/ontology/populationDensity> ?popDensity .
 }
 LIMIT 1000

@@ -6,45 +6,80 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 5
 Unique Predicates: 5
-Endpoints Used: 0
+Endpoints Used: 3
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
+1. country
+   Cardinality: 1
+   Endpoints: 2
+   Possible Class Pairs: 161
+2. bcr_patient_barcode
+   Cardinality: 10
+   Endpoints: 2
+   Possible Class Pairs: 71
+3. populationDensity
+   Cardinality: 78
+   Endpoints: 1
+   Possible Class Pairs: 6
+4. bcr_aliquot_barcode
+   Cardinality: 855
+   Endpoints: 1
+   Possible Class Pairs: 8
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8887/sparql/
+  Predicates: 1
+  Total Triples: 302
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8889/sparql/
+  Predicates: 111
+  Total Triples: 169.0K
+  Estimated Retrieved Triples: 36
+Endpoint: http://localhost:8891/sparql/
+  Predicates: 334
+  Total Triples: 3.1M
+  Estimated Retrieved Triples: 551
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
-Method: no-metadata
-Estimated Rows: unknown
-Confidence: low
+Method: join-chain-analysis
+Estimated Rows: 1
+Confidence: medium
+Reasoning: Estimated from 4 join chains
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Query structure is already well-optimized
+• Start query execution with 'country' (1 triples)
+• Use subject/object class constraints to reduce search space for 2 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 3 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
 Status: partial
-Metadata Coverage: 0/5
-Unknown Endpoint Triples: 5
+Metadata Coverage: 4/5
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
 --------------------------------------------------------------------------------
 # Smart Federated Query with Class Constraints
-# Variables are constrained by inferred class types and grouped by endpoint
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
 
-SELECT DISTINCT ?aliquot ?country ?o ?patient ?popDensity ?uri
+SELECT DISTINCT ?patient ?p ?o
 WHERE {
 
-  # Unknown endpoint (no metadata)
+  SERVICE <http://localhost:8889/sparql/> {
     ?patient <http://dbpedia.org/ontology/country> ?country .
-    ?patient <http://tcga.deri.ie/schema/bcr_aliquot_barcode> ?aliquot .
-    ?uri <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient .
-    ?country <http://dbpedia.org/ontology/populationDensity> ?popDensity .
+    ?uri <http://tcga.deri.ie/schema/bcr_patient_barcode> ?patient . # ?uri:clinical_omf, ?patient:clinical_nte
+    ?patient <http://tcga.deri.ie/schema/bcr_aliquot_barcode> ?aliquot . # ?patient:clinical_omf, ?aliquot:aliquot
     ?aliquot ?p ?o .
+  }
+
+  SERVICE <http://localhost:8891/sparql/> {
+    ?country <http://dbpedia.org/ontology/populationDensity> ?popDensity . # ?country:Country, ?popDensity:Literal
+  }
 }
 LIMIT 1000

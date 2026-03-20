@@ -1,0 +1,64 @@
+PREFIX sbm:  <http://sparqlbuilder.org/2015/09/rdf-metadata-schema#>
+PREFIX sd:   <http://www.w3.org/ns/sparql-service-description#>
+PREFIX void: <http://rdfs.org/ns/void#>
+
+[ a                  sd:Service;
+  sd:defaultDataset  [ a                       sd:Dataset;
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://tcga.deri.ie/schema/expression_exon_result>;
+                                                 void:entities  "57429308"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classes            "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       void:properties         "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://tcga.deri.ie/schema/RPKM>;
+                                                 void:triples       "57429308"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "57429308"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://tcga.deri.ie/schema/expression_exon_result>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://tcga.deri.ie/schema/stop>;
+                                                 void:triples       "57429308"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "57429308"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://tcga.deri.ie/schema/expression_exon_result>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://tcga.deri.ie/schema/chromosome>;
+                                                 void:triples       "57429308"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "57429308"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://tcga.deri.ie/schema/expression_exon_result>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://tcga.deri.ie/schema/start>;
+                                                 void:triples       "57429308"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "57429308"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://tcga.deri.ie/schema/expression_exon_result>
+                                                                    ]
+                                               ];
+                       void:triples            "344576146"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       sbm:crawlLog            [ a                     sbm:CrawlLog;
+                                                 sbm:crawlEndTime      "2026-03-09T21:44:02+09:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+                                                 sbm:crawlStartTime    "2026-03-09T18:22:29+09:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+                                                 sbm:endpointAccesses  "10"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       sd:namedGraph           [ a        sd:NamedGraph;
+                                                 sd:name  <linkedtcga-e>
+                                               ]
+                     ];
+  sd:endpoint        <http://localhost:8888/sparql/>
+] .

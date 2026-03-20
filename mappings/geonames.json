@@ -1,0 +1,4284 @@
+{
+  "mapping_file": "/Users/yamamotobikutorueiichi/codes/federated_query/tripledataprofiler/largerdfbench/predicates/geonames.json",
+  "endpoint": "http://localhost:8893/sparql",
+  "query_limit": 1000,
+  "total_predicates_queried": 129,
+  "results": [
+    {
+      "predicate": "http://purl.org/dc/terms/created",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://localhost:8890",
+              "count": 743
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 743
+            }
+          ],
+          "total_results": 743
+        }
+      }
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/extent",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://localhost:8890",
+              "count": 730
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 730
+            }
+          ],
+          "total_results": 730
+        }
+      }
+    },
+    {
+      "predicate": "http://purl.org/dc/terms/modified",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://localhost:8890",
+              "count": 743
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 743
+            }
+          ],
+          "total_results": 743
+        }
+      }
+    },
+    {
+      "predicate": "http://www.geonames.org/ontology#childrenFeatures",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 224573
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 224573
+            }
+          ],
+          "total_results": 224573
+        }
+      }
+    },
+    {
+      "predicate": "http://www.geonames.org/ontology#featureClass",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0,
+          "error": "EndPointInternalError: The endpoint returned the HTTP status code 500. \n\nResponse:\nb'Virtuoso S1T00 Error SR171: Transaction timed out\\n\\nSPARQL query:\\n\\n                SELECT ?ps ?po WHERE {\\n                  ?s <http://www.geonames.org/ontology#featureClass> ?o .\\n                  FILTER ISIRI(?s)\\n                  \\n                  BIND(REPLACE(STR(?s), \"(https?://[^/]+).*\", \"$1\") AS ?ps)\\n                  BIND(IF(ISIRI(?o), REPLACE(STR(?o), \"(https?://[^/]+).*\", \"$1\"), \"any\") AS ?po)\\n                }\\n                LIMIT 1000\\n                OFFSET 5041000\\n                '"
+        }
+      }
+    },
+    {
+      "predicate": "http://www.geonames.org/ontology#featureCode",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 7389099
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.geonames.org",
+              "count": 7389099
+            }
+          ],
+          "total_results": 7389099
+        }
+      }
+    },
+    {
+      "predicate": "http://www.geonames.org/ontology#locationMap",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 7479714
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.geonames.org",
+              "count": 7479714
+            }
+          ],
+          "total_results": 7479714
+        }
+      }
+    },
+    {
+      "predicate": "http://www.geonames.org/ontology#nearbyFeatures",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 7255141
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 7255141
+            }
+          ],
+          "total_results": 7255141
+        }
+      }
+    },
+    {
+      "predicate": "http://www.geonames.org/ontology#neighbouringFeatures",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 242
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 242
+            }
+          ],
+          "total_results": 242
+        }
+      }
+    },
+    {
+      "predicate": "http://www.geonames.org/ontology#parentADM1",
+      "total_triples": 109006352,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 6812897
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 6812897
+            }
+          ],
+          "total_results": 6812897
+        }
+      }
+    },
+    {
+      "predicate": "http://www.geonames.org/ontology#parentADM2",
+      "total_triples": 39997104,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 2499819
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 2499819
+            }
+          ],
+          "total_results": 2499819
+        }
+      }
+    },
+    {
+      "predicate": "http://www.geonames.org/ontology#parentADM3",
+      "total_triples": 3634960,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 227185
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 227185
+            }
+          ],
+          "total_results": 227185
+        }
+      }
+    },
+    {
+      "predicate": "http://www.geonames.org/ontology#parentADM4",
+      "total_triples": 1941888,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 121368
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 121368
+            }
+          ],
+          "total_results": 121368
+        }
+      }
+    },
+    {
+      "predicate": "http://www.geonames.org/ontology#parentCountry",
+      "total_triples": 119589168,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 7474323
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 7474323
+            }
+          ],
+          "total_results": 7474323
+        }
+      }
+    },
+    {
+      "predicate": "http://www.geonames.org/ontology#parentFeature",
+      "total_triples": 119675408,
+      "literal_triples": 0,
+      "missing_in_original_ttl": false,
+      "source": "ttl_metadata",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 7479713
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 7479713
+            }
+          ],
+          "total_results": 7479713
+        }
+      }
+    },
+    {
+      "predicate": "http://www.geonames.org/ontology#wikipediaArticle",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 906599
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://en.wikipedia.org",
+              "count": 117915
+            },
+            {
+              "authority": "http://nl.wikipedia.org",
+              "count": 90523
+            },
+            {
+              "authority": "http://vo.wikipedia.org",
+              "count": 74866
+            },
+            {
+              "authority": "http://fr.wikipedia.org",
+              "count": 62706
+            },
+            {
+              "authority": "http://it.wikipedia.org",
+              "count": 62386
+            },
+            {
+              "authority": "http://pl.wikipedia.org",
+              "count": 56679
+            },
+            {
+              "authority": "http://pt.wikipedia.org",
+              "count": 54889
+            },
+            {
+              "authority": "http://de.wikipedia.org",
+              "count": 48252
+            },
+            {
+              "authority": "http://ceb.wikipedia.org",
+              "count": 28037
+            },
+            {
+              "authority": "http://es.wikipedia.org",
+              "count": 19049
+            },
+            {
+              "authority": "http://eo.wikipedia.org",
+              "count": 17014
+            },
+            {
+              "authority": "http://lmo.wikipedia.org",
+              "count": 16481
+            },
+            {
+              "authority": "http://ja.wikipedia.org",
+              "count": 15864
+            },
+            {
+              "authority": "http://sr.wikipedia.org",
+              "count": 14304
+            },
+            {
+              "authority": "http://sv.wikipedia.org",
+              "count": 13044
+            },
+            {
+              "authority": "http://no.wikipedia.org",
+              "count": 11353
+            },
+            {
+              "authority": "http://ru.wikipedia.org",
+              "count": 10297
+            },
+            {
+              "authority": "http://ro.wikipedia.org",
+              "count": 9188
+            },
+            {
+              "authority": "http://nap.wikipedia.org",
+              "count": 7998
+            },
+            {
+              "authority": "http://zh.wikipedia.org",
+              "count": 7672
+            },
+            {
+              "authority": "http://io.wikipedia.org",
+              "count": 7183
+            },
+            {
+              "authority": "http://ca.wikipedia.org",
+              "count": 7093
+            },
+            {
+              "authority": "http://fi.wikipedia.org",
+              "count": 6596
+            },
+            {
+              "authority": "http://ar.wikipedia.org",
+              "count": 5800
+            },
+            {
+              "authority": "http://bpy.wikipedia.org",
+              "count": 5739
+            },
+            {
+              "authority": "http://hu.wikipedia.org",
+              "count": 5718
+            },
+            {
+              "authority": "http://id.wikipedia.org",
+              "count": 5315
+            },
+            {
+              "authority": "http://sk.wikipedia.org",
+              "count": 4866
+            },
+            {
+              "authority": "http://cs.wikipedia.org",
+              "count": 4793
+            },
+            {
+              "authority": "http://tr.wikipedia.org",
+              "count": 4733
+            },
+            {
+              "authority": "http://da.wikipedia.org",
+              "count": 4020
+            },
+            {
+              "authority": "http://vi.wikipedia.org",
+              "count": 3739
+            },
+            {
+              "authority": "http://bg.wikipedia.org",
+              "count": 3674
+            },
+            {
+              "authority": "http://nds.wikipedia.org",
+              "count": 3615
+            },
+            {
+              "authority": "http://eu.wikipedia.org",
+              "count": 3442
+            },
+            {
+              "authority": "http://nn.wikipedia.org",
+              "count": 3363
+            },
+            {
+              "authority": "http://et.wikipedia.org",
+              "count": 3354
+            },
+            {
+              "authority": "http://lt.wikipedia.org",
+              "count": 3313
+            },
+            {
+              "authority": "http://pms.wikipedia.org",
+              "count": 2906
+            },
+            {
+              "authority": "http://br.wikipedia.org",
+              "count": 2884
+            },
+            {
+              "authority": "http://he.wikipedia.org",
+              "count": 2812
+            },
+            {
+              "authority": "http://lb.wikipedia.org",
+              "count": 2506
+            },
+            {
+              "authority": "http://ko.wikipedia.org",
+              "count": 2434
+            },
+            {
+              "authority": "http://gl.wikipedia.org",
+              "count": 2207
+            },
+            {
+              "authority": "http://uk.wikipedia.org",
+              "count": 2126
+            },
+            {
+              "authority": "http://hr.wikipedia.org",
+              "count": 2053
+            },
+            {
+              "authority": "http://la.wikipedia.org",
+              "count": 1899
+            },
+            {
+              "authority": "http://pam.wikipedia.org",
+              "count": 1897
+            },
+            {
+              "authority": "http://sl.wikipedia.org",
+              "count": 1873
+            },
+            {
+              "authority": "http://vec.wikipedia.org",
+              "count": 1834
+            },
+            {
+              "authority": "http://oc.wikipedia.org",
+              "count": 1746
+            },
+            {
+              "authority": "http://tg.wikipedia.org",
+              "count": 1675
+            },
+            {
+              "authority": "http://scn.wikipedia.org",
+              "count": 1647
+            },
+            {
+              "authority": "http://lv.wikipedia.org",
+              "count": 1621
+            },
+            {
+              "authority": "http://bn.wikipedia.org",
+              "count": 1615
+            },
+            {
+              "authority": "http://el.wikipedia.org",
+              "count": 1604
+            },
+            {
+              "authority": "http://fa.wikipedia.org",
+              "count": 1573
+            },
+            {
+              "authority": "http://new.wikipedia.org",
+              "count": 1543
+            },
+            {
+              "authority": "http://an.wikipedia.org",
+              "count": 1498
+            },
+            {
+              "authority": "http://th.wikipedia.org",
+              "count": 1324
+            },
+            {
+              "authority": "http://cy.wikipedia.org",
+              "count": 1286
+            },
+            {
+              "authority": "http://tl.wikipedia.org",
+              "count": 1182
+            },
+            {
+              "authority": "http://war.wikipedia.org",
+              "count": 1162
+            },
+            {
+              "authority": "http://jv.wikipedia.org",
+              "count": 1144
+            },
+            {
+              "authority": "http://is.wikipedia.org",
+              "count": 1099
+            },
+            {
+              "authority": "http://sh.wikipedia.org",
+              "count": 1051
+            },
+            {
+              "authority": "http://af.wikipedia.org",
+              "count": 961
+            },
+            {
+              "authority": "http://bs.wikipedia.org",
+              "count": 958
+            },
+            {
+              "authority": "http://co.wikipedia.org",
+              "count": 864
+            },
+            {
+              "authority": "http://ms.wikipedia.org",
+              "count": 815
+            },
+            {
+              "authority": "http://ilo.wikipedia.org",
+              "count": 812
+            },
+            {
+              "authority": "http://ka.wikipedia.org",
+              "count": 794
+            },
+            {
+              "authority": "http://qu.wikipedia.org",
+              "count": 793
+            },
+            {
+              "authority": "http://li.wikipedia.org",
+              "count": 784
+            },
+            {
+              "authority": "http://hi.wikipedia.org",
+              "count": 737
+            },
+            {
+              "authority": "http://ta.wikipedia.org",
+              "count": 718
+            },
+            {
+              "authority": "http://sw.wikipedia.org",
+              "count": 716
+            },
+            {
+              "authority": "http://ast.wikipedia.org",
+              "count": 710
+            },
+            {
+              "authority": "http://se.wikipedia.org",
+              "count": 609
+            },
+            {
+              "authority": "http://ga.wikipedia.org",
+              "count": 594
+            },
+            {
+              "authority": "http://be.wikipedia.org",
+              "count": 588
+            },
+            {
+              "authority": "http://lij.wikipedia.org",
+              "count": 587
+            },
+            {
+              "authority": "http://mk.wikipedia.org",
+              "count": 582
+            },
+            {
+              "authority": "http://ku.wikipedia.org",
+              "count": 576
+            },
+            {
+              "authority": "http://mr.wikipedia.org",
+              "count": 538
+            },
+            {
+              "authority": "http://sq.wikipedia.org",
+              "count": 531
+            },
+            {
+              "authority": "http://ia.wikipedia.org",
+              "count": 521
+            },
+            {
+              "authority": "http://frp.wikipedia.org",
+              "count": 517
+            },
+            {
+              "authority": "http://cv.wikipedia.org",
+              "count": 482
+            },
+            {
+              "authority": "http://ht.wikipedia.org",
+              "count": 475
+            },
+            {
+              "authority": "http://az.wikipedia.org",
+              "count": 466
+            },
+            {
+              "authority": "http://kw.wikipedia.org",
+              "count": 453
+            },
+            {
+              "authority": "http://fy.wikipedia.org",
+              "count": 405
+            },
+            {
+              "authority": "http://rm.wikipedia.org",
+              "count": 387
+            },
+            {
+              "authority": "http://ur.wikipedia.org",
+              "count": 376
+            },
+            {
+              "authority": "http://nov.wikipedia.org",
+              "count": 370
+            },
+            {
+              "authority": "http://fo.wikipedia.org",
+              "count": 367
+            },
+            {
+              "authority": "http://hy.wikipedia.org",
+              "count": 353
+            },
+            {
+              "authority": "http://am.wikipedia.org",
+              "count": 346
+            },
+            {
+              "authority": "http://als.wikipedia.org",
+              "count": 340
+            },
+            {
+              "authority": "http://os.wikipedia.org",
+              "count": 322
+            },
+            {
+              "authority": "http://yi.wikipedia.org",
+              "count": 316
+            },
+            {
+              "authority": "http://fur.wikipedia.org",
+              "count": 316
+            },
+            {
+              "authority": "http://gd.wikipedia.org",
+              "count": 311
+            },
+            {
+              "authority": "http://uz.wikipedia.org",
+              "count": 297
+            },
+            {
+              "authority": "http://ml.wikipedia.org",
+              "count": 290
+            },
+            {
+              "authority": "http://nah.wikipedia.org",
+              "count": 282
+            },
+            {
+              "authority": "http://lad.wikipedia.org",
+              "count": 270
+            },
+            {
+              "authority": "http://crh.wikipedia.org",
+              "count": 269
+            },
+            {
+              "authority": "http://diq.wikipedia.org",
+              "count": 256
+            },
+            {
+              "authority": "http://wa.wikipedia.org",
+              "count": 256
+            },
+            {
+              "authority": "http://eml.wikipedia.org",
+              "count": 246
+            },
+            {
+              "authority": "http://dv.wikipedia.org",
+              "count": 227
+            },
+            {
+              "authority": "http://hsb.wikipedia.org",
+              "count": 225
+            },
+            {
+              "authority": "http://kk.wikipedia.org",
+              "count": 225
+            },
+            {
+              "authority": "http://ty.wikipedia.org",
+              "count": 223
+            },
+            {
+              "authority": "http://sa.wikipedia.org",
+              "count": 222
+            },
+            {
+              "authority": "http://wo.wikipedia.org",
+              "count": 206
+            },
+            {
+              "authority": "http://ps.wikipedia.org",
+              "count": 195
+            },
+            {
+              "authority": "http://csb.wikipedia.org",
+              "count": 195
+            },
+            {
+              "authority": "http://vls.wikipedia.org",
+              "count": 192
+            },
+            {
+              "authority": "http://na.wikipedia.org",
+              "count": 184
+            },
+            {
+              "authority": "http://te.wikipedia.org",
+              "count": 179
+            },
+            {
+              "authority": "http://ang.wikipedia.org",
+              "count": 177
+            },
+            {
+              "authority": "http://ksh.wikipedia.org",
+              "count": 175
+            },
+            {
+              "authority": "http://kn.wikipedia.org",
+              "count": 172
+            },
+            {
+              "authority": "http://sco.wikipedia.org",
+              "count": 169
+            },
+            {
+              "authority": "http://bar.wikipedia.org",
+              "count": 163
+            },
+            {
+              "authority": "http://ln.wikipedia.org",
+              "count": 156
+            },
+            {
+              "authority": "http://mn.wikipedia.org",
+              "count": 147
+            },
+            {
+              "authority": "http://nrm.wikipedia.org",
+              "count": 146
+            },
+            {
+              "authority": "http://sc.wikipedia.org",
+              "count": 142
+            },
+            {
+              "authority": "http://arc.wikipedia.org",
+              "count": 138
+            },
+            {
+              "authority": "http://mt.wikipedia.org",
+              "count": 136
+            },
+            {
+              "authority": "http://ug.wikipedia.org",
+              "count": 134
+            },
+            {
+              "authority": "http://dsb.wikipedia.org",
+              "count": 133
+            },
+            {
+              "authority": "http://su.wikipedia.org",
+              "count": 128
+            },
+            {
+              "authority": "http://bo.wikipedia.org",
+              "count": 126
+            },
+            {
+              "authority": "http://zea.wikipedia.org",
+              "count": 123
+            },
+            {
+              "authority": "http://tk.wikipedia.org",
+              "count": 121
+            },
+            {
+              "authority": "http://pdc.wikipedia.org",
+              "count": 118
+            },
+            {
+              "authority": "http://tet.wikipedia.org",
+              "count": 115
+            },
+            {
+              "authority": "http://ne.wikipedia.org",
+              "count": 115
+            },
+            {
+              "authority": "http://gv.wikipedia.org",
+              "count": 114
+            },
+            {
+              "authority": "http://gn.wikipedia.org",
+              "count": 107
+            },
+            {
+              "authority": "http://cu.wikipedia.org",
+              "count": 107
+            },
+            {
+              "authority": "http://ie.wikipedia.org",
+              "count": 106
+            },
+            {
+              "authority": "http://tpi.wikipedia.org",
+              "count": 101
+            },
+            {
+              "authority": "http://udm.wikipedia.org",
+              "count": 95
+            },
+            {
+              "authority": "http://mi.wikipedia.org",
+              "count": 87
+            },
+            {
+              "authority": "http://ks.wikipedia.org",
+              "count": 86
+            },
+            {
+              "authority": "http://yo.wikipedia.org",
+              "count": 78
+            },
+            {
+              "authority": "http://so.wikipedia.org",
+              "count": 76
+            },
+            {
+              "authority": "http://kg.wikipedia.org",
+              "count": 69
+            },
+            {
+              "authority": "http://tt.wikipedia.org",
+              "count": 66
+            },
+            {
+              "authority": "http://jbo.wikipedia.org",
+              "count": 63
+            },
+            {
+              "authority": "http://ky.wikipedia.org",
+              "count": 63
+            },
+            {
+              "authority": "http://ay.wikipedia.org",
+              "count": 61
+            },
+            {
+              "authority": "http://ce.wikipedia.org",
+              "count": 58
+            },
+            {
+              "authority": "http://pag.wikipedia.org",
+              "count": 58
+            },
+            {
+              "authority": "http://hak.wikipedia.org",
+              "count": 58
+            },
+            {
+              "authority": "http://wuu.wikipedia.org",
+              "count": 57
+            },
+            {
+              "authority": "http://dz.wikipedia.org",
+              "count": 55
+            },
+            {
+              "authority": "http://mo.wikipedia.org",
+              "count": 55
+            },
+            {
+              "authority": "http://nv.wikipedia.org",
+              "count": 48
+            },
+            {
+              "authority": "http://rmy.wikipedia.org",
+              "count": 47
+            },
+            {
+              "authority": "http://gu.wikipedia.org",
+              "count": 45
+            },
+            {
+              "authority": "http://haw.wikipedia.org",
+              "count": 44
+            },
+            {
+              "authority": "http://kab.wikipedia.org",
+              "count": 44
+            },
+            {
+              "authority": "http://bcl.wikipedia.org",
+              "count": 42
+            },
+            {
+              "authority": "http://km.wikipedia.org",
+              "count": 39
+            },
+            {
+              "authority": "http://kl.wikipedia.org",
+              "count": 36
+            },
+            {
+              "authority": "http://mg.wikipedia.org",
+              "count": 35
+            },
+            {
+              "authority": "http://ig.wikipedia.org",
+              "count": 34
+            },
+            {
+              "authority": "http://ba.wikipedia.org",
+              "count": 29
+            },
+            {
+              "authority": "http://pih.wikipedia.org",
+              "count": 28
+            },
+            {
+              "authority": "http://kv.wikipedia.org",
+              "count": 27
+            },
+            {
+              "authority": "http://bm.wikipedia.org",
+              "count": 27
+            },
+            {
+              "authority": "http://ts.wikipedia.org",
+              "count": 27
+            },
+            {
+              "authority": "http://stq.wikipedia.org",
+              "count": 26
+            },
+            {
+              "authority": "http://si.wikipedia.org",
+              "count": 26
+            },
+            {
+              "authority": "http://pa.wikipedia.org",
+              "count": 25
+            },
+            {
+              "authority": "http://to.wikipedia.org",
+              "count": 25
+            },
+            {
+              "authority": "http://cdo.wikipedia.org",
+              "count": 23
+            },
+            {
+              "authority": "http://zu.wikipedia.org",
+              "count": 21
+            },
+            {
+              "authority": "http://iu.wikipedia.org",
+              "count": 21
+            },
+            {
+              "authority": "http://rw.wikipedia.org",
+              "count": 21
+            },
+            {
+              "authority": "http://sm.wikipedia.org",
+              "count": 21
+            },
+            {
+              "authority": "http://lo.wikipedia.org",
+              "count": 20
+            },
+            {
+              "authority": "http://nb.wikipedia.org",
+              "count": 19
+            },
+            {
+              "authority": "http://pap.wikipedia.org",
+              "count": 19
+            },
+            {
+              "authority": "http://ve.wikipedia.org",
+              "count": 18
+            },
+            {
+              "authority": "http://av.wikipedia.org",
+              "count": 17
+            },
+            {
+              "authority": "http://chr.wikipedia.org",
+              "count": 17
+            },
+            {
+              "authority": "http://ss.wikipedia.org",
+              "count": 17
+            },
+            {
+              "authority": "http://ee.wikipedia.org",
+              "count": 17
+            },
+            {
+              "authority": "http://ch.wikipedia.org",
+              "count": 17
+            },
+            {
+              "authority": "http://my.wikipedia.org",
+              "count": 16
+            },
+            {
+              "authority": "http://mzn.wikipedia.org",
+              "count": 16
+            },
+            {
+              "authority": "http://ik.wikipedia.org",
+              "count": 15
+            },
+            {
+              "authority": "http://xh.wikipedia.org",
+              "count": 15
+            },
+            {
+              "authority": "http://as.wikipedia.org",
+              "count": 14
+            },
+            {
+              "authority": "http://ab.wikipedia.org",
+              "count": 13
+            },
+            {
+              "authority": "http://xal.wikipedia.org",
+              "count": 13
+            },
+            {
+              "authority": "http://bi.wikipedia.org",
+              "count": 13
+            },
+            {
+              "authority": "http://tn.wikipedia.org",
+              "count": 13
+            },
+            {
+              "authority": "http://lg.wikipedia.org",
+              "count": 10
+            },
+            {
+              "authority": "http://om.wikipedia.org",
+              "count": 10
+            },
+            {
+              "authority": "http://za.wikipedia.org",
+              "count": 9
+            },
+            {
+              "authority": "http://st.wikipedia.org",
+              "count": 9
+            },
+            {
+              "authority": "http://ff.wikipedia.org",
+              "count": 9
+            },
+            {
+              "authority": "http://or.wikipedia.org",
+              "count": 9
+            },
+            {
+              "authority": "http://sg.wikipedia.org",
+              "count": 8
+            },
+            {
+              "authority": "http://cr.wikipedia.org",
+              "count": 8
+            },
+            {
+              "authority": "http://sd.wikipedia.org",
+              "count": 8
+            },
+            {
+              "authority": "http://fj.wikipedia.org",
+              "count": 8
+            },
+            {
+              "authority": "http://ny.wikipedia.org",
+              "count": 7
+            },
+            {
+              "authority": "http://bh.wikipedia.org",
+              "count": 7
+            },
+            {
+              "authority": "http://dk.wikipedia.org",
+              "count": 7
+            },
+            {
+              "authority": "http://ha.wikipedia.org",
+              "count": 6
+            },
+            {
+              "authority": "http://ki.wikipedia.org",
+              "count": 6
+            },
+            {
+              "authority": "http://bxr.wikipedia.org",
+              "count": 5
+            },
+            {
+              "authority": "http://lbe.wikipedia.org",
+              "count": 5
+            },
+            {
+              "authority": "http://ti.wikipedia.org",
+              "count": 5
+            },
+            {
+              "authority": "http://tw.wikipedia.org",
+              "count": 5
+            },
+            {
+              "authority": "http://glk.wikipedia.org",
+              "count": 5
+            },
+            {
+              "authority": "http://ng.wikipedia.org",
+              "count": 4
+            },
+            {
+              "authority": "http://pi.wikipedia.org",
+              "count": 4
+            },
+            {
+              "authority": "http://rn.wikipedia.org",
+              "count": 4
+            },
+            {
+              "authority": "http://cz.wikipedia.org",
+              "count": 3
+            },
+            {
+              "authority": "http://tum.wikipedia.org",
+              "count": 2
+            },
+            {
+              "authority": "http://sp.wikipedia.org",
+              "count": 2
+            },
+            {
+              "authority": "http://nan.wikipedia.org",
+              "count": 2
+            },
+            {
+              "authority": "http://chy.wikipedia.org",
+              "count": 2
+            },
+            {
+              "authority": "http://bug.wikipedia.org",
+              "count": 2
+            },
+            {
+              "authority": "http://16.wikipedia.org",
+              "count": 2
+            },
+            {
+              "authority": "http://ii.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://ci.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://ge.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://wb.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://mh.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://hz.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://krj.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://23.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://\u00f3\u00f3.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://ak.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://ua.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://em.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://biz.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://ftp.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://n2.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://aa.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://sn.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://91.wikipedia.org",
+              "count": 1
+            },
+            {
+              "authority": "http://w.wikipedia.org",
+              "count": 1
+            }
+          ],
+          "total_results": 906599
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/DAV#ownerUser",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://localhost:8890",
+              "count": 743
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "mailto:somebody@example.domain",
+              "count": 743
+            }
+          ],
+          "total_results": 743
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#inheritFrom",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 99
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 99
+            }
+          ],
+          "total_results": 99
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#isGcResistantType",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "bif:contains",
+              "count": 1
+            },
+            {
+              "authority": "bif:xcontains",
+              "count": 1
+            },
+            {
+              "authority": "bif:xpath_contains",
+              "count": 1
+            },
+            {
+              "authority": "bif:xquery_contains",
+              "count": 1
+            },
+            {
+              "authority": "bif:spatial_contains",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "bif:contains",
+              "count": 1
+            },
+            {
+              "authority": "bif:xcontains",
+              "count": 1
+            },
+            {
+              "authority": "bif:xpath_contains",
+              "count": 1
+            },
+            {
+              "authority": "bif:xquery_contains",
+              "count": 1
+            },
+            {
+              "authority": "bif:spatial_contains",
+              "count": 1
+            }
+          ],
+          "total_results": 5
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#item",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 139
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 139
+            }
+          ],
+          "total_results": 139
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#loadAs",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 8
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 8
+            }
+          ],
+          "total_results": 8
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#noInherit",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 56
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 56
+            }
+          ],
+          "total_results": 56
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmGraphMap",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmObjectMap",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmTableName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 47
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 47
+            }
+          ],
+          "total_results": 47
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 42
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 42
+            }
+          ],
+          "total_results": 42
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 39
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 39
+            }
+          ],
+          "total_results": 39
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 31
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 31
+            }
+          ],
+          "total_results": 31
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 12
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 12
+            }
+          ],
+          "total_results": 12
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 31
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 31
+            }
+          ],
+          "total_results": 31
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 6
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 6
+            }
+          ],
+          "total_results": 6
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 22
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 22
+            }
+          ],
+          "total_results": 22
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 57
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 57
+            }
+          ],
+          "total_results": 57
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 47
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 47
+            }
+          ],
+          "total_results": 47
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsStable",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 47
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 47
+            }
+          ],
+          "total_results": 47
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 8
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 8
+            }
+          ],
+          "total_results": 8
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 4
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 4
+            }
+          ],
+          "total_results": 4
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 31
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 31
+            }
+          ],
+          "total_results": 31
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 31
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 31
+            }
+          ],
+          "total_results": 31
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 19
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 19
+            }
+          ],
+          "total_results": 19
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 31
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 31
+            }
+          ],
+          "total_results": 31
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 31
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 31
+            }
+          ],
+          "total_results": 31
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 31
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 31
+            }
+          ],
+          "total_results": 31
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 4
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 4
+            }
+          ],
+          "total_results": 4
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 45
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 45
+            }
+          ],
+          "total_results": 45
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 45
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 45
+            }
+          ],
+          "total_results": 45
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 40
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 40
+            }
+          ],
+          "total_results": 40
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 130
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 130
+            }
+          ],
+          "total_results": 130
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 31
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 31
+            }
+          ],
+          "total_results": 31
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 31
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 31
+            }
+          ],
+          "total_results": 31
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 6
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 6
+            }
+          ],
+          "total_results": 6
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 31
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 31
+            }
+          ],
+          "total_results": 31
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 31
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 31
+            }
+          ],
+          "total_results": 31
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 31
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 31
+            }
+          ],
+          "total_results": 31
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 31
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 31
+            }
+          ],
+          "total_results": 31
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 37
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 37
+            }
+          ],
+          "total_results": 37
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 29
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 29
+            }
+          ],
+          "total_results": 29
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 53
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 53
+            }
+          ],
+          "total_results": 53
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 53
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 53
+            }
+          ],
+          "total_results": 53
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 53
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 53
+            }
+          ],
+          "total_results": 53
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 98
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 98
+            }
+          ],
+          "total_results": 98
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 39
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 39
+            }
+          ],
+          "total_results": 39
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 39
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 39
+            }
+          ],
+          "total_results": 39
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 39
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 39
+            }
+          ],
+          "total_results": 39
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 45
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 45
+            }
+          ],
+          "total_results": 45
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 7
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 7
+            }
+          ],
+          "total_results": 7
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 1
+            }
+          ],
+          "total_results": 1
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 172
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 172
+            }
+          ],
+          "total_results": 172
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvATables",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 8
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 8
+            }
+          ],
+          "total_results": 8
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvColumns",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 8
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 8
+            }
+          ],
+          "total_results": 8
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 8
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 8
+            }
+          ],
+          "total_results": 8
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvFText",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvFormat",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 8
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 8
+            }
+          ],
+          "total_results": 8
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvGeo",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvTableName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 8
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 8
+            }
+          ],
+          "total_results": 8
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvaAlias",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvaTableName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvcAlias",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 8
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 8
+            }
+          ],
+          "total_results": 8
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 8
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 8
+            }
+          ],
+          "total_results": 8
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftAlias",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 4
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 4
+            }
+          ],
+          "total_results": 4
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftConds",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftTableName",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 3
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 3
+            }
+          ],
+          "total_results": 3
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#qsUserMaps",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 3
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 3
+            }
+          ],
+          "total_results": 3
+        }
+      }
+    },
+    {
+      "predicate": "http://www.openlinksw.com/schemas/virtrdf#version",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 1
+            }
+          ],
+          "total_results": 1
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_1",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 66
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 66
+            }
+          ],
+          "total_results": 66
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_2",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 13
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 13
+            }
+          ],
+          "total_results": 13
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_3",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 10
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 10
+            }
+          ],
+          "total_results": 10
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_4",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 3
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 3
+            }
+          ],
+          "total_results": 3
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#_5",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 3
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 3
+            }
+          ],
+          "total_results": 3
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [],
+          "object_authorities": [],
+          "total_results": 0
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 7479714
+            },
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 270
+            },
+            {
+              "authority": "http://www.w3.org",
+              "count": 50
+            },
+            {
+              "authority": "http://localhost:8890",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.geonames.org",
+              "count": 7479714
+            },
+            {
+              "authority": "http://www.openlinksw.com",
+              "count": 270
+            },
+            {
+              "authority": "http://www.w3.org",
+              "count": 51
+            }
+          ],
+          "total_results": 7480035
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 1
+            }
+          ],
+          "total_results": 1
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 21
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 21
+            }
+          ],
+          "total_results": 21
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 40
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 40
+            }
+          ],
+          "total_results": 40
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 20
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 20
+            }
+          ],
+          "total_results": 20
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 12
+            },
+            {
+              "authority": "http://www.w2.org",
+              "count": 3
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 12
+            },
+            {
+              "authority": "http://www.w2.org",
+              "count": 3
+            }
+          ],
+          "total_results": 15
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#complementOf",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 1
+            }
+          ],
+          "total_results": 1
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#imports",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 1
+            }
+          ],
+          "total_results": 1
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#priorVersion",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.daml.org",
+              "count": 1
+            }
+          ],
+          "total_results": 1
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#sameAs",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 117915
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://dbpedia.org",
+              "count": 117915
+            }
+          ],
+          "total_results": 117915
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#unionOf",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 1
+            }
+          ],
+          "total_results": 1
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/2002/07/owl#versionInfo",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "any",
+              "count": 1
+            }
+          ],
+          "total_results": 1
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#endpoint",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://localhost:8890",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://localhost:8890",
+              "count": 1
+            }
+          ],
+          "total_results": 1
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#feature",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://localhost:8890",
+              "count": 2
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 2
+            }
+          ],
+          "total_results": 2
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#resultFormat",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://localhost:8890",
+              "count": 8
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 8
+            }
+          ],
+          "total_results": 8
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#supportedLanguage",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://localhost:8890",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://www.w3.org",
+              "count": 1
+            }
+          ],
+          "total_results": 1
+        }
+      }
+    },
+    {
+      "predicate": "http://www.w3.org/ns/sparql-service-description#url",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://localhost:8890",
+              "count": 1
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://localhost:8890",
+              "count": 1
+            }
+          ],
+          "total_results": 1
+        }
+      }
+    },
+    {
+      "predicate": "http://xmlns.com/foaf/0.1/page",
+      "total_triples": 0,
+      "literal_triples": 0,
+      "missing_in_original_ttl": true,
+      "source": "endpoint_scan",
+      "query_limit": 1000,
+      "graphs": {
+        "default": {
+          "subject_authorities": [
+            {
+              "authority": "http://sws.geonames.org",
+              "count": 32581
+            }
+          ],
+          "object_authorities": [
+            {
+              "authority": "http://rdf.insee.fr",
+              "count": 32342
+            },
+            {
+              "authority": "http://www.ordnancesurvey.co.uk",
+              "count": 239
+            }
+          ],
+          "total_results": 32581
+        }
+      }
+    }
+  ]
+}

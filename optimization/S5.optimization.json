@@ -1,36 +1,29 @@
 {
   "query_id": "S5",
   "analysis_file": "optimization/S5.analysis.json",
-  "optimization_status": "partial",
+  "optimization_status": "complete",
   "metadata_coverage": {
     "total_predicates": 4,
-    "covered_predicates": 2,
-    "missing_predicates": [
-      "<http://dbpedia.org/ontology/director>",
-      "<http://dbpedia.org/ontology/nationality>"
-    ],
-    "coverage_ratio": 0.5,
-    "is_partial": true
+    "covered_predicates": 4,
+    "missing_predicates": [],
+    "coverage_ratio": 1.0,
+    "is_partial": false
   },
-  "unknown_endpoint_triples": [
-    [
-      "?director",
-      "<http://dbpedia.org/ontology/nationality>",
-      "<http://dbpedia.org/resource/Italy>"
-    ]
-  ],
+  "unknown_endpoint_triples": [],
   "optimization_analysis": {
     "optimization_strategy": "federated-with-service-clauses",
     "original_query": "SELECT ...",
     "endpoints_used": [
+      "http://localhost:8891/sparql/",
       "http://localhost:8892/sparql/",
       "http://localhost:8893/sparql/",
       "http://localhost:8894/sparql/",
       "http://localhost:8895/sparql/",
       "http://localhost:8896/sparql/",
-      "http://localhost:8897/sparql/"
+      "http://localhost:8897/sparql/",
+      "http://localhost:8898/sparql/"
     ],
-    "num_endpoints": 6,
+    "num_endpoints": 8,
     "optimization_details": {
       "num_triples": 4,
       "num_unique_predicates": 4,
@@ -39,16 +32,22 @@
       "num_variables": 0,
       "selective_predicates": [
         {
-          "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-          "cardinality": 1787.0,
-          "num_endpoints": 6,
-          "num_possible_classes": 5
+          "predicate": "<http://dbpedia.org/ontology/nationality>",
+          "cardinality": 1.0,
+          "num_endpoints": 1,
+          "num_possible_classes": 74
         },
         {
-          "predicate": "<http://data.linkedmdb.org/resource/movie/genre>",
-          "cardinality": 39054.0,
+          "predicate": "<http://dbpedia.org/ontology/director>",
+          "cardinality": 3.0,
           "num_endpoints": 1,
-          "num_possible_classes": 1
+          "num_possible_classes": 16
+        },
+        {
+          "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
+          "cardinality": 1630.0,
+          "num_endpoints": 8,
+          "num_possible_classes": 5
         }
       ],
       "multi_endpoint_predicates": [
@@ -56,18 +55,259 @@
       ]
     },
     "cardinality_estimate": {
-      "estimated_rows": 1787,
-      "estimated_rows_readable": "1.8K",
+      "estimated_rows": 1,
+      "estimated_rows_readable": "1",
       "confidence": "medium",
       "method": "join-chain-analysis",
       "reasoning": "Estimated from 3 join chains"
     },
     "endpoint_breakdown": [
       {
+        "endpoint": "http://localhost:8891/sparql/",
+        "num_predicates": 231,
+        "total_triples": 687035,
+        "total_triples_readable": "687.0K",
+        "predicates": [
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://dbpedia.org/ontology/nationality>",
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>",
+          "<http://dbpedia.org/ontology/director>"
+        ],
+        "estimated_retrieved_triples": 3,
+        "estimated_retrieved_triples_readable": "3"
+      },
+      {
         "endpoint": "http://localhost:8892/sparql/",
         "num_predicates": 1,
-        "total_triples": 0,
-        "total_triples_readable": "0",
+        "total_triples": 9521,
+        "total_triples_readable": "9.5K",
         "predicates": [
           "<http://www.w3.org/2002/07/owl#sameAs>"
         ],
@@ -77,8 +317,8 @@
       {
         "endpoint": "http://localhost:8893/sparql/",
         "num_predicates": 1,
-        "total_triples": 0,
-        "total_triples_readable": "0",
+        "total_triples": 117915,
+        "total_triples_readable": "117.9K",
         "predicates": [
           "<http://www.w3.org/2002/07/owl#sameAs>"
         ],
@@ -88,8 +328,8 @@
       {
         "endpoint": "http://localhost:8894/sparql/",
         "num_predicates": 1,
-        "total_triples": 0,
-        "total_triples_readable": "0",
+        "total_triples": 1697,
+        "total_triples_readable": "1.7K",
         "predicates": [
           "<http://www.w3.org/2002/07/owl#sameAs>"
         ],
@@ -112,13 +352,13 @@
       {
         "endpoint": "http://localhost:8896/sparql/",
         "num_predicates": 4,
-        "total_triples": 117162,
-        "total_triples_readable": "117.2K",
+        "total_triples": 180324,
+        "total_triples_readable": "180.3K",
         "predicates": [
-          "<http://www.w3.org/2002/07/owl#sameAs>",
           "<http://data.linkedmdb.org/resource/movie/genre>",
           "<http://data.linkedmdb.org/resource/movie/genre>",
-          "<http://data.linkedmdb.org/resource/movie/genre>"
+          "<http://data.linkedmdb.org/resource/movie/genre>",
+          "<http://www.w3.org/2002/07/owl#sameAs>"
         ],
         "estimated_retrieved_triples": 39054,
         "estimated_retrieved_triples_readable": "39.1K"
@@ -131,13 +371,73 @@
         "predicates": [
           "<http://www.w3.org/2002/07/owl#sameAs>"
         ],
-        "estimated_retrieved_triples": 1787,
-        "estimated_retrieved_triples_readable": "1.8K"
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "num_predicates": 1,
+        "total_triples": 1630,
+        "total_triples_readable": "1.6K",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 4\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n#   <http://data.linkedmdb.org/resource/movie/genre> (http://data.linkedmdb.org/resource/movie/film -> http://data.linkedmdb.org/resource/movie/film_genre) [39.1K triples]\n#   <http://data.linkedmdb.org/resource/movie/genre> (http://data.linkedmdb.org/resource/movie/film -> http://data.linkedmdb.org/resource/movie/film_genre) [39.1K triples]\n#   <http://data.linkedmdb.org/resource/movie/genre> (http://data.linkedmdb.org/resource/movie/film -> http://data.linkedmdb.org/resource/movie/film_genre) [39.1K triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8898/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [1.6K triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [1.7K triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [9.5K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [117.9K triples]\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 4\n#   <http://data.linkedmdb.org/resource/movie/genre> (http://data.linkedmdb.org/resource/movie/film -> http://data.linkedmdb.org/resource/movie/film_genre) [39.1K triples]\n#   <http://data.linkedmdb.org/resource/movie/genre> (http://data.linkedmdb.org/resource/movie/film -> http://data.linkedmdb.org/resource/movie/film_genre) [39.1K triples]\n#   <http://data.linkedmdb.org/resource/movie/genre> (http://data.linkedmdb.org/resource/movie/film -> http://data.linkedmdb.org/resource/movie/film_genre) [39.1K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [63.2K triples]\n\n# Endpoint: http://localhost:8891/sparql/\n# Predicates: 231\n#   <http://dbpedia.org/ontology/nationality> (http://dbpedia.org/ontology/Pope -> http://dbpedia.org/ontology/Country) [1 triples]\n#   <http://dbpedia.org/ontology/nationality> (http://dbpedia.org/ontology/BasketballPlayer -> http://dbpedia.org/ontology/Country) [2.6K triples]\n#   <http://dbpedia.org/ontology/nationality> (http://dbpedia.org/ontology/BasketballPlayer -> http://www.w3.org/2002/07/owl#Thing) [2.6K triples]\n#   <http://dbpedia.org/ontology/nationality> (http://dbpedia.org/ontology/Comedian -> http://dbpedia.org/ontology/Country) [768 triples]\n#   <http://dbpedia.org/ontology/nationality> (http://dbpedia.org/ontology/BasketballPlayer -> http://dbpedia.org/ontology/Country) [2.6K triples]\n\n"
   },
   "constraint_map": {
+    "?director": [
+      "http://dbpedia.org/ontology/Actor",
+      "http://dbpedia.org/ontology/Ambassador",
+      "http://dbpedia.org/ontology/Architect",
+      "http://dbpedia.org/ontology/Artist",
+      "http://dbpedia.org/ontology/Astronaut",
+      "http://dbpedia.org/ontology/Athlete",
+      "http://dbpedia.org/ontology/BasketballPlayer",
+      "http://dbpedia.org/ontology/Boxer",
+      "http://dbpedia.org/ontology/Chancellor",
+      "http://dbpedia.org/ontology/ChristianBishop",
+      "http://dbpedia.org/ontology/Cleric",
+      "http://dbpedia.org/ontology/Comedian",
+      "http://dbpedia.org/ontology/ComicsCreator",
+      "http://dbpedia.org/ontology/Congressman",
+      "http://dbpedia.org/ontology/EducationalInstitution",
+      "http://dbpedia.org/ontology/FictionalCharacter",
+      "http://dbpedia.org/ontology/FormulaOneRacer",
+      "http://dbpedia.org/ontology/Governor",
+      "http://dbpedia.org/ontology/IceHockeyPlayer",
+      "http://dbpedia.org/ontology/Judge",
+      "http://dbpedia.org/ontology/Mayor",
+      "http://dbpedia.org/ontology/MemberOfParliament",
+      "http://dbpedia.org/ontology/MilitaryPerson",
+      "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete",
+      "http://dbpedia.org/ontology/OfficeHolder",
+      "http://dbpedia.org/ontology/Person",
+      "http://dbpedia.org/ontology/Politician",
+      "http://dbpedia.org/ontology/Pope",
+      "http://dbpedia.org/ontology/President",
+      "http://dbpedia.org/ontology/PrimeMinister",
+      "http://dbpedia.org/ontology/Scientist",
+      "http://dbpedia.org/ontology/Senator",
+      "http://dbpedia.org/ontology/SoccerManager",
+      "http://dbpedia.org/ontology/Work",
+      "http://www.opengis.net/gml/_Feature",
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "?film": [
+      "http://bio2rdf.org/ns/kegg#Compound",
+      "http://bio2rdf.org/ns/kegg#Drug",
+      "http://bio2rdf.org/ns/kegg#Reaction",
+      "http://dbpedia.org/ontology/Album",
+      "http://dbpedia.org/ontology/EducationalInstitution",
+      "http://dbpedia.org/ontology/Film",
+      "http://dbpedia.org/ontology/MusicalWork",
+      "http://dbpedia.org/ontology/School",
+      "http://www.geonames.org/ontology#Feature"
+    ],
     "?x": [
       "http://bio2rdf.org/ns/kegg#Compound",
       "http://bio2rdf.org/ns/kegg#Drug",
@@ -145,17 +445,55 @@
       "http://data.linkedmdb.org/resource/movie/film",
       "http://www.w3.org/2004/02/skos/core#Concept"
     ],
-    "?film": [
-      "http://bio2rdf.org/ns/kegg#Compound",
-      "http://bio2rdf.org/ns/kegg#Drug",
-      "http://bio2rdf.org/ns/kegg#Reaction",
-      "http://www.geonames.org/ontology#Feature"
-    ],
     "?genre": [
       "http://data.linkedmdb.org/resource/movie/film_genre"
     ]
   },
   "inferred_variable_classes": {
+    "?director": [
+      {
+        "class": "http://xmlns.com/foaf/0.1/Person",
+        "confidence": 0.08937828093572141
+      },
+      {
+        "class": "http://dbpedia.org/ontology/Person",
+        "confidence": 0.07076361353055295
+      },
+      {
+        "class": "http://dbpedia.org/ontology/IceHockeyPlayer",
+        "confidence": 0.049155446144929504
+      },
+      {
+        "class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "confidence": 0.04731481873217007
+      },
+      {
+        "class": "http://dbpedia.org/ontology/Chancellor",
+        "confidence": 0.04547419131941064
+      }
+    ],
+    "?film": [
+      {
+        "class": "http://dbpedia.org/ontology/School",
+        "confidence": 0.3122782521270978
+      },
+      {
+        "class": "http://dbpedia.org/ontology/Film",
+        "confidence": 0.24373509635457993
+      },
+      {
+        "class": "http://dbpedia.org/ontology/EducationalInstitution",
+        "confidence": 0.19723880570263275
+      },
+      {
+        "class": "http://dbpedia.org/ontology/Album",
+        "confidence": 0.10701345604738283
+      },
+      {
+        "class": "http://dbpedia.org/ontology/MusicalWork",
+        "confidence": 0.10701345604738283
+      }
+    ],
     "?x": [
       {
         "class": "http://data.linkedmdb.org/resource/movie/film",
@@ -178,24 +516,6 @@
         "confidence": 0.14059487567194973
       }
     ],
-    "?film": [
-      {
-        "class": "http://www.geonames.org/ontology#Feature",
-        "confidence": 0.2888385676023399
-      },
-      {
-        "class": "http://bio2rdf.org/ns/kegg#Drug",
-        "confidence": 0.2428200971928318
-      },
-      {
-        "class": "http://bio2rdf.org/ns/kegg#Reaction",
-        "confidence": 0.241397748359715
-      },
-      {
-        "class": "http://bio2rdf.org/ns/kegg#Compound",
-        "confidence": 0.2269435868451133
-      }
-    ],
     "?genre": [
       {
         "class": "http://data.linkedmdb.org/resource/movie/film_genre",
@@ -203,12 +523,38 @@
       }
     ]
   },
-  "optimized_federated_query": "# Smart Federated Query with UNION for Multiple Class Interpretations\n# Each UNION branch uses different endpoints or predicates\n\nSELECT ?director ?film ?genre ?x\nWHERE {\n  # Scenario 1: ?genre=film_genre, ?x=film, ?film=Feature\n  {\n    SERVICE <http://localhost:8896/sparql/> {\n      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre . # ?x:film, ?genre:film_genre\n    }\n    SERVICE <http://localhost:8897/sparql/> {\n      ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . # ?x:Concept, ?film:Feature\n      ?film <http://dbpedia.org/ontology/director> ?director .\n    }\n    # Unknown endpoint (no metadata)\n      ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .\n  }\n\n  UNION\n\n  # Scenario 2: ?genre=film_genre, ?x=film, ?film=Drug\n  {\n    SERVICE <http://localhost:8895/sparql/> {\n      ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . # ?x:Drug, ?film:Drug\n      ?film <http://dbpedia.org/ontology/director> ?director .\n    }\n    SERVICE <http://localhost:8896/sparql/> {\n      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre . # ?x:film, ?genre:film_genre\n    }\n    # Unknown endpoint (no metadata)\n      ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .\n  }\n}\nLIMIT 1000\n",
+  "inferred_variable_authorities": {
+    "?director": [
+      "http://dbpedia.org"
+    ],
+    "?film": [
+      "http://dbpedia.org"
+    ],
+    "?x": [
+      "http://data.linkedmdb.org"
+    ],
+    "?genre": [
+      "http://data.linkedmdb.org"
+    ]
+  },
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Note: Multiple class interpretations exist but all route to same endpoints\n# A single query retrieves all data regardless of class ambiguity\n\nSELECT ?film ?director ?genre\nWHERE {\n\n  SERVICE <http://localhost:8891/sparql/> {\n    ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> . # ?director:IceHockeyPlayer\n    ?film <http://dbpedia.org/ontology/director> ?director . # ?film:School, ?director:Person\n  }\n\n  SERVICE <http://localhost:8896/sparql/> {\n    ?x <http://www.w3.org/2002/07/owl#sameAs> ?film .\n    ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre . # ?x:film, ?genre:film_genre\n  }\n}\nLIMIT 1000\n",
   "predicate_selectivity": [
     {
+      "predicate": "<http://dbpedia.org/ontology/nationality>",
+      "cardinality": 1.0,
+      "num_endpoints": 1,
+      "num_possible_classes": 74
+    },
+    {
+      "predicate": "<http://dbpedia.org/ontology/director>",
+      "cardinality": 3.0,
+      "num_endpoints": 1,
+      "num_possible_classes": 16
+    },
+    {
       "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-      "cardinality": 1787.0,
-      "num_endpoints": 6,
+      "cardinality": 1630.0,
+      "num_endpoints": 8,
       "num_possible_classes": 5
     },
     {

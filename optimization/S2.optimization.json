@@ -1,35 +1,29 @@
 {
   "query_id": "S2",
   "analysis_file": "optimization/S2.analysis.json",
-  "optimization_status": "partial",
+  "optimization_status": "complete",
   "metadata_coverage": {
     "total_predicates": 3,
-    "covered_predicates": 2,
-    "missing_predicates": [
-      "<http://dbpedia.org/ontology/party>"
-    ],
-    "coverage_ratio": 0.6667,
-    "is_partial": true
+    "covered_predicates": 3,
+    "missing_predicates": [],
+    "coverage_ratio": 1.0,
+    "is_partial": false
   },
-  "unknown_endpoint_triples": [
-    [
-      "<http://dbpedia.org/resource/Barack_Obama>",
-      "<http://dbpedia.org/ontology/party>",
-      "?party"
-    ]
-  ],
+  "unknown_endpoint_triples": [],
   "optimization_analysis": {
     "optimization_strategy": "federated-with-service-clauses",
     "original_query": "SELECT ...",
     "endpoints_used": [
+      "http://localhost:8891/sparql/",
       "http://localhost:8892/sparql/",
       "http://localhost:8893/sparql/",
       "http://localhost:8894/sparql/",
       "http://localhost:8895/sparql/",
       "http://localhost:8896/sparql/",
-      "http://localhost:8897/sparql/"
+      "http://localhost:8897/sparql/",
+      "http://localhost:8898/sparql/"
     ],
-    "num_endpoints": 6,
+    "num_endpoints": 8,
     "optimization_details": {
       "num_triples": 3,
       "num_unique_predicates": 3,
@@ -39,13 +33,19 @@
       "selective_predicates": [
         {
           "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-          "cardinality": 1787.0,
-          "num_endpoints": 6,
+          "cardinality": 1630.0,
+          "num_endpoints": 8,
           "num_possible_classes": 5
         },
         {
           "predicate": "<http://data.nytimes.com/elements/topicPage>",
-          "cardinality": Infinity,
+          "cardinality": 7432.0,
+          "num_endpoints": 1,
+          "num_possible_classes": 1
+        },
+        {
+          "predicate": "<http://dbpedia.org/ontology/party>",
+          "cardinality": 30571.0,
           "num_endpoints": 1,
           "num_possible_classes": 1
         }
@@ -55,18 +55,30 @@
       ]
     },
     "cardinality_estimate": {
-      "estimated_rows": 1787,
-      "estimated_rows_readable": "1.8K",
+      "estimated_rows": 1630,
+      "estimated_rows_readable": "1.6K",
       "confidence": "medium",
       "method": "join-chain-analysis",
       "reasoning": "Estimated from 2 join chains"
     },
     "endpoint_breakdown": [
       {
+        "endpoint": "http://localhost:8891/sparql/",
+        "num_predicates": 2,
+        "total_triples": 92026,
+        "total_triples_readable": "92.0K",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>",
+          "<http://dbpedia.org/ontology/party>"
+        ],
+        "estimated_retrieved_triples": 30571,
+        "estimated_retrieved_triples_readable": "30.6K"
+      },
+      {
         "endpoint": "http://localhost:8892/sparql/",
         "num_predicates": 1,
-        "total_triples": 0,
-        "total_triples_readable": "0",
+        "total_triples": 9521,
+        "total_triples_readable": "9.5K",
         "predicates": [
           "<http://www.w3.org/2002/07/owl#sameAs>"
         ],
@@ -76,8 +88,8 @@
       {
         "endpoint": "http://localhost:8893/sparql/",
         "num_predicates": 1,
-        "total_triples": 0,
-        "total_triples_readable": "0",
+        "total_triples": 117915,
+        "total_triples_readable": "117.9K",
         "predicates": [
           "<http://www.w3.org/2002/07/owl#sameAs>"
         ],
@@ -87,8 +99,8 @@
       {
         "endpoint": "http://localhost:8894/sparql/",
         "num_predicates": 1,
-        "total_triples": 0,
-        "total_triples_readable": "0",
+        "total_triples": 1697,
+        "total_triples_readable": "1.7K",
         "predicates": [
           "<http://www.w3.org/2002/07/owl#sameAs>"
         ],
@@ -111,8 +123,8 @@
       {
         "endpoint": "http://localhost:8896/sparql/",
         "num_predicates": 1,
-        "total_triples": 0,
-        "total_triples_readable": "0",
+        "total_triples": 63162,
+        "total_triples_readable": "63.2K",
         "predicates": [
           "<http://www.w3.org/2002/07/owl#sameAs>"
         ],
@@ -122,17 +134,28 @@
       {
         "endpoint": "http://localhost:8897/sparql/",
         "num_predicates": 2,
-        "total_triples": 1787,
-        "total_triples_readable": "1.8K",
+        "total_triples": 9219,
+        "total_triples_readable": "9.2K",
         "predicates": [
           "<http://data.nytimes.com/elements/topicPage>",
           "<http://www.w3.org/2002/07/owl#sameAs>"
         ],
         "estimated_retrieved_triples": 1787,
         "estimated_retrieved_triples_readable": "1.8K"
+      },
+      {
+        "endpoint": "http://localhost:8898/sparql/",
+        "num_predicates": 1,
+        "total_triples": 1630,
+        "total_triples_readable": "1.6K",
+        "predicates": [
+          "<http://www.w3.org/2002/07/owl#sameAs>"
+        ],
+        "estimated_retrieved_triples": null,
+        "estimated_retrieved_triples_readable": "unknown"
       }
     ],
-    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [unknown triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 2\n#   <http://data.nytimes.com/elements/topicPage> (None -> None) [unknown triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n"
+    "optimized_query": "# Optimized Federated Query using SERVICE clauses\n# Each triple pattern is pushed to its most selective endpoint\n\n# Endpoint: http://localhost:8898/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [1.6K triples]\n\n# Endpoint: http://localhost:8894/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [1.7K triples]\n\n# Endpoint: http://localhost:8897/sparql/\n# Predicates: 2\n#   <http://data.nytimes.com/elements/topicPage> (None -> None) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://www.w3.org/2004/02/skos/core#Concept -> http://www.geonames.org/ontology#Feature) [1.8K triples]\n\n# Endpoint: http://localhost:8892/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [9.5K triples]\n\n# Endpoint: http://localhost:8895/sparql/\n# Predicates: 3\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Reaction -> http://bio2rdf.org/ns/kegg#Reaction) [7.8K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Drug -> http://bio2rdf.org/ns/kegg#Drug) [7.4K triples]\n#   <http://www.w3.org/2002/07/owl#sameAs> (http://bio2rdf.org/ns/kegg#Compound -> http://bio2rdf.org/ns/kegg#Compound) [13.9K triples]\n\n# Endpoint: http://localhost:8896/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [63.2K triples]\n\n# Endpoint: http://localhost:8891/sparql/\n# Predicates: 2\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [61.5K triples]\n#   <http://dbpedia.org/ontology/party> (None -> None) [30.6K triples]\n\n# Endpoint: http://localhost:8893/sparql/\n# Predicates: 1\n#   <http://www.w3.org/2002/07/owl#sameAs> (None -> None) [117.9K triples]\n\n"
   },
   "constraint_map": {
     "?x": [
@@ -162,17 +185,34 @@
       }
     ]
   },
-  "optimized_federated_query": "# Smart Federated Query with UNION for Multiple Class Interpretations\n# Each UNION branch uses different endpoints or predicates\n\nSELECT ?page ?party ?x\nWHERE {\n  # Scenario 1: ?x=Concept\n  {\n    SERVICE <http://localhost:8897/sparql/> {\n      ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> . # ?x:Concept\n      ?x <http://data.nytimes.com/elements/topicPage> ?page .\n    }\n    # Unknown endpoint (no metadata)\n      <http://dbpedia.org/resource/Barack_Obama> <http://dbpedia.org/ontology/party> ?party .\n  }\n\n  UNION\n\n  # Scenario 2: ?x=Drug\n  {\n    SERVICE <http://localhost:8896/sparql/> {\n      ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .\n    }\n    SERVICE <http://localhost:8897/sparql/> {\n      ?x <http://data.nytimes.com/elements/topicPage> ?page .\n    }\n    # Unknown endpoint (no metadata)\n      <http://dbpedia.org/resource/Barack_Obama> <http://dbpedia.org/ontology/party> ?party .\n  }\n}\nLIMIT 1000\n",
+  "inferred_variable_authorities": {
+    "?x": [
+      "http://data.nytimes.com"
+    ],
+    "?party": [
+      "http://dbpedia.org"
+    ],
+    "?page": [
+      "http://topics.nytimes.com"
+    ]
+  },
+  "optimized_federated_query": "# Smart Federated Query with Class Constraints\n# Note: Multiple class interpretations exist but all route to same endpoints\n# A single query retrieves all data regardless of class ambiguity\n\nSELECT ?party ?page\nWHERE {\n\n  SERVICE <http://localhost:8891/sparql/> {\n    <http://dbpedia.org/resource/Barack_Obama> <http://dbpedia.org/ontology/party> ?party .\n  }\n\n  SERVICE <http://localhost:8897/sparql/> {\n    ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> . # ?x:Concept\n    ?x <http://data.nytimes.com/elements/topicPage> ?page .\n  }\n}\nLIMIT 1000\n",
   "predicate_selectivity": [
     {
       "predicate": "<http://www.w3.org/2002/07/owl#sameAs>",
-      "cardinality": 1787.0,
-      "num_endpoints": 6,
+      "cardinality": 1630.0,
+      "num_endpoints": 8,
       "num_possible_classes": 5
     },
     {
       "predicate": "<http://data.nytimes.com/elements/topicPage>",
-      "cardinality": Infinity,
+      "cardinality": 7432.0,
+      "num_endpoints": 1,
+      "num_possible_classes": 1
+    },
+    {
+      "predicate": "<http://dbpedia.org/ontology/party>",
+      "cardinality": 30571.0,
       "num_endpoints": 1,
       "num_possible_classes": 1
     }

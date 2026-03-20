@@ -113,12 +113,2355 @@
     "reduced": false
   },
   "predicate_metadata": {
+    "<http://tcga.deri.ie/schema/bcr_patient_barcode>": [
+      {
+        "endpoint": "http://localhost:8887/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": 302,
+        "triple_count_source": "partition",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 226,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/radiation",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 72,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 678,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 1110,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 1417,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 678,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 28,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/drug",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 664,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 681,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 93,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 81,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/patient",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 28,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/follow_up",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 541,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/drug",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 659,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/normal_control",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 1104,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 1115,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/drug",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 663,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 81,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 681,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 84,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 84,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/patient",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 227,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/follow_up",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 44,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 84,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/normal_control",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 1104,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 675,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 36,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/patient",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 1114,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 30,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 1415,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 81,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 84,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 36,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/normal_control",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 1417,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 227,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 681,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/radiation",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 310,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 1424,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/normal_control",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 1415,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/follow_up",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 542,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/radiation",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 310,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 36,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 681,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/normal_control",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 27,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/patient",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 1115,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 84,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/radiation",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 307,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/drug",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 15,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 675,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 678,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/radiation",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 307,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 225,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/radiation",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 10,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 1114,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/follow_up",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 542,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 681,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 681,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 84,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 1115,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 93,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 1457,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/patient",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 1104,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 681,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 681,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 81,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 675,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 1110,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 81,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 1114,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 678,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 1110,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 90,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 36,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 90,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 81,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/follow_up",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 10,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/follow_up",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 537,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 93,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/normal_control",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 226,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/patient",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 1110,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 1424,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/patient",
+        "object_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "triple_count": 1115,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 27,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 678,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 1424,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/drug",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 77,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 678,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/radiation",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 309,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 90,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/follow_up",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 539,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 681,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 1114,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/normal_control",
+        "triple_count": 1104,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/drug",
+        "object_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "triple_count": 659,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/drug",
+        "object_class": "http://tcga.deri.ie/schema/patient",
+        "triple_count": 664,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "triple_count": 36,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "triple_count": 36,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/normal_control",
+        "object_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "triple_count": 1417,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      }
+    ],
+    "<http://tcga.deri.ie/schema/result>": [
+      {
+        "endpoint": "http://localhost:8887/sparql/",
+        "subject_class": null,
+        "object_class": null,
+        "triple_count": 83006005,
+        "triple_count_source": "partition",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/copy_number_result",
+        "triple_count": 10569,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/patient",
+        "object_class": "http://tcga.deri.ie/schema/expression_gene_result",
+        "triple_count": 5232545,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/copy_number_result",
+        "triple_count": 10569,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/patient",
+        "object_class": "http://tcga.deri.ie/schema/expression_protein_result",
+        "triple_count": 25713,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/normal_control",
+        "object_class": "http://tcga.deri.ie/schema/copy_number_result",
+        "triple_count": 9636,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/normal_control",
+        "object_class": "http://tcga.deri.ie/schema/expression_protein_result",
+        "triple_count": 26109,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/expression_protein_result",
+        "triple_count": 13365,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/snp_result",
+        "triple_count": 9777,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "object_class": "http://tcga.deri.ie/schema/copy_number_result",
+        "triple_count": 9636,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/expression_gene_result",
+        "triple_count": 260301,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/expression_protein_result",
+        "triple_count": 26109,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/snp_result",
+        "triple_count": 9777,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/expression_gene_result",
+        "triple_count": 3250452,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "object_class": "http://tcga.deri.ie/schema/expression_gene_result",
+        "triple_count": 5301933,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/patient",
+        "object_class": "http://tcga.deri.ie/schema/snp_result",
+        "triple_count": 224935,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/expression_protein_result",
+        "triple_count": 13365,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/miRNA_result",
+        "triple_count": 7809,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/copy_number_result",
+        "triple_count": 90,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/expression_protein_result",
+        "triple_count": 25713,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/expression_gene_result",
+        "triple_count": 3250452,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/miRNA_result",
+        "triple_count": 100965,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/miRNA_result",
+        "triple_count": 141109,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/snp_result",
+        "triple_count": 130548,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/miRNA_result",
+        "triple_count": 100965,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/expression_gene_result",
+        "triple_count": 260301,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "object_class": "http://tcga.deri.ie/schema/expression_protein_result",
+        "triple_count": 26109,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/expression_protein_result",
+        "triple_count": 885,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/copy_number_result",
+        "triple_count": 10569,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/copy_number_result",
+        "triple_count": 90,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/expression_gene_result",
+        "triple_count": 260301,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "object_class": "http://tcga.deri.ie/schema/snp_result",
+        "triple_count": 227401,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/snp_result",
+        "triple_count": 130548,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/expression_gene_result",
+        "triple_count": 5319609,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/expression_gene_result",
+        "triple_count": 3250452,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/miRNA_result",
+        "triple_count": 100965,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/copy_number_result",
+        "triple_count": 90,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/expression_protein_result",
+        "triple_count": 885,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/expression_protein_result",
+        "triple_count": 885,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/normal_control",
+        "object_class": "http://tcga.deri.ie/schema/snp_result",
+        "triple_count": 227401,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/tumor_sample",
+        "object_class": "http://tcga.deri.ie/schema/miRNA_result",
+        "triple_count": 141109,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/patient",
+        "object_class": "http://tcga.deri.ie/schema/miRNA_result",
+        "triple_count": 138516,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/normal_control",
+        "object_class": "http://tcga.deri.ie/schema/miRNA_result",
+        "triple_count": 141109,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/snp_result",
+        "triple_count": 224935,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/snp_result",
+        "triple_count": 228231,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/patient",
+        "object_class": "http://tcga.deri.ie/schema/copy_number_result",
+        "triple_count": 8998,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/snp_result",
+        "triple_count": 130548,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/miRNA_result",
+        "triple_count": 7809,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/copy_number_result",
+        "triple_count": 8998,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/snp_result",
+        "triple_count": 9777,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_omf",
+        "object_class": "http://tcga.deri.ie/schema/miRNA_result",
+        "triple_count": 7809,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/biospecimen_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/copy_number_result",
+        "triple_count": 9636,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_nte",
+        "object_class": "http://tcga.deri.ie/schema/expression_protein_result",
+        "triple_count": 13365,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/expression_gene_result",
+        "triple_count": 5232545,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/normal_control",
+        "object_class": "http://tcga.deri.ie/schema/expression_gene_result",
+        "triple_count": 5301933,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      },
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/clinical_cqcf",
+        "object_class": "http://tcga.deri.ie/schema/miRNA_result",
+        "triple_count": 138516,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [
+            "http://tcga.deri.ie"
+          ],
+          "object": [
+            "http://tcga.deri.ie"
+          ]
+        }
+      }
+    ],
     "<http://tcga.deri.ie/schema/RPKM>": [
       {
         "endpoint": "http://localhost:8888/sparql/",
         "subject_class": "http://tcga.deri.ie/schema/expression_exon_result",
         "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
         "triple_count": 57429308,
+        "triple_count_source": "class_relation",
+        "authorities": {
+          "subject": [],
+          "object": []
+        }
+      }
+    ],
+    "<http://tcga.deri.ie/schema/scaled_estimate>": [
+      {
+        "endpoint": "http://localhost:8889/sparql/",
+        "subject_class": "http://tcga.deri.ie/schema/expression_gene_result",
+        "object_class": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "triple_count": 5319609,
+        "triple_count_source": "class_relation",
         "authorities": {
           "subject": [],
           "object": []
@@ -127,20 +2470,18 @@
     ]
   },
   "endpoints_found": [
-    "http://localhost:8888/sparql/"
+    "http://localhost:8887/sparql/",
+    "http://localhost:8888/sparql/",
+    "http://localhost:8889/sparql/"
   ],
-  "num_endpoints": 1,
+  "num_endpoints": 3,
   "query_id": "B1",
   "query_file": "LargeRDFBench/BigRDFBench-Utilities/queries/B1",
   "metadata_coverage": {
     "total_predicates": 4,
-    "covered_predicates": 1,
-    "missing_predicates": [
-      "<http://tcga.deri.ie/schema/bcr_patient_barcode>",
-      "<http://tcga.deri.ie/schema/result>",
-      "<http://tcga.deri.ie/schema/scaled_estimate>"
-    ],
-    "coverage_ratio": 0.25,
-    "is_partial": true
+    "covered_predicates": 4,
+    "missing_predicates": [],
+    "coverage_ratio": 1.0,
+    "is_partial": false
   }
 }

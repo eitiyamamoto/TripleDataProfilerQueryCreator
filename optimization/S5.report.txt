@@ -6,32 +6,44 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 4
 Unique Predicates: 4
-Endpoints Used: 6
+Endpoints Used: 8
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
-1. sameAs
-   Cardinality: 1.8K
-   Endpoints: 6
+1. nationality
+   Cardinality: 1
+   Endpoints: 1
+   Possible Class Pairs: 74
+2. director
+   Cardinality: 3
+   Endpoints: 1
+   Possible Class Pairs: 16
+3. sameAs
+   Cardinality: 1.6K
+   Endpoints: 8
    Possible Class Pairs: 5
-2. genre
+4. genre
    Cardinality: 39.1K
    Endpoints: 1
    Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8891/sparql/
+  Predicates: 231
+  Total Triples: 687.0K
+  Estimated Retrieved Triples: 3
 Endpoint: http://localhost:8892/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 9.5K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8893/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 117.9K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8894/sparql/
   Predicates: 1
-  Total Triples: 0
+  Total Triples: 1.7K
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8895/sparql/
   Predicates: 3
@@ -39,67 +51,54 @@ Endpoint: http://localhost:8895/sparql/
   Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8896/sparql/
   Predicates: 4
-  Total Triples: 117.2K
+  Total Triples: 180.3K
   Estimated Retrieved Triples: 39.1K
 Endpoint: http://localhost:8897/sparql/
   Predicates: 1
   Total Triples: 1.8K
-  Estimated Retrieved Triples: 1.8K
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8898/sparql/
+  Predicates: 1
+  Total Triples: 1.6K
+  Estimated Retrieved Triples: unknown
 
 ESTIMATED RESULT CARDINALITY
 --------------------------------------------------------------------------------
 Method: join-chain-analysis
-Estimated Rows: 1.8K
+Estimated Rows: 1
 Confidence: medium
 Reasoning: Estimated from 3 join chains
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Start query execution with 'sameAs' (1.8K triples)
+• Start query execution with 'nationality' (1 triples)
 • Use subject/object class constraints to reduce search space for 1 predicates that span multiple endpoints
-• Use SERVICE clauses to parallelize execution across 6 endpoints
+• Use SERVICE clauses to parallelize execution across 8 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 2/4
-Unknown Endpoint Triples: 1
+Status: complete
+Metadata Coverage: 4/4
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
 --------------------------------------------------------------------------------
-# Smart Federated Query with UNION for Multiple Class Interpretations
-# Each UNION branch uses different endpoints or predicates
+# Smart Federated Query with Class Constraints
+# Note: Multiple class interpretations exist but all route to same endpoints
+# A single query retrieves all data regardless of class ambiguity
 
-SELECT ?director ?film ?genre ?x
+SELECT ?film ?director ?genre
 WHERE {
-  # Scenario 1: ?genre=film_genre, ?x=film, ?film=Feature
-  {
-    SERVICE <http://localhost:8896/sparql/> {
-      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre . # ?x:film, ?genre:film_genre
-    }
-    SERVICE <http://localhost:8897/sparql/> {
-      ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . # ?x:Concept, ?film:Feature
-      ?film <http://dbpedia.org/ontology/director> ?director .
-    }
-    # Unknown endpoint (no metadata)
-      ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .
+
+  SERVICE <http://localhost:8891/sparql/> {
+    ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> . # ?director:IceHockeyPlayer
+    ?film <http://dbpedia.org/ontology/director> ?director . # ?film:School, ?director:Person
   }
 
-  UNION
-
-  # Scenario 2: ?genre=film_genre, ?x=film, ?film=Drug
-  {
-    SERVICE <http://localhost:8895/sparql/> {
-      ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . # ?x:Drug, ?film:Drug
-      ?film <http://dbpedia.org/ontology/director> ?director .
-    }
-    SERVICE <http://localhost:8896/sparql/> {
-      ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre . # ?x:film, ?genre:film_genre
-    }
-    # Unknown endpoint (no metadata)
-      ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .
+  SERVICE <http://localhost:8896/sparql/> {
+    ?x <http://www.w3.org/2002/07/owl#sameAs> ?film .
+    ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre . # ?x:film, ?genre:film_genre
   }
 }
 LIMIT 1000

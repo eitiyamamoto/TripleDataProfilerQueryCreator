@@ -1,0 +1,264 @@
+PREFIX sbm:  <http://sparqlbuilder.org/2015/09/rdf-metadata-schema#>
+PREFIX sd:   <http://www.w3.org/ns/sparql-service-description#>
+PREFIX void: <http://rdfs.org/ns/void#>
+
+[ a                  sd:Service;
+  sd:defaultDataset  [ a                       sd:Dataset;
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://purl.org/ontology/mo/Playlist>;
+                                                 void:entities  "102804"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://purl.org/ontology/mo/Record>;
+                                                 void:entities  "5786"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://www.w3.org/2006/time#Interval>;
+                                                 void:entities  "45634"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://purl.org/ontology/mo/Torrent>;
+                                                 void:entities  "11572"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://xmlns.com/foaf/0.1/Document>;
+                                                 void:entities  "92"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://purl.org/ontology/mo/Lyrics>;
+                                                 void:entities  "8823"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://purl.org/ontology/mo/Signal>;
+                                                 void:entities  "45634"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://purl.org/ontology/mo/Track>;
+                                                 void:entities  "45634"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://purl.org/ontology/mo/ED2K>;
+                                                 void:entities  "11572"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://purl.org/ontology/mo/MusicArtist>;
+                                                 void:entities  "3505"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classPartition     [ a              void:Dataset;
+                                                 void:class     <http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tag>;
+                                                 void:entities  "9235"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       void:classes            "11"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       void:properties         "17"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://xmlns.com/foaf/0.1/name>;
+                                                 void:triples       "3505"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "3505"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/MusicArtist>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/ontology/mo/track_number>;
+                                                 void:triples       "45634"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "45634"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Track>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/dc/elements/1.1/format>;
+                                                 void:triples       "125948"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "11572"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Torrent>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "11572"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/ED2K>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "102804"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Playlist>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www.holygoat.co.uk/owl/redwood/0.1/tags/tagName>;
+                                                 void:triples       "9235"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "9235"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tag>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/dc/elements/1.1/date>;
+                                                 void:triples       "5786"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "5786"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Record>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/ontology/mo/text>;
+                                                 void:triples       "8823"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "8823"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Lyrics>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/dc/elements/1.1/description>;
+                                                 void:triples       "880"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "880"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Record>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://xmlns.com/foaf/0.1/maker>;
+                                                 void:triples       "5786"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "5786"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://purl.org/ontology/mo/MusicArtist>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Record>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/ontology/mo/biography>;
+                                                 void:triples       "485"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "485"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/MusicArtist>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://xmlns.com/foaf/0.1/made>;
+                                                 void:triples       "5786"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "5786"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://purl.org/ontology/mo/Record>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/MusicArtist>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/ontology/mo/published_as>;
+                                                 void:triples       "45634"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "45634"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://purl.org/ontology/mo/Track>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Signal>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/dc/elements/1.1/title>;
+                                                 void:triples       "51402"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "45634"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Track>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "5768"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2000/01/rdf-schema#Literal>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Record>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/ontology/mo/track>;
+                                                 void:triples       "45634"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "45634"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://purl.org/ontology/mo/Track>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Record>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/ontology/mo/license>;
+                                                 void:triples       "45634"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "45634"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://xmlns.com/foaf/0.1/Document>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Track>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://www.holygoat.co.uk/owl/redwood/0.1/tags/taggedWithTag>;
+                                                 void:triples       "53438"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "53438"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tag>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Record>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/ontology/mo/time>;
+                                                 void:triples       "45634"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "45634"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://www.w3.org/2006/time#Interval>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Signal>
+                                                                    ]
+                                               ];
+                       void:propertyPartition  [ a                  void:Dataset;
+                                                 void:classes       "5"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 void:property      <http://purl.org/ontology/mo/available_as>;
+                                                 void:triples       "125948"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "91268"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://purl.org/ontology/mo/Playlist>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Track>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "11536"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://purl.org/ontology/mo/Playlist>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Record>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "11572"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://purl.org/ontology/mo/Torrent>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Record>
+                                                                    ];
+                                                 sbm:classRelation  [ a                 sbm:ClassRelation;
+                                                                      void:triples      "11572"^^<http://www.w3.org/2001/XMLSchema#long>;
+                                                                      sbm:objectClass   <http://purl.org/ontology/mo/ED2K>;
+                                                                      sbm:subjectClass  <http://purl.org/ontology/mo/Record>
+                                                                    ]
+                                               ];
+                       void:triples            "1049647"^^<http://www.w3.org/2001/XMLSchema#long>;
+                       sbm:crawlLog            [ a                     sbm:CrawlLog;
+                                                 sbm:crawlEndTime      "2026-03-04T14:19:37+09:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+                                                 sbm:crawlStartTime    "2026-03-03T18:56:47+09:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+                                                 sbm:endpointAccesses  "55"^^<http://www.w3.org/2001/XMLSchema#long>
+                                               ];
+                       sd:namedGraph           [ a        sd:NamedGraph;
+                                                 sd:name  <jamendo>
+                                               ]
+                     ];
+  sd:endpoint        <http://localhost:8894/sparql/>
+] .

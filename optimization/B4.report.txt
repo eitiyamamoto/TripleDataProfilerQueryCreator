@@ -6,20 +6,48 @@ QUERY OVERVIEW
 --------------------------------------------------------------------------------
 Total Triple Patterns: 0
 Unique Predicates: 5
-Endpoints Used: 1
+Endpoints Used: 4
 
 PREDICATE SELECTIVITY (Most Selective First)
 --------------------------------------------------------------------------------
-1. RPKM
+1. country
+   Cardinality: 1
+   Endpoints: 2
+   Possible Class Pairs: 161
+2. bcr_patient_barcode
+   Cardinality: 10
+   Endpoints: 2
+   Possible Class Pairs: 71
+3. result
+   Cardinality: 90
+   Endpoints: 2
+   Possible Class Pairs: 36
+4. reads_per_million_miRNA_mapped
+   Cardinality: 141.1K
+   Endpoints: 1
+   Possible Class Pairs: 1
+5. RPKM
    Cardinality: 57.4M
    Endpoints: 1
    Possible Class Pairs: 1
 
 ENDPOINT BREAKDOWN
 --------------------------------------------------------------------------------
+Endpoint: http://localhost:8887/sparql/
+  Predicates: 2
+  Total Triples: 83.0M
+  Estimated Retrieved Triples: unknown
 Endpoint: http://localhost:8888/sparql/
   Predicates: 1
   Total Triples: 57.4M
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8889/sparql/
+  Predicates: 155
+  Total Triples: 39.9M
+  Estimated Retrieved Triples: unknown
+Endpoint: http://localhost:8891/sparql/
+  Predicates: 322
+  Total Triples: 1.6M
   Estimated Retrieved Triples: unknown
 
 ESTIMATED RESULT CARDINALITY
@@ -30,13 +58,15 @@ Confidence: low
 
 OPTIMIZATION RECOMMENDATIONS
 --------------------------------------------------------------------------------
-• Start query execution with 'RPKM' (57.4M triples)
+• Start query execution with 'country' (1 triples)
+• Use subject/object class constraints to reduce search space for 3 predicates that span multiple endpoints
+• Use SERVICE clauses to parallelize execution across 4 endpoints
 
 --------------------------------------------------------------------------------
 OPTIMIZATION STATUS
 --------------------------------------------------------------------------------
-Status: partial
-Metadata Coverage: 1/5
+Status: complete
+Metadata Coverage: 5/5
 
 --------------------------------------------------------------------------------
 GENERATED FEDERATED QUERY
@@ -44,7 +74,7 @@ GENERATED FEDERATED QUERY
 # Smart Federated Query with Class Constraints
 # Variables are constrained by inferred class types and grouped by endpoint
 
-SELECT *
+SELECT ?expressionValues
 WHERE {
 }
 LIMIT 1000
